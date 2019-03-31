@@ -1,0 +1,19 @@
+@import"abstracts/functions";
+@import"abstracts/mixins";
+@import"abstracts/placeholders";
+@import "abstracts/variables";
+
+
+@import"base/reset";
+@import"base/typography";
+
+@import"components/cards";
+@import "components/companyentry";
+@import "components/companyregistration";
+@import "components/divposition";
+// @import"pages/contact";
+@import"layout/Profile";
+
+
+@import"vendors/custom";
+// @import"vendors/jquery-ui";

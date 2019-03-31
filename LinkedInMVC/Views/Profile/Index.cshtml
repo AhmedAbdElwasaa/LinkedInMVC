@@ -1,0 +1,50 @@
+﻿@model LinkedInMVC.ViewModel.ProfileViewModel
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- profile -->
+<div class="container-fluid profile col-lg-12">
+    <div class="profile-view col-lg-8">
+        <div class="container-img-background">
+            <img id="img-background" src=@Model.ProfileCover />
+        </div>
+
+        <div class="container-img-profile">
+            <img id="img-profile" src=@Model.ProfileImage />
+        </div>
+
+        <div class="profile-details">
+            <!-- <div id="btn-edit-profile"><i class="fas fa-pen"></i></div> -->
+            <div class="profile-details-left">
+                <div id="profile-user-name">@Model.FirstName</div>
+                <div id="profile-headline">full-stack developer</div>
+                <div class="dropdown-profile">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="Add-profile-section"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Add profile section
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="Add-profile-section">
+                        <a class="dropdown-item" href="#"><i class="fas fa-briefcase"></i> Work experience</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-university"></i> Education</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-medal"></i>Skills</a>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-details-right">
+                <div id="current-company-container">
+                    <img id="company-img" src="../images/Logo.png">
+                    <span class="current-company-name">ITI</span>
+                </div>
+                <div id="see-connection">
+                    <i class="fas fa-users"></i><span class="connection-num">
+                        See
+                        connections
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
