@@ -1,8 +1,11 @@
-﻿
+﻿@model List<ConnectionViewModel>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@foreach (ConnectionViewModel item in Model)
+{
 
-<h2>Index</h2>
-
+    <label>@item.FirstName</label>
+    <label>@item.UserId</label>
+}
