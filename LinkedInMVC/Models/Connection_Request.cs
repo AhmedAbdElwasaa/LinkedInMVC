@@ -15,7 +15,7 @@ namespace LinkedInMVC.Models
         [Key]
         [Column(Order = 1)]
         public int Id { get; set; }
-        public ApplicationUser FK_UserId { get; set; }
-        public ApplicationUser FK_Connction_UserId { get; set; }
+        public virtual ApplicationUser FK_UserId { get; set; }
+        public virtual ApplicationUser FK_Connction_UserId { get; set; }
     }
 }

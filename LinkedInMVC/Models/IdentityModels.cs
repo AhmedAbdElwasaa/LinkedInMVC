@@ -24,7 +24,8 @@ namespace LinkedInMVC.Models
         public virtual ICollection<UserCompany> UserCompanies { get; set; }
         public ICollection<UserEducation> UserEducations = new List<UserEducation>();
         public ICollection<UserExperience> UserExperiences = new List<UserExperience>();
-
+        public ICollection<Connection_Request> Connection_Requeset = new List<Connection_Request>();
+        public ICollection<Connection_Request> Connection_Requeset1 = new List<Connection_Request>();
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
