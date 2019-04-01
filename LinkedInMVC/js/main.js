@@ -1,4 +1,4 @@
-
+/* 
 window.onscroll = function () { myFunction() };
 
 // Get the navbar
@@ -14,4 +14,7 @@ function myFunction() {
     } else {
         navbar.classList.remove("sticky");
     }
-}
+} */
+
+
+
