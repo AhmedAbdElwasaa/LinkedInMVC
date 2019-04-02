@@ -455,6 +455,7 @@
     <Content Include="sass\components\_companyentry.scss" />
     <Content Include="sass\components\_companyregistration.scss" />
     <Content Include="sass\components\_divposition.scss" />
+    <Content Include="package-lock.json" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -515,6 +516,9 @@
     <Content Include="Views\Experiences\Edit.cshtml" />
     <Content Include="Views\Experiences\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\Profile\_education.cshtml" />
+    <Content Include="Views\Profile\_experience.cshtml" />
+    <Content Include="Views\Profile\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
