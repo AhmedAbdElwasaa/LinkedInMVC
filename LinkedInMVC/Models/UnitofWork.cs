@@ -57,7 +57,13 @@ namespace LinkedInMVC.Models
             }
         }
 
-
+        public PostsManager PostsManager
+        {
+            get
+            {
+                return new PostsManager(context);
+            }
+        }
         public UnitofWork(IOwinContext owinContext)
         {
             context = owinContext.Get<ApplicationDbContext>();

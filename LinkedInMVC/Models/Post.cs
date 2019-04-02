@@ -15,7 +15,7 @@ namespace LinkedInMVC.Models
         public int Id { get; set; }
 
         //Creator of the post 
-        public ApplicationUser ApplicationUser { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
 
         //Refernce to the original post 
         public Post Post_Shared { get; set; }
