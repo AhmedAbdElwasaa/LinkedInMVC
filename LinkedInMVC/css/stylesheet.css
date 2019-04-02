@@ -7425,10 +7425,11 @@ a.text-dark:hover, a.text-dark:focus {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #e6e9ec;
-  padding-bottom: 9px; }
+  padding-bottom: 9px;
+  padding-top: 12px; }
 
 .connection-card {
-  justify-content: center; }
+  /*justify-content: center;*/ }
 
 .connection .remove-conn {
   font-size: 20px;
@@ -7441,6 +7442,15 @@ a.text-dark:hover, a.text-dark:focus {
 
 .connection .dropdown-item {
   font-size: 12px; }
+
+.connection-section {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 83ms;
+  background-color: #fff;
+  border-radius: 2px;
+  width: 800px;
+  margin-top: 6%;
+  margin-left: 5%; }
 
 body {
   background-color: #f8f9fa !important; }

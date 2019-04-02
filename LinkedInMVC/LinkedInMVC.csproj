@@ -281,8 +281,12 @@
     <Content Include="HTML\CreatePost.html" />
     <Content Include="HTML\landingCompanyPage.html" />
     <Content Include="HTML\Profile.html" />
+    <Content Include="images\0.jpg" />
+    <Content Include="images\1.jpg" />
     <Content Include="images\1.png" />
+    <Content Include="images\2.jpg" />
     <Content Include="images\2.png" />
+    <Content Include="images\3.jpg" />
     <Content Include="images\cover.jpg" />
     <Content Include="images\df.png" />
     <Content Include="images\Logo.png" />

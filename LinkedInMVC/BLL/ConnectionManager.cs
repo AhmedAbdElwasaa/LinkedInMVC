@@ -96,6 +96,16 @@ namespace LinkedInMVC.BLL
             return friendsOffriends;
 
         }
+        public void RemoveConnection(string userId , string connId)
+        {
+            Connection_Request connecToDelete = context.Connection_Requeset
+             .Select(p => p).Where(p => p.FK_UserId.Id == userId && p.FK_Connction_UserId.Id==connId && p.IsApproved==true).FirstOrDefault();
+            context.Connection_Requeset.Remove(connecToDelete);
+            Connection_Request connecToDelete2 = context.Connection_Requeset
+          .Select(p => p).Where(p => p.FK_UserId.Id == connId && p.FK_Connction_UserId.Id == userId && p.IsApproved == true).FirstOrDefault();
+            context.Connection_Requeset.Remove(connecToDelete2);
+            context.SaveChanges();
+        }
 
     }
 }
