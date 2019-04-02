@@ -462,16 +462,12 @@
     <Content Include="sass\components\_companyentry.scss" />
     <Content Include="sass\components\_companyregistration.scss" />
     <Content Include="sass\components\_divposition.scss" />
-<<<<<<< HEAD
-    <Content Include="package-lock.json" />
-=======
     <Content Include="sass\components\_connection.scss" />
     <Content Include="sass\components\CreatePost.scss" />
     <Content Include="sass\components\posts.scss" />
     <Content Include="sass\layout\Home.scss" />
     <Content Include="sass\components\_comp_Post.scss" />
     <Content Include="sass\components\_companyProfile.scss" />
->>>>>>> 03d8639edee6b5abc345d4ae497bfc52c0e590da
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -534,13 +530,7 @@
     <Content Include="Views\Experiences\Edit.cshtml" />
     <Content Include="Views\Experiences\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
-<<<<<<< HEAD
-    <Content Include="Views\Profile\_education.cshtml" />
-    <Content Include="Views\Profile\_experience.cshtml" />
-    <Content Include="Views\Profile\Details.cshtml" />
-=======
     <Content Include="Views\Shared\_PostPartial.cshtml" />
->>>>>>> 03d8639edee6b5abc345d4ae497bfc52c0e590da
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
