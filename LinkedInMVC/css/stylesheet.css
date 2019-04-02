@@ -7034,9 +7034,10 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 .profile {
-  margin: 5rem 0; }
+  margin: 5rem 0;
+  display: flex; }
   .profile .profile-view {
-    height: 47rem;
+    height: 50rem;
     padding: 0rem !important;
     margin: auto;
     border: 1px solid white;
@@ -7073,7 +7074,8 @@ a.text-dark:hover, a.text-dark:focus {
         .profile .profile-view .profile-details .profile-details-left #profile-headline {
           text-transform: capitalize; }
       .profile .profile-view .profile-details .profile-details-right {
-        padding-right: 5rem; }
+        padding-right: 5rem;
+        margin-left: 40rem; }
         .profile .profile-view .profile-details .profile-details-right #company-img {
           width: 3rem;
           height: 2rem; }
@@ -7119,7 +7121,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding-bottom: 1rem; }
   .experience-container #btn-add-experience {
     position: relative;
-    left: 81rem;
+    left: 79rem;
     color: #007bff;
     font-size: 1.7rem;
     top: -2rem; }
@@ -7133,7 +7135,7 @@ a.text-dark:hover, a.text-dark:focus {
       display: flex; }
       .experience-container .experience .experience-data .btn-edit-experience {
         position: relative;
-        left: 81rem;
+        left: 79rem;
         color: #007bff;
         font-size: 1.7rem; }
       .experience-container .experience .experience-data .company-img-container {
@@ -7161,7 +7163,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding-bottom: 1rem; }
   .education-container #btn-add-education {
     position: relative;
-    left: 81rem;
+    left: 79rem;
     color: #007bff;
     font-size: 1.7rem;
     top: -2rem; }
@@ -7176,7 +7178,7 @@ a.text-dark:hover, a.text-dark:focus {
       display: flex; }
       .education-container .education .education-data .btn-edit-education {
         position: relative;
-        left: 81rem;
+        left: 79rem;
         color: #007bff;
         font-size: 1.7rem; }
       .education-container .education .education-data .school-img-container {
@@ -7204,13 +7206,13 @@ a.text-dark:hover, a.text-dark:focus {
   padding-bottom: 1rem; }
   .skills-container #btn-add-skill {
     position: relative;
-    left: 81rem;
+    left: 79rem;
     color: #007bff;
     font-size: 1.7rem;
     top: -2rem; }
   .skills-container .btn-edit-skills {
     position: relative;
-    left: 81rem;
+    left: 79rem;
     color: #007bff;
     font-size: 1.7rem; }
   .skills-container .skill {
@@ -7379,6 +7381,72 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: #006097 !important;
   color: #F3F6F8 !important; }
 
+.profil-fristblock {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-left: 11rem;
+  margin-right: 11rem;
+  margin-top: 11rem;
+  margin-bottom: 2rem;
+  border: 1px solid #B6B6B6;
+  flex-direction: column;
+  background-color: white; }
+  .profil-fristblock__comp-cover-profile {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 20rem; }
+  .profil-fristblock__comp-img-profile {
+    display: flex;
+    position: absolute;
+    top: 24rem;
+    left: 16rem;
+    width: 15rem;
+    height: 15rem; }
+  .profil-fristblock__subBlock {
+    height: 24rem; }
+    .profil-fristblock__subBlock__s-position {
+      padding-left: 21rem;
+      padding-top: 1rem; }
+    .profil-fristblock__subBlock__butt-follow {
+      background-color: #006097 !important;
+      width: 13rem;
+      margin-top: 10rem;
+      margin-left: 6rem; }
+
+.comp-post-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .comp-post-block__comp-post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 106%;
+    border: 1px solid #B6B6B6; }
+    .comp-post-block__comp-post__textarea-styles {
+      border-bottom-style: 1px solid #B6B6B6;
+      border-top-style: none;
+      border-left-style: none;
+      border-right-style: none;
+      margin-top: 3rem;
+      font-size: 1.5rem !important;
+      resize: none;
+      outline: none;
+      width: 36rem; }
+    .comp-post-block__comp-post__btnp-color {
+      background-color: #006097 !important;
+      color: white !important;
+      margin-left: 36rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem !important; }
+
 .connection {
   display: flex; }
 
@@ -7453,10 +7521,168 @@ a.text-dark:hover, a.text-dark:focus {
   margin-left: 5%; }
 
 body {
+  background-color: #E6E9EC !important; }
+
+.Home {
+  line-height: 1.5;
+  padding-top: 3rem;
+  padding-bottom: 2rem; }
+  .Home__home-left {
+    display: block; }
+  .Home__post-sec {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+  .Home__create-post-sec {
+    border-bottom: 0.1px rgba(0, 0, 0, 0.04);
+    padding-bottom: 1rem; }
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #E6E9EC; }
+
+.post {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: inherit;
+  height: auto;
+  border-radius: 2px;
+  margin-bottom: 5px;
+  margin-top: 2px; }
+  .post__post-main {
+    display: flex;
+    flex-direction: column;
+    background: inherit; }
+
+.post-main-head {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  padding-bottom: 3px; }
+
+.user-photo {
+  border-radius: 50%;
+  height: 3rem; }
+
+.user-data {
+  display: flex;
+  flex-direction: column;
+  text-align: left; }
+  .user-data__user-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.9); }
+    .user-data__user-name:hover {
+      color: #0073b1;
+      text-decoration: underline; }
+  .user-data__user-title {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400; }
+
+.post-main-content {
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: 400;
+  padding-top: 1rem;
+  padding-bottom: 2rem; }
+
+.add-Comment {
+  display: flex; }
+
+.comment-txt {
+  border-radius: 10px; }
+
+.like-button, .comment-button, .share-button {
+  display: flex;
+  border: none;
+  background-color: white; }
+  .like-button:hover, .comment-button:hover, .share-button:hover {
+    background-color: rgba(207, 207, 207, 0.25);
+    color: rgba(0, 0, 0, 0.75); }
+
+.active-reaction {
+  background-color: transparent;
+  color: #0073b1; }
+
+.feedback-buttons {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 0.1px rgba(0, 0, 0, 0.04);
+  border-top-style: groove;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.4rem;
+  line-height: 1.42857; }
+
+ul, li {
+  list-style-type: none; }
+
+.user-img-container {
+  margin-right: -5rem;
+  margin-left: -3rem; }
+
+.social-counts {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400; }
+
+.post-box {
+  background-color: white;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+  line-height: 1.5;
+  height: 100px;
+  border: 0; }
+  .post-box__btn-post {
+    width: 100%;
+    height: 100%;
+    padding-right: 7rem;
+    width: inherit;
+    height: inherit;
+    background: 0 0;
+    border: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    color: #696c6f;
+    font-size: 1.6rem;
+    font-weight: 600; }
+    .post-box__btn-post:hover {
+      color: #0073b1;
+      text-decoration: underline;
+      cursor: pointer; }
+      .post-box__btn-post:hover i, .post-box__btn-post:hover__btn-start-post, .post-box__btn-post:hover__edit-icon {
+        color: #0073b1; }
+  .post-box__post-media {
+    width: inherit;
+    height: inherit; }
+  .post-box__btn-share-img, .post-box__btn-share-video, .post-box__btn-share-file {
+    cursor: pointer;
+    height: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.6rem;
+    font-weight: 600; }
+  .post-box__modal-header {
+    background: #0073b1; }
+
+.modal-header {
+  background-color: #0073b1 !important; }
+
+.close {
+  color: white; }
+
+.post-btn {
+  background-color: #0073b1 !important; }
+
+.post-area {
+  width: 500px;
+  height: 200px; }
+
+body {
   background-color: #f8f9fa !important; }
 
-.profile-body .experience-container {
-  background-color: white; }
+.profile-body {
+  display: flex;
+  flex-direction: column; }
+  .profile-body .experience-container {
+    background-color: white; }
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
@@ -14548,3 +14774,47 @@ body {
 .navbar {
   padding: 0rem;
   margin: 0rem; }
+
+#AddEducationModal .modal-dialog {
+  max-width: 700px; }
+  #AddEducationModal .modal-dialog .modal-body {
+    font-size: 1.6rem; }
+    #AddEducationModal .modal-dialog .modal-body input {
+      width: 100% !important; }
+    #AddEducationModal .modal-dialog .modal-body .Title {
+      margin-top: 2rem; }
+    #AddEducationModal .modal-dialog .modal-body .date {
+      display: flex;
+      width: 100%; }
+      #AddEducationModal .modal-dialog .modal-body .date .StartDate-wrapper {
+        width: 50%; }
+        #AddEducationModal .modal-dialog .modal-body .date .StartDate-wrapper select {
+          width: 90%; }
+      #AddEducationModal .modal-dialog .modal-body .date .EndDate-Wrapper {
+        width: 50%; }
+        #AddEducationModal .modal-dialog .modal-body .date .EndDate-Wrapper select {
+          width: 90%; }
+  #AddEducationModal .modal-dialog .modal-footer button {
+    font-size: 1.6rem; }
+
+#EditEducationModal .modal-dialog {
+  max-width: 700px; }
+  #EditEducationModal .modal-dialog .modal-body {
+    font-size: 1.6rem; }
+    #EditEducationModal .modal-dialog .modal-body input {
+      width: 100% !important; }
+    #EditEducationModal .modal-dialog .modal-body .Title {
+      margin-top: 2rem; }
+    #EditEducationModal .modal-dialog .modal-body .date {
+      display: flex;
+      width: 100%; }
+      #EditEducationModal .modal-dialog .modal-body .date .StartDate-wrapper {
+        width: 50%; }
+        #EditEducationModal .modal-dialog .modal-body .date .StartDate-wrapper select {
+          width: 90%; }
+      #EditEducationModal .modal-dialog .modal-body .date .EndDate-Wrapper {
+        width: 50%; }
+        #EditEducationModal .modal-dialog .modal-body .date .EndDate-Wrapper select {
+          width: 90%; }
+  #EditEducationModal .modal-dialog .modal-footer button {
+    font-size: 1.6rem; }

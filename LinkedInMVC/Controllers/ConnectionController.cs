@@ -31,8 +31,10 @@ namespace LinkedInMVC.Controllers
             .ToList();
             return View(cvm);
         }
-        public void Delete(string userId,string connId)
+        public ActionResult Delete(string id)
         {
+            string connId = User.Identity.GetUserId();
+            UnitofWork.ConnectionManager.RemoveConnection(id, connId);
             //if (id == null)
             //{
             //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -42,8 +44,8 @@ namespace LinkedInMVC.Controllers
             //{
             //    return HttpNotFound();
             //}
+            return RedirectToAction("Index");
 
-            return View();
         }
     }
 }

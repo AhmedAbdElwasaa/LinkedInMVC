@@ -1,4 +1,5 @@
-﻿@model LinkedInMVC.ViewModel.ProfileViewModel
+﻿
+@model LinkedInMVC.ViewModel.ProfileViewModel
 @{
     ViewBag.Title = "Profile";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -19,7 +20,7 @@
                 <div class="profile-details-left">
                     <div id="profile-user-name">@Model.FirstName</div>
                     <div id="profile-headline">full-stack developer</div>
-                    <div class="dropdown-profile">
+                    @*<div class="dropdown-profile">
                         <button class="btn btn-primary dropdown-toggle" type="button" id="Add-profile-section"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Add profile section
@@ -29,19 +30,19 @@
                             <a class="dropdown-item" href="#"><i class="fas fa-university"></i> Education</a>
                             <a class="dropdown-item" href="#"><i class="fas fa-medal"></i>Skills</a>
                         </div>
-                    </div>
+                    </div>*@
                 </div>
                 <div class="profile-details-right">
                     <div id="current-company-container">
                         <img id="company-img" src="../images/Logo.png">
                         <span class="current-company-name">ITI</span>
                     </div>
-                    <div id="see-connection">
+                    @*<div id="see-connection">
                         <i class="fas fa-users"></i><span class="connection-num">
                             See
                             connections
                         </span>
-                    </div>
+                    </div>*@
                 </div>
             </div>
 
@@ -59,7 +60,7 @@
     <!-- education -->
     <div class="education-container col-lg-8">
         <h2 class="profile-section">education</h2>
-        <div id="btn-add-education" data-toggle="modal" data-target="#AddEducationModal"><i class="fas fa-plus"></i></div>
+       @* <div id="btn-add-education" data-toggle="modal" data-target="#AddEducationModal"><i class="fas fa-plus"></i></div>*@
 
 
         @foreach (var EducationItem in Model.Educations)
@@ -71,7 +72,7 @@
 
     <div class="experience-container col-lg-8">
         <h2 class="profile-section">experience</h2>
-        <div id="btn-add-experience"><i class="fas fa-plus"></i></div>
+        @*<div id="btn-add-experience"><i class="fas fa-plus"></i></div>*@
 
         @foreach (var experience in Model.Experiences)
         {
@@ -129,55 +130,55 @@
                 @using (Html.BeginForm("Create", "Educations", "Post", FormMethod.Post))
                 {
                     @Html.AntiForgeryToken()
-                <!-- <div class="Title">School</div>-->
-                @Html.LabelFor(m=>m.Education.SchoolName, new { @class = "Title" })
-                @Html.EditorFor(m => m.Education.SchoolName, new { id = "schoolName"  @*placeholder = "Ex: Boston University"*@});
-                <!-- <input id="schoolName" type="text" placeholder="Ex: Boston University" />-->
+                    <!-- <div class="Title">School</div>-->
+                    @Html.LabelFor(m => m.Education.SchoolName, new { @class = "Title" })
+                    @Html.EditorFor(m => m.Education.SchoolName, new { id = "schoolName"  @*placeholder = "Ex: Boston University"*@});
+                    <!-- <input id="schoolName" type="text" placeholder="Ex: Boston University" />-->
 
-                <!-- <div class="Title">Degree</div>-->
-                @Html.LabelFor(m => m.Education.Degree, new { @class = "Title" })
-                @Html.EditorFor(m => m.Education.Degree, new { id = "Degree"  @*placeholder = "Ex: Boston University"*@});
+                    <!-- <div class="Title">Degree</div>-->
+                    @Html.LabelFor(m => m.Education.Degree, new { @class = "Title" })
+                    @Html.EditorFor(m => m.Education.Degree, new { id = "Degree"  @*placeholder = "Ex: Boston University"*@});
 
-                <!-- <input id="Degree" type="text" placeholder="Ex: Bachelor’s" /> -->
+                    <!-- <input id="Degree" type="text" placeholder="Ex: Bachelor’s" /> -->
 
-                @*<div class="Title">Field of study</div>
-        <input id="StudyField" type="text" placeholder="Ex: Business" />*@
+                    @*<div class="Title">Field of study</div>
+                        <input id="StudyField" type="text" placeholder="Ex: Business" />*@
 
-                @Html.LabelFor(m => m.Education.FieldOfStudy, new { @class = "Title" })
-                @Html.EditorFor(m => m.Education.FieldOfStudy, new { id = "StudyField"  @*placeholder = "Ex: Boston University"*@});
+                    @Html.LabelFor(m => m.Education.FieldOfStudy, new { @class = "Title" })
+                    @Html.EditorFor(m => m.Education.FieldOfStudy, new { id = "StudyField"  @*placeholder = "Ex: Boston University"*@});
 
-                <div class="date">
-                    <div class="StartDate-wrapper">
+                    <div class="date">
+                        <div class="StartDate-wrapper">
 
-                        <div class="Title">Start Date</div>
-                        <select data-control-name="edit_education_start_year" name="startYear" id="pe-education-form__start-year" class="pe-education-form__start-year ember-view">
-                            <option value="">Year</option>
-                            @for (var i = 2019; i > 1990; i--)
-                            {
-                                <option value="@i">@i</option>
-                            }
+                            <div class="Title">Start Date</div>
+                            <select data-control-name="edit_education_start_year" name="startYear" id="pe-education-form__start-year" class="pe-education-form__start-year ember-view">
+                                <option value="">Year</option>
+                                @for (var i = 2019; i > 1990; i--)
+                                {
+                                    <option value="@i">@i</option>
+                                }
 
-                        </select>
+                            </select>
+                        </div>
+                        <div class="EndDate-Wrapper">
+                            <div class="Title">End Date</div>
+                            <select data-control-name="edit_education_start_year" name="startYear" id="pe-education-form__start-year" class="pe-education-form__start-year ember-view">
+                                <option value="">Year</option>
+                                @for (var i = 2019; i > 1990; i--)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+
+                            </select>
+                        </div>
                     </div>
-                    <div class="EndDate-Wrapper">
-                        <div class="Title">End Date</div>
-                        <select data-control-name="edit_education_start_year" name="startYear" id="pe-education-form__start-year" class="pe-education-form__start-year ember-view">
-                            <option value="">Year</option>
-                            @for (var i = 2019; i > 1990; i--)
-                            {
-                                <option value="@i">@i</option>
-                            }
 
-                        </select>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" id="BtnSave">Save</button>
                     </div>
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary" id="BtnSave">Save</button>
-                </div>
-            }
-            </div>
+                }
             </div>
         </div>
+    </div>
 
