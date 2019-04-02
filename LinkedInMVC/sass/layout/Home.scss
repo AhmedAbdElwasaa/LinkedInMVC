@@ -1,0 +1,29 @@
+﻿
+body {
+    background-color: $home-background !important;
+}
+.Home {
+    line-height: 1.5;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+
+    &__home-left {
+        display: block;
+    }
+
+    &__post-sec {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    &__create-post-sec {
+        border-bottom: 0.1px rgba(0,0,0,.04);
+        padding-bottom: 1rem;
+    }
+
+    &__posts-sec {
+    }
+
+    &__home-right {
+    }
+}
