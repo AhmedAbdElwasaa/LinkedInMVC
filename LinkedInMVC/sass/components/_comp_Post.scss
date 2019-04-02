@@ -1,0 +1,39 @@
+.comp-post-block{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+&__comp-post
+{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background-color: white;  
+width: 106%;
+border: 1px solid $textcolorlight;
+&__textarea-styles
+{
+    border-bottom-style: 1px solid $textcolorlight;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    margin-top: 3rem;
+    font-size: 1.5rem !important;
+    resize: none;
+    outline: none;
+    width: 36rem;
+}
+&__btnp-color
+{
+    background-color: $linkedcolortext !important;
+    color: white !important;
+    margin-left: 36rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem !important;
+}
+}
+
+}
