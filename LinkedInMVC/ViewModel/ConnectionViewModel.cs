@@ -10,6 +10,7 @@ namespace LinkedInMVC.ViewModel
     {
         public string FirstName { get; set; }
         public string SecondName { get; set; }
+        public string ImageUrl { get; set; }
 
         public string UserId { get; set; }
         public string Url { get; set; }

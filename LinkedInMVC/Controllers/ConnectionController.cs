@@ -5,6 +5,8 @@ using Microsoft.AspNet.Identity.Owin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -25,23 +27,25 @@ namespace LinkedInMVC.Controllers
             List<ApplicationUser> v = UnitofWork.ConnectionManager.
                GetAllFriend(User.Identity.GetUserId());
             List<ConnectionViewModel> cvm = v.Select(c => new ConnectionViewModel
-            { FirstName = c.FirstName, UserId = c.Id })
+            { FirstName = c.FirstName, UserId = c.Id ,ImageUrl=c.ProfileImage})
             .ToList();
             return View(cvm);
         }
-        //public ActionResult index()
-        //{
-        //    //Connection_Request v = new Connection_Request();
+        public ActionResult Delete(string id)
+        {
+            string connId = User.Identity.GetUserId();
+            UnitofWork.ConnectionManager.RemoveConnection(id, connId);
+            //if (id == null)
+            //{
+            //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            //}
+            //Education education = await db.Educations.FindAsync(id);
+            //if (education == null)
+            //{
+            //    return HttpNotFound();
+            //}
+            return RedirectToAction("Index");
 
-        //    //var u = UnitofWork.UserManager.Users.ToList();
-        //    //ConnectionViewModel cvm= new ConnectionViewModel
-        //    //{
-
-        //    //     IsApproved=UnitofWork.CompanyManager
-
-        //    //}
-        //    return View(v);
-        //}
-
+        }
     }
 }

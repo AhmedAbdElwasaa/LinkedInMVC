@@ -1,8 +1,9 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 .profile {
   margin: 5rem 0;
+  display:flex;
   .profile-view {
-    height: 47rem;
+    height: 50rem;
     padding: 0rem !important ;
     margin: auto;
     border: 1px solid $white;
@@ -49,6 +50,7 @@
       }
       .profile-details-right {
         padding-right: 5rem;
+        margin-left: 40rem;
         #company-img {
           width: 3rem;
           height: 2rem;
@@ -114,68 +116,67 @@
 // }
 
 
-.experience-container
-{
-  margin: auto;
-  padding-top: 2rem;
-  background-color: $white;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  #btn-add-experience
-  {
-    position: relative;
-    left: 81rem;
-    color: $blue;
-    font-size: 1.7rem;
-    top: -2rem;
-  }
-  .experience
-  {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-    .experience-data
-    {
-      line-height: 2.5rem;
-      display: flex;
-      .btn-edit-experience
-      {
-          position: relative;
-          left: 81rem;
-          color: $blue;
-          font-size: 1.7rem;
-      }
-      .company-img-container
-      {
-          height: 5.5rem;
-          width: 5.5rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          .company-img
-          {
-              width: 100%
-          }
-      }
-      .experience-details
-      {
-        font-size: 1.6rem;
-          .date
-          {
-            display: flex;
-            .date-from
-            {
-                margin-right: 1rem;
-            }
-            .date-to
-            {
-                margin-left: 1rem;
-            }
-          }
-      }
+.experience-container {
+    margin: auto;
+    padding-top: 2rem;
+    background-color: $white;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+
+    #btn-add-experience {
+        position: relative;
+        left: 79rem;
+        color: $blue;
+        font-size: 1.7rem;
+        top: -2rem;
     }
-  }
+
+    .experience {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+
+        .experience-data {
+            line-height: 2.5rem;
+            display: flex;
+
+            .btn-edit-experience {
+                position: relative;
+                left: 79rem;
+                color: $blue;
+                font-size: 1.7rem;
+            }
+
+            .company-img-container {
+                height: 5.5rem;
+                width: 5.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .company-img {
+                    width: 100%
+                }
+            }
+
+            .experience-details {
+                font-size: 1.6rem;
+
+                .date {
+                    display: flex;
+
+                    .date-from {
+                        margin-right: 1rem;
+                    }
+
+                    .date-to {
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+    }
 }
 // education
 .education-container
@@ -188,7 +189,7 @@
   #btn-add-education
   {
     position: relative;
-    left: 81rem;
+    left: 79rem;
     color: $blue;
     font-size: 1.7rem;
     top: -2rem;
@@ -207,7 +208,7 @@
       .btn-edit-education
       {
           position: relative;
-          left: 81rem;
+          left: 79rem;
           color: $blue;
           font-size: 1.7rem;
       }
@@ -244,69 +245,65 @@
 }
 
 // skills
-.skills-container 
-{
-  margin: auto;
-  padding-top: 2rem;
-  background-color: $white;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  #btn-add-skill
-  {
-    position: relative;
-    left: 81rem;
-    color: $blue;
-    font-size: 1.7rem;
-    top: -2rem;
-  }
-  .btn-edit-skills
-  {
-      position: relative;
-      left: 81rem;
-      color: $blue;
-      font-size: 1.7rem;
-  }
-  .skill
-  {
-    display: flex;
-    flex-direction: column;
+.skills-container {
+    margin: auto;
+    padding-top: 2rem;
     background-color: $white;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
 
-    .skill-data
-    {
-       
+    #btn-add-skill {
+        position: relative;
+        left: 79rem;
+        color: $blue;
+        font-size: 1.7rem;
+        top: -2rem;
+    }
+
+    .btn-edit-skills {
+        position: relative;
+        left: 79rem;
+        color: $blue;
+        font-size: 1.7rem;
+    }
+
+    .skill {
         display: flex;
-        .plus-icon-container
-        {
+        flex-direction: column;
+        background-color: $white;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+
+        .skill-data {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5rem;
-            border: 1px solid $blue;
-            color: $blue;
-            background-color: $white;
-            border-radius: 50%;
-            width: 3rem;
-            height: 3rem;
-        }
-        .skill-name
-        {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-left: 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-transform: capitalize;
+
+            .plus-icon-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.5rem;
+                border: 1px solid $blue;
+                color: $blue;
+                background-color: $white;
+                border-radius: 50%;
+                width: 3rem;
+                height: 3rem;
+            }
+
+            .skill-name {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-left: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: capitalize;
+            }
         }
 
+        .Endorsements {
+            font-size: 1.6rem;
+            padding-left: 2rem;
+        }
     }
-    .Endorsements
-    {
-        font-size: 1.6rem;
-        padding-left: 2rem;
-    }
-  }
 }

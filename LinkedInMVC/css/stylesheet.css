@@ -7034,9 +7034,10 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 .profile {
-  margin: 5rem 0; }
+  margin: 5rem 0;
+  display: flex; }
   .profile .profile-view {
-    height: 47rem;
+    height: 50rem;
     padding: 0rem !important;
     margin: auto;
     border: 1px solid white;
@@ -7073,7 +7074,8 @@ a.text-dark:hover, a.text-dark:focus {
         .profile .profile-view .profile-details .profile-details-left #profile-headline {
           text-transform: capitalize; }
       .profile .profile-view .profile-details .profile-details-right {
-        padding-right: 5rem; }
+        padding-right: 5rem;
+        margin-left: 40rem; }
         .profile .profile-view .profile-details .profile-details-right #company-img {
           width: 3rem;
           height: 2rem; }
@@ -7119,7 +7121,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding-bottom: 1rem; }
   .experience-container #btn-add-experience {
     position: relative;
-    left: 81rem;
+    left: 79rem;
     color: #007bff;
     font-size: 1.7rem;
     top: -2rem; }
@@ -7133,7 +7135,7 @@ a.text-dark:hover, a.text-dark:focus {
       display: flex; }
       .experience-container .experience .experience-data .btn-edit-experience {
         position: relative;
-        left: 81rem;
+        left: 79rem;
         color: #007bff;
         font-size: 1.7rem; }
       .experience-container .experience .experience-data .company-img-container {
@@ -7161,7 +7163,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding-bottom: 1rem; }
   .education-container #btn-add-education {
     position: relative;
-    left: 81rem;
+    left: 79rem;
     color: #007bff;
     font-size: 1.7rem;
     top: -2rem; }
@@ -7176,7 +7178,7 @@ a.text-dark:hover, a.text-dark:focus {
       display: flex; }
       .education-container .education .education-data .btn-edit-education {
         position: relative;
-        left: 81rem;
+        left: 79rem;
         color: #007bff;
         font-size: 1.7rem; }
       .education-container .education .education-data .school-img-container {
@@ -7204,13 +7206,13 @@ a.text-dark:hover, a.text-dark:focus {
   padding-bottom: 1rem; }
   .skills-container #btn-add-skill {
     position: relative;
-    left: 81rem;
+    left: 79rem;
     color: #007bff;
     font-size: 1.7rem;
     top: -2rem; }
   .skills-container .btn-edit-skills {
     position: relative;
-    left: 81rem;
+    left: 79rem;
     color: #007bff;
     font-size: 1.7rem; }
   .skills-container .skill {
@@ -7456,6 +7458,7 @@ a.text-dark:hover, a.text-dark:focus {
       margin-top: 2rem;
       margin-bottom: 1rem;
       font-size: 1.5rem !important; }
+<<<<<<< HEAD
     .comp-post-block__comp-post__edit-block {
       display: flex;
       justify-content: center;
@@ -7518,6 +7521,8 @@ a.text-dark:hover, a.text-dark:focus {
           color: #B6B6B6; }
         .comp-post-block__comp-post__edit-block__item-edit3:focus {
           outline: transparent auto 5px; }
+=======
+>>>>>>> 8c02ab01ef99a17e6854f45d9a9370cee44c86c5
 
 .connection {
   display: flex; }
@@ -7565,10 +7570,11 @@ a.text-dark:hover, a.text-dark:focus {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #e6e9ec;
-  padding-bottom: 9px; }
+  padding-bottom: 9px;
+  padding-top: 12px; }
 
 .connection-card {
-  justify-content: center; }
+  /*justify-content: center;*/ }
 
 .connection .remove-conn {
   font-size: 20px;
@@ -7582,6 +7588,34 @@ a.text-dark:hover, a.text-dark:focus {
 .connection .dropdown-item {
   font-size: 12px; }
 
+<<<<<<< HEAD
+=======
+.connection-section {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 83ms;
+  background-color: #fff;
+  border-radius: 2px;
+  width: 800px;
+  margin-top: 6%;
+  margin-left: 5%; }
+
+body {
+  background-color: #E6E9EC !important; }
+
+.Home {
+  line-height: 1.5;
+  padding-top: 3rem;
+  padding-bottom: 2rem; }
+  .Home__home-left {
+    display: block; }
+  .Home__post-sec {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+  .Home__create-post-sec {
+    border-bottom: 0.1px rgba(0, 0, 0, 0.04);
+    padding-bottom: 1rem; }
+
+>>>>>>> 8c02ab01ef99a17e6854f45d9a9370cee44c86c5
 .posts {
   display: flex;
   flex-direction: column;
@@ -7720,6 +7754,7 @@ ul, li {
 .post-area {
   width: 500px;
   height: 200px; }
+<<<<<<< HEAD
 
 .cop-dashb {
   display: flex;
@@ -7778,12 +7813,17 @@ body {
   .Home__create-post-sec {
     border-bottom: 0.1px rgba(0, 0, 0, 0.04);
     padding-bottom: 1rem; }
+=======
+>>>>>>> 8c02ab01ef99a17e6854f45d9a9370cee44c86c5
 
 body {
   background-color: #f8f9fa !important; }
 
-.profile-body .experience-container {
-  background-color: white; }
+.profile-body {
+  display: flex;
+  flex-direction: column; }
+  .profile-body .experience-container {
+    background-color: white; }
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
@@ -14875,3 +14915,47 @@ body {
 .navbar {
   padding: 0rem;
   margin: 0rem; }
+
+#AddEducationModal .modal-dialog {
+  max-width: 700px; }
+  #AddEducationModal .modal-dialog .modal-body {
+    font-size: 1.6rem; }
+    #AddEducationModal .modal-dialog .modal-body input {
+      width: 100% !important; }
+    #AddEducationModal .modal-dialog .modal-body .Title {
+      margin-top: 2rem; }
+    #AddEducationModal .modal-dialog .modal-body .date {
+      display: flex;
+      width: 100%; }
+      #AddEducationModal .modal-dialog .modal-body .date .StartDate-wrapper {
+        width: 50%; }
+        #AddEducationModal .modal-dialog .modal-body .date .StartDate-wrapper select {
+          width: 90%; }
+      #AddEducationModal .modal-dialog .modal-body .date .EndDate-Wrapper {
+        width: 50%; }
+        #AddEducationModal .modal-dialog .modal-body .date .EndDate-Wrapper select {
+          width: 90%; }
+  #AddEducationModal .modal-dialog .modal-footer button {
+    font-size: 1.6rem; }
+
+#EditEducationModal .modal-dialog {
+  max-width: 700px; }
+  #EditEducationModal .modal-dialog .modal-body {
+    font-size: 1.6rem; }
+    #EditEducationModal .modal-dialog .modal-body input {
+      width: 100% !important; }
+    #EditEducationModal .modal-dialog .modal-body .Title {
+      margin-top: 2rem; }
+    #EditEducationModal .modal-dialog .modal-body .date {
+      display: flex;
+      width: 100%; }
+      #EditEducationModal .modal-dialog .modal-body .date .StartDate-wrapper {
+        width: 50%; }
+        #EditEducationModal .modal-dialog .modal-body .date .StartDate-wrapper select {
+          width: 90%; }
+      #EditEducationModal .modal-dialog .modal-body .date .EndDate-Wrapper {
+        width: 50%; }
+        #EditEducationModal .modal-dialog .modal-body .date .EndDate-Wrapper select {
+          width: 90%; }
+  #EditEducationModal .modal-dialog .modal-footer button {
+    font-size: 1.6rem; }

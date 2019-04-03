@@ -3,12 +3,13 @@ body {
 }
 
 
-.profile-body
-{
+.profile-body {
     // background-color: $white;
     // width: 80rem;
-    .experience-container
-    {
+    display: flex;
+    flex-direction: column;
+
+    .experience-container {
         background-color: $white;
     }
 }

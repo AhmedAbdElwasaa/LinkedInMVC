@@ -46,11 +46,11 @@ namespace LinkedInMVC.Controllers
         }
 
         //// GET: Educations/Create
-        //public ActionResult Create()
-        //{
+        public ActionResult Create()
+        {
 
-        //    return View();
-        //}
+            return View();
+        }
 
         //// POST: Educations/Create
         [HttpPost]
