@@ -70,17 +70,14 @@
         <div class="Home__posts-sec col-md-12">
             <div class="posts col-md-12 flex-column">
                 @if (Model.posts != null)
-                {
-                    foreach (LinkedInMVC.Models.Post post in Model.posts)
                     {
-
-                        Html.Partial("_PostPartial", post);
-                    }
+                    <text>
+                @foreach (LinkedInMVC.Models.Post post in Model.posts)
+                {
+                    @Html.Partial("_PostPartial", post)
                 }
-                 else{
-                    Html.Display("Add friends and follow companies to see posts in your Home");
+                </text>
                 }
-                 
             </div>
             @*<div class="posts col-md-12 flex-column">
                     <div class="post pl-5 ">

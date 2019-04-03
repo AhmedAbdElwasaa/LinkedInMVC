@@ -7597,8 +7597,7 @@ a.text-dark:hover, a.text-dark:focus {
 .posts {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background-color: #E6E9EC; }
+  justify-content: space-between; }
 
 .post {
   display: flex;
