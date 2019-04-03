@@ -150,7 +150,7 @@
                     <div class="StartDate-wrapper">
 
                         <div class="Title">Start Date</div>
-                        <select data-control-name="edit_education_start_year" name="startYear" id="pe-education-form__start-year" class="pe-education-form__start-year ember-view">
+                        <select data-control-name="edit_education_start_year" name="@Model.Education.FromYear" id="pe-education-form__start-year" class="pe-education-form__start-year ember-view">
                             <option value="">Year</option>
                             @for (var i = 2019; i > 1990; i--)
                             {
@@ -161,7 +161,7 @@
                     </div>
                     <div class="EndDate-Wrapper">
                         <div class="Title">End Date</div>
-                        <select data-control-name="edit_education_start_year" name="startYear" id="pe-education-form__start-year" class="pe-education-form__start-year ember-view">
+                        <select data-control-name="edit_education_start_year"  name="@Model.Education.ToYear" id="pe-education-form__start-year" class="pe-education-form__start-year ember-view">
                             <option value="">Year</option>
                             @for (var i = 2019; i > 1990; i--)
                             {
