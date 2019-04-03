@@ -2,50 +2,93 @@
 
 
 
-    <div class="post pl-5 ">
-        <div class="post__post-main col-md-12">
-            <div class="post-main-head row">
-                <img class="user-photo col-md-2 " src="../images/u.png">
-                <div class="user-data col-md-6 d-flex">
-                    <a class="user-data__user-name" href="#">@Model.ApplicationUser.FirstName</a>
-                    <div class="user-data__user-title">@Model.ApplicationUser.Headline</div>
-                </div>
-            </div>
-            <div class="post-main-content col-md-12">
-                @Model.postText
-            </div>
-            <ul class="social-counts col-md-5 d-flex ">
-                <li>
-                    <span class="num-likes pr-2">@Model.numOfLikes </span>
-                    <span>Likes</span>
-                </li>
-                <li>
-                    <span class="num-comments pl-2 pr-2">@Model.numOfComments </span>
-                    <span>Comments</span>
-                </li>
-
-            </ul>
-            <div class="feedback-buttons row">
-                <button class="like-button col-md-3">
-                    <i class="far fa-thumbs-up like-button__ilike"></i>
-                    <span> Like </span>
-                </button>
-                <button class="comment-button col-md-3">
-                    <i class="fal fa-comment-alt-lines comment-button__icomment"></i>
-                    <span>Comment</span>
-                </button>
-                <button class="share-button col-md-3">
-                    <i class="fas fa-share share-button__ishare"></i>
-                    <span>  Share</span>
-                </button>
+<div class="post pl-5 ">
+    <div class="post__post-main col-md-12">
+        <div class="post-main-head row">
+            <img class="user-photo col-md-2 " src="../images/u.png">
+            <div class="user-data col-md-6 d-flex">
+                <a class="user-data__user-name" href="#">@Model.ApplicationUser.FirstName</a>
+                <div class="user-data__user-title">@Model.ApplicationUser.Headline</div>
             </div>
         </div>
-        <div class="post-reactions col-md-12">
-            <div class="add-Comment ">
-                <div class="user-img-container col-md-3 "><img class="user-photo" src="../images/u.png"></div>
-                <input type="text" name="" class="comment-txt col-md-8" placeholder="Add a comment...">
-            </div>
+        <div class="post-main-content col-md-12">
+            @Model.postText
+        </div>
+        <ul class="social-counts col-md-5 d-flex ">
+            <li>
+                <span class="num-likes pr-2">@Model.numOfLikes </span>
+                <span>Likes</span>
+            </li>
+            <li>.</li>
+            <li>
+                <span class="num-comments pl-2 pr-2">@Model.numOfComments </span>
+                <span>Comments</span>
+            </li>
+
+        </ul>
+        <div class="feedback-buttons row">
+            <button class="like-button col-md-3">
+                <i class="far fa-thumbs-up like-button__ilike"></i>
+                <span> Like </span>
+            </button>
+            <button class="comment-button col-md-3">
+                <i class="fal fa-comment-alt-lines comment-button__icomment"></i>
+                <span>Comment</span>
+            </button>
+            <button class="share-button col-md-3">
+                <i class="fas fa-share share-button__ishare"></i>
+                <span>  Share</span>
+            </button>
         </div>
     </div>
+    <div class="post-reactions col-md-12">
+        <div class="add-Comment ">
+            <div class="user-img-container col-md-3 "><img class="user-photo" src="../images/u.png"></div>
+            <input type="text" name="" class="comment-txt col-md-8" placeholder="Add a comment...">
+        </div>
+    </div>
+    <div class="comments col-md-12">
+        <div class="comment-box col-md-12">
+            <div class="comment-box__comment-user-photo col-md-2">
+                <img class="comment-box__comment-user-photo" src="../images/u.png" />
+            </div>
+            <div class="comment-box__comment-info col-md-10">
+                <div class="comment-box__comment-main-content row">
+                    <div class="comment-box__comment-user-name">
+                        Souhaila Muhammad
+                    </div>
+                    <div class="comment-box__comment-headerline">R&d Developer</div>
+                    <div class="comment-box__comment-content">This is really awesome, I like to stay here</div>
+
+                </div>
+                <div class="comment-box__comment-reactions row">
+                    <ul class="comment-box__comment-reactions row">
+                        <li>
+                            <button class="like-button col-md-3">
+                                <i class="far fa-thumbs-up like-button__ilike"></i>
+                            </button>
+                        </li>
+                        <li><span> . </span></li>
+                        <li>
+                            <span class="num-likes pr-2">50 </span>
+                            <span>Likes</span>
+                        </li>
+                        <li> | </li>
+                        <li>
+                            <button class="comment-button col-md-3">
+                                <i class="fal fa-comment-alt-lines comment-button__icomment"></i>
+                            </button>
+                            <span>.</span>
+                            <span class="num-comments pl-2 pr-2">50 </span>
+                            <span>Replies</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
 
 

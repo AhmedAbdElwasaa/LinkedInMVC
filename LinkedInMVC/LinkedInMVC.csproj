@@ -275,6 +275,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="HTML\CommentBox.html" />
     <Content Include="HTML\companyprofile.html" />
     <Content Include="HTML\company_registration.html" />
     <Content Include="HTML\components.html" />
@@ -475,6 +476,7 @@
     <Content Include="sass\components\_companyProfile.scss" />
     <Content Include="sass\components\_compcomun.scss" />
     <Content Include="sass\components\_compdashboard.scss" />
+    <Content Include="sass\components\comments.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
