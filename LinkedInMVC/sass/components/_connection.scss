@@ -52,10 +52,12 @@
     border-bottom-style: solid;
     border-bottom-color: rgb(230, 233, 236);
     padding-bottom: 9px;
+    padding-top: 12px;
 }
 
 .connection-card {
-    justify-content: center;
+    /*justify-content: center;*/
+
 }
 
 .connection .remove-conn {
@@ -69,4 +71,13 @@
 }
 .connection .dropdown-item {
     font-size: 12px;
+}
+.connection-section {
+    box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+    transition: box-shadow 83ms;
+    background-color: #fff;
+    border-radius: 2px;
+    width: 800px;
+    margin-top: 6%;
+    margin-left: 5%;
 }
