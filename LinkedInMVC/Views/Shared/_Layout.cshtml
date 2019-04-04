@@ -32,7 +32,7 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="#home"><i class="fas fa-home"></i>@Html.ActionLink("Home", "Index", "Home",new { @class= "nav-link-item" })</a>
+                                <a class="nav-link" href="#home"><i class="fas fa-home"></i>@Html.ActionLink("Home", "Index", "Home", new { @class = "nav-link-item" })</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fas fa-users"></i>@Html.ActionLink("myNetwork", "Index", "Home", new { @class = "nav-link-item" }) </a>
@@ -65,6 +65,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/jquery.unobtrusive-ajax.min.js")
     @RenderSection("scripts", required: false)
 </body>
 </html>
