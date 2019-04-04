@@ -375,9 +375,6 @@ D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.AI.DependencyCollector.xml
 D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.AI.WindowsServer.xml
 D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.AI.Web.xml
 D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csprojResolveAssemblyReference.cache
-D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.test.resources
-D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.GenerateResource.Cache
 D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CoreCompileInputs.cache
 D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.dll
 D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.pdb
@@ -509,3 +506,9 @@ E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CoreCompileInputs
 E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CopyComplete
 E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.dll
 E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.pdb
+D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.test.resources
+D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.GenerateResource.Cache
+D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.test2.resources
+D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.test4.resources
+D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csprojResolveAssemblyReference.cache
+D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.test5.resources
