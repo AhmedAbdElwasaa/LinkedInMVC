@@ -9,19 +9,26 @@
 
 @import"components/cards";
 @import "components/companyentry";
-@import "components/companyregistration";
+@import "components/companyregistration";  
 @import "components/divposition";
 @import "components/companyProfile";
 @import "components/comp_Post";
 @import "components/connection";
+<<<<<<< HEAD
 @import "components/peopleMayKnow";
 
 
 //Home By Souhaila
 @import "layout/Home.scss";
+=======
+>>>>>>> 50bc30012ad2af562579ff6994fc3764ac291c69
 @import "components/posts.scss";
 @import "components/CreatePost.scss";
-// @import"pages/contact";
+@import "components/comments.scss";
+@import "components/compdashboard";
+@import "components/compcomun";
+
+@import "layout/Home.scss";
 @import"layout/Profile";
 
 

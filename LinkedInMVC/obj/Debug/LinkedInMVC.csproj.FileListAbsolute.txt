@@ -254,3 +254,386 @@ F:\Mvc\ahmed\LinkedInMVC\LinkedInMVC\bin\Microsoft.AI.WindowsServer.xml
 F:\Mvc\ahmed\LinkedInMVC\LinkedInMVC\bin\Microsoft.AI.Web.xml
 F:\Mvc\ahmed\LinkedInMVC\LinkedInMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 F:\Mvc\ahmed\LinkedInMVC\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CopyComplete
+D:\ahmed\Linkedin-\LinkedInMVC\bin\ApplicationInsights.config
+D:\ahmed\Linkedin-\LinkedInMVC\bin\LinkedInMVC.dll.config
+D:\ahmed\Linkedin-\LinkedInMVC\bin\LinkedInMVC.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\LinkedInMVC.pdb
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\csc.exe
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\csc.exe.config
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\csc.rsp
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\csi.exe
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\csi.exe.config
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\csi.rsp
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.Managed.Core.targets
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.AppContext.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.Collections.Immutable.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.Console.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.IO.Compression.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.IO.FileSystem.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.IO.Pipes.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.Reflection.Metadata.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.Security.AccessControl.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.Security.Claims.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.Security.Principal.Windows.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.ValueTuple.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.Xml.XmlDocument.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.Xml.XPath.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\vbc.exe
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\vbc.exe.config
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\vbc.rsp
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\VBCSCompiler.exe
+D:\ahmed\Linkedin-\LinkedInMVC\bin\roslyn\VBCSCompiler.exe.config
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Antlr3.Runtime.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\EntityFramework.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\EntityFramework.SqlServer.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.AI.Agent.Intercept.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.AI.DependencyCollector.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.AI.Web.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.AI.WindowsServer.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.ApplicationInsights.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.AspNet.Identity.Core.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.Cookies.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.Facebook.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.Google.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.OAuth.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.Twitter.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.Web.Infrastructure.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Newtonsoft.Json.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Owin.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Diagnostics.DiagnosticSource.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Net.Http.Formatting.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Web.Helpers.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Web.Http.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Web.Http.WebHost.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Web.Mvc.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Web.Optimization.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Web.Razor.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Web.WebPages.Deployment.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Web.WebPages.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Web.WebPages.Razor.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\WebGrease.dll
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Web.Helpers.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Web.Mvc.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Web.Optimization.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Web.Razor.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Web.WebPages.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Web.WebPages.Deployment.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Web.WebPages.Razor.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Newtonsoft.Json.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Antlr3.Runtime.pdb
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Net.Http.Formatting.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Web.Http.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Web.Http.WebHost.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\EntityFramework.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\EntityFramework.SqlServer.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.AspNet.Identity.Core.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.Facebook.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.Cookies.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.Google.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.Twitter.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.OAuth.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\System.Diagnostics.DiagnosticSource.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.AI.DependencyCollector.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.AI.WindowsServer.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.AI.Web.xml
+D:\ahmed\Linkedin-\LinkedInMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csprojResolveAssemblyReference.cache
+D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.test.resources
+D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.GenerateResource.Cache
+D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CoreCompileInputs.cache
+D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.dll
+D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.pdb
+E:\LinkedInMVC\origin\LinkedInMVC\bin\ApplicationInsights.config
+E:\LinkedInMVC\origin\LinkedInMVC\bin\LinkedInMVC.dll.config
+E:\LinkedInMVC\origin\LinkedInMVC\bin\LinkedInMVC.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\LinkedInMVC.pdb
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\csc.exe
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\csc.exe.config
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\csc.rsp
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\csi.exe
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\csi.exe.config
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\csi.rsp
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\Microsoft.Managed.Core.targets
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.AppContext.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.Collections.Immutable.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.Console.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.IO.Compression.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.IO.FileSystem.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.IO.Pipes.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.Reflection.Metadata.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.Security.AccessControl.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.Security.Claims.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.Security.Principal.Windows.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.ValueTuple.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.Xml.XmlDocument.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.Xml.XPath.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\vbc.exe
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\vbc.exe.config
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\vbc.rsp
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\VBCSCompiler.exe
+E:\LinkedInMVC\origin\LinkedInMVC\bin\roslyn\VBCSCompiler.exe.config
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Antlr3.Runtime.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\EntityFramework.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\EntityFramework.SqlServer.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.AI.Agent.Intercept.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.AI.DependencyCollector.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.AI.Web.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.AI.WindowsServer.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.ApplicationInsights.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.AspNet.Identity.Core.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.Owin.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.Owin.Security.Cookies.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.Owin.Security.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.Owin.Security.Facebook.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.Owin.Security.Google.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.Owin.Security.OAuth.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.Owin.Security.Twitter.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.Web.Infrastructure.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Newtonsoft.Json.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Owin.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Diagnostics.DiagnosticSource.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Net.Http.Formatting.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Web.Helpers.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Web.Http.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Web.Http.WebHost.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Web.Mvc.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Web.Optimization.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Web.Razor.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Web.WebPages.Deployment.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Web.WebPages.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Web.WebPages.Razor.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\WebGrease.dll
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Web.Helpers.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Web.Mvc.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Web.Optimization.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Web.Razor.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Web.WebPages.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Web.WebPages.Deployment.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Web.WebPages.Razor.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Newtonsoft.Json.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Antlr3.Runtime.pdb
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Net.Http.Formatting.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Web.Http.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Web.Http.WebHost.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\EntityFramework.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\EntityFramework.SqlServer.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.AspNet.Identity.Core.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.Owin.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.Owin.Security.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.Owin.Security.Facebook.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.Owin.Security.Cookies.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.Owin.Security.Google.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.Owin.Security.Twitter.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.Owin.Security.OAuth.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\System.Diagnostics.DiagnosticSource.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.AI.DependencyCollector.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.AI.WindowsServer.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.AI.Web.xml
+E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.csprojAssemblyReference.cache
+E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.test.resources
+E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.GenerateResource.cache
+E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CoreCompileInputs.cache
+E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CopyComplete
+E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.dll
+E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.pdb
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\ApplicationInsights.config
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\LinkedInMVC.dll.config
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\LinkedInMVC.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\LinkedInMVC.pdb
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\csc.exe
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\csc.exe.config
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\csc.rsp
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\csi.exe
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\csi.exe.config
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\csi.rsp
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.Managed.Core.targets
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.AppContext.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.Collections.Immutable.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.Console.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.IO.Compression.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.IO.FileSystem.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.IO.Pipes.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.Reflection.Metadata.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.Security.AccessControl.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.Security.Claims.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.Security.Principal.Windows.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.ValueTuple.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.Xml.XmlDocument.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.Xml.XPath.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\vbc.exe
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\vbc.exe.config
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\vbc.rsp
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\VBCSCompiler.exe
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\VBCSCompiler.exe.config
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Antlr3.Runtime.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\EntityFramework.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\EntityFramework.SqlServer.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AI.Agent.Intercept.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AI.DependencyCollector.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AI.Web.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AI.WindowsServer.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.ApplicationInsights.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AspNet.Identity.Core.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.Cookies.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.Facebook.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.Google.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.OAuth.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.Twitter.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.Web.Infrastructure.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Newtonsoft.Json.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Owin.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Diagnostics.DiagnosticSource.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Net.Http.Formatting.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Web.Helpers.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Web.Http.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Web.Http.WebHost.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Web.Mvc.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Web.Optimization.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Web.Razor.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Web.WebPages.Deployment.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Web.WebPages.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Web.WebPages.Razor.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\WebGrease.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Web.Helpers.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Web.Mvc.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Web.Optimization.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Web.Razor.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Web.WebPages.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Web.WebPages.Deployment.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Web.WebPages.Razor.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Newtonsoft.Json.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Antlr3.Runtime.pdb
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Net.Http.Formatting.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Web.Http.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Web.Http.WebHost.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\EntityFramework.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\EntityFramework.SqlServer.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AspNet.Identity.Core.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.Facebook.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.Cookies.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.Google.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.Twitter.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.Owin.Security.OAuth.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\System.Diagnostics.DiagnosticSource.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AI.DependencyCollector.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AI.WindowsServer.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AI.Web.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csprojAssemblyReference.cache
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.test.resources
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.GenerateResource.cache
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CoreCompileInputs.cache
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CopyComplete
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.dll
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.pdb

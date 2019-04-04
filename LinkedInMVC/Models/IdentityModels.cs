@@ -57,7 +57,7 @@ namespace LinkedInMVC.Models
         public DbSet<Comment> Comments { get; set; }
 
 
-        public DbSet<Education> Educations { get; set; }
+        public DbSet<Education> Education { get; set; }
          public DbSet<UserEducation> UserEducation { get; set; }
       
         public DbSet<Experience> Experience { get; set; }

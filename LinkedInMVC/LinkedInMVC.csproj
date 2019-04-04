@@ -267,15 +267,12 @@
   <ItemGroup>
     <Content Include="bin\LinkedInMVC.dll" />
     <Content Include="bin\LinkedInMVC.pdb" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\stylesheet.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="HTML\CommentBox.html" />
+    <Content Include="HTML\companyprofile.html" />
     <Content Include="HTML\company_registration.html" />
     <Content Include="HTML\components.html" />
     <Content Include="HTML\CreatePost.html" />
@@ -473,7 +470,13 @@
     <Content Include="sass\layout\Home.scss" />
     <Content Include="sass\components\_comp_Post.scss" />
     <Content Include="sass\components\_companyProfile.scss" />
+<<<<<<< HEAD
     <Content Include="sass\components\_peopleMayKnow.scss" />
+=======
+    <Content Include="sass\components\_compcomun.scss" />
+    <Content Include="sass\components\_compdashboard.scss" />
+    <Content Include="sass\components\comments.scss" />
+>>>>>>> 50bc30012ad2af562579ff6994fc3764ac291c69
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -539,12 +542,19 @@
     <Content Include="Views\Experiences\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Shared\_PostPartial.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Shared\_Connection.cshtml" />
     <Content Include="Views\Network\Create.cshtml" />
     <Content Include="Views\Network\Delete.cshtml" />
     <Content Include="Views\Network\Details.cshtml" />
     <Content Include="Views\Network\Edit.cshtml" />
     <Content Include="Views\Network\Index.cshtml" />
+=======
+    <Content Include="Views\Profile\_education.cshtml" />
+    <Content Include="Views\Profile\_experience.cshtml" />
+    <Content Include="Views\Profile\Details.cshtml" />
+    <Content Include="Views\Home\_CreatePostPartial.cshtml" />
+>>>>>>> 50bc30012ad2af562579ff6994fc3764ac291c69
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -556,10 +566,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
