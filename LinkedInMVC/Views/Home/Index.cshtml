@@ -69,13 +69,15 @@
         </div>
         <div class="Home__posts-sec col-md-12">
             <div class="posts col-md-12 flex-column">
-                @*@if (Model.posts != null)
-                    {*@
+                @if (Model.posts != null)
+                    {
+                    <text>
                 @foreach (LinkedInMVC.Models.Post post in Model.posts)
                 {
                     @Html.Partial("_PostPartial", post)
                 }
-                @*}*@
+                </text>
+                }
             </div>
             @*<div class="posts col-md-12 flex-column">
                     <div class="post pl-5 ">
