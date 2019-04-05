@@ -637,3 +637,6 @@ E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.cspro
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CopyComplete
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.dll
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.pdb
+D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.test2.resources
+D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.test4.resources
+D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.test5.resources
