@@ -640,3 +640,4 @@ E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.pdb
 D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.test2.resources
 D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.test4.resources
 D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.test5.resources
+D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.test6.resources
