@@ -209,13 +209,10 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="BLL\CommentManager.cs" />
     <Compile Include="BLL\CompanyManager.cs" />
-    <Compile Include="BLL\CompanySizeManager.cs" />
-    <Compile Include="BLL\CompanyTypeManager.cs" />
     <Compile Include="BLL\ConnectionManager.cs" />
     <Compile Include="BLL\EducationManager.cs" />
     <Compile Include="BLL\ExperienceManager.cs" />
     <Compile Include="BLL\HomeManager.cs" />
-    <Compile Include="BLL\IndustryManager.cs" />
     <Compile Include="BLL\LikesManager.cs" />
     <Compile Include="BLL\PostsManager.cs" />
     <Compile Include="BLL\Test.cs" />
@@ -224,7 +221,6 @@
     <Compile Include="BLL\UserEducationManager.cs" />
     <Compile Include="BLL\UserExperienceManager.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\ConnectionController.cs" />
     <Compile Include="Controllers\EducationsController.cs" />
     <Compile Include="Controllers\ExperiencesController.cs" />
@@ -235,34 +231,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helper\DLIndustryHelper.cs" />
-    <Compile Include="Migrations\201904032142521_test.cs" />
-    <Compile Include="Migrations\201904032142521_test.Designer.cs">
-      <DependentUpon>201904032142521_test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904040107316_test2.cs" />
-    <Compile Include="Migrations\201904040107316_test2.Designer.cs">
-      <DependentUpon>201904040107316_test2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904040229598_test4.cs" />
-    <Compile Include="Migrations\201904040229598_test4.Designer.cs">
-      <DependentUpon>201904040229598_test4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904040744257_test5.cs" />
-    <Compile Include="Migrations\201904040744257_test5.Designer.cs">
-      <DependentUpon>201904040744257_test5.cs</DependentUpon>
+    <Compile Include="Migrations\201904020856215_test.cs" />
+    <Compile Include="Migrations\201904020856215_test.Designer.cs">
+      <DependentUpon>201904020856215_test.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Company.cs" />
-    <Compile Include="Models\CompanySize.cs" />
-    <Compile Include="Models\CompanyType.cs" />
     <Compile Include="Models\Connection_Request.cs" />
     <Compile Include="Models\Education.cs" />
     <Compile Include="Models\Experience.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\Industry.cs" />
     <Compile Include="Models\Like.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Post.cs" />
@@ -277,12 +257,10 @@
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\Repository.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModel\CompanyViewModel.cs" />
     <Compile Include="ViewModel\ConnectionViewModel.cs" />
     <Compile Include="ViewModel\EducationViewModel.cs" />
     <Compile Include="ViewModel\ExperienceViewModel.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />
-    <Compile Include="ViewModel\IndustryViewModel.cs" />
     <Compile Include="ViewModel\PostViewModel.cs" />
     <Compile Include="ViewModel\ProfileViewModel.cs" />
   </ItemGroup>
@@ -576,15 +554,7 @@
     <Content Include="Views\Profile\_experience.cshtml" />
     <Content Include="Views\Profile\Details.cshtml" />
     <Content Include="Views\Home\_CreatePostPartial.cshtml" />
-<<<<<<< HEAD
-    <Content Include="Views\Company\Create.cshtml" />
-    <Content Include="Views\Company\Details.cshtml" />
-    <Content Include="Views\Company\Edit.cshtml" />
-    <Content Include="Views\Company\Index.cshtml" />
-    <Content Include="Views\Shared\_Layout3.cshtml" />
-=======
 >>>>>>> 50bc30012ad2af562579ff6994fc3764ac291c69
->>>>>>> 85a651debc3962c858efc7dea9fb507ef4f8ea19
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -601,17 +571,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904032142521_test.resx">
-      <DependentUpon>201904032142521_test.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904040107316_test2.resx">
-      <DependentUpon>201904040107316_test2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904040229598_test4.resx">
-      <DependentUpon>201904040229598_test4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904040744257_test5.resx">
-      <DependentUpon>201904040744257_test5.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904020856215_test.resx">
+      <DependentUpon>201904020856215_test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
