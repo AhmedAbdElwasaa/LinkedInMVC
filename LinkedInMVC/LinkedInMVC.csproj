@@ -557,18 +557,15 @@
     <Content Include="Views\Experiences\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Shared\_PostPartial.cshtml" />
-<<<<<<< HEAD
+    <Content Include="Views\Profile\_education.cshtml" />
+    <Content Include="Views\Profile\_experience.cshtml" />
+    <Content Include="Views\Profile\Details.cshtml" />
+    <Content Include="Views\Home\_CreatePostPartial.cshtml" />
     <Content Include="Views\Company\Create.cshtml" />
     <Content Include="Views\Company\Details.cshtml" />
     <Content Include="Views\Company\Edit.cshtml" />
     <Content Include="Views\Company\Index.cshtml" />
     <Content Include="Views\Shared\_Layout3.cshtml" />
-=======
-    <Content Include="Views\Profile\_education.cshtml" />
-    <Content Include="Views\Profile\_experience.cshtml" />
-    <Content Include="Views\Profile\Details.cshtml" />
-    <Content Include="Views\Home\_CreatePostPartial.cshtml" />
->>>>>>> 50bc30012ad2af562579ff6994fc3764ac291c69
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
