@@ -207,7 +207,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="BLL\CommentManager.cs" />
+    <Compile Include="BLL\CommentsManager.cs" />
     <Compile Include="BLL\CompanyManager.cs" />
     <Compile Include="BLL\ConnectionManager.cs" />
     <Compile Include="BLL\EducationManager.cs" />
@@ -262,6 +262,7 @@
     <Compile Include="ViewModel\HomeViewModel.cs" />
     <Compile Include="ViewModel\PostViewModel.cs" />
     <Compile Include="ViewModel\ProfileViewModel.cs" />
+    <Compile Include="ViewModel\SearchResultViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\LinkedInMVC.dll" />
@@ -284,16 +285,21 @@
     <Content Include="HTML\landingCompanyPage.html" />
     <Content Include="HTML\PostBox.html" />
     <Content Include="HTML\Profile.html" />
+    <Content Include="HTML\ProfileCard.html" />
+    <Content Include="HTML\SearchComponent.html" />
     <Content Include="images\0.jpg" />
     <Content Include="images\1.jpg" />
     <Content Include="images\1.png" />
+    <Content Include="images\co.jpg" />
     <Content Include="images\2.jpg" />
     <Content Include="images\2.png" />
     <Content Include="images\3.jpg" />
     <Content Include="images\cover.jpg" />
     <Content Include="images\df.png" />
+    <Content Include="images\lincov.PNG" />
     <Content Include="images\Logo.png" />
     <Content Include="images\me.jpg" />
+    <Content Include="images\pp.png" />
     <Content Include="images\u.png" />
     <Content Include="js\main.js" />
     <Content Include="node_modules\bootstrap\dist\css\bootstrap-grid.css" />
@@ -477,6 +483,9 @@
     <Content Include="sass\components\_compcomun.scss" />
     <Content Include="sass\components\_compdashboard.scss" />
     <Content Include="sass\components\comments.scss" />
+    <Content Include="sass\components\_search-results.scss" />
+    <Content Include="sass\layout\profile-card-layout.scss" />
+    <Content Include="sass\components\Profile-card.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -540,6 +549,10 @@
     <Content Include="Views\Experiences\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Shared\_PostPartial.cshtml" />
+    <Content Include="Views\Shared\_LikesPartial.cshtml" />
+    <Content Include="Views\Home\SearchResults.cshtml" />
+    <Content Include="Views\Shared\_SearchResultPartial.cshtml" />
+    <Content Include="Views\Shared\_CommentPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

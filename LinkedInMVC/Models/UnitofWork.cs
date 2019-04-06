@@ -64,6 +64,27 @@ namespace LinkedInMVC.Models
                 return new PostsManager(context);
             }
         }
+        public LikesManager LikesManager
+        {
+            get
+            {
+                return new LikesManager(context);
+            }
+        }
+        public CommentsManager CommentsManager
+        {
+            get
+            {
+                return new CommentsManager(context);
+            }
+        }
+        public HomeManager HomeManager
+        {
+            get
+            {
+                return new HomeManager(context);
+            }
+        }
         public UnitofWork(IOwinContext owinContext)
         {
             context = owinContext.Get<ApplicationDbContext>();
