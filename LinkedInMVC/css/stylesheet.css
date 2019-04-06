@@ -7764,7 +7764,9 @@ body {
   height: auto;
   border-radius: 2px;
   margin-bottom: 5px;
-  margin-top: 2px; }
+  margin-top: 2px;
+  padding: 20px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2); }
   .post__post-main {
     display: flex;
     flex-direction: column;
@@ -7840,6 +7842,7 @@ ul, li {
   font-weight: 400; }
 
 .post-box {
+  display: flex;
   background-color: white;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
   line-height: 1.5;
@@ -7856,7 +7859,9 @@ ul, li {
     border-right: 1px solid rgba(0, 0, 0, 0.15);
     color: #696c6f;
     font-size: 1.6rem;
-    font-weight: 600; }
+    font-weight: 600;
+    padding-left: 35px;
+    padding-top: 20px; }
     .post-box__btn-post:hover {
       color: #0073b1;
       text-decoration: underline;
@@ -7869,11 +7874,13 @@ ul, li {
     width: inherit;
     height: inherit; }
   .post-box__btn-share-img, .post-box__btn-share-video, .post-box__btn-share-file {
+    text-align: center;
     cursor: pointer;
     height: 100%;
     border-right: 1px solid rgba(0, 0, 0, 0.15);
     color: rgba(0, 0, 0, 0.6);
-    font-size: 1.6rem;
+    padding-top: 29px;
+    font-size: 2.6rem;
     font-weight: 600; }
   .post-box__modal-header {
     background: #0073b1; }
@@ -7888,7 +7895,7 @@ ul, li {
   background-color: #0073b1 !important; }
 
 .post-area {
-  width: 500px;
+  width: inherit;
   height: 200px; }
 
 .comments {

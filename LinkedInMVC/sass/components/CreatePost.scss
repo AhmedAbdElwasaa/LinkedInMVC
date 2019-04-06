@@ -3,6 +3,7 @@
 }
 
 .post-box {
+    display: flex;
     background-color: $white;
     box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
     line-height: 1.5;
@@ -22,6 +23,8 @@
         color: $post-writer;
         font-size: 1.6rem;
         font-weight: 600;
+        padding-left: 35px;
+        padding-top: 20px;
 
         &:hover {
             color: $post-writing;
@@ -44,11 +47,13 @@
     }
 
     &__btn-share-img, &__btn-share-video, &__btn-share-file {
+        text-align: center;
         cursor: pointer;
         height: 100%;
         border-right: 1px solid rgba(0, 0, 0, 0.15);
         color: $primary-grey-home;
-        font-size: 1.6rem;
+        padding-top: 29px;
+        font-size: 2.6rem;
         font-weight: 600;
     }
 
@@ -70,6 +75,6 @@
 }
 
 .post-area {
-    width: 500px;
+    width: inherit;
     height: 200px;
 }
