@@ -14,8 +14,8 @@ namespace LinkedInMVC.BLL
         {
             this.context = context;
         }
-       
-        public Post  AddLikes(ApplicationUser user, int postId)
+
+        public Post AddLikes(ApplicationUser user, int postId)
         {
             //Add like with user id in Likes table
             Like userlike = new Like();

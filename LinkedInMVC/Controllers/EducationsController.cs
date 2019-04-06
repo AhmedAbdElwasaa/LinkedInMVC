@@ -10,6 +10,7 @@ using System.Web.Mvc;
 using LinkedInMVC.Models;
 using Microsoft.AspNet.Identity.Owin;
 using LinkedInMVC.ViewModel;
+using Microsoft.AspNet.Identity;
 
 namespace LinkedInMVC.Controllers
 {
@@ -57,14 +58,18 @@ namespace LinkedInMVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(Education education)
         {
+            string userId = User.Identity.GetUserId();
+            ApplicationUser currentUser = UnitofWork.UserManager.FindById(userId);
 
             if (ModelState.IsValid)
             {
-                UnitofWork.EducationManager.Add(education);
-                return RedirectToAction("Index");
+             education=  UnitofWork.EducationManager.Add(education);
+              UnitofWork.UserEducationManager.AddUserEducation(education, currentUser);
+                
+              
             }
 
-            return View(education);
+            return RedirectToAction( "Index","Profile");
         }
 
         //// GET: Educations/Edit/5

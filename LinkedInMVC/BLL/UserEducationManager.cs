@@ -26,7 +26,8 @@ namespace LinkedInMVC.BLL
             List<EducationViewModel> Educations = new List<EducationViewModel>();
             foreach (int item in EducationIds)
             {
-               var  education= context.Educations.Where(u => u.Id == item).Select(e =>
+               var  education= context.Education
+                .Where(u => u.Id == item).Select(e =>
                 new EducationViewModel { SchoolName = e.SchoolName ,Degree =e.Degree , FieldOfStudy=e.FieldOfStudy ,
 
                     FromYear =e.FromYear ,ToYear =e.ToYear ,Grade =e.Grade }).FirstOrDefault();
@@ -36,5 +37,19 @@ namespace LinkedInMVC.BLL
             }
             return Educations;
         }
+
+
+        public bool AddUserEducation(Education education, ApplicationUser user)
+        {
+            UserEducation userEducation = new UserEducation();
+            userEducation.UserId = user;
+            userEducation.Education = education;
+
+            context.UserEducation.Add(userEducation);
+
+
+            return context.SaveChanges() > 0;
+        }
     }
+
 }

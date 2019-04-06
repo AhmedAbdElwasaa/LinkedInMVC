@@ -26,13 +26,13 @@ namespace LinkedInMVC.BLL
         {
             List<ApplicationUser> ls1 = SearchPeopleFirst(searched);
             List<ApplicationUser> ls2 = SearchPeopleSecond(searched);
-            foreach(var user in ls2)
+            foreach (var user in ls2)
             {
-                if(!ls1.Any(e=>e.Id == user.Id))
+                if (!ls1.Any(e => e.Id == user.Id))
                 {
                     ls1.Add(user);
                 }
-                
+
             }
             return ls1;
         }

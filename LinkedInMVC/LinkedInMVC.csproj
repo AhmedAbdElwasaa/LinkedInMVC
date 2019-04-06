@@ -207,7 +207,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="BLL\CommentsManager.cs" />
+    <Compile Include="BLL\CommentManager.cs" />
     <Compile Include="BLL\CompanyManager.cs" />
     <Compile Include="BLL\ConnectionManager.cs" />
     <Compile Include="BLL\EducationManager.cs" />
@@ -226,6 +226,7 @@
     <Compile Include="Controllers\ExperiencesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NetworkController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -267,15 +268,10 @@
   <ItemGroup>
     <Content Include="bin\LinkedInMVC.dll" />
     <Content Include="bin\LinkedInMVC.pdb" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\stylesheet.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="HTML\CommentBox.html" />
     <Content Include="HTML\companyprofile.html" />
     <Content Include="HTML\company_registration.html" />
@@ -290,16 +286,13 @@
     <Content Include="images\0.jpg" />
     <Content Include="images\1.jpg" />
     <Content Include="images\1.png" />
-    <Content Include="images\co.jpg" />
     <Content Include="images\2.jpg" />
     <Content Include="images\2.png" />
     <Content Include="images\3.jpg" />
     <Content Include="images\cover.jpg" />
     <Content Include="images\df.png" />
-    <Content Include="images\lincov.PNG" />
     <Content Include="images\Logo.png" />
     <Content Include="images\me.jpg" />
-    <Content Include="images\pp.png" />
     <Content Include="images\u.png" />
     <Content Include="js\main.js" />
     <Content Include="node_modules\bootstrap\dist\css\bootstrap-grid.css" />
@@ -480,18 +473,21 @@
     <Content Include="sass\layout\Home.scss" />
     <Content Include="sass\components\_comp_Post.scss" />
     <Content Include="sass\components\_companyProfile.scss" />
+    <Content Include="sass\components\_peopleMayKnow.scss" />
     <Content Include="sass\components\_compcomun.scss" />
     <Content Include="sass\components\_compdashboard.scss" />
     <Content Include="sass\components\comments.scss" />
-    <Content Include="sass\components\_search-results.scss" />
     <Content Include="sass\layout\profile-card-layout.scss" />
     <Content Include="sass\components\Profile-card.scss" />
+    <Content Include="sass\components\_search-results.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -549,10 +545,19 @@
     <Content Include="Views\Experiences\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Shared\_PostPartial.cshtml" />
-    <Content Include="Views\Shared\_LikesPartial.cshtml" />
+    <Content Include="Views\Shared\_Connection.cshtml" />
+    <Content Include="Views\Network\Create.cshtml" />
+    <Content Include="Views\Network\Delete.cshtml" />
+    <Content Include="Views\Network\Details.cshtml" />
+    <Content Include="Views\Network\Edit.cshtml" />
+    <Content Include="Views\Network\Index.cshtml" />
+    <Content Include="Views\Profile\_education.cshtml" />
+    <Content Include="Views\Profile\_experience.cshtml" />
+    <Content Include="Views\Profile\Details.cshtml" />
+    <Content Include="Views\Home\_CreatePostPartial.cshtml" />
     <Content Include="Views\Home\SearchResults.cshtml" />
+    <Content Include="Views\Shared\_LikesPartial.cshtml" />
     <Content Include="Views\Shared\_SearchResultPartial.cshtml" />
-    <Content Include="Views\Shared\_CommentPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -564,10 +569,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />

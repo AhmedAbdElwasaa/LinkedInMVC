@@ -9,11 +9,18 @@
 
 @import"components/cards";
 @import "components/companyentry";
-@import "components/companyregistration";
+@import "components/companyregistration";  
 @import "components/divposition";
 @import "components/companyProfile";
 @import "components/comp_Post";
 @import "components/connection";
+
+@import "components/peopleMayKnow";
+
+
+//Home By Souhaila
+@import "layout/Home.scss";
+
 @import "components/posts.scss";
 @import "components/CreatePost.scss";
 @import "components/comments.scss";

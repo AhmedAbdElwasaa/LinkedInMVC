@@ -44,7 +44,7 @@ namespace LinkedInMVC.Controllers
             post.numOfLikes = likesNum;
             return Content(likesNum.ToString());
         }
-       
+
         public ActionResult AddLike(Post post)
         {
             ApplicationUser ApplicationUser;

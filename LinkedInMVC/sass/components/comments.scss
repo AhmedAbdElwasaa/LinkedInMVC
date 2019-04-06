@@ -1,7 +1,7 @@
-﻿.comments{
-    background-color:$white;
-
+﻿.comments {
+    background-color: $white;
 }
+
 .comment-box {
     display: flex;
 
@@ -23,8 +23,8 @@
         display: flex;
         flex-direction: column;
         background-color: rgba(207,207,207,.25);
-        margin-top:5px;
-        margin-bottom:12px;
+        margin-top: 5px;
+        margin-bottom: 12px;
     }
 
     &__comment-user-name {

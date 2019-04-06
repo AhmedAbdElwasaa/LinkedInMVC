@@ -12,13 +12,16 @@ namespace LinkedInMVC.BLL
         private readonly ApplicationDbContext context;
         public EducationManager(ApplicationDbContext context) : base(context)
         {
-            context = this.context;
+            this.context = context;
 
         }
-        public  bool AddEducation(Education education, ApplicationUser userId)
-        {
-            context.Educations.Add(education);
-            return true;
-        }
+        //public int AddEducation(Education education)
+        //{
+           
+        //    context.Education.Add(education);
+        //    context.SaveChanges() ;
+        //    int id = education.Id;
+        //    return id;
+        //}
     }
 }
