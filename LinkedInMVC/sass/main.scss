@@ -14,23 +14,23 @@
 @import "components/companyProfile";
 @import "components/comp_Post";
 @import "components/connection";
-<<<<<<< HEAD
+
 @import "components/peopleMayKnow";
 
 
 //Home By Souhaila
 @import "layout/Home.scss";
-=======
->>>>>>> 50bc30012ad2af562579ff6994fc3764ac291c69
+
 @import "components/posts.scss";
 @import "components/CreatePost.scss";
 @import "components/comments.scss";
+@import "components/_search-results.scss";
 @import "components/compdashboard";
 @import "components/compcomun";
-
+@import "components/Profile-card.scss";
 @import "layout/Home.scss";
 @import"layout/Profile";
-
+@import"layout/profile-card-layout.scss";
 
 @import"vendors/custom";
 // @import"vendors/jquery-ui";

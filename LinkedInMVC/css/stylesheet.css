@@ -7623,7 +7623,6 @@ a.text-dark:hover, a.text-dark:focus {
   margin-top: 6%;
   margin-left: 5%; }
 
-<<<<<<< HEAD
 .network-block {
   margin-top: 100px;
   display: flex;
@@ -7770,7 +7769,7 @@ body {
 
 .Home {
   line-height: 1.5;
-  padding-top: 3rem;
+  padding-top: 4rem;
   padding-bottom: 2rem; }
   .Home__home-left {
     display: block; }
@@ -7781,8 +7780,6 @@ body {
     border-bottom: 0.1px rgba(0, 0, 0, 0.04);
     padding-bottom: 1rem; }
 
-=======
->>>>>>> 50bc30012ad2af562579ff6994fc3764ac291c69
 .posts {
   display: flex;
   flex-direction: column;
@@ -7895,6 +7892,8 @@ ul, li {
       cursor: pointer; }
       .post-box__btn-post:hover i, .post-box__btn-post:hover__btn-start-post, .post-box__btn-post:hover__edit-icon {
         color: #0073b1; }
+  .post-box__btn-start-post, .post-box__edit-icon {
+    color: rgba(0, 0, 0, 0.6); }
   .post-box__post-media {
     width: inherit;
     height: inherit; }
@@ -7961,6 +7960,83 @@ ul, li {
     color: rgba(0, 0, 0, 0.6);
     font-weight: 400; }
 
+.search-results {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+  margin-left: 10rem;
+  margin-top: 2rem; }
+
+.search-bar {
+  height: 34px;
+  border-radius: 2px;
+  background-color: #e1e9ee;
+  font-size: 1.4rem;
+  width: 100%;
+  border: none;
+  border-radius: 2px;
+  padding: 0 8px 0 28px;
+  line-height: 1;
+  color: #283e4a;
+  font-weight: 400; }
+
+.search-icon {
+  color: #0073b1;
+  background-color: #D2ECEB;
+  border: #0073b1 .5px;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  padding: .6rem; }
+
+.search-result {
+  padding: 3rem;
+  background: white;
+  display: flex;
+  border-bottom: 0.1px rgba(0, 0, 0, 0.04);
+  border-bottom-style: groove; }
+  .search-result__imgCont {
+    border-radius: 50%;
+    height: 3rem; }
+  .search-result__user-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #0073b1; }
+    .search-result__user-name:hover {
+      text-decoration: underline; }
+  .search-result__user-title {
+    font-size: 1.4rem;
+    line-height: 1.42857;
+    color: rgba(0, 0, 0, 0.9);
+    font-weight: 400; }
+  .search-result__country {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400; }
+  .search-result__connect-or-msg {
+    font-weight: 700;
+    font-size: 1.4rem;
+    height: 4rem;
+    color: #0073b1;
+    background-color: white;
+    border-color: #0073b1;
+    border: 2px solid;
+    border-radius: 5px;
+    cursor: pointer; }
+    .search-result__connect-or-msg:hover {
+      background-color: rgba(152, 216, 244, 0.25);
+      box-shadow: inset 0 0 0 2px #006097; }
+  .search-result__matual-cons {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 700;
+    font-size: 1rem; }
+
+.search-result-info {
+  padding-top: 1.5rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.4rem;
+  line-height: 1.42857; }
+
 .cop-dashb {
   display: flex;
   justify-content: left;
@@ -8006,12 +8082,107 @@ ul, li {
 .div-height {
   height: 10rem; }
 
+.small-profile-card {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 2rem; }
+  .small-profile-card .col-md-2 {
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
+  .small-profile-card__cover {
+    height: 15rem;
+    padding-bottom: 6rem;
+    width: 100%; }
+  .small-profile-card__details {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.2rem;
+    line-height: 1.33333;
+    font-weight: 400; }
+  .small-profile-card__pimage {
+    position: absolute;
+    top: -100px;
+    left: 29%;
+    border-radius: 49%;
+    border: 2px solid white;
+    width: 72px;
+    height: 68px;
+    box-sizing: border-box;
+    background-clip: content-box; }
+  .small-profile-card__content {
+    border-bottom: 0.1px rgba(0, 0, 0, 0.08);
+    border-bottom-style: groove; }
+  .small-profile-card__nametag {
+    color: rgba(0, 0, 0, 0.9);
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center; }
+  .small-profile-card__managecon {
+    display: flex;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.1px rgba(0, 0, 0, 0.08);
+    border-bottom-style: groove; }
+  .small-profile-card__leftside-num1, .small-profile-card__leftside-num2 {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.333;
+    text-align: left; }
+    .small-profile-card__leftside-num1:hover, .small-profile-card__leftside-num2:hover {
+      cursor: pointer;
+      color: #0073b1;
+      text-decoration: underline; }
+  .small-profile-card__leftside {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start; }
+  .small-profile-card__leftside-num3 {
+    color: rgba(0, 0, 0, 0.9);
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.333;
+    text-align: left; }
+    .small-profile-card__leftside-num3:hover {
+      cursor: pointer;
+      color: #0073b1;
+      text-decoration: underline; }
+  .small-profile-card__managecon-rightside-num4, .small-profile-card__managecon-rightside-num5 {
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.3333;
+    text-align: right;
+    color: #0073b1; }
+    .small-profile-card__managecon-rightside-num4:hover, .small-profile-card__managecon-rightside-num5:hover {
+      cursor: pointer;
+      text-decoration: underline; }
+  .small-profile-card__premium-ptext {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.9);
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.333; }
+  .small-profile-card__premium-linkpremium {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.9);
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.333; }
+    .small-profile-card__premium-linkpremium:hover {
+      color: #0073b1;
+      cursor: pointer;
+      text-decoration: underline; }
+
 body {
   background-color: #E6E9EC !important; }
 
 .Home {
   line-height: 1.5;
-  padding-top: 3rem;
+  padding-top: 4rem;
   padding-bottom: 2rem; }
   .Home__home-left {
     display: block; }
@@ -8030,6 +8201,10 @@ body {
   flex-direction: column; }
   .profile-body .experience-container {
     background-color: white; }
+
+.profile-card-layout {
+  display: flex;
+  flex-direction: column; }
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)

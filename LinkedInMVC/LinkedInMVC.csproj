@@ -289,6 +289,7 @@
     <Compile Include="ViewModel\IndustryViewModel.cs" />
     <Compile Include="ViewModel\PostViewModel.cs" />
     <Compile Include="ViewModel\ProfileViewModel.cs" />
+    <Compile Include="ViewModel\SearchResultViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\LinkedInMVC.dll" />
@@ -306,6 +307,8 @@
     <Content Include="HTML\landingCompanyPage.html" />
     <Content Include="HTML\PostBox.html" />
     <Content Include="HTML\Profile.html" />
+    <Content Include="HTML\ProfileCard.html" />
+    <Content Include="HTML\SearchComponent.html" />
     <Content Include="images\0.jpg" />
     <Content Include="images\1.jpg" />
     <Content Include="images\1.png" />
@@ -500,6 +503,9 @@
     <Content Include="sass\components\_compcomun.scss" />
     <Content Include="sass\components\_compdashboard.scss" />
     <Content Include="sass\components\comments.scss" />
+    <Content Include="sass\layout\profile-card-layout.scss" />
+    <Content Include="sass\components\Profile-card.scss" />
+    <Content Include="sass\components\_search-results.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -580,6 +586,9 @@
     <Content Include="Views\Company\Edit.cshtml" />
     <Content Include="Views\Company\Index.cshtml" />
     <Content Include="Views\Shared\_Layout3.cshtml" />
+    <Content Include="Views\Home\SearchResults.cshtml" />
+    <Content Include="Views\Shared\_LikesPartial.cshtml" />
+    <Content Include="Views\Shared\_SearchResultPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
