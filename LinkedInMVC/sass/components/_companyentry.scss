@@ -19,14 +19,34 @@
     cursor: pointer;
 }
 
+
+
 .img-phone-position {
     width: 26%;
     position: absolute;
     left: 31%;
     top: 29%;
+    animation: example1 3s;
 }
 
 .img-lap-position {
     margin-top: 8rem;
     margin-left: 54%;
+    animation-name:example;
+    animation-duration:3s;
+
+}
+@keyframes example1{
+    0%{    left: 51%;
+        top: 29%;}
+    100%{
+        left: 31%;
+        top: 29%;
+    }     
+}
+@keyframes example{
+    0%{    margin-top: 8rem;
+        margin-left: 35%;}
+    100%{ margin-top: 8rem;
+        margin-left: 54%;}
 }

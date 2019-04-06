@@ -17,12 +17,13 @@
 
 </head>
 <body>
-    
+
     <div class="container-fluid body-content">
         @RenderBody()
-      
-    </div>
 
+    </div>
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/node_modules/jquery-ajax-unobtrusive/dist/jquery.unobtrusive-ajax.min.js"></script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

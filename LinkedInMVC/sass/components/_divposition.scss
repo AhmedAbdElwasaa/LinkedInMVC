@@ -84,38 +84,49 @@
 .div-bgcolor{
     background-color: $bgcolorlighter;
 }
-.butt-style{
-    border: 2px solid $linkedcolortext !important; 
+.butt-style {
+    border: 2px solid $linkedcolortext !important;
     margin-left: 15rem;
+    width: 8rem;
+    background:none;
+    color:inherit;
+    outline:inherit;
 }
-.div-color{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 3rem;
-    width: 27rem;
-    height: 4rem;
-    background-color:$divcolor ;
-}
-
-.textare-reseize {
-    border: none;
-    background-color: transparent;
-    resize: none;
-    outline: none;
-}
-.check-style{
-    width: 2rem;
-    height: 2rem;
-}
-.footer-form
-{
-    margin-left: 9rem;
-    font-size: 1.3rem;
-    width: 47rem;
-
+.butt-style1 {
+    position: absolute;
+    right: 15rem;
+    top: 0.5rem;
+    border: 2px solid #006097 !important;
 }
 
-.butn-disable{
-    background-color: $linkedcolortext !important;
-    color:$bgcolorlighter !important;
-}
+.div-color {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            margin-left: 3rem;
+            width: 27rem;
+            height: 4rem;
+            background-color: $divcolor;
+        }
+
+        .textare-reseize {
+            border: none;
+            background-color: transparent;
+            resize: none;
+            outline: none;
+        }
+
+        .check-style {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .footer-form {
+            margin-left: 9rem;
+            font-size: 1.3rem;
+            width: 47rem;
+        }
+
+        .butn-disable {
+            background-color: $linkedcolortext !important;
+            color: $bgcolorlighter !important;
+        }

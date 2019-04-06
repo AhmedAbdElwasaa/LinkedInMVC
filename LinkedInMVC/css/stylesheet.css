@@ -7267,11 +7267,30 @@ a.text-dark:hover, a.text-dark:focus {
   width: 26%;
   position: absolute;
   left: 31%;
-  top: 29%; }
+  top: 29%;
+  animation: example1 3s; }
 
 .img-lap-position {
   margin-top: 8rem;
-  margin-left: 54%; }
+  margin-left: 54%;
+  animation-name: example;
+  animation-duration: 3s; }
+
+@keyframes example1 {
+  0% {
+    left: 51%;
+    top: 29%; }
+  100% {
+    left: 31%;
+    top: 29%; } }
+
+@keyframes example {
+  0% {
+    margin-top: 8rem;
+    margin-left: 35%; }
+  100% {
+    margin-top: 8rem;
+    margin-left: 54%; } }
 
 .header-position {
   position: fixed;
@@ -7352,7 +7371,17 @@ a.text-dark:hover, a.text-dark:focus {
 
 .butt-style {
   border: 2px solid #006097 !important;
-  margin-left: 15rem; }
+  margin-left: 15rem;
+  width: 8rem;
+  background: none;
+  color: inherit;
+  outline: inherit; }
+
+.butt-style1 {
+  position: absolute;
+  right: 15rem;
+  top: 0.5rem;
+  border: 2px solid #006097 !important; }
 
 .div-color {
   margin-top: 2rem;
