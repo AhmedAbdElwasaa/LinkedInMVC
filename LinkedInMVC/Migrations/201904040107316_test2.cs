@@ -1,0 +1,18 @@
+namespace LinkedInMVC.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class test2 : DbMigration
+    {
+        public override void Up()
+        {
+            AddColumn("dbo.Company", "Size", c => c.String());
+        }
+        
+        public override void Down()
+        {
+            DropColumn("dbo.Company", "Size");
+        }
+    }
+}
