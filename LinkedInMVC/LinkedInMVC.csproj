@@ -470,21 +470,16 @@
     <Content Include="sass\layout\Home.scss" />
     <Content Include="sass\components\_comp_Post.scss" />
     <Content Include="sass\components\_companyProfile.scss" />
-<<<<<<< HEAD
-    <Content Include="sass\components\_peopleMayKnow.scss" />
-=======
     <Content Include="sass\components\_compcomun.scss" />
     <Content Include="sass\components\_compdashboard.scss" />
     <Content Include="sass\components\comments.scss" />
->>>>>>> 50bc30012ad2af562579ff6994fc3764ac291c69
+    <Content Include="sass\components\_peopleMayKnow.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -542,19 +537,15 @@
     <Content Include="Views\Experiences\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Shared\_PostPartial.cshtml" />
-<<<<<<< HEAD
-    <Content Include="Views\Shared\_Connection.cshtml" />
+    <Content Include="Views\Profile\_education.cshtml" />
+    <Content Include="Views\Profile\_experience.cshtml" />
+    <Content Include="Views\Profile\Details.cshtml" />
+    <Content Include="Views\Home\_CreatePostPartial.cshtml" />
     <Content Include="Views\Network\Create.cshtml" />
     <Content Include="Views\Network\Delete.cshtml" />
     <Content Include="Views\Network\Details.cshtml" />
     <Content Include="Views\Network\Edit.cshtml" />
     <Content Include="Views\Network\Index.cshtml" />
-=======
-    <Content Include="Views\Profile\_education.cshtml" />
-    <Content Include="Views\Profile\_experience.cshtml" />
-    <Content Include="Views\Profile\Details.cshtml" />
-    <Content Include="Views\Home\_CreatePostPartial.cshtml" />
->>>>>>> 50bc30012ad2af562579ff6994fc3764ac291c69
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

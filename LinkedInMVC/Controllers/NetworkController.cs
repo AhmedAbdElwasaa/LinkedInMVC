@@ -8,18 +8,34 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using LinkedInMVC.Models;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.AspNet.Identity;
+using LinkedInMVC.ViewModel;
 
 namespace LinkedInMVC.Controllers
 {
     public class NetworkController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        public UnitofWork UnitofWork
+        {
+            get
+            {
+                return HttpContext.GetOwinContext().Get<UnitofWork>();
+            }
+        }
 
         // GET: Network
-        public async Task<ActionResult> Index()
+        public  ActionResult Index()
         {
-            return View(await db.Connection_Requeset.ToListAsync());
+            List<ApplicationUser> v = UnitofWork.ConnectionManager.
+                           GetMetualFriend(User.Identity.GetUserId());
+            List<ConnectionViewModel> cvm = v.Select(c => new ConnectionViewModel
+            { FirstName = c.FirstName, UserId = c.Id, ImageUrl = c.ProfileImage })
+            .ToList();
+            return View(cvm);
         }
+
 
         // GET: Network/Details/5
         public async Task<ActionResult> Details(int? id)

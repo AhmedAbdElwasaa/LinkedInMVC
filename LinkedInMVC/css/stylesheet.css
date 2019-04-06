@@ -7594,7 +7594,7 @@ a.text-dark:hover, a.text-dark:focus {
   margin-top: 6%;
   margin-left: 5%; }
 
-<<<<<<< HEAD
+/*<<<<<<< HEAD*/
 .network-block {
   margin-top: 100px;
   display: flex;
@@ -7621,10 +7621,10 @@ a.text-dark:hover, a.text-dark:focus {
     .network-block__imgprofile__pimage {
       position: absolute;
       border-radius: 50%;
-      top: 1rem;
-      left: 4rem;
-      width: 8.5rem;
-      height: 8.5rem; }
+      top: 0rem;
+      left: 2rem;
+      width: 8.7rem;
+      height: 8.7rem; }
     .network-block__imgprofile__content {
       display: flex;
       justify-content: center;
@@ -7736,6 +7736,10 @@ a.text-dark:hover, a.text-dark:focus {
   justify-content: center;
   margin-top: 74px; }
 
+.net-row {
+  margin-top: 100px;
+  margin-bottom: 100px; }
+
 body {
   background-color: #E6E9EC !important; }
 
@@ -7752,8 +7756,7 @@ body {
     border-bottom: 0.1px rgba(0, 0, 0, 0.04);
     padding-bottom: 1rem; }
 
-=======
->>>>>>> 50bc30012ad2af562579ff6994fc3764ac291c69
+/*=======*/
 .posts {
   display: flex;
   flex-direction: column;
