@@ -247,8 +247,7 @@ E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AI.Dependency
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AI.WindowsServer.xml
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AI.Web.xml
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csprojAssemblyReference.cache
-E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.test.resources
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.testamal.resources
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.GenerateResource.cache
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CoreCompileInputs.cache
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CopyComplete

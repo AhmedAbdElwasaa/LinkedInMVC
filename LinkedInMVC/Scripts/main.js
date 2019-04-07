@@ -1,26 +1,25 @@
 ﻿var edu = null;
+var exp = null;
+//education
 $("#EduBtnSave").click(() => {
-
     edu = {
 
         SchoolName: $("#Education_SchoolName").val(),
         Degree: $("#Education_Degree").val(),
         FieldOfStudy: $("#Education_FieldOfStudy").val(),
         Grade: $("#Education_Grade").val()
+        //date
 
     }
-
-
-    console.log(edu);
-
+    $('#EducationModal').modal('hide');
+    
 });
 
 
+
+
 function OnSuccessAddEducation() {
-    debugger
-  
-    console.log(edu);
-    
+
       $(".education-container").append(`<div class="education">
         <div class= "education-data">
         <div class="btn-edit-education" data-toggle="modal" data-target="#AddEducationModal"><i class="fas fa-pen"></i></div>
@@ -42,9 +41,7 @@ function OnSuccessAddEducation() {
 </div>
     </div >`);
 
-  
- $('#EducationModal').modal('hide');
-    
+   
 } 
 
 
@@ -55,3 +52,54 @@ $(".btn-edit-education").click(() => {
 
 
 });
+
+
+//Experience
+
+$("#ExpBtnSave").click(() => {
+
+    exp  = {
+
+        Title: $("#Experience_Title").val(),
+        Company: $("#Experience_Company").val(),
+        Location: $("#Experience_Location").val(),
+        //date
+
+    }
+
+
+});
+
+
+function OnSuccessAddExperience() {
+    debugger
+    $(".experience-container").append(`  <div class="experience">
+            <div class="experience-data">
+                <div class="btn-edit-experience"  data-toggle="modal" data-target="#ExperienceModal"><i class="fas fa-pen"></i></div>
+                <div class="company-img-container">
+                    <img src="../images/Logo.png" class="company-img">
+                </div>
+                <div class="experience-details">
+                    <h4 class="title"> ${exp.Title}</h4>
+                    <h4 class="company-name">${exp.Company}</h4>
+                    <h4 class="company-name">${exp.Location}}</h4>
+                    <div class="date">
+                        <h4 class="date-from">@Model.ToYear</h4>
+                        <span> - </span>
+                        <h4 class="date-to">@Model.ToYear</h4>
+                    </div>
+                </div>
+            </div>
+        </div>`);
+
+
+}
+
+
+//$(".btn-edit-education").click(() => {
+//    debugger
+//    var $this = $(this);
+//    console.log($this.parent())
+
+
+//});

@@ -236,9 +236,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\DLIndustryHelper.cs" />
-    <Compile Include="Migrations\201904061845422_test.cs" />
-    <Compile Include="Migrations\201904061845422_test.Designer.cs">
-      <DependentUpon>201904061845422_test.cs</DependentUpon>
+    <Compile Include="Migrations\201904071750386_testamal.cs" />
+    <Compile Include="Migrations\201904071750386_testamal.Designer.cs">
+      <DependentUpon>201904071750386_testamal.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -837,10 +837,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_CommentPartial.cshtml" />
+    <Content Include="sass\components\_job.scss" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904061845422_test.resx">
-      <DependentUpon>201904061845422_test.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904071750386_testamal.resx">
+      <DependentUpon>201904071750386_testamal.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

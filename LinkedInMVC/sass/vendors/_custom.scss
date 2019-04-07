@@ -167,6 +167,52 @@ body
     }
 }
 
+#ExperienceModal {
+
+    .modal-dialog {
+        max-width: 700px;
+
+        .modal-body {
+            font-size: 1.6rem;
+
+            input {
+                width: 100% !important;
+            }
+
+            .Title {
+                margin-top: 2rem;
+            }
+
+            .date {
+                display: flex;
+                width: 100%;
+
+                .StartDate-wrapper {
+                    width: 50%;
+
+                    select {
+                        width: 90%;
+                    }
+                }
+
+                .EndDate-Wrapper {
+                    width: 50%;
+
+                    select {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+
+        .modal-footer {
+            button {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
 
 /*#EditEducationModal {
 

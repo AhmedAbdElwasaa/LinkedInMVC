@@ -7245,6 +7245,9 @@ a.text-dark:hover, a.text-dark:focus {
     .skills-container .skill .Endorsements {
       font-size: 1.6rem;
       padding-left: 2rem; }
+  .skills-container .Endorsements {
+    font-size: 1.6rem;
+    padding-left: 2rem; }
 
 .job-card {
   margin-bottom: 2rem;
@@ -7648,7 +7651,15 @@ a.text-dark:hover, a.text-dark:focus {
 .connection .dropdown-item {
   font-size: 12px; }
 
-<<<<<<< HEAD
+.connection-section {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 83ms;
+  background-color: #fff;
+  border-radius: 2px;
+  width: 800px;
+  margin-top: 6%;
+  margin-left: 5%; }
+
 .job-page {
   height: 100vh;
   background-color: #F5F5F5; }
@@ -7670,15 +7681,6 @@ a.text-dark:hover, a.text-dark:focus {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: flex-start; }
-=======
-.connection-section {
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 83ms;
-  background-color: #fff;
-  border-radius: 2px;
-  width: 800px;
-  margin-top: 6%;
-  margin-left: 5%; }
 
 .network-block {
   margin-top: 100px;
@@ -7820,7 +7822,6 @@ a.text-dark:hover, a.text-dark:focus {
   display: flex;
   justify-content: center;
   margin-top: 74px; }
->>>>>>> 150438a0d56d808cf5429042a98c6a277bd98794
 
 body {
   background-color: #E6E9EC !important; }
@@ -7972,8 +7973,6 @@ ul, li {
   .post-box__modal-header {
     background: #0073b1; }
 
-.modal-header {
-  background-color: #0073b1 !important; }
 
 .close {
   color: white; }
@@ -15382,6 +15381,28 @@ body {
         #EducationModal .modal-dialog .modal-body .date .EndDate-Wrapper select {
           width: 90%; }
   #EducationModal .modal-dialog .modal-footer button {
+    font-size: 1.6rem; }
+
+#ExperienceModal .modal-dialog {
+  max-width: 700px; }
+  #ExperienceModal .modal-dialog .modal-body {
+    font-size: 1.6rem; }
+    #ExperienceModal .modal-dialog .modal-body input {
+      width: 100% !important; }
+    #ExperienceModal .modal-dialog .modal-body .Title {
+      margin-top: 2rem; }
+    #ExperienceModal .modal-dialog .modal-body .date {
+      display: flex;
+      width: 100%; }
+      #ExperienceModal .modal-dialog .modal-body .date .StartDate-wrapper {
+        width: 50%; }
+        #ExperienceModal .modal-dialog .modal-body .date .StartDate-wrapper select {
+          width: 90%; }
+      #ExperienceModal .modal-dialog .modal-body .date .EndDate-Wrapper {
+        width: 50%; }
+        #ExperienceModal .modal-dialog .modal-body .date .EndDate-Wrapper select {
+          width: 90%; }
+  #ExperienceModal .modal-dialog .modal-footer button {
     font-size: 1.6rem; }
 
 /*#EditEducationModal {
