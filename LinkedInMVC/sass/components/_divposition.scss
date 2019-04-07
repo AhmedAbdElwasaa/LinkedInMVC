@@ -1,0 +1,132 @@
+﻿.header-position
+{
+    position: fixed;
+    z-index: 1000;
+}
+
+.buttn-back{
+    margin-left: 7rem;
+}
+
+
+.div-position {
+    /*float:left;*/
+    position: fixed !important;
+    z-index: 1000;
+    color: $linkedcolortext;
+    background-color: white;
+    margin-left: 7rem;
+    margin-top: 4.5rem;
+    padding-top: 4rem;
+    padding-left:2rem;
+}
+.text-color
+{
+    color:black;
+}
+.text-color1{
+    color:$textcolorlight;
+}
+.drop-fsize
+{
+    font-size: 1.5rem !important;
+}
+.text-header2{
+    position: fixed !important;
+    z-index: 1000 !important;
+    margin-top: 25rem;
+    margin-right: 9rem;
+    width: 50rem;
+    border:1px solid $colorborder;
+}
+.image-border{
+    margin-left: 3rem;
+    border:2px solid white;
+    width: 14rem;
+    height: 14rem;
+}
+.lbl-style
+{
+    border:1px solid $colorborder;  
+}
+.form-position{
+    border: 1px solid $colorborder;
+    margin-top:2rem;
+    background-color: white;
+    margin-top: 6rem;
+    background-color: white;
+    margin-left: 9rem;
+    margin-right: 8rem;
+
+
+}
+.form-position1{
+    border: 1px solid $colorborder;
+    background-color: white;
+    margin-top: 25rem;
+    background-color: white;
+    margin-left: 9rem;
+    margin-right: 8rem;
+}
+.text-header{
+    color:$linkedcolortext;
+    display: block;
+}
+.head-text-size {
+    font-size: 6rem;
+    margin-left: 7rem;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.div-bgcolor{
+    background-color: $bgcolorlighter;
+}
+.butt-style {
+    border: 2px solid $linkedcolortext !important;
+    margin-left: 15rem;
+    width: 8rem;
+    background:none;
+    color:inherit;
+    outline:inherit;
+}
+.butt-style1 {
+    position: absolute;
+    right: 15rem;
+    top: 0.5rem;
+    border: 2px solid #006097 !important;
+}
+
+.div-color {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            margin-left: 3rem;
+            width: 27rem;
+            height: 4rem;
+            background-color: $divcolor;
+        }
+
+        .textare-reseize {
+            border: none;
+            background-color: transparent;
+            resize: none;
+            outline: none;
+        }
+
+        .check-style {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .footer-form {
+            margin-left: 9rem;
+            font-size: 1.3rem;
+            width: 47rem;
+        }
+
+        .butn-disable {
+            background-color: $linkedcolortext !important;
+            color: $bgcolorlighter !important;
+        }

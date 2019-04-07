@@ -1,0 +1,35 @@
+@import"abstracts/functions";
+@import"abstracts/mixins";
+@import"abstracts/placeholders";
+@import "abstracts/variables";
+
+
+@import"base/reset";
+@import"base/typography";
+
+@import"components/cards";
+@import "components/companyentry";
+@import "components/companyregistration";  
+@import "components/divposition";    
+@import "components/companyProfile";  
+@import "components/comp_Post";
+@import "components/connection";
+
+@import "components/peopleMayKnow";
+
+
+//Home By Souhaila
+@import "layout/Home.scss";
+@import "components/posts.scss";
+@import "components/CreatePost.scss";
+@import "components/comments.scss";
+@import "components/_search-results.scss";
+@import "components/compdashboard";
+@import "components/compcomun";
+@import "components/Profile-card.scss";
+@import "layout/Home.scss";
+@import"layout/Profile";
+@import"layout/profile-card-layout.scss";
+
+@import"vendors/custom";
+// @import"vendors/jquery-ui";

@@ -1,0 +1,309 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+.profile {
+  margin: 5rem 0;
+  display:flex;
+  .profile-view {
+    height: 50rem;
+    padding: 0rem !important ;
+    margin: auto;
+    border: 1px solid $white;
+    background-color: $white;
+    .container-img-profile {
+      width: 15rem;
+      height: 15rem;
+      border: 1.5px solid $white; //change color
+      border-radius: 50%;   
+      position: relative;
+      top: -7rem;
+      left: 4rem;
+      #img-profile {
+        width: 100%;
+        height: 100%;
+        border: 1.5px solid $white; //change color
+        border-radius: 50%;
+        overflow: hidden;
+        background-size: cover;
+      }
+    }
+    .container-img-background {
+      //  width: 80rem;
+      width: 100%;
+      height: 20rem;
+      #img-background {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .profile-details {
+      margin-top: -5rem;
+      display: flex;
+      justify-content: space-between;
+      .profile-details-left {
+        padding-left: 2rem;
+        #profile-user-name {
+          text-transform: capitalize;
+        }
+        #profile-headline {
+          text-transform: capitalize;
+        }
+      }
+      .profile-details-right {
+        padding-right: 5rem;
+        margin-left: 40rem;
+        #company-img {
+          width: 3rem;
+          height: 2rem;
+        }
+        .current-company-name {
+          font-size: 1.5rem;
+          margin-top: 2rem;
+        }
+        #see-connection {
+          margin-top: 2rem;
+          font-size: 1.5rem;
+          cursor: pointer;
+          &:hover {
+            color: $primary;
+            text-decoration: underline;
+          }
+          // }
+        }
+      }
+
+      #profile-user-name,
+      #profile-headline,
+      .current-company-name,
+      #see-connection {
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 2px;
+      }
+      #profile-headline .current-company-name {
+        color: $gray-800;
+      }
+      #fa-users {
+        color: $gray-700;
+      }
+      .dropdown-profile {
+        #Add-profile-section {
+          font-size: 1.6rem;
+          // padding: 0.7rem;
+          margin-top: 2rem;
+        }
+        .dropdown-menu {
+          .dropdown-item {
+            color: $gray-800;
+            font-size: 1.6rem;
+            i {
+              margin-right: 0.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.profile-section
+{
+    text-transform: capitalize;
+    font-size: 2rem;
+   
+}
+// .profile-body
+// {
+    
+// }
+
+
+.experience-container {
+    margin: auto;
+    padding-top: 2rem;
+    background-color: $white;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+
+    #btn-add-experience {
+        position: relative;
+        left: 79rem;
+        color: $blue;
+        font-size: 1.7rem;
+        top: -2rem;
+    }
+
+    .experience {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+
+        .experience-data {
+            line-height: 2.5rem;
+            display: flex;
+
+            .btn-edit-experience {
+                position: relative;
+                left: 79rem;
+                color: $blue;
+                font-size: 1.7rem;
+            }
+
+            .company-img-container {
+                height: 5.5rem;
+                width: 5.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .company-img {
+                    width: 100%
+                }
+            }
+
+            .experience-details {
+                font-size: 1.6rem;
+
+                .date {
+                    display: flex;
+
+                    .date-from {
+                        margin-right: 1rem;
+                    }
+
+                    .date-to {
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+// education
+.education-container
+{
+  margin: auto;
+  padding-top: 2rem;
+  background-color: $white;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  #btn-add-education
+  {
+    position: relative;
+    left: 79rem;
+    color: $blue;
+    font-size: 1.7rem;
+    top: -2rem;
+  }
+  .education
+  {
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    .education-data
+    {
+      line-height: 2.5rem;
+      display: flex;
+      .btn-edit-education
+      {
+          position: relative;
+          left: 79rem;
+          color: $blue;
+          font-size: 1.7rem;
+      }
+      .school-img-container
+      {
+          height: 5.5rem;
+          width: 5.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .school-img
+          {
+              width: 100%
+          }
+      }
+      .education-details
+      {
+        font-size: 1.6rem;
+          .date
+          {
+            display: flex;
+            .date-from
+            {
+                margin-right: 1rem;
+            }
+            .date-to
+            {
+                margin-left: 1rem;
+            }
+          }
+      }
+    }
+  }
+}
+
+// skills
+.skills-container {
+    margin: auto;
+    padding-top: 2rem;
+    background-color: $white;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+
+    #btn-add-skill {
+        position: relative;
+        left: 79rem;
+        color: $blue;
+        font-size: 1.7rem;
+        top: -2rem;
+    }
+
+    .btn-edit-skills {
+        position: relative;
+        left: 79rem;
+        color: $blue;
+        font-size: 1.7rem;
+    }
+
+    .skill {
+        display: flex;
+        flex-direction: column;
+        background-color: $white;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+
+        .skill-data {
+            display: flex;
+
+            .plus-icon-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.5rem;
+                border: 1px solid $blue;
+                color: $blue;
+                background-color: $white;
+                border-radius: 50%;
+                width: 3rem;
+                height: 3rem;
+            }
+
+            .skill-name {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-left: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: capitalize;
+            }
+        }
+
+        .Endorsements {
+            font-size: 1.6rem;
+            padding-left: 2rem;
+        }
+    }
+}

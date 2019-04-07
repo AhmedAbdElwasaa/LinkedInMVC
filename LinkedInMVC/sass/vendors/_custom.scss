@@ -1,0 +1,218 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+// .mynav-container-fluid
+// {
+//     background-color: $dark-blue;
+
+//     .mynav-container
+//     {
+//         background-color: $dark-blue;
+//         .mynav
+//         {
+//             justify-content: flex-end;
+//             .navbar-nav
+//             {
+//                 font-size: 1.3rem;
+//             }
+//             .navbar-toggler
+//             {
+//                background-color:$white;
+//             }
+//             .logo
+//             {
+//                 height: 4rem;
+//             }
+//             .nav-item
+//             {
+//                 margin: 0 1rem;
+
+//                 .nav-link
+//                 {
+//                     color: $white;
+//                     display: flex;
+//                     flex-direction: column;
+//                     justify-content: space-evenly;
+//                     align-items: center;
+
+//                 }
+//             }
+
+//         }
+//     }
+// }
+body
+{
+    padding-top: 0px;
+     padding-bottom: 0px;
+}
+.navbar-toggler-icon
+{
+    background-color: $white;
+}
+.header
+{
+    width: 100%;
+    .container-fluid
+    {
+        width: 100%;
+        background-color: $dark-blue;
+    }
+    .container
+    {
+        background-color: $dark-blue;
+        width: 100%;
+    }
+}
+.no-gutters
+{
+    padding: 0rem;
+}
+.navbar-nav
+{
+    font-size: 1.4rem
+}
+.logo
+{
+    height: 4rem;
+}
+.nav-link
+{
+    padding: 0rem;
+    margin: 0rem;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.navbar-toggler-icon
+{
+    background-color: $white;
+}
+.nav-link-item
+{
+    color: $white;
+    text-decoration: none;
+    padding: 0rem;
+    margin: 0rem;
+    &:hover
+    {
+        color: $white;
+        text-decoration: none;
+    }
+}
+.nav-item
+{
+    padding: 0 1rem;
+}
+.navbar-nav
+{
+ li
+ {
+    a
+    {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+ }
+}
+.navbar
+{
+    padding: 0rem;
+    margin: 0rem;
+}
+
+#AddEducationModal {
+
+    .modal-dialog {
+        max-width: 700px;
+
+        .modal-body {
+            font-size: 1.6rem;
+
+            input {
+                width: 100% !important;
+            }
+
+            .Title {
+                margin-top: 2rem;
+            }
+
+            .date {
+                display: flex;
+                width: 100%;
+
+                .StartDate-wrapper {
+                    width: 50%;
+
+                    select {
+                        width: 90%;
+                    }
+                }
+
+                .EndDate-Wrapper {
+                    width: 50%;
+
+                    select {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+
+        .modal-footer
+            {
+            button 
+                {
+
+            font-size:1.6rem;
+            }
+        }
+    }
+}
+
+
+#EditEducationModal {
+
+    .modal-dialog {
+        max-width: 700px;
+
+        .modal-body {
+            font-size: 1.6rem;
+
+            input {
+                width: 100% !important;
+            }
+
+            .Title {
+                margin-top: 2rem;
+            }
+
+            .date {
+                display: flex;
+                width: 100%;
+
+                .StartDate-wrapper {
+                    width: 50%;
+
+                    select {
+                        width: 90%;
+                    }
+                }
+
+                .EndDate-Wrapper {
+                    width: 50%;
+
+                    select {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+
+        .modal-footer {
+            button {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
