@@ -4,12 +4,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="row">
-    <div class=" connection-section ">
-        @foreach (ConnectionViewModel item in Model)
-        {
-           //  @Html.HiddenFor(item.UserId)
-
-            <div class=" col-lg-12 connection-card  ">
+    <div id="d" class=" connection-section ">
+        @{
+            int x = 0;
+                }
+            @foreach (ConnectionViewModel item in Model)
+            {
+                //  @Html.HiddenFor(item.UserId)
+                x++;
+            <div id="@x"  class=" col-lg-12 connection-card  ">
                 <div class=" connection">
                     <div class="image-container">
                         <img class="image" src="@item.ImageUrl " />
@@ -24,7 +27,9 @@
                         <div class="dropdown remove-ddl">
                             <i class="fas fa-ellipsis-h remove-conn" data-toggle="dropdown"></i>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                     @Html.ActionLink("Remove Connection", "Delete", "connection", new { id = item.UserId }, new { @class = "dropdown-item" })
+                                @Html.ActionLink("Remove Connection", "Delete", "connection", new { id = item.UserId }, new { @class = "dropdown-item" })
+                                @Ajax.ActionLink("Remove Connection", "Delete", "connection", new { id = item.UserId },
+                      new AjaxOptions { UpdateTargetId="d" ,OnSuccess = "removerow('" + x + "')" }, null)
                             </div>
                         </div>
                     </div>
@@ -39,3 +44,9 @@
     <label>@item.FirstName</label>
     <label>@item.UserId</label>
 }*@
+<script>
+    function removerow(x) {
+        var self = this
+        $(x).remove();
+    }
+</script>
