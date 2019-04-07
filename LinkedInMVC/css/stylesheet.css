@@ -14933,46 +14933,70 @@ body {
   padding: 0rem;
   margin: 0rem; }
 
-#AddEducationModal .modal-dialog {
+#EducationModal .modal-dialog {
   max-width: 700px; }
-  #AddEducationModal .modal-dialog .modal-body {
+  #EducationModal .modal-dialog .modal-body {
     font-size: 1.6rem; }
-    #AddEducationModal .modal-dialog .modal-body input {
+    #EducationModal .modal-dialog .modal-body input {
       width: 100% !important; }
-    #AddEducationModal .modal-dialog .modal-body .Title {
+    #EducationModal .modal-dialog .modal-body .Title {
       margin-top: 2rem; }
-    #AddEducationModal .modal-dialog .modal-body .date {
+    #EducationModal .modal-dialog .modal-body .date {
       display: flex;
       width: 100%; }
-      #AddEducationModal .modal-dialog .modal-body .date .StartDate-wrapper {
+      #EducationModal .modal-dialog .modal-body .date .StartDate-wrapper {
         width: 50%; }
-        #AddEducationModal .modal-dialog .modal-body .date .StartDate-wrapper select {
+        #EducationModal .modal-dialog .modal-body .date .StartDate-wrapper select {
           width: 90%; }
-      #AddEducationModal .modal-dialog .modal-body .date .EndDate-Wrapper {
+      #EducationModal .modal-dialog .modal-body .date .EndDate-Wrapper {
         width: 50%; }
-        #AddEducationModal .modal-dialog .modal-body .date .EndDate-Wrapper select {
+        #EducationModal .modal-dialog .modal-body .date .EndDate-Wrapper select {
           width: 90%; }
-  #AddEducationModal .modal-dialog .modal-footer button {
+  #EducationModal .modal-dialog .modal-footer button {
     font-size: 1.6rem; }
 
-#EditEducationModal .modal-dialog {
-  max-width: 700px; }
-  #EditEducationModal .modal-dialog .modal-body {
-    font-size: 1.6rem; }
-    #EditEducationModal .modal-dialog .modal-body input {
-      width: 100% !important; }
-    #EditEducationModal .modal-dialog .modal-body .Title {
-      margin-top: 2rem; }
-    #EditEducationModal .modal-dialog .modal-body .date {
-      display: flex;
-      width: 100%; }
-      #EditEducationModal .modal-dialog .modal-body .date .StartDate-wrapper {
-        width: 50%; }
-        #EditEducationModal .modal-dialog .modal-body .date .StartDate-wrapper select {
-          width: 90%; }
-      #EditEducationModal .modal-dialog .modal-body .date .EndDate-Wrapper {
-        width: 50%; }
-        #EditEducationModal .modal-dialog .modal-body .date .EndDate-Wrapper select {
-          width: 90%; }
-  #EditEducationModal .modal-dialog .modal-footer button {
-    font-size: 1.6rem; }
+/*#EditEducationModal {
+
+    .modal-dialog {
+        max-width: 700px;
+
+        .modal-body {
+            font-size: 1.6rem;
+
+            input {
+                width: 100% !important;
+            }
+
+            .Title {
+                margin-top: 2rem;
+            }
+
+            .date {
+                display: flex;
+                width: 100%;
+
+                .StartDate-wrapper {
+                    width: 50%;
+
+                    select {
+                        width: 90%;
+                    }
+                }
+
+                .EndDate-Wrapper {
+                    width: 50%;
+
+                    select {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+
+        .modal-footer {
+            button {  
+                font-size: 1.6rem;
+            }
+        }
+    }
+}*/

@@ -3,7 +3,10 @@
 
     <div class="education">
         <div class="education-data">
-            <div class="btn-edit-education"  data-toggle="modal" data-target="#EditEducationModal"><i class="fas fa-pen"></i></div>
+            <div class="btn-edit-education" data-toggle="modal" data-target="#EducationModal"><i class="fas fa-pen"></i></div>
+          @*  @Html.ActionLink(" ", "", new { id = Model.Id }, new { @class = "fas fa-pen", @data_target= "#AddEducationModal" })*@
+
+           
             <div class="school-img-container">
                 <img src="../images/Logo.png" class="school-img">
             </div>
@@ -24,71 +27,5 @@
 
 
 
-    <div class="modal fade" id="EditEducationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edit Education</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    @using (Html.BeginForm("Create", "Educations", "Post", FormMethod.Post))
-                    {
-                        @Html.AntiForgeryToken()
-                        <!-- <div class="Title">School</div>-->
-                        @Html.LabelFor(m=>m.SchoolName, new { @class = "Title" })
-                        @Html.EditorFor(m => m.SchoolName, new { id = "schoolName"  @*placeholder = "Ex: Boston University"*@});
-                        <!-- <input id="schoolName" type="text" placeholder="Ex: Boston University" />-->
 
-                        <!-- <div class="Title">Degree</div>-->
-                        @Html.LabelFor(m => m.Degree, new { @class = "Title" })
-                        @Html.EditorFor(m => m.Degree, new { id = "Degree"  @*placeholder = "Ex: Boston University"*@});
-
-                        <!-- <input id="Degree" type="text" placeholder="Ex: Bachelor’s" /> -->
-
-                        @*<div class="Title">Field of study</div>
-                        <input id="StudyField" type="text" placeholder="Ex: Business" />*@
-
-                        @Html.LabelFor(m => m.FieldOfStudy, new { @class = "Title" })
-                        @Html.EditorFor(m => m.FieldOfStudy, new { id = "StudyField"  @*placeholder = "Ex: Boston University"*@});
-
-                        <div class="date">
-                            <div class="StartDate-wrapper">
-
-                                <div class="Title">Start Date</div>
-                                <select data-control-name="edit_education_start_year" name="startYear" id="pe-education-form__start-year" class="pe-education-form__start-year ember-view">
-                                    <option value="">Year</option>
-                                    @for (var i = 2019; i > 1990; i--)
-                                    {
-                                        <option value="@i">@i</option>
-                                    }
-
-                                </select>
-                            </div>
-                            <div class="EndDate-Wrapper">
-                                <div class="Title">End Date</div>
-                                <select data-control-name="edit_education_start_year" name="startYear" id="pe-education-form__start-year" class="pe-education-form__start-year ember-view">
-                                    <option value="">Year</option>
-                                    @for (var i = 2019; i > 1990; i--)
-                                    {
-                                        <option value="@i">@i</option>
-                                    }
-
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary" id="BtnSave">Save</button>
-                        </div>
-                    }
-                </div>
-            </div>
-        </div>
-
-
-</div>
 
