@@ -68,6 +68,8 @@ namespace LinkedInMVC.Controllers
         {
             CompanyViewModel cvm = new CompanyViewModel
             {
+                
+                Selected = false,
                 Industries = UnitofWork.IndustryManager.GetAll().Select(a => new SelectListItem { Text = a.Name, Value = a.Id.ToString(),Selected=true }).ToList(),
                 Sizes=UnitofWork.CompanySizeManager.GetAll().Select(a=> new SelectListItem { Text=a.Size,Value=a.Id.ToString(),Selected=true}).ToList(),
                 Types=UnitofWork.CompanyTypeManager.GetAll().Select(a=>new SelectListItem {Text=a.Type,Value=a.Id.ToString(),Selected=true }).ToList()
@@ -87,8 +89,8 @@ namespace LinkedInMVC.Controllers
             if (ModelState.IsValid)
             {
                 UserCompany userCompany = new UserCompany();
-                ApplicationUser user = new ApplicationUser();
-                 user.Id=User.Identity.GetUserId();
+                string userId = User.Identity.GetUserId();
+                ApplicationUser currentUser = UnitofWork.UserManager.FindById(userId);
                 if (company.LogoFileName!=null)
                 {
                     string fileName = Path.GetFileNameWithoutExtension(company.LogoFileName.FileName);
@@ -98,7 +100,7 @@ namespace LinkedInMVC.Controllers
                     fileName = Path.Combine(Server.MapPath("~/images/"), fileName);
                     company.LogoFileName.SaveAs(fileName);
                     UnitofWork.CompanyManager.Add(company);
-                    UnitofWork.UserCompanyManager.AddCompany(user, company);
+                    UnitofWork.UserCompanyManager.AddCompany(currentUser, company);
                     ViewBag.Message += string.Format("<b>{0}</b> Uploaded.<br/>", fileName);
                     return RedirectToAction("Index");
                 }

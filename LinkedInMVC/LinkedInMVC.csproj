@@ -236,13 +236,29 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\DLIndustryHelper.cs" />
-    <Compile Include="Migrations\201904061845422_test.cs" />
-    <Compile Include="Migrations\201904061845422_test.Designer.cs">
-      <DependentUpon>201904061845422_test.cs</DependentUpon>
+    <Compile Include="Migrations\201904070740558_tttrr.cs" />
+    <Compile Include="Migrations\201904070740558_tttrr.Designer.cs">
+      <DependentUpon>201904070740558_tttrr.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904061044516_teddd.cs" />
-    <Compile Include="Migrations\201904061044516_teddd.Designer.cs">
-      <DependentUpon>201904061044516_teddd.cs</DependentUpon>
+    <Compile Include="Migrations\201904070744442_tttrr11.cs" />
+    <Compile Include="Migrations\201904070744442_tttrr11.Designer.cs">
+      <DependentUpon>201904070744442_tttrr11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904070818147_tttrr112.cs" />
+    <Compile Include="Migrations\201904070818147_tttrr112.Designer.cs">
+      <DependentUpon>201904070818147_tttrr112.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904070827050_tttrr1123.cs" />
+    <Compile Include="Migrations\201904070827050_tttrr1123.Designer.cs">
+      <DependentUpon>201904070827050_tttrr1123.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904070838399_trtrtr.cs" />
+    <Compile Include="Migrations\201904070838399_trtrtr.Designer.cs">
+      <DependentUpon>201904070838399_trtrtr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904070959111_tytyty.cs" />
+    <Compile Include="Migrations\201904070959111_tytyty.Designer.cs">
+      <DependentUpon>201904070959111_tytyty.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -593,11 +609,23 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904061845422_test.resx">
-      <DependentUpon>201904061845422_test.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904070740558_tttrr.resx">
+      <DependentUpon>201904070740558_tttrr.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904061044516_teddd.resx">
-      <DependentUpon>201904061044516_teddd.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904070744442_tttrr11.resx">
+      <DependentUpon>201904070744442_tttrr11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904070818147_tttrr112.resx">
+      <DependentUpon>201904070818147_tttrr112.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904070827050_tttrr1123.resx">
+      <DependentUpon>201904070827050_tttrr1123.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904070838399_trtrtr.resx">
+      <DependentUpon>201904070838399_trtrtr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904070959111_tytyty.resx">
+      <DependentUpon>201904070959111_tytyty.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

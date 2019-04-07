@@ -2,6 +2,7 @@
 using Repository;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Web;
 
@@ -17,13 +18,33 @@ namespace LinkedInMVC.BLL
         }
 
 
-        public bool AddCompany(ApplicationUser user,Company company)
+        public bool AddCompany(ApplicationUser userId,Company company)
         {
-            UserCompany uc = new UserCompany();
-            uc.Company = company;
-            uc.ApplicationUser=user;
-            context.UserCompany.Add(uc);
-           return context.SaveChanges()>0;
+           // try
+           // {
+                UserCompany uc = new UserCompany();
+                uc.Company = company;
+                uc.ApplicationUser = userId;
+                context.UserCompany.Add(uc);
+            return context.SaveChanges()>0;
+      
+           // } catch(DbEntityValidationException e )
+           // {
+            //    Exception raise = e;
+              //  foreach (var eve in e.EntityValidationErrors)
+              //  {
+                 
+               //     foreach (var ve in eve.ValidationErrors)
+                //    {
+                  //      string message = string.Format("{0}:{1}",eve.Entry.Entity.ToString(),ve.ErrorMessage);
+                   //     raise = new InvalidOperationException(message, raise);
+
+//                    }
+
+              //  }
+
+               //  throw raise;
+           // }
         }
     }
 }

@@ -46,7 +46,7 @@
                         @Html.LabelFor(m => m.Company.Name, "Name *", new { @class = "h5 py-4" })
                         @*<label class="h5 py-4" for="name">Name*</label>*@
                         @Html.TextBoxFor(m => m.Company.Name, new { @class = "form-control p-4" })
-                        @Html.ValidationMessageFor(m => m.Company.Name, "", new { @class = "error" })
+                        @Html.ValidationMessageFor(m => m.Company.Name,"", new { @class = "error" })
                         @*<input type="text" id="name" class="form-control p-4" />*@
                     </div>
                     <div class="col-12 py-2">
@@ -138,61 +138,68 @@
                 <div class="form-group form-position">
                     <div class="col-12 py-1">
                         <span class="text-header h3">Company details</span>
-                        @Html.LabelFor(m => m.Company.Industry, "Industry *", new { @class = "h5 py-4" })
+                        @Html.LabelFor(m => m.Industries, "Industry *", new { @class = "h5 py-4" })
+                   
                         @*<label class="h5 py-4" for="dropdownMenu">Industry *</label>*@
-                        @Html.DropDownListFor(m => m.Company.Industry.Id, Model.Industries, new { @class = "form-control drop-fsize", @id = "dropdownMenu" })
-                        @*<select class="form-control drop-fsize" id="dropdownMenu">
-                                <option selected>Select industry</option>
-                                <option value="Accounting">Accounting</option>
-                                <option value="Airlines/Aviation">Airlines/Aviation</option>
-                                <option value="AlternativeDisputeResolution">Alternative Dispute Resolution</option>
-                                <option value="AlternativeMedicine">Alternative Medicine</option>
-                                <option value="Animation"> Animation</option>
-                                <option value="ApparelFashion">Apparel & Fashion</option>
-                                <option value="ArchitecturePlanning">Architecture & Planning</option>
-                                <option value="ArtsCrafts">Arts & Crafts</option>
-                                <option value="Automotive">Automotive</option>
-                                <option value="AviationAerospace">Aviation & Aerospace</option>
-                                <option value="Banking">Banking</option>
-                                <option value="Biotechnology">Biotechnology</option>
-                                <option value="InformationTechnologyServices">
-                                    Information Technology & Services
-                                </option>
-                                <option value="Internet">Internet</option>
-                                <option value="InvestmentBanking">Investment Banking</option>
-                                <option value="InvestmentManagement">Investment Management</option>
-                                <option value="Veterinary">Veterinary</option>
-                                <option value="Telecommunications">Telecommunications</option>
-                                <option value="TranslationLocalization">Translation & Localization</option>
+                        @Html.DropDownListFor(m => m.Company.Industry.Id,Model.Industries, new { @class = "form-control drop-fsize" })
+                        @Html.ValidationMessageFor(m => m.Industries, "", new { @class = "error" })
 
-                            </select>*@
+                        @*<select class="form-control drop-fsize" id="dropdownMenu">
+            <option selected>Select industry</option>
+            <option value="Accounting">Accounting</option>
+            <option value="Airlines/Aviation">Airlines/Aviation</option>
+            <option value="AlternativeDisputeResolution">Alternative Dispute Resolution</option>
+            <option value="AlternativeMedicine">Alternative Medicine</option>
+            <option value="Animation"> Animation</option>
+            <option value="ApparelFashion">Apparel & Fashion</option>
+            <option value="ArchitecturePlanning">Architecture & Planning</option>
+            <option value="ArtsCrafts">Arts & Crafts</option>
+            <option value="Automotive">Automotive</option>
+            <option value="AviationAerospace">Aviation & Aerospace</option>
+            <option value="Banking">Banking</option>
+            <option value="Biotechnology">Biotechnology</option>
+            <option value="InformationTechnologyServices">
+                Information Technology & Services
+            </option>
+            <option value="Internet">Internet</option>
+            <option value="InvestmentBanking">Investment Banking</option>
+            <option value="InvestmentManagement">Investment Management</option>
+            <option value="Veterinary">Veterinary</option>
+            <option value="Telecommunications">Telecommunications</option>
+            <option value="TranslationLocalization">Translation & Localization</option>
+
+        </select>*@
                     </div>
                     <div class="col-12 py-2">
                         @Html.LabelFor(m => m.Company.Size, "Company size *", new { @class = "h5 py-4" })
                         @*<label class="h5 py-4" for="dropdownMenu2">Company size * </label>*@
-                        @Html.DropDownListFor(m => m.Company.CompanySize.Id, Model.Sizes, new { @class = "form-control drop-fsize",option= "Select company size ", @id = "dropdownMenu2", selected = "Select company size" })
+                        @Html.DropDownListFor(m => m.Company.CompanySize.Id, Model.Sizes, new { @class = "form-control drop-fsize", @id = "dropdownMenu2", selected = "Select company size" })
+                        @Html.ValidationMessageFor(m => m.Sizes, "", new { @class = "error" })
+
                         @*<select class="form-control drop-fsize" id="dropdownMenu2">
-                                <option selected>Select company size</option>
-                                <option value="Publiccompany">0–1 employees</option>
-                                <option value="Self-employed">2–10 employees</option>
-                                <option value="Governmentagency">11–50 employees</option>
-                                <option value="Nonprofit">51–200 employees</option>
-                            </select>*@
+            <option selected>Select company size</option>
+            <option value="Publiccompany">0–1 employees</option>
+            <option value="Self-employed">2–10 employees</option>
+            <option value="Governmentagency">11–50 employees</option>
+            <option value="Nonprofit">51–200 employees</option>
+        </select>*@
                     </div>
                     <div class="col-12 py-2">
                         @Html.LabelFor(m => m.Company.Type, "Company type *", new { @class = "h5 py-4" })
                         @*<label for="dropdownMenu3" class="h5 py-4">Company type *</label>*@
-                        @Html.DropDownListFor(m => m.Company.CompanyType.Id, Model.Types, new { @class = "form-control drop-fsize", @id = "dropdownMenu3", @selected = "Select company type" })
+                        @Html.DropDownListFor(m => m.Company.CompanyType.Id, Model.Types, new { @class = "form-control drop-fsize", @id = "dropdownMenu3", selected = "Select company type" })
+                        @Html.ValidationMessageFor(m => m.Types, "", new { @class = "error" })
+
                         @*<select class="form-control drop-fsize" id="dropdownMenu3">
-                                <option selected>Select company type</option>
-                                <option value="Publiccompany">Public company</option>
-                                <option value="Self-employed">Self-employed</option>
-                                <option value="Governmentagency">Government agency</option>
-                                <option value="Nonprofit">Nonprofit</option>
-                                <option value="Soleproprietorship">Sole proprietorship</option>
-                                <option value="Privatelyheld">Privately held</option>
-                                <option value="Partnership">Partnership</option>
-                            </select>*@
+            <option selected>Select company type</option>
+            <option value="Publiccompany">Public company</option>
+            <option value="Self-employed">Self-employed</option>
+            <option value="Governmentagency">Government agency</option>
+            <option value="Nonprofit">Nonprofit</option>
+            <option value="Soleproprietorship">Sole proprietorship</option>
+            <option value="Privatelyheld">Privately held</option>
+            <option value="Partnership">Partnership</option>
+        </select>*@
                     </div>
                 </div>
             </div>
@@ -241,7 +248,7 @@
                 <div class="form-group footer-form">
                     <div class="row">
                         <div class="col-1 py-1">
-                            @Html.CheckBox("Checkbox",false,new {@class= "check-style" })
+                            @Html.CheckBoxFor(m=>m.Selected,new {@class= "check-style"})
                             @*<input type="checkbox" class="check-style" />*@
                         </div>
                         <div class="col-11 ">
@@ -253,7 +260,15 @@
 
                         </div>
                         <div class="col-3">
-                            <input type="submit" class="form-control btn-lg butn-disable" value="Create page" />
+                            @if (Model.Selected==true)
+                              {
+                        <input type="submit" class="form-control btn-lg butn-disable" value="Create page" />
+
+                              }
+                             else{
+                        <input type="submit" class="form-control btn-lg butn-disable"  value="Create page" />
+
+                                 }
 
                         </div>
                     </div>

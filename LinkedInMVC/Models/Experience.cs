@@ -16,6 +16,7 @@ namespace LinkedInMVC.Models
         public string Location { get; set; }
         public int FromYear { get; set; }
         public string ToYear { get; set; }
+
         public virtual ICollection<UserExperience> UserExperience { get; set; }
 
     }
