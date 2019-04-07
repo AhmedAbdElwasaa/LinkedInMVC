@@ -15,8 +15,8 @@ namespace LinkedInMVC.Models
         private readonly ApplicationDbContext context;
         public ApplicationRoleManager RoleManager { get; private set; }
         public ApplicationUserManager UserManager { get; private set; }
-        public CompanyManager CompanyManager { get; set; }// unit of work for company manager
-        public UserCompanyManager UserCompanyManager { get; set; }// unit of work for usercompany manager
+        //public CompanyManager CompanyManager { get; set; }// unit of work for company manager
+        //public UserCompanyManager UserCompanyManager { get; set; }// unit of work for usercompany manager
         
         public ExperienceManager ExperienceManager
         {
@@ -31,6 +31,20 @@ namespace LinkedInMVC.Models
             get
             {
                 return new EducationManager(context);
+            }
+        }
+        public CompanySizeManager CompanySizeManager
+        {
+            get
+            {
+                return new CompanySizeManager(context);
+            }
+        }
+        public CompanyTypeManager CompanyTypeManager
+        {
+            get
+            {
+                return new CompanyTypeManager(context);
             }
         }
         public UserEducationManager UserEducationManager
@@ -48,6 +62,13 @@ namespace LinkedInMVC.Models
             }
         }
 
+        public IndustryManager IndustryManager
+        {
+            get
+            {
+                return new IndustryManager(context);
+            }
+        }
 
         public ConnectionManager ConnectionManager
         {
@@ -56,15 +77,56 @@ namespace LinkedInMVC.Models
                 return new ConnectionManager(context);
             }
         }
+        public CompanyManager CompanyManager
+        {
+            get
+            {
+                return new CompanyManager(context);
+            }
+        }
+        public UserCompanyManager UserCompanyManager
+        {
+            get
+            {
+                return new UserCompanyManager(context);
+            }
+        }
 
-
+        public PostsManager PostsManager
+        {
+            get
+            {
+                return new PostsManager(context);
+            }
+        }
+        public LikesManager LikesManager
+        {
+            get
+            {
+                return new LikesManager(context);
+            }
+        }
+        public CommentsManager CommentsManager
+        {
+            get
+            {
+                return new CommentsManager(context);
+            }
+        }
+        public HomeManager HomeManager
+        {
+            get
+            {
+                return new HomeManager(context);
+            }
+        }
         public UnitofWork(IOwinContext owinContext)
         {
             context = owinContext.Get<ApplicationDbContext>();
             RoleManager = owinContext.Get<ApplicationRoleManager>();
             UserManager = owinContext.Get<ApplicationUserManager>();
-            CompanyManager = owinContext.Get<CompanyManager>();  // initialize company manager property
-            UserCompanyManager = owinContext.Get<UserCompanyManager>(); // initialize usercompany manager property 
+            //CompanyManager = owinContext.Get<CompanyManager>();  // initialize company manager property
+            //UserCompanyManager = owinContext.Get<UserCompanyManager>(); // initialize usercompany manager property 
         }
         public static UnitofWork Create(IdentityFactoryOptions<UnitofWork> options, IOwinContext owinContext)
         {

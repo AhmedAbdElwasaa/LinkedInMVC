@@ -55,9 +55,36 @@ namespace LinkedInMVC.Controllers
         }
 
 
-        //public Task<ActionResult> Create( )
-        //{
+        public  ActionResult Details(String id)
+        {
+            //  string id = User.Identity.GetUserId();
+            ApplicationUser user = UnitofWork.UserManager.FindById(id);
+            ProfileViewModel ProfileVM;
+            if (id !=null)
+            {
+                List<EducationViewModel> userEducations = UnitofWork.UserEducationManager.GetUserEducations(id);
+                List<ExperienceViewModel> userExperiences = UnitofWork.UserExperienceManager.GetUserExperiences(id);
+                ProfileVM = new ProfileViewModel
+                {
+                    FirstName = user.FirstName,
+                    LastName = user.SecondName,
+                    ProfileImage = user.ProfileImage,
+                    ProfileCover = user.ProfileCover,
+                    CurrentCopmany = user.CurrentCopmany,
+                    Headline = user.Headline,
+                    Country = user.Country,
+                    NumOfConnections = user.NumOfConnections,
+                    Educations = userEducations,
+                    Experiences = userExperiences
+                };
+            }
+            else
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
 
-        //}
+            return View(ProfileVM);
+        }
+
     }
 }     

@@ -3,45 +3,39 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class=" connection-card ">
-    <div class="row connection-card">
-        <div class="col-lg-7 connection">
-            <div class="image-container">
-                <img class="image" src="~/images/me.jpg" />
-            </div>
-            <div class="profile-info">
-                <h2 class="name">ahmed ali</h2>
-                <h5 class="job">developer</h5>
-            </div>
-            <div class="connection-btn">
-                <input type="button" value="Message" class="btn btn-accept " />
-
-            </div>
-        </div>
-    </div>
-    <div class="row connection-card ">
-        <div class="col-lg-7 connection">
-            <div class="image-container">
-                <img class="image" src="~/images/me.jpg" />
-            </div>
-            <div class="profile-info">
-                <h2 class="name">ahmed ali</h2>
-                <h5 class="job">developer</h5>
-            </div>
-            <div class="connection-btn">
-                <input type="button" value="Message" class="btn btn-accept " />
-                <div class="dropdown remove-ddl">
-                    <i class="fas fa-ellipsis-h remove-conn" data-toggle="dropdown"></i>
-                    @*<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown button
-                    </button>*@
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Remove Connection</a>
-
+<div class="row">
+    <div id="d" class=" connection-section ">
+        @{
+            int x = 0;
+                }
+            @foreach (ConnectionViewModel item in Model)
+            {
+                //  @Html.HiddenFor(item.UserId)
+                x++;
+            <div id="@x"  class=" col-lg-12 connection-card  ">
+                <div class=" connection">
+                    <div class="image-container">
+                        <img class="image" src="@item.ImageUrl " />
+                    </div>
+                    <div class="profile-info">
+                     
+                        <h2>@Html.ActionLink(@item.FirstName, "Details", "Profile", new { id = item.UserId } ,null)</h2>
+                        <h5 class="job">developer</h5>
+                    </div>
+                    <div class="connection-btn">
+                        <input type="button" value="Message" class="btn btn-accept " />
+                        <div class="dropdown remove-ddl">
+                            <i class="fas fa-ellipsis-h remove-conn" data-toggle="dropdown"></i>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                @Html.ActionLink("Remove Connection", "Delete", "connection", new { id = item.UserId }, new { @class = "dropdown-item" })
+                                @Ajax.ActionLink("Remove Connection", "Delete", "connection", new { id = item.UserId },
+                      new AjaxOptions { UpdateTargetId="d" ,OnSuccess = "removerow('" + x + "')" }, null)
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        }
     </div>
 </div>
 @*@foreach (ConnectionViewModel item in Model)
@@ -50,3 +44,9 @@
     <label>@item.FirstName</label>
     <label>@item.UserId</label>
 }*@
+<script>
+    function removerow(x) {
+        var self = this
+        $(x).remove();
+    }
+</script>

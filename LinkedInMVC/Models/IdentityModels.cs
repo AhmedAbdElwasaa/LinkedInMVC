@@ -21,6 +21,7 @@ namespace LinkedInMVC.Models
         public string Headline { get; set; }
         public string Country { get; set; }
         public int NumOfConnections { get; set; }
+        public virtual ICollection<Post> Posts { get; set; }
         public virtual ICollection<UserCompany> UserCompanies { get; set; }
         public ICollection<UserEducation> UserEducations = new List<UserEducation>();
         public ICollection<UserExperience> UserExperiences = new List<UserExperience>();
@@ -50,13 +51,19 @@ namespace LinkedInMVC.Models
       
         public DbSet<Company> Company { get; set; }
         public DbSet<UserCompany> UserCompany { get; set; }
+        public DbSet<Industry> Industry { get; set; }
+        public DbSet<CompanySize> CompanySize { get; set; }
+        public DbSet<CompanyType> CompanyType { get; set; }
+
+
+
 
         public DbSet<Post> Posts { get; set; }
         public DbSet<Like> Likes { get; set; }
         public DbSet<Comment> Comments { get; set; }
 
 
-        public DbSet<Education> Educations { get; set; }
+        public DbSet<Education> Education { get; set; }
          public DbSet<UserEducation> UserEducation { get; set; }
       
         public DbSet<Experience> Experience { get; set; }

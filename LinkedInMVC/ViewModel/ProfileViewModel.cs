@@ -20,7 +20,27 @@ namespace LinkedInMVC.ViewModel
         public string Country { get; set; }
         public int NumOfConnections { get; set; }
 
+       // public Education Education { get; set; }
 
+        private Education education;
+
+        public Education Education
+        {
+            get
+            {
+                if(education==null)
+                {
+
+                    education = new Education();
+                
+                }
+                return education;
+            }
+            set { education = value; }
+        }
+
+
+        public Experience Experience { get; set; }
         public List<EducationViewModel> Educations { get; set; }
         public List<ExperienceViewModel> Experiences { get; set; }
     }
