@@ -10,11 +10,14 @@ namespace LinkedInMVC.Models
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser 
     {
+<<<<<<< HEAD
         public ApplicationUser()
         {
             this.UserCompanies = new HashSet<UserCompany>();
         }
         
+=======
+>>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
         public string FirstName { get; set; }
         public string SecondName { get; set; }
 

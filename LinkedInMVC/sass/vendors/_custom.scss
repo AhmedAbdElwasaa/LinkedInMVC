@@ -121,7 +121,11 @@ body
     margin: 0rem;
 }
 
+<<<<<<< HEAD
 #AddEducationModal {
+=======
+#EducationModal {
+>>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
 
     .modal-dialog {
         max-width: 700px;
@@ -159,19 +163,23 @@ body
             }
         }
 
+<<<<<<< HEAD
         .modal-footer
             {
             button 
                 {
 
             font-size:1.6rem;
+=======
+        .modal-footer {
+            button {
+                font-size: 1.6rem;
             }
         }
     }
 }
 
-
-#EditEducationModal {
+#ExperienceModal {
 
     .modal-dialog {
         max-width: 700px;
@@ -212,7 +220,67 @@ body
         .modal-footer {
             button {
                 font-size: 1.6rem;
+>>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
             }
         }
     }
 }
+
+
+<<<<<<< HEAD
+#EditEducationModal {
+=======
+/*#EditEducationModal {
+>>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
+
+    .modal-dialog {
+        max-width: 700px;
+
+        .modal-body {
+            font-size: 1.6rem;
+
+            input {
+                width: 100% !important;
+            }
+
+            .Title {
+                margin-top: 2rem;
+            }
+
+            .date {
+                display: flex;
+                width: 100%;
+
+                .StartDate-wrapper {
+                    width: 50%;
+
+                    select {
+                        width: 90%;
+                    }
+                }
+
+                .EndDate-Wrapper {
+                    width: 50%;
+
+                    select {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+
+        .modal-footer {
+<<<<<<< HEAD
+            button {
+=======
+            button {  
+>>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
+                font-size: 1.6rem;
+            }
+        }
+    }
+<<<<<<< HEAD
+}
+=======
+}*/
+>>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7

@@ -7,7 +7,11 @@ using System.Web;
 
 namespace LinkedInMVC.Models
 {
+<<<<<<< HEAD
     [Table("Company_Type")]
+=======
+    [Table("Company Type")]
+>>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
     public class CompanyType
     {
         [Key]

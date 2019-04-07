@@ -2,7 +2,10 @@
 using Repository;
 using System;
 using System.Collections.Generic;
+<<<<<<< HEAD
 using System.Data.Entity.Validation;
+=======
+>>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
 using System.Linq;
 using System.Web;
 
@@ -18,6 +21,7 @@ namespace LinkedInMVC.BLL
         }
 
 
+<<<<<<< HEAD
         public bool AddCompany(ApplicationUser userId,Company company)
         {
            // try
@@ -45,6 +49,15 @@ namespace LinkedInMVC.BLL
 
                //  throw raise;
            // }
+=======
+        public void AddCompany(string userId,Company company)
+        {
+            UserCompany uc = new UserCompany();
+            uc.ApplicationUser.Id = userId;
+            uc.Company.Id = company.Id;
+            context.UserCompany.Add(uc);
+            context.SaveChanges();
+>>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
         }
     }
 }

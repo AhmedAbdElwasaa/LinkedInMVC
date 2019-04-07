@@ -7245,6 +7245,46 @@ a.text-dark:hover, a.text-dark:focus {
     .skills-container .skill .Endorsements {
       font-size: 1.6rem;
       padding-left: 2rem; }
+<<<<<<< HEAD
+=======
+  .skills-container .Endorsements {
+    font-size: 1.6rem;
+    padding-left: 2rem; }
+
+.job-card {
+  margin-bottom: 2rem;
+  width: 25.2rem;
+  height: fit-content;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  padding: 1.8rem;
+  transition: box-shadow 83ms; }
+  .job-card--body .job-img {
+    width: 6rem; }
+  .job-card--body .job-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-display: bold;
+    color: #252525; }
+  .job-card--body .job-company-name {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 1.2rem; }
+  .job-card--body .job-address {
+    color: #ACACAC; }
+  .job-card--body .job-mutual-connections {
+    display: flex;
+    align-items: center; }
+  .job-card--body .job-hr {
+    width: 4rem;
+    color: #cdcfd2; }
+  .job-card--body .job-time {
+    font-size: 1.2rem;
+    line-height: 1.33333;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6); }
+  .job-card:hover {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2); }
+>>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
 
 .i-color-company {
   color: #005E93; }
@@ -7623,6 +7663,31 @@ a.text-dark:hover, a.text-dark:focus {
   margin-top: 6%;
   margin-left: 5%; }
 
+<<<<<<< HEAD
+=======
+.job-page {
+  height: 100vh;
+  background-color: #F5F5F5; }
+  .job-page .job-container-head {
+    margin: 10rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #FFFFFF;
+    width: 112.8rem;
+    height: fit-content;
+    position: absolute;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2); }
+    .job-page .job-container-head .container-title {
+      margin-left: 2.4rem;
+      margin-bottom: 3rem; }
+  .job-page .job-container-body {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-start; }
+
+>>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
 .network-block {
   margin-top: 100px;
   display: flex;
@@ -7914,8 +7979,11 @@ ul, li {
   .post-box__modal-header {
     background: #0073b1; }
 
+<<<<<<< HEAD
 .modal-header {
   background-color: #0073b1 !important; }
+=======
+>>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
 
 .close {
   color: white; }
@@ -15304,6 +15372,7 @@ body {
   padding: 0rem;
   margin: 0rem; }
 
+<<<<<<< HEAD
 #AddEducationModal .modal-dialog {
   max-width: 700px; }
   #AddEducationModal .modal-dialog .modal-body {
@@ -15347,3 +15416,94 @@ body {
           width: 90%; }
   #EditEducationModal .modal-dialog .modal-footer button {
     font-size: 1.6rem; }
+=======
+#EducationModal .modal-dialog {
+  max-width: 700px; }
+  #EducationModal .modal-dialog .modal-body {
+    font-size: 1.6rem; }
+    #EducationModal .modal-dialog .modal-body input {
+      width: 100% !important; }
+    #EducationModal .modal-dialog .modal-body .Title {
+      margin-top: 2rem; }
+    #EducationModal .modal-dialog .modal-body .date {
+      display: flex;
+      width: 100%; }
+      #EducationModal .modal-dialog .modal-body .date .StartDate-wrapper {
+        width: 50%; }
+        #EducationModal .modal-dialog .modal-body .date .StartDate-wrapper select {
+          width: 90%; }
+      #EducationModal .modal-dialog .modal-body .date .EndDate-Wrapper {
+        width: 50%; }
+        #EducationModal .modal-dialog .modal-body .date .EndDate-Wrapper select {
+          width: 90%; }
+  #EducationModal .modal-dialog .modal-footer button {
+    font-size: 1.6rem; }
+
+#ExperienceModal .modal-dialog {
+  max-width: 700px; }
+  #ExperienceModal .modal-dialog .modal-body {
+    font-size: 1.6rem; }
+    #ExperienceModal .modal-dialog .modal-body input {
+      width: 100% !important; }
+    #ExperienceModal .modal-dialog .modal-body .Title {
+      margin-top: 2rem; }
+    #ExperienceModal .modal-dialog .modal-body .date {
+      display: flex;
+      width: 100%; }
+      #ExperienceModal .modal-dialog .modal-body .date .StartDate-wrapper {
+        width: 50%; }
+        #ExperienceModal .modal-dialog .modal-body .date .StartDate-wrapper select {
+          width: 90%; }
+      #ExperienceModal .modal-dialog .modal-body .date .EndDate-Wrapper {
+        width: 50%; }
+        #ExperienceModal .modal-dialog .modal-body .date .EndDate-Wrapper select {
+          width: 90%; }
+  #ExperienceModal .modal-dialog .modal-footer button {
+    font-size: 1.6rem; }
+
+/*#EditEducationModal {
+
+    .modal-dialog {
+        max-width: 700px;
+
+        .modal-body {
+            font-size: 1.6rem;
+
+            input {
+                width: 100% !important;
+            }
+
+            .Title {
+                margin-top: 2rem;
+            }
+
+            .date {
+                display: flex;
+                width: 100%;
+
+                .StartDate-wrapper {
+                    width: 50%;
+
+                    select {
+                        width: 90%;
+                    }
+                }
+
+                .EndDate-Wrapper {
+                    width: 50%;
+
+                    select {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+
+        .modal-footer {
+            button {  
+                font-size: 1.6rem;
+            }
+        }
+    }
+}*/
+>>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7

@@ -28,7 +28,11 @@ namespace LinkedInMVC.BLL
             {
                var  education= context.Education
                 .Where(u => u.Id == item).Select(e =>
+<<<<<<< HEAD
                 new EducationViewModel { SchoolName = e.SchoolName ,Degree =e.Degree , FieldOfStudy=e.FieldOfStudy ,
+=======
+                new EducationViewModel { Id=e.Id,  SchoolName = e.SchoolName ,Degree =e.Degree , FieldOfStudy=e.FieldOfStudy ,
+>>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
 
                     FromYear =e.FromYear ,ToYear =e.ToYear ,Grade =e.Grade }).FirstOrDefault();
 

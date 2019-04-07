@@ -33,6 +33,7 @@
     </div>
 </div>
 <div class="container-fluid ">
+<<<<<<< HEAD
     @using (Html.BeginForm("Create", "Company", FormMethod.Post,new {enctype="multipart/form-data" }))
     {
         @Html.AntiForgeryToken()
@@ -279,6 +280,228 @@
             </div>
 
         </div>
+=======
+    @using (Html.BeginForm("Add", "Company", FormMethod.Post))
+    {
+    <div class="row">
+        <div class="col-6 ">
+            <div class="form-group form-position1">
+                    @*@using (Ajax.BeginForm(ao))
+                    {*@
+                <div class="col-12 py-1">
+                    <span class="text-header h3">Page identity</span>
+                    @Html.LabelFor(m => m.Company.Name, "Name *", new { @class = "h5 py-4" })
+                    @*<label class="h5 py-4" for="name">Name*</label>*@
+                    @Html.TextBoxFor(m => m.Company.Name, new { @class = "form-control p-4", @onchange = "$(document.forms[0]).submit()" })
+                    @*<input type="text" id="name" class="form-control p-4" />*@
+                </div>
+                <div class="col-12 py-2">
+                    @Html.LabelFor(m => m, "LinkedIn public URL *", new { @class = "h5 py-4" })
+                    @*<label class="h5 py-4" for="URL">LinkedIn public URL* </label>*@
+                    <div class="row">
+                        <div class="col-4">
+                            @Html.LabelFor(m => m, "linkedin.com/company/", new { @class = "h5 py-4" })
+
+                            @*<label for="URL" class="h5 text-color1">linkedin.com/company/</label>*@
+                        </div>
+                        <div class="col-8">
+                            @Html.TextBox("URL", null, new { @class = "form-control py-4 my-1" })
+                            @*<input type="text" id="URL" class="form-control p-4" />*@
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-12 py-2">
+                    @Html.LabelFor(m => m.Company.URL, new { @class = "h5 py-4" })
+
+                    @*<label for="Website" class="h5 py-4">Website</label>*@
+                    @Html.TextBoxFor(m => m.Company.URL, new { @class = "form-control py-4", placeholder = "Begin with http:// or https:// or www." })
+                    @*<input type="text" id="Website" placeholder="Begin with http:// or https:// or www."
+                        class="form-control py-4" />*@
+                    <label class="h6 text-color1">This is a link to your external website.</label>
+                </div>
+                   
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="text-header2  ">
+                <div class="row no-gutters bg-white">
+                    <div class="col-12 lbl-style">
+                        @Html.Label("Page Preview", new { @class = "h4 py-4 pl-4" })
+                        @*<label class="h4 py-4 pl-4 " id="pgp">Page Preview</label>*@
+                    </div>
+                </div>
+
+
+                <div class="row no-gutters">
+                    <div class="col-1"></div>
+                    <div class="col-6 bg-white">
+                        <img class="image-border" src="../images/df.png" />
+                    </div>
+                    <div class="col-5 bg-white py-4">
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                                @Html.LabelFor(m => m.Company.Name, new { @class = "h2 text-color1" })
+                                @*<label class="h2 text-color1" id="test1">Company Name</label>*@
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                                @Html.LabelFor(m => m.Company.Industry, new { @class = "h5 text-color1" })
+                                @*<label class="h5 text-color1">Industry</label>*@
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                                @Html.LabelFor(m => m.Company.Description, new { @class = "h5 text-color1" })
+                                @*<label class="h5 text-color1">Tagline</label>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-1">
+
+                    </div>
+                    <div class="col-6 bg-white">
+                        <div class="div-color">
+
+                        </div>
+
+                    </div>
+                    <div class="col-5 bg-white">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group form-position">
+                <div class="col-12 py-1">
+                    <span class="text-header h3">Company details</span>
+                    @Html.LabelFor(m => m.Company.Industry, "Industry *", new { @class = "h5 py-4" })
+                    @*<label class="h5 py-4" for="dropdownMenu">Industry *</label>*@
+                    @Html.DropDownListFor(m => m.Company.CompanyIndustry, Model.Industries, new { @class = "form-control drop-fsize", @id = "dropdownMenu", @selected = "Select industry" })
+                    @*<select class="form-control drop-fsize" id="dropdownMenu">
+                            <option selected>Select industry</option>
+                            <option value="Accounting">Accounting</option>
+                            <option value="Airlines/Aviation">Airlines/Aviation</option>
+                            <option value="AlternativeDisputeResolution">Alternative Dispute Resolution</option>
+                            <option value="AlternativeMedicine">Alternative Medicine</option>
+                            <option value="Animation"> Animation</option>
+                            <option value="ApparelFashion">Apparel & Fashion</option>
+                            <option value="ArchitecturePlanning">Architecture & Planning</option>
+                            <option value="ArtsCrafts">Arts & Crafts</option>
+                            <option value="Automotive">Automotive</option>
+                            <option value="AviationAerospace">Aviation & Aerospace</option>
+                            <option value="Banking">Banking</option>
+                            <option value="Biotechnology">Biotechnology</option>
+                            <option value="InformationTechnologyServices">
+                                Information Technology & Services
+                            </option>
+                            <option value="Internet">Internet</option>
+                            <option value="InvestmentBanking">Investment Banking</option>
+                            <option value="InvestmentManagement">Investment Management</option>
+                            <option value="Veterinary">Veterinary</option>
+                            <option value="Telecommunications">Telecommunications</option>
+                            <option value="TranslationLocalization">Translation & Localization</option>
+
+                        </select>*@
+                </div>
+                <div class="col-12 py-2">
+                    @Html.LabelFor(m => m.Company.Size, "Company size *", new { @class = "h5 py-4" })
+                    @*<label class="h5 py-4" for="dropdownMenu2">Company size * </label>*@
+                    @Html.DropDownListFor(m => m.Company.CompanySize, Model.Sizes, new { @class = "form-control drop-fsize", @id = "dropdownMenu2", @selected = "Select company size" })
+                    @*<select class="form-control drop-fsize" id="dropdownMenu2">
+                            <option selected>Select company size</option>
+                            <option value="Publiccompany">0–1 employees</option>
+                            <option value="Self-employed">2–10 employees</option>
+                            <option value="Governmentagency">11–50 employees</option>
+                            <option value="Nonprofit">51–200 employees</option>
+                        </select>*@
+                </div>
+                <div class="col-12 py-2">
+                    @Html.LabelFor(m => m.Company.Type, "Company type *", new { @class = "h5 py-4" })
+                    @*<label for="dropdownMenu3" class="h5 py-4">Company type *</label>*@
+                    @Html.DropDownListFor(m => m.Company.Type, Model.Types, new { @class = "form-control drop-fsize", @id = "dropdownMenu3", @selected = "Select company type" })
+                    @*<select class="form-control drop-fsize" id="dropdownMenu3">
+                            <option selected>Select company type</option>
+                            <option value="Publiccompany">Public company</option>
+                            <option value="Self-employed">Self-employed</option>
+                            <option value="Governmentagency">Government agency</option>
+                            <option value="Nonprofit">Nonprofit</option>
+                            <option value="Soleproprietorship">Sole proprietorship</option>
+                            <option value="Privatelyheld">Privately held</option>
+                            <option value="Partnership">Partnership</option>
+                        </select>*@
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group form-position">
+                <div class="col-12 py-1">
+                    <span class="text-header h3">Profile details</span>
+                    @Html.LabelFor(m => m, "logo", new { @class = "h5 py-4 d-block" })
+                    @*<label class="h5 py-4 d-block" for="">Logo</label>*@
+                    <div class="row">
+                        <div class="col-12 ">
+                            <div class="div-bgcolor">
+
+                                <span class="h4 px-4">Upload to see preview </span>
+                                <input type="file" class="btn butt-style" value="Choose file" />
+                            </div>
+                            <span class="text-color1">300 x 300px recommended. JPGs, JPEGs, and PNGs supported.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 py-2">
+                    <label class="h5 py-4" for="Tagline">Tagline</label>
+                    <textarea rows="1" cols="20" class="form-control textare-reseize py-4" id="Tagline"></textarea>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-6">
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-6 ">
+            <div class="form-group footer-form">
+                <div class="row">
+                    <div class="col-1 py-1">
+                        <input type="checkbox" class="check-style" />
+                    </div>
+                    <div class="col-11 ">
+                        <span> I verify that I am the official representative of this company and have the right to act on behalf of the company in the creation of this page.</span>
+                    </div>
+                </div>
+                <div class="row py-4">
+                    <div class="col-8">
+
+                    </div>
+                    <div class="col-3">
+                        <input type="submit" class="form-control btn-lg butn-disable"  value="Create page" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+
+        </div>
+
+    </div>
+>>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
     }
 </div>
 

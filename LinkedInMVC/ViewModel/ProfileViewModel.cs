@@ -40,7 +40,26 @@ namespace LinkedInMVC.ViewModel
         }
 
 
+<<<<<<< HEAD
         public Experience Experience { get; set; }
+=======
+        private Experience experience;
+
+        public Experience Experience
+        {
+            get
+            {
+                if (experience == null)
+                {
+
+                    experience = new Experience();
+
+                }
+                return experience;
+            }
+            set { experience = value; }
+        }
+>>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
         public List<EducationViewModel> Educations { get; set; }
         public List<ExperienceViewModel> Experiences { get; set; }
     }
