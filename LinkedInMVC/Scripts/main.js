@@ -1,5 +1,6 @@
 ﻿var edu = null;
 var exp = null;
+var skill = null;
 //education
 $("#EduBtnSave").click(() => {
     edu = {
@@ -95,11 +96,34 @@ function OnSuccessAddExperience() {
 
 }
 
+// skills
 
-//$(".btn-edit-education").click(() => {
-//    debugger
-//    var $this = $(this);
-//    console.log($this.parent())
+$("#SkillBtnSave").click(() => {
+
+    skill = {
+
+        Title: $("#Experience_Title").val()
+        //date
+
+    }
 
 
-//});
+});
+
+
+function OnSuccessAddSkill() {
+    debugger
+    $(".skills-container").append(`  <div class="skill">
+    <div class="skill-data">
+        <button class="plus-icon-container">
+            <i class="fas fa-plus"></i>
+        </button>
+        <div class="skill-name">${skill.Title}</div>
+        <input type="hidden" value="@Model.Id" />
+    </div>
+    <div class="Endorsements"><span class="Endorsed-by">Endorsed by </span>Ibrahim Sharaf ElDen, who is highly skilled at this</div>
+</div>
+`);
+
+
+}

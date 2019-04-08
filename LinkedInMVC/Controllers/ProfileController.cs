@@ -32,6 +32,8 @@ namespace LinkedInMVC.Controllers
             {
                 List<EducationViewModel> userEducations = UnitofWork.UserEducationManager.GetUserEducations(id);
                 List<ExperienceViewModel> userExperiences = UnitofWork.UserExperienceManager.GetUserExperiences(id);
+                List<SkillViewModel> userSkills = UnitofWork.UserSkillManager.GetUserSkills(id);
+
                 ProfileVM = new ProfileViewModel
                 {
                     FirstName = currentUser.FirstName,
@@ -43,7 +45,8 @@ namespace LinkedInMVC.Controllers
                     Country = currentUser.Country,
                     NumOfConnections = currentUser.NumOfConnections,
                     Educations = userEducations,
-                    Experiences = userExperiences
+                    Experiences = userExperiences,
+                    Skills=userSkills
                 };
             }
             else
