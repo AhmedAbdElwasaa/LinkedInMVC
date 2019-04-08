@@ -253,12 +253,17 @@ E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.dll
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.pdb
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 E:\ITI\MVC\Project\LinkedInMVC\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.mostafa.resources
 E:\ITI\MVC\Project\LinkedInMVC\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.GenerateResource.cache
 E:\ITI\MVC\Project\LinkedInMVC\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.tett.resources
 E:\ITI\MVC\Project\LinkedInMVC\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.farouk.resources
 E:\ITI\MVC\Project\LinkedInMVC\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.hh.resources
 E:\ITI\MVC\Project\LinkedInMVC\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.fffff.resources
+=======
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csprojAssemblyReference.cache
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.skills.resources
+>>>>>>> 237dd417cfb4330b99113de0581f21ded7b3db23
 =======
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csprojAssemblyReference.cache
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.skills.resources

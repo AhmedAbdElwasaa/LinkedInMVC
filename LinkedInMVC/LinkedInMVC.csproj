@@ -267,6 +267,10 @@
     <Compile Include="Migrations\201904080819402_skills.Designer.cs">
       <DependentUpon>201904080819402_skills.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904080819402_skills.cs" />
+    <Compile Include="Migrations\201904080819402_skills.Designer.cs">
+      <DependentUpon>201904080819402_skills.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Comment.cs" />
@@ -286,7 +290,11 @@
     <Compile Include="Models\Post.cs" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="Models\SeniorityLevel.cs" />
+=======
+    <Compile Include="Models\Skill.cs" />
+>>>>>>> 237dd417cfb4330b99113de0581f21ded7b3db23
 =======
     <Compile Include="Models\Skill.cs" />
 >>>>>>> 237dd417cfb4330b99113de0581f21ded7b3db23
@@ -885,6 +893,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904081158450_fffff.resx">
       <DependentUpon>201904081158450_fffff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904080819402_skills.resx">
+      <DependentUpon>201904080819402_skills.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904080819402_skills.resx">
       <DependentUpon>201904080819402_skills.cs</DependentUpon>
