@@ -120,8 +120,6 @@ E:\ITI\MVC\Project\LinkedInMVC\LinkedInMVC\bin\Microsoft.AI.WindowsServer.xml
 E:\ITI\MVC\Project\LinkedInMVC\LinkedInMVC\bin\Microsoft.AI.Web.xml
 E:\ITI\MVC\Project\LinkedInMVC\LinkedInMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 E:\ITI\MVC\Project\LinkedInMVC\LinkedInMVC\obj\Debug\LinkedInMVC.csprojAssemblyReference.cache
-E:\ITI\MVC\Project\LinkedInMVC\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.test.resources
-E:\ITI\MVC\Project\LinkedInMVC\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.GenerateResource.cache
 E:\ITI\MVC\Project\LinkedInMVC\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CoreCompileInputs.cache
 E:\ITI\MVC\Project\LinkedInMVC\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CopyComplete
 E:\ITI\MVC\Project\LinkedInMVC\LinkedInMVC\obj\Debug\LinkedInMVC.dll
@@ -253,3 +251,9 @@ E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.cspro
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CopyComplete
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.dll
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.pdb
+E:\ITI\MVC\Project\LinkedInMVC\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.mostafa.resources
+E:\ITI\MVC\Project\LinkedInMVC\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.GenerateResource.cache
+E:\ITI\MVC\Project\LinkedInMVC\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.tett.resources
+E:\ITI\MVC\Project\LinkedInMVC\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.farouk.resources
+E:\ITI\MVC\Project\LinkedInMVC\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.hh.resources
+E:\ITI\MVC\Project\LinkedInMVC\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.fffff.resources

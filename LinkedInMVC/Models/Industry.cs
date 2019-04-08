@@ -13,7 +13,8 @@ namespace LinkedInMVC.Models
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
-      
+
+        public ICollection<JobIndustry> JobIndustryFk { get; set; }
         public ICollection<Company> Companies { get; set; }
     }
 }

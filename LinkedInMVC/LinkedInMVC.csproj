@@ -236,9 +236,25 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\DLIndustryHelper.cs" />
-    <Compile Include="Migrations\201904071750386_testamal.cs" />
-    <Compile Include="Migrations\201904071750386_testamal.Designer.cs">
-      <DependentUpon>201904071750386_testamal.cs</DependentUpon>
+    <Compile Include="Migrations\201904080735297_mostafa.cs" />
+    <Compile Include="Migrations\201904080735297_mostafa.Designer.cs">
+      <DependentUpon>201904080735297_mostafa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904080738197_tett.cs" />
+    <Compile Include="Migrations\201904080738197_tett.Designer.cs">
+      <DependentUpon>201904080738197_tett.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904081147116_farouk.cs" />
+    <Compile Include="Migrations\201904081147116_farouk.Designer.cs">
+      <DependentUpon>201904081147116_farouk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904081154342_hh.cs" />
+    <Compile Include="Migrations\201904081154342_hh.Designer.cs">
+      <DependentUpon>201904081154342_hh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904081158450_fffff.cs" />
+    <Compile Include="Migrations\201904081158450_fffff.Designer.cs">
+      <DependentUpon>201904081158450_fffff.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -248,12 +264,16 @@
     <Compile Include="Models\CompanyType.cs" />
     <Compile Include="Models\Connection_Request.cs" />
     <Compile Include="Models\Education.cs" />
+    <Compile Include="Models\EmploymentType.cs" />
     <Compile Include="Models\Experience.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Industry.cs" />
+    <Compile Include="Models\Job.cs" />
+    <Compile Include="Models\JobIndustry.cs" />
     <Compile Include="Models\Like.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Post.cs" />
+    <Compile Include="Models\SeniorityLevel.cs" />
     <Compile Include="Models\UnitofWork.cs" />
     <Compile Include="Models\UserCompany.cs" />
     <Compile Include="Models\UserEducation.cs" />
@@ -840,8 +860,20 @@
     <Content Include="sass\components\_job.scss" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904071750386_testamal.resx">
-      <DependentUpon>201904071750386_testamal.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904080735297_mostafa.resx">
+      <DependentUpon>201904080735297_mostafa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904080738197_tett.resx">
+      <DependentUpon>201904080738197_tett.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904081147116_farouk.resx">
+      <DependentUpon>201904081147116_farouk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904081154342_hh.resx">
+      <DependentUpon>201904081154342_hh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904081158450_fffff.resx">
+      <DependentUpon>201904081158450_fffff.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

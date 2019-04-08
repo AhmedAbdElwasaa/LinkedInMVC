@@ -32,6 +32,7 @@ namespace LinkedInMVC.Models
         public CompanyType CompanyType { get; set; }
        
         public Industry Industry { get; set; }
+        public ICollection<Job> JobFK { get; set; }
 
     }
 }
