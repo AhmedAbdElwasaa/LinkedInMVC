@@ -63,11 +63,30 @@ namespace LinkedInMVC.Controllers
             return View(Educations);
         }
 
-      
-      
 
-        
-       
+
+
+
+
+
+
+        // POST: Educations/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Edit(Education education)
+        {
+            if (ModelState.IsValid)
+            {
+               
+
+                UnitofWork.EducationManager.Update(education);
+
+            }
+                return RedirectToAction("Index", "Profile");
+         
+        }
+
+
 
         //// GET: Educations/Edit/5
         //public async Task<ActionResult> Edit(int? id)
@@ -83,23 +102,6 @@ namespace LinkedInMVC.Controllers
         //    }
         //    return View(education);
         //}
-
-        //// POST: Educations/Edit/5
-        //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        //// more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<ActionResult> Edit([Bind(Include = "Id,SchoolName,Degree,FieldOfStudy,Grade,FromYear,ToYear")] Education education)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        db.Entry(education).State = EntityState.Modified;
-        //        await db.SaveChangesAsync();
-        //        return RedirectToAction("Index");
-        //    }
-        //    return View(education);
-        //}
-
         //// GET: Educations/Delete/5
         //public async Task<ActionResult> Delete(int? id)
         //{

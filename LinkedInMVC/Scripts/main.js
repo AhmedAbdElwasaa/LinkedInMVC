@@ -1,20 +1,31 @@
 ﻿var edu = null;
 var exp = null;
 var skill = null;
-var [, EducationModal] = $("#EducationModal").children().children().children();
-var EducationForm = EducationModal.children.form0;
+var [, EducationModal] = $("#EditEducationModal").children().children().children();
+var EducationForm = EducationModal.children.form1;
 //education
 $(".btn-edit-education").click(function () {
 
 
     let [, , temp] = $(this).parent().children();
     let EductionDetails = temp.children;
+
+    let id = EductionDetails[0].value;
     let schoolName = EductionDetails[1].textContent;
     let degree = EductionDetails[2].textContent;
     let field = EductionDetails[3].textContent;
     let grade = EductionDetails[4].textContent;
     //let startDate=
 
+    console.log(EducationForm)
+    debugger
+
+    EducationForm[1].value = id;
+    EducationForm[2].value = schoolName;
+    EducationForm[3].value = degree;
+    EducationForm[4].value = field;
+    EducationForm[5].value = grade;
+    debugger
 });
 
 $("#EduBtnSave").click(() => {
@@ -27,7 +38,7 @@ $("#EduBtnSave").click(() => {
         //date
 
     }
-    $('#EducationModal').modal('hide');
+   
 
 });
 
@@ -56,7 +67,10 @@ function OnSuccessAddEducation() {
     </div>
 </div>
     </div >`);
-
+    EducationForm[1].value = "";
+    EducationForm[2].value = "";
+    EducationForm[3].value = "";
+    EducationForm[4].value = "";
 
 }
 
@@ -122,7 +136,7 @@ function OnSuccessAddSkill() {
             <i class="fas fa-plus"></i>
         </button>
         <div class="skill-name">${skill.Title}</div>
-        <input type="hidden" value="@Model.Id" />
+        <input type="hidden" value="${skill.Id}" />
     </div>
 </div>
 `);
