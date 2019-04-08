@@ -25,8 +25,8 @@
                             Add profile section
                         </button>
                         <div class="dropdown-menu" aria-labelledby="Add-profile-section">
-                            <a class="dropdown-item" href="#"><i class="fas fa-briefcase"></i> Work experience</a>
-                            <a class="dropdown-item" href="#"><i class="fas fa-university"></i> Education</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-briefcase"></i> <span data-toggle="modal" data-target="#ExperienceModal" > Work experience </span></a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-university"></i> <span data-toggle="modal" data-target="#EducationModal">Education</span> </a>
                             <a class="dropdown-item" href="#"><i class="fas fa-medal"></i>Skills</a>
                         </div>
                     </div>
@@ -59,7 +59,7 @@
     <!-- education -->
     <div class="education-container col-lg-8">
         <h2 class="profile-section">education</h2>
-        <div id="btn-add-education" data-toggle="modal" data-target="#AddEducationModal"><i class="fas fa-plus"></i></div>
+        <div id="btn-add-education" data-toggle="modal" data-target="#EducationModal"><i class="fas fa-plus"></i></div>
 
 
         @foreach (var EducationItem in Model.Educations)
@@ -69,9 +69,11 @@
 
     </div>
 
+
+    <!-- Experience -->
     <div class="experience-container col-lg-8">
         <h2 class="profile-section">experience</h2>
-        <div id="btn-add-experience"><i class="fas fa-plus"></i></div>
+        <div id="btn-add-experience" data-toggle="modal" data-target="#ExperienceModal"><i class="fas fa-plus"></i></div>
 
         @foreach (var experience in Model.Experiences)
         {
@@ -110,13 +112,10 @@
     </div>
 </div>
 
-<!-- Button trigger modal -->
-@*<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-        Launch demo modal
-    </button>*@
+
 
 <!-- Modal -->
-<div class="modal fade" id="AddEducationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" data-keyboard="true" id="EducationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -125,59 +124,190 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+
             <div class="modal-body">
-                @using (Html.BeginForm("Create", "Educations", "Post", FormMethod.Post))
+                @using (Ajax.BeginForm("Create", "Educations", new AjaxOptions { HttpMethod = "POST", OnSuccess = "OnSuccessAddEducation" }))
                 {
                     @Html.AntiForgeryToken()
-                <!-- <div class="Title">School</div>-->
-                @Html.LabelFor(m=>m.Education.SchoolName, new { @class = "Title" })
-                @Html.EditorFor(m => m.Education.SchoolName, new { id = "schoolName"  @*placeholder = "Ex: Boston University"*@});
-                <!-- <input id="schoolName" type="text" placeholder="Ex: Boston University" />-->
 
-                <!-- <div class="Title">Degree</div>-->
-                @Html.LabelFor(m => m.Education.Degree, new { @class = "Title" })
-                @Html.EditorFor(m => m.Education.Degree, new { id = "Degree"  @*placeholder = "Ex: Boston University"*@});
+                    @Html.LabelFor(m => m.Education.SchoolName, new { @class = "Title" })
+                    @Html.EditorFor(m => m.Education.SchoolName, new { id = "schoolName"  @*placeholder = "Ex: Boston University"*@});
 
-                <!-- <input id="Degree" type="text" placeholder="Ex: Bachelor’s" /> -->
+                    @Html.LabelFor(m => m.Education.Degree, new { @class = "Title" })
+                    @Html.EditorFor(m => m.Education.Degree, new { id = "Degree"  @*placeholder = "Ex: Bachelor’s"*@});
 
-                @*<div class="Title">Field of study</div>
-        <input id="StudyField" type="text" placeholder="Ex: Business" />*@
 
-                @Html.LabelFor(m => m.Education.FieldOfStudy, new { @class = "Title" })
-                @Html.EditorFor(m => m.Education.FieldOfStudy, new { id = "StudyField"  @*placeholder = "Ex: Boston University"*@});
+                    @Html.LabelFor(m => m.Education.FieldOfStudy, new { @class = "Title" })
+                    @Html.EditorFor(m => m.Education.FieldOfStudy, new { id = "StudyField"  @*placeholder = "Ex: Business"*@});
 
-                <div class="date">
-                    <div class="StartDate-wrapper">
+                    @Html.LabelFor(m => m.Education.Grade, new { @class = "Title" })
+                    @Html.EditorFor(m => m.Education.Grade, new { id = "Grade"  @*placeholder = "Ex: Business"*@});
+                    <div class="date">
+                        <div class="StartDate-wrapper">
 
-                        <div class="Title">Start Date</div>
-                        <select data-control-name="edit_education_start_year" name="@Model.Education.FromYear" id="pe-education-form__start-year" class="pe-education-form__start-year ember-view">
-                            <option value="">Year</option>
-                            @for (var i = 2019; i > 1990; i--)
-                            {
-                                <option value="@i">@i</option>
-                            }
+                            <div class="Title">Start Date</div>
+                            <select data-control-name="edit_education_start_year" name="@Model.Education.FromYear" id="pe-education-form__start-year" class="pe-education-form__start-year ember-view">
+                                <option value="">Year</option>
+                                @for (var i = 2019; i > 1990; i--)
+                                {
+                                    <option value="@i">@i</option>
+                                }
 
-                        </select>
+                            </select>
+                        </div>
+                        <div class="EndDate-Wrapper">
+                            <div class="Title">End Date</div>
+                            <select data-control-name="edit_education_start_year" name="@Model.Education.ToYear" id="pe-education-form__start-year" class="pe-education-form__start-year ember-view">
+                                <option value="">Year</option>
+                                @for (var i = 2019; i > 1990; i--)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+
+                            </select>
+                        </div>
                     </div>
-                    <div class="EndDate-Wrapper">
-                        <div class="Title">End Date</div>
-                        <select data-control-name="edit_education_start_year"  name="@Model.Education.ToYear" id="pe-education-form__start-year" class="pe-education-form__start-year ember-view">
-                            <option value="">Year</option>
-                            @for (var i = 2019; i > 1990; i--)
-                            {
-                                <option value="@i">@i</option>
-                            }
 
-                        </select>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary"  id="EduBtnSave">Save</button>
                     </div>
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary" id="BtnSave">Save</button>
-                </div>
-            }
+                }
             </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="ExperienceModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Experience</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                @using (Ajax.BeginForm("Create", "Experiences", "Post", new AjaxOptions { HttpMethod = "POST", OnSuccess = "OnSuccessAddExperience" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.LabelFor(m => m.Experience.Title, new { @class = "Title" })
+                    @Html.EditorFor(m => m.Experience.Title, new { id = "Title"  @*placeholder = "Ex: Boston University"*@});
+
+                    <!-- <div class="Title">Degree</div>-->
+                    @Html.LabelFor(m => m.Experience.Company, new { @class = "Title" })
+                    @Html.EditorFor(m => m.Experience.Company, new { id = "Company"  @*placeholder = "Ex: Boston University"*@});
+
+                    @Html.LabelFor(m => m.Experience.Location, new { @class = "Title" })
+                    @Html.EditorFor(m => m.Experience.Location, new { id = "Location"  @*placeholder = "Ex: Boston University"*@});
+
+                    <div class="date">
+                        <div class="StartDate-wrapper">
+
+                            <div class="Title">Start Date</div>
+                            <select data-control-name="edit_education_start_year" name="startYear" id="pe-education-form__start-year" class="pe-education-form__start-year ember-view">
+                                <option value="">Year</option>
+                                @for (var i = 2019; i > 1990; i--)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+
+                            </select>
+                        </div>
+                        <div class="EndDate-Wrapper">
+                            <div class="Title">End Date</div>
+                            <select data-control-name="edit_education_start_year" name="startYear" id="pe-education-form__start-year" class="pe-education-form__start-year ember-view">
+                                <option value="">Year</option>
+                                @for (var i = 2019; i > 1990; i--)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary"  id="ExpBtnSave">Save</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="~/Scripts/main.js"></script>
+
+
+
+
+@*<div class="modal fade" id="EditEducationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Education</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @using (Html.BeginForm("Create", "Educations", "Post", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        @Html.LabelFor(m => m.SchoolName, new { @class = "Title" })
+                        @Html.EditorFor(m => m.SchoolName, new { id = "schoolName", @placeholder = "Ex: Boston University" });
+
+
+
+                        @Html.LabelFor(m => m.Degree, new { @class = "Title" })
+                        @Html.EditorFor(m => m.Degree, new { id = "Degree", @placeholder = "Ex: Bachelor’s" });
+
+
+
+                        @Html.LabelFor(m => m.FieldOfStudy, new { @class = "Title" })
+                        @Html.EditorFor(m => m.FieldOfStudy, new { id = "StudyField", @placeholder = "Ex:Business" });
+
+                        <div class="date">
+                            <div class="StartDate-wrapper">
+
+                                <div class="Title">Start Date</div>
+                                <select data-control-name="edit_education_start_year" name="startYear" id="pe-education-form__start-year" class="pe-education-form__start-year ember-view">
+                                    <option value="">Year</option>
+                                    @for (var i = 2019; i > 1990; i--)
+                                    {
+                                        <option value="@i">@i</option>
+                                    }
+
+                                </select>
+                            </div>
+                            <div class="EndDate-Wrapper">
+                                <div class="Title">End Date</div>
+                                <select data-control-name="edit_education_start_year" name="startYear" id="pe-education-form__start-year" class="pe-education-form__start-year ember-view">
+                                    <option value="">Year</option>
+                                    @for (var i = 2019; i > 1990; i--)
+                                    {
+                                        <option value="@i">@i</option>
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" id="BtnSave">Save</button>
+                        </div>
+                    }
+                </div>
             </div>
         </div>
 
+
+    </div>*@

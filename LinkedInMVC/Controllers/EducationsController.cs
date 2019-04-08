@@ -24,11 +24,28 @@ namespace LinkedInMVC.Controllers
             }
         }
 
-        // GET: Educations
-        //public async Task<ActionResult> Index()
-        //{
-        //    return View(await db.Educations.ToListAsync());
-        //}
+        //// POST: Educations/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Create(Education education)
+        {
+            string userId = User.Identity.GetUserId();
+            ApplicationUser currentUser = UnitofWork.UserManager.FindById(userId);
+
+            if (ModelState.IsValid)
+            {
+                education = UnitofWork.EducationManager.Add(education);
+                UnitofWork.UserEducationManager.AddUserEducation(education, currentUser);
+
+             
+
+            }
+
+            
+            return RedirectToAction("Index", "Profile");
+        }
+
+      
 
         //// GET: Educations/Details/5
         public async Task<ActionResult> Details(String id)
@@ -46,31 +63,11 @@ namespace LinkedInMVC.Controllers
             return View(Educations);
         }
 
-        //// GET: Educations/Create
-        public ActionResult Create()
-        {
+      
+      
 
-            return View();
-        }
-
-        //// POST: Educations/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(Education education)
-        {
-            string userId = User.Identity.GetUserId();
-            ApplicationUser currentUser = UnitofWork.UserManager.FindById(userId);
-
-            if (ModelState.IsValid)
-            {
-             education=  UnitofWork.EducationManager.Add(education);
-              UnitofWork.UserEducationManager.AddUserEducation(education, currentUser);
-                
-              
-            }
-
-            return RedirectToAction( "Index","Profile");
-        }
+        
+       
 
         //// GET: Educations/Edit/5
         //public async Task<ActionResult> Edit(int? id)
