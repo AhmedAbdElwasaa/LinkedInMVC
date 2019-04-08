@@ -6,7 +6,7 @@ $(".btn-edit-education").click(function () {
     
     temp = $(this).parent();
     console.log(temp);
-    debugger
+    debugger;
 });
 
 $("#EduBtnSave").click(() => {
