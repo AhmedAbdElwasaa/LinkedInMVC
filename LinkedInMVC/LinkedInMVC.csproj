@@ -236,25 +236,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\DLIndustryHelper.cs" />
-    <Compile Include="Migrations\201904032142521_test.cs" />
-    <Compile Include="Migrations\201904032142521_test.Designer.cs">
-      <DependentUpon>201904032142521_test.cs</DependentUpon>
+    <Compile Include="Migrations\201904061403594_j.cs" />
+    <Compile Include="Migrations\201904061403594_j.Designer.cs">
+      <DependentUpon>201904061403594_j.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904040107316_test2.cs" />
-    <Compile Include="Migrations\201904040107316_test2.Designer.cs">
-      <DependentUpon>201904040107316_test2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904040229598_test4.cs" />
-    <Compile Include="Migrations\201904040229598_test4.Designer.cs">
-      <DependentUpon>201904040229598_test4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904040744257_test5.cs" />
-    <Compile Include="Migrations\201904040744257_test5.Designer.cs">
-      <DependentUpon>201904040744257_test5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904052233085_test6.cs" />
-    <Compile Include="Migrations\201904052233085_test6.Designer.cs">
-      <DependentUpon>201904052233085_test6.cs</DependentUpon>
+    <Compile Include="Migrations\201904061408255_yg.cs" />
+    <Compile Include="Migrations\201904061408255_yg.Designer.cs">
+      <DependentUpon>201904061408255_yg.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -499,12 +487,6 @@
     <Content Include="sass\layout\Home.scss" />
     <Content Include="sass\components\_comp_Post.scss" />
     <Content Include="sass\components\_companyProfile.scss" />
-<<<<<<< HEAD
-    <Content Include="sass\components\_compcomun.scss" />
-    <Content Include="sass\components\_compdashboard.scss" />
-    <Content Include="sass\components\comments.scss" />
-    <Content Include="sass\components\_peopleMayKnow.scss" />
-=======
     <Content Include="sass\components\_peopleMayKnow.scss" />
     <Content Include="sass\components\_compcomun.scss" />
     <Content Include="sass\components\_compdashboard.scss" />
@@ -512,13 +494,14 @@
     <Content Include="sass\layout\profile-card-layout.scss" />
     <Content Include="sass\components\Profile-card.scss" />
     <Content Include="sass\components\_search-results.scss" />
->>>>>>> 86d86c2ad9e7706fbd93a0f54adaf91b07c2b5e4
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -576,21 +559,12 @@
     <Content Include="Views\Experiences\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Shared\_PostPartial.cshtml" />
-<<<<<<< HEAD
-    <Content Include="Views\Profile\_education.cshtml" />
-    <Content Include="Views\Profile\_experience.cshtml" />
-    <Content Include="Views\Profile\Details.cshtml" />
-    <Content Include="Views\Home\_CreatePostPartial.cshtml" />
-=======
-    <Content Include="Views\Shared\_Connection.cshtml" />
->>>>>>> 86d86c2ad9e7706fbd93a0f54adaf91b07c2b5e4
+    <Content Include="Views\Shared\_connection.cshtml" />
     <Content Include="Views\Network\Create.cshtml" />
     <Content Include="Views\Network\Delete.cshtml" />
     <Content Include="Views\Network\Details.cshtml" />
     <Content Include="Views\Network\Edit.cshtml" />
     <Content Include="Views\Network\Index.cshtml" />
-<<<<<<< HEAD
-=======
     <Content Include="Views\Profile\_education.cshtml" />
     <Content Include="Views\Profile\_experience.cshtml" />
     <Content Include="Views\Profile\Details.cshtml" />
@@ -603,7 +577,7 @@
     <Content Include="Views\Home\SearchResults.cshtml" />
     <Content Include="Views\Shared\_LikesPartial.cshtml" />
     <Content Include="Views\Shared\_SearchResultPartial.cshtml" />
->>>>>>> 86d86c2ad9e7706fbd93a0f54adaf91b07c2b5e4
+    <Content Include="Views\Shared\_PeopleMayKnow.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -620,20 +594,11 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904032142521_test.resx">
-      <DependentUpon>201904032142521_test.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904061403594_j.resx">
+      <DependentUpon>201904061403594_j.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904040107316_test2.resx">
-      <DependentUpon>201904040107316_test2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904040229598_test4.resx">
-      <DependentUpon>201904040229598_test4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904040744257_test5.resx">
-      <DependentUpon>201904040744257_test5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904052233085_test6.resx">
-      <DependentUpon>201904052233085_test6.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904061408255_yg.resx">
+      <DependentUpon>201904061408255_yg.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -4,28 +4,34 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@foreach (var network in Model)
-{
-
-<div class="container network row ">
+<div class="row">
     <div class="col-lg-8 network-container">
-        <h3>Recommended for you</h3>
-        <div class="row net-row">
-            <div class="col-lg-4">
+        <div class="row">
+            <h3>Recommended for you</h3>
+        </div>
+        <div class=" row net-row">
+            <div class="container network row ">
+                @*@{
+                    int x = 0;
+                }*@
+                @foreach (var network in Model)
+                {
+                    //x++;
+
+                    @Html.Partial("_PeopleMayKnow", network)
+                    @*<div class="col-lg-4">
+
                 <div class="network-block">
                     <div class="network-block__imgprofile">
                         <div class="network-block__imgprofile__cover">
-                            <img src="@network.ImageUrl" class="img-cover" />
+                            <img src="@network.CoverUrl" class="img-cover" />
                         </div>
                         <div class="network-block__imgprofile__pimage">
-                            <img src="@network.ImageUrl"  class="network-block__imgprofile__pimage" />
+                            <img src="@network.ImageUrl" class="network-block__imgprofile__pimage" />
                         </div>
                         <div class="network-block__imgprofile__content">
-                            <a class="network-block__imgprofile__content__nametag" href="">@Html.ActionLink(network.FirstName, "Details", "Profile", new { id = network.UserId }, null)</a>
-                            <p class="network-block__imgprofile__content__details">
-                                trainee at information technology institute (ITI)
-                            </p>
                         </div>
+                        <a class="network-block__imgprofile__content__nametag" href="">@Html.ActionLink(network.FirstName, "Details", "Profile", new { id = network.UserId }, new { @class = "network-block__imgprofile__content__nametag" })</a>
                     </div>
                     <div class="network-block__imgnetwork">
                         <div class="network-block__imgnetwork__img1"></div>
@@ -33,17 +39,24 @@
                         <div class="network-block__imgnetwork__img3"></div>
                         <a class="network-block__imgnetwork__hlink"><span class="network-block__imgnetwork__hlink__numofcon">99</span> mutual connections </a>
                     </div>
+                    @Ajax.ActionLink("Remove Connection", "Delete", "connection", new { id = network.UserId },
+             new AjaxOptions { UpdateTargetId="d" ,OnSuccess = "removerow('" + x + "')" }, null)
                     <input class="network-block__btncon" type="button" value="connect" />
 
                 </div>
+            </div>*@
+                }
             </div>
+
         </div>
-       
     </div>
 </div>
-}
-
-
+<script>
+    function removerow(x) {
+        var self = this
+        $(x).remove();
+    }
+</script>
 @*<p>
         @Html.ActionLink("Create New", "Create")
     </p>

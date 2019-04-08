@@ -31,9 +31,19 @@ namespace LinkedInMVC.Controllers
             List<ApplicationUser> v = UnitofWork.ConnectionManager.
                            GetMetualFriend(User.Identity.GetUserId());
             List<ConnectionViewModel> cvm = v.Select(c => new ConnectionViewModel
-            { FirstName = c.FirstName, UserId = c.Id, ImageUrl = c.ProfileImage })
+            { FirstName = c.FirstName, UserId = c.Id, ImageUrl = c.ProfileImage ,CoverUrl=c.ProfileCover })
             .ToList();
             return View(cvm);
+        }
+        public ActionResult Add(string Id)
+        {
+            if (ModelState.IsValid)
+            {
+                UnitofWork.ConnectionManager.
+                               AddFriendRequest(Id, User.Identity.GetUserId());
+                }
+            
+            return RedirectToAction("Index");
         }
 
 
@@ -90,21 +100,7 @@ namespace LinkedInMVC.Controllers
             return View(connection_Request);
         }
 
-        // POST: Network/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,IsApproved")] Connection_Request connection_Request)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(connection_Request).State = EntityState.Modified;
-                await db.SaveChangesAsync();
-                return RedirectToAction("Index");
-            }
-            return View(connection_Request);
-        }
+     
 
         // GET: Network/Delete/5
         public async Task<ActionResult> Delete(int? id)
@@ -132,13 +128,8 @@ namespace LinkedInMVC.Controllers
             return RedirectToAction("Index");
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+       
+       
+
     }
 }
