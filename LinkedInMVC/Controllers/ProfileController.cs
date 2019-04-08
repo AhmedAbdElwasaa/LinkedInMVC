@@ -33,6 +33,9 @@ namespace LinkedInMVC.Controllers
                 List<EducationViewModel> userEducations = UnitofWork.UserEducationManager.GetUserEducations(id);
                 List<ExperienceViewModel> userExperiences = UnitofWork.UserExperienceManager.GetUserExperiences(id);
                 List<SkillViewModel> userSkills = UnitofWork.UserSkillManager.GetUserSkills(id);
+                List<EndorsementViewModel> endorsements = UnitofWork.EndorsementManager.GetSkillsEndorsements(id, userSkills);
+
+                
 
                 ProfileVM = new ProfileViewModel
                 {
@@ -46,7 +49,8 @@ namespace LinkedInMVC.Controllers
                     NumOfConnections = currentUser.NumOfConnections,
                     Educations = userEducations,
                     Experiences = userExperiences,
-                    Skills=userSkills
+                    Skills=userSkills,
+                    Endorsements= endorsements
                 };
             }
             else
@@ -67,6 +71,9 @@ namespace LinkedInMVC.Controllers
             {
                 List<EducationViewModel> userEducations = UnitofWork.UserEducationManager.GetUserEducations(id);
                 List<ExperienceViewModel> userExperiences = UnitofWork.UserExperienceManager.GetUserExperiences(id);
+                List<SkillViewModel> userSkills = UnitofWork.UserSkillManager.GetUserSkills(id);
+                List<EndorsementViewModel> endorsements = UnitofWork.EndorsementManager.GetSkillsEndorsements(id, userSkills);
+
                 ProfileVM = new ProfileViewModel
                 {
                     FirstName = user.FirstName,
@@ -78,7 +85,9 @@ namespace LinkedInMVC.Controllers
                     Country = user.Country,
                     NumOfConnections = user.NumOfConnections,
                     Educations = userEducations,
-                    Experiences = userExperiences
+                    Experiences = userExperiences,
+                    Skills = userSkills,
+                    Endorsements = endorsements
                 };
             }
             else

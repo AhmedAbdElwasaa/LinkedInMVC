@@ -213,6 +213,7 @@
     <Compile Include="BLL\CompanyTypeManager.cs" />
     <Compile Include="BLL\ConnectionManager.cs" />
     <Compile Include="BLL\EducationManager.cs" />
+    <Compile Include="BLL\EndorsementManager.cs" />
     <Compile Include="BLL\ExperienceManager.cs" />
     <Compile Include="BLL\HomeManager.cs" />
     <Compile Include="BLL\IndustryManager.cs" />
@@ -229,6 +230,7 @@
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\ConnectionController.cs" />
     <Compile Include="Controllers\EducationsController.cs" />
+    <Compile Include="Controllers\EndorsementsController.cs" />
     <Compile Include="Controllers\ExperiencesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -239,14 +241,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\DLIndustryHelper.cs" />
-    <Compile Include="Migrations\201904071750386_testamal.cs" />
-    <Compile Include="Migrations\201904071750386_testamal.Designer.cs">
-      <DependentUpon>201904071750386_testamal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904080819402_skills.cs" />
-    <Compile Include="Migrations\201904080819402_skills.Designer.cs">
-      <DependentUpon>201904080819402_skills.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Comment.cs" />
@@ -255,6 +249,7 @@
     <Compile Include="Models\CompanyType.cs" />
     <Compile Include="Models\Connection_Request.cs" />
     <Compile Include="Models\Education.cs" />
+    <Compile Include="Models\Endorsement.cs" />
     <Compile Include="Models\Experience.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Industry.cs" />
@@ -277,6 +272,7 @@
     <Compile Include="ViewModel\CompanyViewModel.cs" />
     <Compile Include="ViewModel\ConnectionViewModel.cs" />
     <Compile Include="ViewModel\EducationViewModel.cs" />
+    <Compile Include="ViewModel\EndorsementViewModel.cs" />
     <Compile Include="ViewModel\ExperienceViewModel.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />
     <Compile Include="ViewModel\IndustryViewModel.cs" />
@@ -838,14 +834,6 @@
     <Content Include="Views\Shared\_CommentPartial.cshtml" />
     <Content Include="sass\components\_job.scss" />
     <Content Include="Views\Profile\_Skill.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904071750386_testamal.resx">
-      <DependentUpon>201904071750386_testamal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904080819402_skills.resx">
-      <DependentUpon>201904080819402_skills.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

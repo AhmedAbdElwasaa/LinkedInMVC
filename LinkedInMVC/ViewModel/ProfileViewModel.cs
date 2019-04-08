@@ -74,11 +74,29 @@ namespace LinkedInMVC.ViewModel
             set { skill = value; }
         }
 
+
+        private Endorsement endorsement;
+        public Endorsement Endorsement
+        {
+            get
+            {
+                if (endorsement == null)
+                {
+
+                    endorsement = new Endorsement();
+
+                }
+                return endorsement;
+            }
+            set { endorsement = value; }
+        }
+
         public List<EducationViewModel> Educations { get; set; }
         public List<ExperienceViewModel> Experiences { get; set; }
 
         public List<SkillViewModel> Skills { get; set; }
 
+        public List<EndorsementViewModel> Endorsements { get; set; }
 
     }
 }

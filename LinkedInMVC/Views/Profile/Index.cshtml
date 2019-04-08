@@ -38,8 +38,7 @@
                     </div>
                     <div id="see-connection">
                         <i class="fas fa-users"></i><span class="connection-num">
-                            See
-                            connections
+                            See connections
                         </span>
                     </div>
                 </div>
@@ -90,10 +89,12 @@
         <div id="btn-add-skill" data-toggle="modal" data-target="#SkillsModal"><i class="fas fa-plus"></i></div>
         <div class="btn-edit-skills" data-toggle="modal" data-target="#SkillsModal"><i class="fas fa-pen"></i></div>
 
-        @foreach (var skill in Model.Skills)
+        @foreach (var Endorsement in Model.Endorsements)
         {
-            @Html.Partial("_Skill", skill)
+            @Html.Partial("_Skill", Endorsement)
         }
+
+
 
     </div>
 </div>
