@@ -1,29 +1,13 @@
 ﻿var edu = null;
 var exp = null;
 var skill = null;
-var EduEditBtn = document.getElementsByClassName("btn-edit-education"); //edit
 //education
-
-EduEditBtn.addEventListener("click", function () {
-
-    console.log(EduEditBtn);
-    console.log($(this));
+$(".btn-edit-education").click(function () {
+    
+    temp = $(this).parent();
+    console.log(temp);
     debugger
-
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 $("#EduBtnSave").click(() => {
     edu = {
