@@ -7708,10 +7708,10 @@ a.text-dark:hover, a.text-dark:focus {
     .network-block__imgprofile__pimage {
       position: absolute;
       border-radius: 50%;
-      top: 1rem;
-      left: 4rem;
-      width: 8.5rem;
-      height: 8.5rem; }
+      top: 0rem;
+      left: 2rem;
+      width: 8.7rem;
+      height: 8.7rem; }
     .network-block__imgprofile__content {
       display: flex;
       justify-content: center;
@@ -7822,6 +7822,10 @@ a.text-dark:hover, a.text-dark:focus {
   display: flex;
   justify-content: center;
   margin-top: 74px; }
+
+.net-row {
+  margin-top: 100px;
+  margin-bottom: 100px; }
 
 body {
   background-color: #E6E9EC !important; }

@@ -13,7 +13,7 @@ namespace LinkedInMVC.ViewModel
         public string ImageUrl { get; set; }
 
         public string UserId { get; set; }
-        public string Url { get; set; }
+        public string CoverUrl { get; set; }
 
 
 

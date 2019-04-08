@@ -6,6 +6,7 @@ var EducationForm = EducationModal.children.form0;
 //education
 $(".btn-edit-education").click(function () {
 
+
     let [, , temp] = $(this).parent().children();
     let EductionDetails = temp.children;
     let schoolName = EductionDetails[1].textContent;
@@ -13,7 +14,7 @@ $(".btn-edit-education").click(function () {
     let field = EductionDetails[3].textContent;
     let grade = EductionDetails[4].textContent;
     //let startDate=
-    debugger;
+
 });
 
 $("#EduBtnSave").click(() => {
@@ -58,16 +59,6 @@ function OnSuccessAddEducation() {
 
 
 }
-
-
-//$(".btn-edit-education").click(() => {
-
-
-//    console.log($(this))
-
-//    debugger
-//});
-
 
 //Experience
 

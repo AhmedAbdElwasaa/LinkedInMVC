@@ -8,18 +8,44 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using LinkedInMVC.Models;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.AspNet.Identity;
+using LinkedInMVC.ViewModel;
 
 namespace LinkedInMVC.Controllers
 {
     public class NetworkController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        public UnitofWork UnitofWork
+        {
+            get
+            {
+                return HttpContext.GetOwinContext().Get<UnitofWork>();
+            }
+        }
 
         // GET: Network
-        public async Task<ActionResult> Index()
+        public  ActionResult Index()
         {
-            return View(await db.Connection_Requeset.ToListAsync());
+            List<ApplicationUser> v = UnitofWork.ConnectionManager.
+                           GetMetualFriend(User.Identity.GetUserId());
+            List<ConnectionViewModel> cvm = v.Select(c => new ConnectionViewModel
+            { FirstName = c.FirstName, UserId = c.Id, ImageUrl = c.ProfileImage ,CoverUrl=c.ProfileCover })
+            .ToList();
+            return View(cvm);
         }
+        public ActionResult Add(string Id)
+        {
+            if (ModelState.IsValid)
+            {
+                UnitofWork.ConnectionManager.
+                               AddFriendRequest(Id, User.Identity.GetUserId());
+                }
+            
+            return RedirectToAction("Index");
+        }
+
 
         // GET: Network/Details/5
         public async Task<ActionResult> Details(int? id)
@@ -74,21 +100,7 @@ namespace LinkedInMVC.Controllers
             return View(connection_Request);
         }
 
-        // POST: Network/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,IsApproved")] Connection_Request connection_Request)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(connection_Request).State = EntityState.Modified;
-                await db.SaveChangesAsync();
-                return RedirectToAction("Index");
-            }
-            return View(connection_Request);
-        }
+     
 
         // GET: Network/Delete/5
         public async Task<ActionResult> Delete(int? id)
@@ -116,13 +128,8 @@ namespace LinkedInMVC.Controllers
             return RedirectToAction("Index");
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+       
+       
+
     }
 }

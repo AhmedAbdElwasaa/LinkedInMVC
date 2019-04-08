@@ -1,0 +1,28 @@
+﻿@model LinkedInMVC.ViewModel.ConnectionViewModel
+
+<div class="col-lg-4">
+
+    <div class="network-block">
+        <div class="network-block__imgprofile">
+            <div class="network-block__imgprofile__cover">
+                <img src="@Model.CoverUrl" class="img-cover" />
+            </div>
+            <div class="network-block__imgprofile__pimage">
+                <img src="@Model.ImageUrl" class="network-block__imgprofile__pimage" />
+            </div>
+            <div class="network-block__imgprofile__content">
+            </div>
+            <a class="network-block__imgprofile__content__nametag" href="">@Html.ActionLink(Model.FirstName, "Details", "Profile", new { id = Model.UserId }, new { @class = "network-block__imgprofile__content__nametag" })</a>
+        </div>
+        <div class="network-block__imgnetwork">
+            <div class="network-block__imgnetwork__img1"></div>
+            <div class="network-block__imgnetwork__img2"></div>
+            <div class="network-block__imgnetwork__img3"></div>
+            <a class="network-block__imgnetwork__hlink"><span class="network-block__imgnetwork__hlink__numofcon">99</span> mutual connections </a>
+        </div>
+        @Ajax.ActionLink("connect", "Add", "Network", new { id = Model.UserId },
+ new AjaxOptions { }, new{  @class="network-block__btncon" })
+        @*<input class="network-block__btncon" type="button" value="connect" />*@
+
+    </div>
+</div>

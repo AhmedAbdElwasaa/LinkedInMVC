@@ -240,11 +240,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helper\DLIndustryHelper.cs" />
-    <Compile Include="Migrations\201904081945491_test.cs" />
-    <Compile Include="Migrations\201904081945491_test.Designer.cs">
-      <DependentUpon>201904081945491_test.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Comment.cs" />
@@ -292,28 +287,10 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="HTML\CommentBox.html" />
-    <Content Include="HTML\companyprofile.html" />
-    <Content Include="HTML\company_registration.html" />
-    <Content Include="HTML\components.html" />
     <Content Include="HTML\CreatePost.html" />
-    <Content Include="HTML\Home.html" />
-    <Content Include="HTML\landingCompanyPage.html" />
-    <Content Include="HTML\PostBox.html" />
     <Content Include="HTML\Profile.html" />
-    <Content Include="HTML\ProfileCard.html" />
-    <Content Include="HTML\SearchComponent.html" />
-    <Content Include="images\0.jpg" />
-    <Content Include="images\1.jpg" />
-    <Content Include="images\1.png" />
-    <Content Include="images\2.jpg" />
-    <Content Include="images\2.png" />
-    <Content Include="images\3.jpg" />
-    <Content Include="images\cover.jpg" />
-    <Content Include="images\df.png" />
     <Content Include="images\Logo.png" />
-    <Content Include="images\me.jpg" />
-    <Content Include="images\u.png" />
+    <Content Include="js\main.js" />
     <Content Include="node_modules\bootstrap\dist\css\bootstrap-grid.css" />
     <Content Include="node_modules\bootstrap\dist\css\bootstrap-grid.min.css" />
     <Content Include="node_modules\bootstrap\dist\css\bootstrap-reboot.css" />
@@ -731,19 +708,14 @@
     <Content Include="node_modules\bootstrap\scss\_type.scss" />
     <Content Include="node_modules\bootstrap\scss\_utilities.scss" />
     <Content Include="node_modules\bootstrap\scss\_variables.scss" />
-    <Content Include="sass\components\_companyentry.scss" />
-    <Content Include="sass\components\_companyregistration.scss" />
-    <Content Include="sass\components\_divposition.scss" />
-    <Content Include="sass\components\_connection.scss" />
-    <Content Include="sass\components\CreatePost.scss" />
-    <Content Include="sass\components\posts.scss" />
-    <Content Include="sass\layout\Home.scss" />
-    <Content Include="sass\components\_comp_Post.scss" />
-    <Content Include="sass\components\_companyProfile.scss" />
-    <Content Include="sass\components\_peopleMayKnow.scss" />
-    <Content Include="sass\components\_compcomun.scss" />
-    <Content Include="sass\components\_compdashboard.scss" />
-    <Content Include="sass\components\comments.scss" />
+    <Content Include="node_modules\jquery-ajax-unobtrusive\package.json" />
+    <Content Include="node_modules\jquery-ajax-unobtrusive\README.md" />
+    <Content Include="node_modules\jquery-validation-unobtrusive\package.json" />
+    <Content Include="node_modules\jquery-validation-unobtrusive\README.md" />
+    <Content Include="node_modules\jquery-validation\changelog.md" />
+    <Content Include="node_modules\jquery-validation\LICENSE.md" />
+    <Content Include="node_modules\jquery-validation\package.json" />
+    <Content Include="node_modules\jquery-validation\README.md" />
     <Content Include="node_modules\jquery\bower.json" />
     <Content Include="node_modules\jquery\dist\jquery.min.map" />
     <Content Include="node_modules\jquery\dist\jquery.slim.min.map" />
@@ -751,18 +723,7 @@
     <Content Include="node_modules\jquery\package.json" />
     <Content Include="node_modules\jquery\README.md" />
     <Content Include="node_modules\jquery\src\.eslintrc.json" />
-    <Content Include="node_modules\jquery-ajax-unobtrusive\package.json" />
-    <Content Include="node_modules\jquery-ajax-unobtrusive\README.md" />
-    <Content Include="node_modules\jquery-validation\changelog.md" />
-    <Content Include="node_modules\jquery-validation\LICENSE.md" />
-    <Content Include="node_modules\jquery-validation\package.json" />
-    <Content Include="node_modules\jquery-validation\README.md" />
-    <Content Include="node_modules\jquery-validation-unobtrusive\package.json" />
-    <Content Include="node_modules\jquery-validation-unobtrusive\README.md" />
     <Content Include="Scripts\main.js" />
-    <Content Include="sass\layout\profile-card-layout.scss" />
-    <Content Include="sass\components\Profile-card.scss" />
-    <Content Include="sass\components\_search-results.scss" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -772,9 +733,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -804,25 +763,6 @@
     <Content Include="Views\Shared\_Layout2.cshtml" />
     <Content Include="Views\Connection\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
-    <Content Include="Views\Shared\_PostPartial.cshtml" />
-    <Content Include="Views\Shared\_Connection.cshtml" />
-    <Content Include="Views\Network\Create.cshtml" />
-    <Content Include="Views\Network\Delete.cshtml" />
-    <Content Include="Views\Network\Details.cshtml" />
-    <Content Include="Views\Network\Edit.cshtml" />
-    <Content Include="Views\Network\Index.cshtml" />
-    <Content Include="Views\Profile\_education.cshtml" />
-    <Content Include="Views\Profile\_experience.cshtml" />
-    <Content Include="Views\Profile\Details.cshtml" />
-    <Content Include="Views\Home\_CreatePostPartial.cshtml" />
-    <Content Include="Views\Company\Create.cshtml" />
-    <Content Include="Views\Company\Details.cshtml" />
-    <Content Include="Views\Company\Edit.cshtml" />
-    <Content Include="Views\Company\Index.cshtml" />
-    <Content Include="Views\Shared\_Layout3.cshtml" />
-    <Content Include="Views\Home\SearchResults.cshtml" />
-    <Content Include="Views\Shared\_LikesPartial.cshtml" />
-    <Content Include="Views\Shared\_SearchResultPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -835,14 +775,26 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
-    <Content Include="Views\Shared\_CommentPartial.cshtml" />
-    <Content Include="sass\components\_job.scss" />
+    <Content Include="Views\Company\Create.cshtml" />
+    <Content Include="Views\Company\Details.cshtml" />
+    <Content Include="Views\Company\Edit.cshtml" />
+    <Content Include="Views\Company\Index.cshtml" />
+    <Content Include="Views\Network\Create.cshtml" />
+    <Content Include="Views\Network\Delete.cshtml" />
+    <Content Include="Views\Network\Details.cshtml" />
+    <Content Include="Views\Network\Edit.cshtml" />
+    <Content Include="Views\Network\Index.cshtml" />
+    <Content Include="Views\Profile\Details.cshtml" />
+    <Content Include="Views\Profile\_education.cshtml" />
+    <Content Include="Views\Profile\_experience.cshtml" />
     <Content Include="Views\Profile\_Skill.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904081945491_test.resx">
-      <DependentUpon>201904081945491_test.cs</DependentUpon>
-    </EmbeddedResource>
+    <Content Include="Views\Shared\_CommentPartial.cshtml" />
+    <Content Include="Views\Shared\_Connection.cshtml" />
+    <Content Include="Views\Shared\_Layout3.cshtml" />
+    <Content Include="Views\Shared\_LikesPartial.cshtml" />
+    <Content Include="Views\Shared\_PeopleMayKnow.cshtml" />
+    <Content Include="Views\Shared\_PostPartial.cshtml" />
+    <Content Include="Views\Shared\_SearchResultPartial.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
