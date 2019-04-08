@@ -1,5 +1,5 @@
 ﻿@model LinkedInMVC.ViewModel.PostViewModel
-@{ 
+@{
     string name = Model.ApplicationUser.FirstName + " ";
     name += Model.ApplicationUser.SecondName;
     string jobTitle = @Model.ApplicationUser.Headline;
@@ -30,84 +30,84 @@ targetComments = "comments" + Model.Id.ToString();
 }
 @*@Ajax.ActionLink("Test", "t", "Home", null, ao, null)*@
 
-    <div class="post pl-5 ">
-        <div class="post__post-main col-md-12">
-            <div class="post-main-head row">
-                <img class="user-photo col-md-2 " src="../images/u.png">
-                <div class="user-data col-md-6 d-flex">
-                    
-                    @Html.ActionLink(name, "", null, new { @class = "user-data__user-name" })
-                    <div class="user-data__user-title">@jobTitle</div>
+<div class="post pl-5 ">
+    <div class="post__post-main col-md-12">
+        <div class="post-main-head row">
+            <img class="user-photo col-md-2 " src="../images/u.png">
+            <div class="user-data col-md-6 d-flex">
+
+                @Html.ActionLink(name, "", null, new { @class = "user-data__user-name" })
+                <div class="user-data__user-title">@jobTitle</div>
+            </div>
+        </div>
+        <div class="post-main-content col-md-12">
+            @Model.postText
+        </div>
+        <ul class="social-counts col-md-5 d-flex ">
+            <li>
+                <div id=@targetLike>
+                    @Html.Partial("_LikesPartial", Model.LikesViewModel)
+                    @*<span id="likesNum" class="num-likes pr-2">@Model.numOfLikes </span>
+                        <span>Likes</span>*@
                 </div>
-            </div>
-            <div class="post-main-content col-md-12">
-                @Model.postText
-            </div>
-            <ul class="social-counts col-md-5 d-flex ">
-                <li>
-                    <div id=@targetLike>
-                        @Html.Partial("_LikesPartial", Model.LikesViewModel)
-                        @*<span id="likesNum" class="num-likes pr-2">@Model.numOfLikes </span>
-                            <span>Likes</span>*@
-                    </div>
-                </li>
-                <li>.</li>
-                <li>
-                    <span id="commentsNum" class="num-comments pl-2 pr-2">@Model.numOfComments </span>
-                    <span>Comments</span>
-                </li>
+            </li>
+            <li>.</li>
+            <li>
+                <span id="commentsNum" class="num-comments pl-2 pr-2">@Model.numOfComments </span>
+                <span>Comments</span>
+            </li>
 
-            </ul>
-            <div class="feedback-buttons row">
-                @using (Ajax.BeginForm("AddLike", "Likes", ajaxOptionsLikes))
-                {
-                    @Html.HiddenFor(model => Model.ApplicationUser.Id)
-                    @Html.HiddenFor(model => Model.Id)
-                    <button type="submit" id=@targetbtn class="like-button col-md-3">
-
-                        <i class="far fa-thumbs-up like-button__ilike"></i>
-                        <span> Like </span>
-                    </button>
-                }
-                <button class="comment-button col-md-3" onclick="focusComment()">
-                    <i class="fal fa-comment-alt-lines comment-button__icomment"></i>
-                    <span>Comment</span>
-                </button>
-                <button class="share-button col-md-3">
-                    <i class="fas fa-share share-button__ishare"></i>
-                    <span>  Share</span>
-                </button>
-            </div>
-        </div>
-
-        <div class="post-reactions col-md-12">
-            @using (Ajax.BeginForm("AddComment", "Comments", ajaxOptionsComments))
+        </ul>
+        <div class="feedback-buttons row">
+            @using (Ajax.BeginForm("AddLike", "Likes", ajaxOptionsLikes))
             {
+                @Html.HiddenFor(model => Model.ApplicationUser.Id)
                 @Html.HiddenFor(model => Model.Id)
-                <div class="add-Comment">
-                    <div class="user-img-container col-md-3 "><img class="user-photo" src="../images/u.png"></div>
-                    @Html.TextBox("CommentText", null, new { @class = "comment-txt col-md-8", @placeholder = "Add a comment..." })
-                    @*<input type="text" name="" class="comment-txt col-md-8" placeholder="Add a comment...">*@
-                    <button class="btn btn-primary post-btn" @*type="submit"*@ onclick="$(document.forms[3]).submit">Post</button>
-                </div>}
-        </div>
+                <button type="submit" id=@targetbtn class="like-button col-md-3">
 
-        <div id=@targetComments>
-            @if (Model.Comments != null)
-            {
-                @Html.Partial("_CommentsPartial", Model.Comments.ToArray())
+                    <i class="far fa-thumbs-up like-button__ilike"></i>
+                    <span> Like </span>
+                </button>
             }
+            <button class="comment-button col-md-3" onclick="focusComment()">
+                <i class="fal fa-comment-alt-lines comment-button__icomment"></i>
+                <span>Comment</span>
+            </button>
+            <button class="share-button col-md-3">
+                <i class="fas fa-share share-button__ishare"></i>
+                <span>  Share</span>
+            </button>
         </div>
-
     </div>
 
-    <script>
+    <div class="post-reactions col-md-12">
+        @using (Ajax.BeginForm("AddComment", "Comments", ajaxOptionsComments))
+        {
+            @Html.HiddenFor(model => Model.Id)
+            <div class="add-Comment">
+                <div class="user-img-container col-md-3 "><img class="user-photo" src="../images/u.png"></div>
+                @Html.TextBox("CommentText", null, new { @class = "comment-txt col-md-8", @placeholder = "Add a comment..." })
+                @*<input type="text" name="" class="comment-txt col-md-8" placeholder="Add a comment...">*@
+                <button class="btn btn-primary post-btn" @*type="submit"*@ onclick="$(document.forms[3]).submit">Post</button>
+            </div>}
+    </div>
+
+    <div id=@targetComments>
+        @if (Model.Comments != null)
+        {
+            @Html.Partial("_CommentsPartial", Model.Comments.ToArray())
+        }
+    </div>
+
+</div>
+
+<script>
         if (  @Model.liked.ToString().ToLower() === true) {
             document.getElementById('@targetbtn').classList.add('activeLike');
         }
-        
+
         document.getElementById('@targetbtn').addEventListener('click', function (){
-   
+
             if (document.getElementById('@targetbtn').classList.contains('activeLike')) {
                 document.getElementById('@targetbtn').classList.remove('activeLike');
             }
@@ -115,8 +115,9 @@ targetComments = "comments" + Model.Id.ToString();
                 document.getElementById('@targetbtn').classList.add('activeLike');
             }
         });
-        
-    </script>
-    @*<div id="my">blablabla</div>*@
+
+</script>
+@*<div id="my">blablabla</div>*@
+
 
 

@@ -17,7 +17,7 @@ namespace LinkedInMVC.BLL
         public Post AddComment(Comment userComment)
         {
             //Add Comment with user id in Comments table
-            
+
             context.Comments.Add(userComment);
 
             context.SaveChanges();

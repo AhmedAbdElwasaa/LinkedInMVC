@@ -306,4 +306,60 @@
             padding-left: 2rem;
         }
     }
+    .Endorsements
+    {
+        font-size: 1.6rem;
+        padding-left: 2rem;
+    }
+  }
+
+
+//jopCard-start
+.job-card{
+    margin-bottom: 2rem;    
+    width:25.2rem;
+    height: fit-content; //24.5rem;
+    background: #fff;
+    box-shadow:  0 0 0 1px rgba(0,0,0,.1);
+    padding:1.8rem;
+    transition: box-shadow 83ms;
+    &--body{
+      .job-img{
+        width: 6rem;
+      }
+      .job-title{
+        font-size: 1.6rem;
+        font-weight: bold;
+        font-display: bold;
+        color: #252525;
+      }
+      .job-company-name{
+        color:rgba(0,0,0,.9);
+        font-size: 1.2rem;
+      }
+      .job-address{
+        color: #ACACAC;
+      }
+      .job-mutual-connections{
+        display: flex;
+        align-items: center;
+        
+      }
+      .job-hr{
+        //transform: translate(-1rem);
+        width: 4rem;
+        color: #cdcfd2;
+      }
+      .job-time{
+        //color: #ACACAC;
+        font-size: 1.2rem;
+        line-height: 1.33333;
+        font-weight: 400;
+        color: rgba(0,0,0,.6);
+      }
+    }
+    &:hover{
+    box-shadow:  0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+    }
 }
+

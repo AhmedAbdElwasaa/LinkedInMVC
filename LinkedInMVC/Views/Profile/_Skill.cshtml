@@ -1,0 +1,19 @@
+﻿@model LinkedInMVC.ViewModel.EndorsementViewModel
+
+<div class="skill">
+    <div class="skill-data">
+        <button class="plus-icon-container">
+            <i class="fas fa-plus"></i>
+        </button>
+        <div class="skill-name">@Model.Skill.SkillName</div>
+        <input type="hidden" value="@Model.Id" />
+    </div>
+    <div class="Endorsements">
+        <span class="Endorsed-by">Endorsed by </span>
+
+        @foreach (string name in @Model.EndorsedByNames)
+        {
+            <span>  @name</span>
+        }
+    </div>
+    </div>

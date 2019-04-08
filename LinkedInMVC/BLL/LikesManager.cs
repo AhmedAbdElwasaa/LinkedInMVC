@@ -51,7 +51,7 @@ namespace LinkedInMVC.BLL
         {
             var likes = context.Likes.Where(l => l.Fk_PostId == postId);
             List<ApplicationUser> users = new List<ApplicationUser>();
-            foreach(var item in likes)
+            foreach (var item in likes)
             {
                 users.Add(item.ApplicationUser);
             }

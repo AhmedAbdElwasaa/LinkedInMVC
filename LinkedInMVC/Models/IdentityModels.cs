@@ -27,6 +27,10 @@ namespace LinkedInMVC.Models
         public ICollection<UserExperience> UserExperiences = new List<UserExperience>();
         public ICollection<Connection_Request> Connection_Requeset = new List<Connection_Request>();
         public ICollection<Connection_Request> Connection_Requeset1 = new List<Connection_Request>();
+        public ICollection<UserSkill> UserSkills = new List<UserSkill>();
+
+        public ICollection<Endorsement> Endorsments = new List<Endorsement>();
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
@@ -69,6 +73,10 @@ namespace LinkedInMVC.Models
         public DbSet<Experience> Experience { get; set; }
         public DbSet<UserExperience> UserExperiences { get; set; }
 
+        public DbSet<Skill> skill { get; set; }
+        public DbSet<UserSkill> UserSkills { get; set; }
+
+        public DbSet<Endorsement> Endorsement { get; set; }
         //CONNECTION
         public DbSet<Connection_Request> Connection_Requeset { get; set; }
        

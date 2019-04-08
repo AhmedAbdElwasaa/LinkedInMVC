@@ -1,220 +1,42 @@
-﻿@model IEnumerable<LinkedInMVC.Models.Connection_Request>
+﻿@model NetworkViewModel
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout2.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="container network ">
+<div class="row">
     <div class="col-lg-8 network-container">
-        <h3>Recommended for you</h3>
-        <div class="col-lg-4">
-            <div class="network-block">
-                <div class="network-block__imgprofile">
-                    <div class="network-block__imgprofile__cover">
-                        <img src="~/images/cover.jpg" class="img-cover" />
-                    </div>
-                    <div class="network-block__imgprofile__pimage">
-                    </div>
-                    <div class="network-block__imgprofile__content">
-                        <a class="network-block__imgprofile__content__nametag" href="">ahmed abd-elwasaa</a>
-                        <p class="network-block__imgprofile__content__details">
-                            trainee at information technology institute (ITI)
-                        </p>
-                    </div>
-                </div>
-                <div class="network-block__imgnetwork">
-                    <div class="network-block__imgnetwork__img1"></div>
-                    <div class="network-block__imgnetwork__img2"></div>
-                    <div class="network-block__imgnetwork__img3"></div>
-                    <a class="network-block__imgnetwork__hlink"><span class="network-block__imgnetwork__hlink__numofcon">99</span> mutual connections </a>
-                </div>
-                <input class="network-block__btncon" type="button" value="connect" />
-
-            </div>
+        <div class="row">
+            <h3>Recommended for you</h3>
         </div>
-        <div class="col-lg-4">
-            <div class="network-block">
-                <div class="network-block__imgprofile">
-                    <div class="network-block__imgprofile__cover">
-                        <img src="~/images/cover.jpg" class="img-cover" />
-                    </div>
-                    <div class="network-block__imgprofile__pimage">
-                        <img src="~/images/me.jpg" class="net-img" />
-                    </div>
-                    <div class="network-block__imgprofile__content">
-                        <a class="network-block__imgprofile__content__nametag" href="">ahmed abd-elwasaa</a>
-                        <p class="network-block__imgprofile__content__details">
-                            trainee at information technology institute (ITI)
-                        </p>
-                    </div>
-                </div>
-                <div class="network-block__imgnetwork">
-                    <div class="network-block__imgnetwork__img1"></div>
-                    <div class="network-block__imgnetwork__img2"></div>
-                    <div class="network-block__imgnetwork__img3"></div>
-                    <a class="network-block__imgnetwork__hlink"><span class="network-block__imgnetwork__hlink__numofcon">99</span> mutual connections </a>
-                </div>
-                <input class="network-block__btncon" type="button" value="connect" />
+        <div class=" row net-row">
+            <div class="container network row ">
+                @*@{
+            int x = 0;
+        }*@
+                @foreach (var network in Model.MetualFriend)
+                {
+                    //x++;
 
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="network-block">
-                <div class="network-block__imgprofile">
-                    <div class="network-block__imgprofile__cover">
-                        <img src="~/images/cover.jpg" class="img-cover" />
-                    </div>
-                    <div class="network-block__imgprofile__pimage">
-                    </div>
-                    <div class="network-block__imgprofile__content">
-                        <a class="network-block__imgprofile__content__nametag" href="">ahmed abd-elwasaa</a>
-                        <p class="network-block__imgprofile__content__details">
-                            trainee at information technology institute (ITI)
-                        </p>
-                    </div>
-                </div>
-                <div class="network-block__imgnetwork">
-                    <div class="network-block__imgnetwork__img1"></div>
-                    <div class="network-block__imgnetwork__img2"></div>
-                    <div class="network-block__imgnetwork__img3"></div>
-                    <a class="network-block__imgnetwork__hlink"><span class="network-block__imgnetwork__hlink__numofcon">99</span> mutual connections </a>
-                </div>
-                <input class="network-block__btncon" type="button" value="connect" />
+                    @Html.Partial("_PeopleMayKnow", network)
+                }
+                @foreach (var FriendRequest in Model.FriendRequest)
+                {
+                    //x++;
 
+                    @Html.Partial("_FreindRequest", FriendRequest)
+                }
             </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="network-block">
-                <div class="network-block__imgprofile">
-                    <div class="network-block__imgprofile__cover">
-                        <img src="~/images/cover.jpg" class="img-cover" />
-                    </div>
-                    <div class="network-block__imgprofile__pimage">
-                        <img src="~/images/me.jpg" class="net-img" />
-                    </div>
-                    <div class="network-block__imgprofile__content">
-                        <a class="network-block__imgprofile__content__nametag" href="">ahmed abd-elwasaa</a>
-                        <p class="network-block__imgprofile__content__details">
-                            trainee at information technology institute (ITI)
-                        </p>
-                    </div>
-                </div>
-                <div class="network-block__imgnetwork">
-                    <div class="network-block__imgnetwork__img1"></div>
-                    <div class="network-block__imgnetwork__img2"></div>
-                    <div class="network-block__imgnetwork__img3"></div>
-                    <a class="network-block__imgnetwork__hlink"><span class="network-block__imgnetwork__hlink__numofcon">99</span> mutual connections </a>
-                </div>
-                <input class="network-block__btncon" type="button" value="connect" />
 
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="network-block">
-                <div class="network-block__imgprofile">
-                    <div class="network-block__imgprofile__cover">
-                        <img src="~/images/cover.jpg" class="img-cover" />
-                    </div>
-                    <div class="network-block__imgprofile__pimage">
-                    </div>
-                    <div class="network-block__imgprofile__content">
-                        <a class="network-block__imgprofile__content__nametag" href="">ahmed abd-elwasaa</a>
-                        <p class="network-block__imgprofile__content__details">
-                            trainee at information technology institute (ITI)
-                        </p>
-                    </div>
-                </div>
-                <div class="network-block__imgnetwork">
-                    <div class="network-block__imgnetwork__img1"></div>
-                    <div class="network-block__imgnetwork__img2"></div>
-                    <div class="network-block__imgnetwork__img3"></div>
-                    <a class="network-block__imgnetwork__hlink"><span class="network-block__imgnetwork__hlink__numofcon">99</span> mutual connections </a>
-                </div>
-                <input class="network-block__btncon" type="button" value="connect" />
-
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="network-block">
-                <div class="network-block__imgprofile">
-                    <div class="network-block__imgprofile__cover">
-                        <img src="~/images/cover.jpg" class="img-cover" />
-                    </div>
-                    <div class="network-block__imgprofile__pimage">
-                        <img src="~/images/me.jpg" class="net-img" />
-                    </div>
-                    <div class="network-block__imgprofile__content">
-                        <a class="network-block__imgprofile__content__nametag" href="">ahmed abd-elwasaa</a>
-                        <p class="network-block__imgprofile__content__details">
-                            trainee at information technology institute (ITI)
-                        </p>
-                    </div>
-                </div>
-                <div class="network-block__imgnetwork">
-                    <div class="network-block__imgnetwork__img1"></div>
-                    <div class="network-block__imgnetwork__img2"></div>
-                    <div class="network-block__imgnetwork__img3"></div>
-                    <a class="network-block__imgnetwork__hlink"><span class="network-block__imgnetwork__hlink__numofcon">99</span> mutual connections </a>
-                </div>
-                <input class="network-block__btncon" type="button" value="connect" />
-
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="network-block">
-                <div class="network-block__imgprofile">
-                    <div class="network-block__imgprofile__cover">
-                        <img src="~/images/cover.jpg" class="img-cover" />
-                    </div>
-                    <div class="network-block__imgprofile__pimage">
-                    </div>
-                    <div class="network-block__imgprofile__content">
-                        <a class="network-block__imgprofile__content__nametag" href="">ahmed abd-elwasaa</a>
-                        <p class="network-block__imgprofile__content__details">
-                            trainee at information technology institute (ITI)
-                        </p>
-                    </div>
-                </div>
-                <div class="network-block__imgnetwork">
-                    <div class="network-block__imgnetwork__img1"></div>
-                    <div class="network-block__imgnetwork__img2"></div>
-                    <div class="network-block__imgnetwork__img3"></div>
-                    <a class="network-block__imgnetwork__hlink"><span class="network-block__imgnetwork__hlink__numofcon">99</span> mutual connections </a>
-                </div>
-                <input class="network-block__btncon" type="button" value="connect" />
-
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="network-block">
-                <div class="network-block__imgprofile">
-                    <div class="network-block__imgprofile__cover">
-                        <img src="~/images/cover.jpg" class="img-cover" />
-                    </div>
-                    <div class="network-block__imgprofile__pimage">
-                        <img src="~/images/me.jpg" class="net-img" />
-                    </div>
-                    <div class="network-block__imgprofile__content">
-                        <a class="network-block__imgprofile__content__nametag" href="">ahmed abd-elwasaa</a>
-                        <p class="network-block__imgprofile__content__details">
-                            trainee at information technology institute (ITI)
-                        </p>
-                    </div>
-                </div>
-                <div class="network-block__imgnetwork">
-                    <div class="network-block__imgnetwork__img1"></div>
-                    <div class="network-block__imgnetwork__img2"></div>
-                    <div class="network-block__imgnetwork__img3"></div>
-                    <a class="network-block__imgnetwork__hlink"><span class="network-block__imgnetwork__hlink__numofcon">99</span> mutual connections </a>
-                </div>
-                <input class="network-block__btncon" type="button" value="connect" />
-
-            </div>
         </div>
     </div>
 </div>
-
-
+<script>
+    function removerow(x) {
+        var self = this
+        $(x).remove();
+    }
+</script>
 @*<p>
         @Html.ActionLink("Create New", "Create")
     </p>

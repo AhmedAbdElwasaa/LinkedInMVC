@@ -7245,6 +7245,43 @@ a.text-dark:hover, a.text-dark:focus {
     .skills-container .skill .Endorsements {
       font-size: 1.6rem;
       padding-left: 2rem; }
+  .skills-container .Endorsements {
+    font-size: 1.6rem;
+    padding-left: 2rem; }
+
+.job-card {
+  margin-bottom: 2rem;
+  width: 25.2rem;
+  height: fit-content;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  padding: 1.8rem;
+  transition: box-shadow 83ms; }
+  .job-card--body .job-img {
+    width: 6rem; }
+  .job-card--body .job-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-display: bold;
+    color: #252525; }
+  .job-card--body .job-company-name {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 1.2rem; }
+  .job-card--body .job-address {
+    color: #ACACAC; }
+  .job-card--body .job-mutual-connections {
+    display: flex;
+    align-items: center; }
+  .job-card--body .job-hr {
+    width: 4rem;
+    color: #cdcfd2; }
+  .job-card--body .job-time {
+    font-size: 1.2rem;
+    line-height: 1.33333;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6); }
+  .job-card:hover {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2); }
 
 .i-color-company {
   color: #005E93; }
@@ -7623,6 +7660,28 @@ a.text-dark:hover, a.text-dark:focus {
   margin-top: 6%;
   margin-left: 5%; }
 
+.job-page {
+  height: 100vh;
+  background-color: #F5F5F5; }
+  .job-page .job-container-head {
+    margin: 10rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #FFFFFF;
+    width: 112.8rem;
+    height: fit-content;
+    position: absolute;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2); }
+    .job-page .job-container-head .container-title {
+      margin-left: 2.4rem;
+      margin-bottom: 3rem; }
+  .job-page .job-container-body {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-start; }
+
 .network-block {
   margin-top: 100px;
   display: flex;
@@ -7649,10 +7708,10 @@ a.text-dark:hover, a.text-dark:focus {
     .network-block__imgprofile__pimage {
       position: absolute;
       border-radius: 50%;
-      top: 1rem;
-      left: 4rem;
-      width: 8.5rem;
-      height: 8.5rem; }
+      top: 0rem;
+      left: 2rem;
+      width: 8.7rem;
+      height: 8.7rem; }
     .network-block__imgprofile__content {
       display: flex;
       justify-content: center;
@@ -7763,6 +7822,10 @@ a.text-dark:hover, a.text-dark:focus {
   display: flex;
   justify-content: center;
   margin-top: 74px; }
+
+.net-row {
+  margin-top: 100px;
+  margin-bottom: 100px; }
 
 body {
   background-color: #E6E9EC !important; }
@@ -15363,46 +15426,92 @@ body {
   padding: 0rem;
   margin: 0rem; }
 
-#AddEducationModal .modal-dialog {
+#EducationModal .modal-dialog {
   max-width: 700px; }
-  #AddEducationModal .modal-dialog .modal-body {
+  #EducationModal .modal-dialog .modal-body {
     font-size: 1.6rem; }
-    #AddEducationModal .modal-dialog .modal-body input {
+    #EducationModal .modal-dialog .modal-body input {
       width: 100% !important; }
-    #AddEducationModal .modal-dialog .modal-body .Title {
+    #EducationModal .modal-dialog .modal-body .Title {
       margin-top: 2rem; }
-    #AddEducationModal .modal-dialog .modal-body .date {
+    #EducationModal .modal-dialog .modal-body .date {
       display: flex;
       width: 100%; }
-      #AddEducationModal .modal-dialog .modal-body .date .StartDate-wrapper {
+      #EducationModal .modal-dialog .modal-body .date .StartDate-wrapper {
         width: 50%; }
-        #AddEducationModal .modal-dialog .modal-body .date .StartDate-wrapper select {
+        #EducationModal .modal-dialog .modal-body .date .StartDate-wrapper select {
           width: 90%; }
-      #AddEducationModal .modal-dialog .modal-body .date .EndDate-Wrapper {
+      #EducationModal .modal-dialog .modal-body .date .EndDate-Wrapper {
         width: 50%; }
-        #AddEducationModal .modal-dialog .modal-body .date .EndDate-Wrapper select {
+        #EducationModal .modal-dialog .modal-body .date .EndDate-Wrapper select {
           width: 90%; }
-  #AddEducationModal .modal-dialog .modal-footer button {
+  #EducationModal .modal-dialog .modal-footer button {
     font-size: 1.6rem; }
 
-#EditEducationModal .modal-dialog {
+#ExperienceModal .modal-dialog {
   max-width: 700px; }
-  #EditEducationModal .modal-dialog .modal-body {
+  #ExperienceModal .modal-dialog .modal-body {
     font-size: 1.6rem; }
-    #EditEducationModal .modal-dialog .modal-body input {
+    #ExperienceModal .modal-dialog .modal-body input {
       width: 100% !important; }
-    #EditEducationModal .modal-dialog .modal-body .Title {
+    #ExperienceModal .modal-dialog .modal-body .Title {
       margin-top: 2rem; }
-    #EditEducationModal .modal-dialog .modal-body .date {
+    #ExperienceModal .modal-dialog .modal-body .date {
       display: flex;
       width: 100%; }
-      #EditEducationModal .modal-dialog .modal-body .date .StartDate-wrapper {
+      #ExperienceModal .modal-dialog .modal-body .date .StartDate-wrapper {
         width: 50%; }
-        #EditEducationModal .modal-dialog .modal-body .date .StartDate-wrapper select {
+        #ExperienceModal .modal-dialog .modal-body .date .StartDate-wrapper select {
           width: 90%; }
-      #EditEducationModal .modal-dialog .modal-body .date .EndDate-Wrapper {
+      #ExperienceModal .modal-dialog .modal-body .date .EndDate-Wrapper {
         width: 50%; }
-        #EditEducationModal .modal-dialog .modal-body .date .EndDate-Wrapper select {
+        #ExperienceModal .modal-dialog .modal-body .date .EndDate-Wrapper select {
           width: 90%; }
-  #EditEducationModal .modal-dialog .modal-footer button {
+  #ExperienceModal .modal-dialog .modal-footer button {
     font-size: 1.6rem; }
+
+/*#EditEducationModal {
+
+    .modal-dialog {
+        max-width: 700px;
+
+        .modal-body {
+            font-size: 1.6rem;
+
+            input {
+                width: 100% !important;
+            }
+
+            .Title {
+                margin-top: 2rem;
+            }
+
+            .date {
+                display: flex;
+                width: 100%;
+
+                .StartDate-wrapper {
+                    width: 50%;
+
+                    select {
+                        width: 90%;
+                    }
+                }
+
+                .EndDate-Wrapper {
+                    width: 50%;
+
+                    select {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+
+        .modal-footer {
+            button {  
+                font-size: 1.6rem;
+            }
+        }
+    }
+}*/

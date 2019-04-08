@@ -10,6 +10,7 @@ using System.Web.Mvc;
 using LinkedInMVC.Models;
 using Microsoft.AspNet.Identity.Owin;
 using LinkedInMVC.ViewModel;
+using Microsoft.AspNet.Identity;
 
 namespace LinkedInMVC.Controllers
 {
@@ -58,14 +59,20 @@ namespace LinkedInMVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(Experience experience)
         {
+            string userId = User.Identity.GetUserId();
+            ApplicationUser currentUser = UnitofWork.UserManager.FindById(userId);
 
             if (ModelState.IsValid)
             {
-                UnitofWork.ExperienceManager.Add(experience);
-                return RedirectToAction("Index");
+                experience = UnitofWork.ExperienceManager.Add(experience);
+               
+                UnitofWork.UserExperienceManager.AddUserExperience(experience, currentUser);
+
+
+
             }
 
-            return View(experience);
+            return RedirectToAction("Index", "Profile");
         }
 
         //// GET: Experiences/Edit/5

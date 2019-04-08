@@ -24,11 +24,28 @@ namespace LinkedInMVC.Controllers
             }
         }
 
-        // GET: Educations
-        //public async Task<ActionResult> Index()
-        //{
-        //    return View(await db.Educations.ToListAsync());
-        //}
+        //// POST: Educations/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Create(Education education)
+        {
+            string userId = User.Identity.GetUserId();
+            ApplicationUser currentUser = UnitofWork.UserManager.FindById(userId);
+
+            if (ModelState.IsValid)
+            {
+                education = UnitofWork.EducationManager.Add(education);
+                UnitofWork.UserEducationManager.AddUserEducation(education, currentUser);
+
+             
+
+            }
+
+            
+            return RedirectToAction("Index", "Profile");
+        }
+
+      
 
         //// GET: Educations/Details/5
         public async Task<ActionResult> Details(String id)
@@ -46,31 +63,30 @@ namespace LinkedInMVC.Controllers
             return View(Educations);
         }
 
-        //// GET: Educations/Create
-        public ActionResult Create()
-        {
 
-            return View();
-        }
 
-        //// POST: Educations/Create
+
+
+
+
+
+        // POST: Educations/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(Education education)
+        public async Task<ActionResult> Edit(Education education)
         {
-            string userId = User.Identity.GetUserId();
-            ApplicationUser currentUser = UnitofWork.UserManager.FindById(userId);
-
             if (ModelState.IsValid)
             {
-             education=  UnitofWork.EducationManager.Add(education);
-              UnitofWork.UserEducationManager.AddUserEducation(education, currentUser);
-                
-              
-            }
+               
 
-            return RedirectToAction( "Index","Profile");
+                UnitofWork.EducationManager.Update(education);
+
+            }
+                return RedirectToAction("Index", "Profile");
+         
         }
+
+
 
         //// GET: Educations/Edit/5
         //public async Task<ActionResult> Edit(int? id)
@@ -86,23 +102,6 @@ namespace LinkedInMVC.Controllers
         //    }
         //    return View(education);
         //}
-
-        //// POST: Educations/Edit/5
-        //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        //// more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<ActionResult> Edit([Bind(Include = "Id,SchoolName,Degree,FieldOfStudy,Grade,FromYear,ToYear")] Education education)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        db.Entry(education).State = EntityState.Modified;
-        //        await db.SaveChangesAsync();
-        //        return RedirectToAction("Index");
-        //    }
-        //    return View(education);
-        //}
-
         //// GET: Educations/Delete/5
         //public async Task<ActionResult> Delete(int? id)
         //{

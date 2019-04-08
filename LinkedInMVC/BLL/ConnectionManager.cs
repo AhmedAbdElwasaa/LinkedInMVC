@@ -24,11 +24,17 @@ namespace LinkedInMVC.BLL
         }
         public void AddFriendRequest(string userId, string connectionId)
         {
-            Connection_Request friend = new Connection_Request();
-            friend.FK_UserId.Id = userId;
-            friend.FK_Connction_UserId.Id = connectionId;
-            friend.IsApproved = false;
-            context.Connection_Requeset.Add(friend);
+            ApplicationUser ApplicationUser;
+            ApplicationUser = UnitofWork.UserManager.Users
+                .Where(e => e.Id == connectionId).FirstOrDefault();
+            ApplicationUser ApplicationUser2;
+            ApplicationUser2 = UnitofWork.UserManager.Users
+                .Where(e => e.Id == userId).FirstOrDefault();
+            Connection_Request con = new Connection_Request();
+            con.FK_UserId = ApplicationUser;
+            con.FK_Connction_UserId = ApplicationUser2;
+            con.IsApproved = false;
+            context.Connection_Requeset.Add(con);
             context.SaveChanges();
         }
         public List<ApplicationUser> GetAllFriend(string userId)
@@ -83,13 +89,14 @@ namespace LinkedInMVC.BLL
                 List<ApplicationUser> friendsOffriend = con.GetAllFriend(item.Id);
                 foreach (ApplicationUser i in friendsOffriend)
                 {
-                    if (i.Id != userId)
+                    if (i.Id != userId && !friends.Contains(i)&& !checkFreindRequest(userId,i.Id) )
                     {
 
                         friendsOffriends.Add(i);
                     }
 
                 }
+
 
 
             }
@@ -106,6 +113,16 @@ namespace LinkedInMVC.BLL
             context.Connection_Requeset.Remove(connecToDelete2);
             context.SaveChanges();
         }
-
+        public bool checkFreindRequest(string userId ,string connId)
+        {
+            bool flag=true;
+          Connection_Request connlist = context.Connection_Requeset.Where(u => u.IsApproved == false && u.FK_UserId.Id == userId && u.FK_Connction_UserId.Id==connId).Select(y => y).FirstOrDefault();
+            if (connlist == null)
+            {
+                flag = false;
+            }
+           
+            return flag;
+        }
     }
 }
