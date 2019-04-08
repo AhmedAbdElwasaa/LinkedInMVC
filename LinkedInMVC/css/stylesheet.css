@@ -7251,6 +7251,10 @@ a.text-dark:hover, a.text-dark:focus {
     font-size: 1.6rem;
     padding-left: 2rem; }
 
+.Endorsements {
+  font-size: 1.6rem;
+  padding-left: 2rem; }
+
 .job-card {
   margin-bottom: 2rem;
   width: 25.2rem;
@@ -7668,6 +7672,11 @@ a.text-dark:hover, a.text-dark:focus {
 .job-page {
   height: 100vh;
   background-color: #F5F5F5; }
+  .job-page .job-search {
+    background-color: #f3f6f8;
+    position: relative;
+    z-index: 3;
+    width: 112.8rem; }
   .job-page .job-container-head {
     margin: 10rem;
     padding-top: 5rem;

@@ -3,7 +3,7 @@ namespace LinkedInMVC.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class testamal : DbMigration
+    public partial class tett : DbMigration
     {
         public override void Up()
         {

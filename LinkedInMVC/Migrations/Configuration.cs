@@ -14,7 +14,7 @@ namespace LinkedInMVC.Migrations
         }
 
         protected override void Seed(LinkedInMVC.Models.ApplicationDbContext context)
-        {
+      {
 
             context.Industry.AddOrUpdate(x => x.Id,
         new Industry() { Id = 1, Name = "Accounting" },
@@ -44,25 +44,26 @@ namespace LinkedInMVC.Migrations
                 new CompanySize()
                 {
                     Id = 1,
-                    Size= "0–1 employees"
+                    Size = "0–1 employees"
                 },
                 new CompanySize()
                 {
                     Id = 2,
-                    Size= "2–10 employees"
+                    Size = "2–10 employees"
                 },
                 new CompanySize()
                 {
                     Id = 3,
-                    Size= "11–50 employees"
+                    Size = "11–50 employees"
                 },
                 new CompanySize()
                 {
                     Id = 4,
-                    Size= "51–200 employees"
+                    Size = "51–200 employees"
                 }
                 );
 
+<<<<<<< HEAD
 
             //context.Users.AddOrUpdate(x => x.Id,
             //    new ApplicationUser()
@@ -85,11 +86,42 @@ namespace LinkedInMVC.Migrations
           
           
 
+=======
+<<<<<<< HEAD
+            //context.Users.AddOrUpdate(x => x.Id,
+            //    new ApplicationUser()
+            //    {
+            //        FirstName="Ahmed",
+            //        SecondName="Abd-Elwasaa",
+            //        UserName="Ahmed Abd-Elwasaa",
+            //        Email="ahmedabdelwasaa@outlook.com",
+            //        PasswordHash= "AHCfRHzod5yoVBbvJo2vVRobCpjbOfMCbSchC2Y3fXERHk+fGEp0LVWRVLy+vcjZZg==",
+            //        SecurityStamp= "ccd82430-f36b-41e7-9ebb-d8f290a65b5d"
+
+            //    }
+                
+            //    );
+=======
+            context.Users.AddOrUpdate(x => x.Id,
+                new ApplicationUser()
+                {
+                    FirstName = "Ahmed",
+                    SecondName = "Abd-Elwasaa",
+                    UserName = "Ahmed Abd-Elwasaa",
+                    Email = "ahmedabdelwasaa@outlook.com",
+                    PasswordHash = "AHCfRHzod5yoVBbvJo2vVRobCpjbOfMCbSchC2Y3fXERHk+fGEp0LVWRVLy+vcjZZg==",
+                    SecurityStamp = "ccd82430-f36b-41e7-9ebb-d8f290a65b5d"
+
+                }
+
+                );
+>>>>>>> 237dd417cfb4330b99113de0581f21ded7b3db23
+>>>>>>> 39efe7fa678e21118d0994fd516168e32a0bbf84
             context.CompanyType.AddOrUpdate(x => x.Id,
             new CompanyType()
             {
                 Id = 1,
-                 Type= "Public company"
+                Type = "Public company"
             },
             new CompanyType()
             {
@@ -108,7 +140,7 @@ namespace LinkedInMVC.Migrations
             },
             new CompanyType()
             {
-                Id =5,
+                Id = 5,
                 Type = "Privately held"
             },
              new CompanyType()
@@ -131,10 +163,10 @@ namespace LinkedInMVC.Migrations
             );
 
 
-            //  This method will be called after migrating to the latest version.
+            //        //  This method will be called after migrating to the latest version.
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data.
+            //        //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+            //        //  to avoid creating duplicate seed data.
         }
     }
 }

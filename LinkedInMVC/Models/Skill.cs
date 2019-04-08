@@ -7,14 +7,14 @@ using System.Web;
 
 namespace LinkedInMVC.Models
 {
-    [Table("Industry")]
-    public class Industry
+    [Table("Skill")]
+    public class Skill
     {
-        [Key]
         public int Id { get; set; }
-        public string Name { get; set; }
 
-        public ICollection<JobIndustry> JobIndustryFk { get; set; }
-        public ICollection<Company> Companies { get; set; }
+        [Display(Name = "Skill Name")]
+        public string SkillName { get; set; }
+        public virtual ICollection<UserSkill> UserSkill { get; set; }
+
     }
 }

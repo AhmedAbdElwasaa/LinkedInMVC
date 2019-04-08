@@ -1,6 +1,12 @@
 .job-page{
     height: 100vh;
     background-color: #F5F5F5;
+    .job-search{
+        background-color: #f3f6f8;
+        position: relative;
+        z-index: 3;
+        width: 112.8rem;
+    }
     .job-container-head{
 
         margin: 10rem;

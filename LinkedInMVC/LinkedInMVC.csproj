@@ -218,11 +218,13 @@
     <Compile Include="BLL\IndustryManager.cs" />
     <Compile Include="BLL\LikesManager.cs" />
     <Compile Include="BLL\PostsManager.cs" />
+    <Compile Include="BLL\SkillManager.cs" />
     <Compile Include="BLL\Test.cs" />
     <Compile Include="BLL\UserActions.cs" />
     <Compile Include="BLL\UserCompanyManager.cs" />
     <Compile Include="BLL\UserEducationManager.cs" />
     <Compile Include="BLL\UserExperienceManager.cs" />
+    <Compile Include="BLL\UserSkillManager.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\ConnectionController.cs" />
@@ -232,13 +234,46 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NetworkController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="Controllers\SkillsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\DLIndustryHelper.cs" />
-    <Compile Include="Migrations\201904071750386_testamal.cs" />
-    <Compile Include="Migrations\201904071750386_testamal.Designer.cs">
-      <DependentUpon>201904071750386_testamal.cs</DependentUpon>
+    <Compile Include="Migrations\201904080735297_mostafa.cs" />
+    <Compile Include="Migrations\201904080735297_mostafa.Designer.cs">
+      <DependentUpon>201904080735297_mostafa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904080738197_tett.cs" />
+    <Compile Include="Migrations\201904080738197_tett.Designer.cs">
+      <DependentUpon>201904080738197_tett.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904081147116_farouk.cs" />
+    <Compile Include="Migrations\201904081147116_farouk.Designer.cs">
+      <DependentUpon>201904081147116_farouk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904081154342_hh.cs" />
+    <Compile Include="Migrations\201904081154342_hh.Designer.cs">
+      <DependentUpon>201904081154342_hh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904081158450_fffff.cs" />
+    <Compile Include="Migrations\201904081158450_fffff.Designer.cs">
+      <DependentUpon>201904081158450_fffff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904080819402_skills.cs" />
+    <Compile Include="Migrations\201904080819402_skills.Designer.cs">
+      <DependentUpon>201904080819402_skills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904080819402_skills.cs" />
+    <Compile Include="Migrations\201904080819402_skills.Designer.cs">
+      <DependentUpon>201904080819402_skills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904080819402_skills.cs" />
+    <Compile Include="Migrations\201904080819402_skills.Designer.cs">
+      <DependentUpon>201904080819402_skills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904080819402_skills.cs" />
+    <Compile Include="Migrations\201904080819402_skills.Designer.cs">
+      <DependentUpon>201904080819402_skills.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -248,16 +283,37 @@
     <Compile Include="Models\CompanyType.cs" />
     <Compile Include="Models\Connection_Request.cs" />
     <Compile Include="Models\Education.cs" />
+    <Compile Include="Models\EmploymentType.cs" />
     <Compile Include="Models\Experience.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Industry.cs" />
+    <Compile Include="Models\Job.cs" />
+    <Compile Include="Models\JobIndustry.cs" />
     <Compile Include="Models\Like.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Post.cs" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <Compile Include="Models\SeniorityLevel.cs" />
+=======
+    <Compile Include="Models\Skill.cs" />
+>>>>>>> 237dd417cfb4330b99113de0581f21ded7b3db23
+=======
+    <Compile Include="Models\Skill.cs" />
+>>>>>>> 237dd417cfb4330b99113de0581f21ded7b3db23
+=======
+    <Compile Include="Models\Skill.cs" />
+>>>>>>> 237dd417cfb4330b99113de0581f21ded7b3db23
+=======
+    <Compile Include="Models\Skill.cs" />
+>>>>>>> 237dd417cfb4330b99113de0581f21ded7b3db23
     <Compile Include="Models\UnitofWork.cs" />
     <Compile Include="Models\UserCompany.cs" />
     <Compile Include="Models\UserEducation.cs" />
     <Compile Include="Models\UserExperience.cs" />
+    <Compile Include="Models\UserSkill.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -274,6 +330,7 @@
     <Compile Include="ViewModel\PostViewModel.cs" />
     <Compile Include="ViewModel\ProfileViewModel.cs" />
     <Compile Include="ViewModel\SearchResultViewModel.cs" />
+    <Compile Include="ViewModel\SkillViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\LinkedInMVC.dll" />
@@ -306,7 +363,6 @@
     <Content Include="images\Logo.png" />
     <Content Include="images\me.jpg" />
     <Content Include="images\u.png" />
-    <Content Include="js\main.js" />
     <Content Include="node_modules\bootstrap\dist\css\bootstrap-grid.css" />
     <Content Include="node_modules\bootstrap\dist\css\bootstrap-grid.min.css" />
     <Content Include="node_modules\bootstrap\dist\css\bootstrap-reboot.css" />
@@ -796,16 +852,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout2.cshtml" />
     <Content Include="Views\Connection\Index.cshtml" />
-    <Content Include="Views\Educations\Create.cshtml" />
-    <Content Include="Views\Educations\Delete.cshtml" />
-    <Content Include="Views\Educations\Details.cshtml" />
-    <Content Include="Views\Educations\Edit.cshtml" />
-    <Content Include="Views\Educations\Index.cshtml" />
-    <Content Include="Views\Experiences\Create.cshtml" />
-    <Content Include="Views\Experiences\Delete.cshtml" />
-    <Content Include="Views\Experiences\Details.cshtml" />
-    <Content Include="Views\Experiences\Edit.cshtml" />
-    <Content Include="Views\Experiences\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Shared\_PostPartial.cshtml" />
     <Content Include="Views\Shared\_Connection.cshtml" />
@@ -840,10 +886,35 @@
     <None Include="packages.config" />
     <Content Include="Views\Shared\_CommentPartial.cshtml" />
     <Content Include="sass\components\_job.scss" />
+    <Content Include="Views\Profile\_Skill.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904071750386_testamal.resx">
-      <DependentUpon>201904071750386_testamal.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904080735297_mostafa.resx">
+      <DependentUpon>201904080735297_mostafa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904080738197_tett.resx">
+      <DependentUpon>201904080738197_tett.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904081147116_farouk.resx">
+      <DependentUpon>201904081147116_farouk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904081154342_hh.resx">
+      <DependentUpon>201904081154342_hh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904081158450_fffff.resx">
+      <DependentUpon>201904081158450_fffff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904080819402_skills.resx">
+      <DependentUpon>201904080819402_skills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904080819402_skills.resx">
+      <DependentUpon>201904080819402_skills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904080819402_skills.resx">
+      <DependentUpon>201904080819402_skills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904080819402_skills.resx">
+      <DependentUpon>201904080819402_skills.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

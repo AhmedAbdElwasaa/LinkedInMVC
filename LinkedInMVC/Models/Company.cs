@@ -46,6 +46,7 @@ namespace LinkedInMVC.Models
         public CompanySize CompanySize { get; set; }
         public CompanyType CompanyType { get; set; }
         public Industry Industry { get; set; }
+        public ICollection<Job> JobFK { get; set; }
 
     }
 }

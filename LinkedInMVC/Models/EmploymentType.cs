@@ -7,14 +7,15 @@ using System.Web;
 
 namespace LinkedInMVC.Models
 {
-    [Table("Industry")]
-    public class Industry
+    [Table("Employment_Type")]
+    public class EmploymentType
     {
         [Key]
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Type { get; set; }
 
-        public ICollection<JobIndustry> JobIndustryFk { get; set; }
-        public ICollection<Company> Companies { get; set; }
+        public Job Job { get; set; }
+        [ForeignKey("Job")]
+        public int? JobFK { get; set; }
     }
 }
