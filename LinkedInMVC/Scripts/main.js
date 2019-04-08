@@ -1,7 +1,30 @@
 ﻿var edu = null;
 var exp = null;
 var skill = null;
+var EduEditBtn = document.getElementsByClassName("btn-edit-education"); //edit
 //education
+
+EduEditBtn.addEventListener("click", function () {
+
+    console.log(EduEditBtn);
+    console.log($(this));
+    debugger
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $("#EduBtnSave").click(() => {
     edu = {
 
@@ -46,13 +69,13 @@ function OnSuccessAddEducation() {
 } 
 
 
-$(".btn-edit-education").click(() => {
-    debugger
-    var $this = $(this);
-    console.log($this.parent())
+//$(".btn-edit-education").click(() => {
+   
+    
+//    console.log($(this))
 
-
-});
+//    debugger
+//});
 
 
 //Experience
@@ -102,12 +125,10 @@ $("#SkillBtnSave").click(() => {
 
     skill = {
 
-        Title: $("#Experience_Title").val()
+        Title: $("#Skill_SkillName").val()
         //date
 
     }
-
-
 });
 
 
@@ -121,7 +142,6 @@ function OnSuccessAddSkill() {
         <div class="skill-name">${skill.Title}</div>
         <input type="hidden" value="@Model.Id" />
     </div>
-    <div class="Endorsements"><span class="Endorsed-by">Endorsed by </span>Ibrahim Sharaf ElDen, who is highly skilled at this</div>
 </div>
 `);
 
