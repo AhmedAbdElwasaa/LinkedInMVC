@@ -3,7 +3,7 @@ namespace LinkedInMVC.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class skills : DbMigration
+    public partial class sh : DbMigration
     {
         public override void Up()
         {

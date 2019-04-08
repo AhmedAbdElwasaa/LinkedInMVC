@@ -28,12 +28,22 @@ namespace LinkedInMVC.Controllers
         // GET: Network
         public  ActionResult Index()
         {
-            List<ApplicationUser> v = UnitofWork.ConnectionManager.
+            List<ApplicationUser> matualFreind = UnitofWork.ConnectionManager.
                            GetMetualFriend(User.Identity.GetUserId());
-            List<ConnectionViewModel> cvm = v.Select(c => new ConnectionViewModel
+            List<ConnectionViewModel> cvm = matualFreind.Select(c => new ConnectionViewModel
             { FirstName = c.FirstName, UserId = c.Id, ImageUrl = c.ProfileImage ,CoverUrl=c.ProfileCover })
             .ToList();
-            return View(cvm);
+
+
+            List<ApplicationUser> FreiendRequset = UnitofWork.ConnectionManager.GetAllFriendRequest(User.Identity.GetUserId());
+            List<ConnectionViewModel> cvm2 = FreiendRequset.Select(c => new ConnectionViewModel
+            { FirstName = c.FirstName, UserId = c.Id, ImageUrl = c.ProfileImage, CoverUrl = c.ProfileCover })
+           .ToList();
+
+            NetworkViewModel cvm3 = new NetworkViewModel();
+            cvm3.MetualFriend = cvm;
+            cvm3.FriendRequest = cvm2;
+            return View(cvm3);
         }
         public ActionResult Add(string Id)
         {
