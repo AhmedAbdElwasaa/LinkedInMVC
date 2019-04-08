@@ -24,13 +24,13 @@ namespace LinkedInMVC.Controllers
             }
         }
 
-<<<<<<< HEAD
-        // GET: Educations
-        //public async Task<ActionResult> Index()
-        //{
-        //    return View(await db.Educations.ToListAsync());
-        //}
-=======
+
+//        // GET: Educations
+//        //public async Task<ActionResult> Index()
+//        //{
+//        //    return View(await db.Educations.ToListAsync());
+//        //}
+
         //// POST: Educations/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -52,8 +52,7 @@ namespace LinkedInMVC.Controllers
             return RedirectToAction("Index", "Profile");
         }
 
-      
->>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
+
 
         //// GET: Educations/Details/5
         public async Task<ActionResult> Details(String id)
@@ -71,7 +70,7 @@ namespace LinkedInMVC.Controllers
             return View(Educations);
         }
 
-<<<<<<< HEAD
+
         //// GET: Educations/Create
         public ActionResult Create()
         {
@@ -80,30 +79,24 @@ namespace LinkedInMVC.Controllers
         }
 
         //// POST: Educations/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(Education education)
-        {
-            string userId = User.Identity.GetUserId();
-            ApplicationUser currentUser = UnitofWork.UserManager.FindById(userId);
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<ActionResult> Create(Education education)
+        //{
+        //    string userId = User.Identity.GetUserId();
+        //    ApplicationUser currentUser = UnitofWork.UserManager.FindById(userId);
 
-            if (ModelState.IsValid)
-            {
-             education=  UnitofWork.EducationManager.Add(education);
-              UnitofWork.UserEducationManager.AddUserEducation(education, currentUser);
+        //    if (ModelState.IsValid)
+        //    {
+        //     education=  UnitofWork.EducationManager.Add(education);
+        //      UnitofWork.UserEducationManager.AddUserEducation(education, currentUser);
                 
               
-            }
+        //    }
 
-            return RedirectToAction( "Index","Profile");
-        }
-=======
-      
-      
+        //    return RedirectToAction( "Index","Profile");
+        //}
 
-        
-       
->>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
 
         //// GET: Educations/Edit/5
         //public async Task<ActionResult> Edit(int? id)

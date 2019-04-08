@@ -31,10 +31,7 @@ namespace LinkedInMVC.BLL
                      Location = e.Location,
                      FromYear = e.FromYear,
                      ToYear = e.ToYear,    
-<<<<<<< HEAD
-=======
 
->>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
                  }).FirstOrDefault();
 
                 Experiences.Add(experience);
@@ -42,8 +39,7 @@ namespace LinkedInMVC.BLL
             }
             return Experiences;
         }
-<<<<<<< HEAD
-=======
+
 
 
         public bool AddUserExperience(Experience experience, ApplicationUser user)
@@ -57,6 +53,6 @@ namespace LinkedInMVC.BLL
 
             return context.SaveChanges() > 0;
         }
->>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
+
     }
 }

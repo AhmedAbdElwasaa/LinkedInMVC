@@ -236,35 +236,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\DLIndustryHelper.cs" />
-<<<<<<< HEAD
-    <Compile Include="Migrations\201904070740558_tttrr.cs" />
-    <Compile Include="Migrations\201904070740558_tttrr.Designer.cs">
-      <DependentUpon>201904070740558_tttrr.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904070744442_tttrr11.cs" />
-    <Compile Include="Migrations\201904070744442_tttrr11.Designer.cs">
-      <DependentUpon>201904070744442_tttrr11.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904070818147_tttrr112.cs" />
-    <Compile Include="Migrations\201904070818147_tttrr112.Designer.cs">
-      <DependentUpon>201904070818147_tttrr112.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904070827050_tttrr1123.cs" />
-    <Compile Include="Migrations\201904070827050_tttrr1123.Designer.cs">
-      <DependentUpon>201904070827050_tttrr1123.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904070838399_trtrtr.cs" />
-    <Compile Include="Migrations\201904070838399_trtrtr.Designer.cs">
-      <DependentUpon>201904070838399_trtrtr.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904070959111_tytyty.cs" />
-    <Compile Include="Migrations\201904070959111_tytyty.Designer.cs">
-      <DependentUpon>201904070959111_tytyty.cs</DependentUpon>
-=======
     <Compile Include="Migrations\201904071750386_testamal.cs" />
     <Compile Include="Migrations\201904071750386_testamal.Designer.cs">
       <DependentUpon>201904071750386_testamal.cs</DependentUpon>
->>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -314,6 +288,8 @@
     <Content Include="HTML\components.html" />
     <Content Include="HTML\CreatePost.html" />
     <Content Include="HTML\Home.html" />
+    <Content Include="HTML\job-card.html" />
+    <Content Include="HTML\job-page.html" />
     <Content Include="HTML\landingCompanyPage.html" />
     <Content Include="HTML\PostBox.html" />
     <Content Include="HTML\Profile.html" />
@@ -368,10 +344,6 @@
     <Content Include="node_modules\bootstrap\js\src\tools\sanitizer.js" />
     <Content Include="node_modules\bootstrap\js\src\tooltip.js" />
     <Content Include="node_modules\bootstrap\js\src\util.js" />
-<<<<<<< HEAD
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-=======
     <Content Include="node_modules\jquery-ajax-unobtrusive\dist\jquery.unobtrusive-ajax.js" />
     <Content Include="node_modules\jquery-ajax-unobtrusive\dist\jquery.unobtrusive-ajax.min.js" />
     <Content Include="node_modules\jquery-ajax-unobtrusive\LICENSE.txt" />
@@ -622,7 +594,6 @@
     <Content Include="node_modules\jquery\src\var\support.js" />
     <Content Include="node_modules\jquery\src\var\toString.js" />
     <Content Include="node_modules\jquery\src\wrap.js" />
->>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -766,24 +737,6 @@
     <Content Include="sass\components\_compcomun.scss" />
     <Content Include="sass\components\_compdashboard.scss" />
     <Content Include="sass\components\comments.scss" />
-<<<<<<< HEAD
-    <Content Include="sass\layout\profile-card-layout.scss" />
-    <Content Include="sass\components\Profile-card.scss" />
-    <Content Include="sass\components\_search-results.scss" />
-    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.3.1.js" />
-    <Content Include="Scripts\jquery-3.3.1.min.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
-=======
     <Content Include="node_modules\jquery\bower.json" />
     <Content Include="node_modules\jquery\dist\jquery.min.map" />
     <Content Include="node_modules\jquery\dist\jquery.slim.min.map" />
@@ -803,7 +756,6 @@
     <Content Include="sass\layout\profile-card-layout.scss" />
     <Content Include="sass\components\Profile-card.scss" />
     <Content Include="sass\components\_search-results.scss" />
->>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -886,36 +838,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
-<<<<<<< HEAD
-    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.3.1.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904070740558_tttrr.resx">
-      <DependentUpon>201904070740558_tttrr.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904070744442_tttrr11.resx">
-      <DependentUpon>201904070744442_tttrr11.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904070818147_tttrr112.resx">
-      <DependentUpon>201904070818147_tttrr112.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904070827050_tttrr1123.resx">
-      <DependentUpon>201904070827050_tttrr1123.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904070838399_trtrtr.resx">
-      <DependentUpon>201904070838399_trtrtr.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904070959111_tytyty.resx">
-      <DependentUpon>201904070959111_tytyty.cs</DependentUpon>
-=======
     <Content Include="Views\Shared\_CommentPartial.cshtml" />
     <Content Include="sass\components\_job.scss" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201904071750386_testamal.resx">
       <DependentUpon>201904071750386_testamal.cs</DependentUpon>
->>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

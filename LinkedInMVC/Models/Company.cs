@@ -11,9 +11,8 @@ namespace LinkedInMVC.Models
     [Table("Company")]
     public class Company
     {
-<<<<<<< HEAD
 
-   
+ 
         public Company()
         {
            
@@ -30,21 +29,12 @@ namespace LinkedInMVC.Models
         [DisplayName("Website")]
         public string  URL { get; set; }
         [Required(ErrorMessage ="Image musn't empty")]
-=======
-        [Key]
-        public int Id { get; set; }
-        public string  Name { get; set; }
-        [DisplayName("Website")]
-        public string  URL { get; set; }
->>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
         public string Logo { get; set; }
         public string Cover { get; set; }
         public string Type { get; set; }
         [Column("Industry")]
         public string CompanyIndustry { get; set; }
         public string Size { get; set; }
-<<<<<<< HEAD
-
         public string Address { get; set; }
         [DisplayName("TagLine")]
         public string Description { get; set; }
@@ -55,18 +45,6 @@ namespace LinkedInMVC.Models
         public ICollection<UserCompany> UserCompanies { get; set; }
         public CompanySize CompanySize { get; set; }
         public CompanyType CompanyType { get; set; }
-    
-=======
-        public string Address { get; set; }
-        [DisplayName("TagLine")]
-        public string Description { get; set; }
-        public ICollection<UserCompany> UserCompanies { get; set; }
-        
-        public CompanySize CompanySize { get; set; }
-      
-        public CompanyType CompanyType { get; set; }
-       
->>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
         public Industry Industry { get; set; }
 
     }

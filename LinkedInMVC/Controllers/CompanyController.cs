@@ -11,10 +11,7 @@ using LinkedInMVC.Models;
 using Microsoft.AspNet.Identity.Owin;
 using LinkedInMVC.ViewModel;
 using System.IO;
-<<<<<<< HEAD
 using Microsoft.AspNet.Identity;
-=======
->>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
 
 namespace LinkedInMVC.Controllers
 {
@@ -71,11 +68,9 @@ namespace LinkedInMVC.Controllers
         {
             CompanyViewModel cvm = new CompanyViewModel
             {
-<<<<<<< HEAD
-                
+
                 Selected = false,
-=======
->>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
+               // Company = UnitofWork.CompanyManager.GetAll().FirstOrDefault(),
                 Industries = UnitofWork.IndustryManager.GetAll().Select(a => new SelectListItem { Text = a.Name, Value = a.Id.ToString(),Selected=true }).ToList(),
                 Sizes=UnitofWork.CompanySizeManager.GetAll().Select(a=> new SelectListItem { Text=a.Size,Value=a.Id.ToString(),Selected=true}).ToList(),
                 Types=UnitofWork.CompanyTypeManager.GetAll().Select(a=>new SelectListItem {Text=a.Type,Value=a.Id.ToString(),Selected=true }).ToList()
@@ -87,18 +82,18 @@ namespace LinkedInMVC.Controllers
         // POST: Company/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-<<<<<<< HEAD
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public  ActionResult Create(Company company)
+        public ActionResult Create(Company company)
         {
             if (ModelState.IsValid)
             {
                 UserCompany userCompany = new UserCompany();
                 string userId = User.Identity.GetUserId();
                 ApplicationUser currentUser = UnitofWork.UserManager.FindById(userId);
-                if (company.LogoFileName!=null)
+                if (company.LogoFileName != null)
                 {
                     string fileName = Path.GetFileNameWithoutExtension(company.LogoFileName.FileName);
                     string fileExtension = Path.GetExtension(company.LogoFileName.FileName);
@@ -113,29 +108,13 @@ namespace LinkedInMVC.Controllers
                 }
 
 
-            
-                
-            }
-         
-            return View();
-=======
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Id,Name,URL,Logo,Cover,Type,Industry,Address,Description")] Company company)
-        {
-            if (ModelState.IsValid)
-            {
-                //string str = company.Logo.FileName;
-                //FileUpload1.PostedFile.SaveAs(Server.MapPath("~/Images/") + str);
-                //string path = "~/Images/" + str.ToString();
-                //UnitofWork.CompanyManager.Add(company);
-                
-                return RedirectToAction("Index");
+
+
             }
 
-            return View(company);
->>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
+            return View();
         }
+      
 
         // GET: Company/Edit/5
         //public async Task<ActionResult> Edit(int? id)
