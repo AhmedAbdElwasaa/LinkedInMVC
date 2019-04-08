@@ -1,7 +1,21 @@
 ﻿var edu = null;
 var exp = null;
 var skill = null;
+var [, EducationModal] = $("#EducationModal").children().children().children();
+var EducationForm = EducationModal.children.form0;
 //education
+$(".btn-edit-education").click(function () {
+
+    let [, , temp] = $(this).parent().children();
+    let EductionDetails = temp.children;
+    let schoolName = EductionDetails[1].textContent;
+    let degree = EductionDetails[2].textContent;
+    let field = EductionDetails[3].textContent;
+    let grade = EductionDetails[4].textContent;
+    //let startDate=
+    debugger;
+});
+
 $("#EduBtnSave").click(() => {
     edu = {
 
@@ -13,7 +27,7 @@ $("#EduBtnSave").click(() => {
 
     }
     $('#EducationModal').modal('hide');
-    
+
 });
 
 
@@ -21,7 +35,7 @@ $("#EduBtnSave").click(() => {
 
 function OnSuccessAddEducation() {
 
-      $(".education-container").append(`<div class="education">
+    $(".education-container").append(`<div class="education">
         <div class= "education-data">
         <div class="btn-edit-education" data-toggle="modal" data-target="#AddEducationModal"><i class="fas fa-pen"></i></div>
             <div class="school-img-container">
@@ -42,24 +56,24 @@ function OnSuccessAddEducation() {
 </div>
     </div >`);
 
-   
-} 
+
+}
 
 
-$(".btn-edit-education").click(() => {
-    debugger
-    var $this = $(this);
-    console.log($this.parent())
+//$(".btn-edit-education").click(() => {
 
 
-});
+//    console.log($(this))
+
+//    debugger
+//});
 
 
 //Experience
 
 $("#ExpBtnSave").click(() => {
 
-    exp  = {
+    exp = {
 
         Title: $("#Experience_Title").val(),
         Company: $("#Experience_Company").val(),
@@ -102,12 +116,10 @@ $("#SkillBtnSave").click(() => {
 
     skill = {
 
-        Title: $("#Experience_Title").val()
+        Title: $("#Skill_SkillName").val()
         //date
 
     }
-
-
 });
 
 
@@ -121,7 +133,6 @@ function OnSuccessAddSkill() {
         <div class="skill-name">${skill.Title}</div>
         <input type="hidden" value="@Model.Id" />
     </div>
-    <div class="Endorsements"><span class="Endorsed-by">Endorsed by </span>Ibrahim Sharaf ElDen, who is highly skilled at this</div>
 </div>
 `);
 

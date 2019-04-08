@@ -241,6 +241,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\DLIndustryHelper.cs" />
+    <Compile Include="Migrations\201904081945491_test.cs" />
+    <Compile Include="Migrations\201904081945491_test.Designer.cs">
+      <DependentUpon>201904081945491_test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Comment.cs" />
@@ -834,6 +838,11 @@
     <Content Include="Views\Shared\_CommentPartial.cshtml" />
     <Content Include="sass\components\_job.scss" />
     <Content Include="Views\Profile\_Skill.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904081945491_test.resx">
+      <DependentUpon>201904081945491_test.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
