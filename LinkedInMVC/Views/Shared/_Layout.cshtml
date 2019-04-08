@@ -12,7 +12,11 @@
     <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="~/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+<<<<<<< HEAD
      <script src="~/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+=======
+   @* <script src="~/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>*@
+>>>>>>> 4760c58f5b76313de0e925806eeb2bacee9a8d9c
     <script src="~/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -50,7 +54,7 @@
                                 <a class="nav-link" href="#events"><i class="far fa-bell"></i>@Html.ActionLink(" Notification", "Index", "Home", new { @class = "nav-link-item" })</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#albums"><i class="fas fa-user-alt"></i>@Html.ActionLink(" Me", "Index", "Home", new { @class = "nav-link-item" })</a>
+                                <a class="nav-link" href="#albums"><i class="fas fa-user-alt"></i>@Html.ActionLink(" Me", "Index", "Profile", new { @class = "nav-link-item" })</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#gallery"><i class="fas fa-sign-out-alt"></i>@Html.ActionLink("Sign Out", "Index", "Home", new { @class = "nav-link-item" })</a>
@@ -69,6 +73,10 @@
     @RenderBody()
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4760c58f5b76313de0e925806eeb2bacee9a8d9c
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

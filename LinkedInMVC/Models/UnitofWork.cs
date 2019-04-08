@@ -33,6 +33,13 @@ namespace LinkedInMVC.Models
                 return new EducationManager(context);
             }
         }
+        public SkillManager SkillManager
+        {
+            get
+            {
+                return new SkillManager(context);
+            }
+        }
         public CompanySizeManager CompanySizeManager
         {
             get
@@ -59,6 +66,13 @@ namespace LinkedInMVC.Models
             get
             {
                 return new UserExperienceManager(context);
+            }
+        }
+        public UserSkillManager UserSkillManager
+        {
+            get
+            {
+                return new UserSkillManager(context);
             }
         }
 

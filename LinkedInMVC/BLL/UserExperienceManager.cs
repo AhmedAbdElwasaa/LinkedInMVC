@@ -31,12 +31,26 @@ namespace LinkedInMVC.BLL
                      Location = e.Location,
                      FromYear = e.FromYear,
                      ToYear = e.ToYear,    
+
                  }).FirstOrDefault();
 
                 Experiences.Add(experience);
 
             }
             return Experiences;
+        }
+
+
+        public bool AddUserExperience(Experience experience, ApplicationUser user)
+        {
+            UserExperience userExperience = new UserExperience();
+            userExperience.UserId = user;
+            userExperience.Experience = experience;
+
+            context.UserExperiences.Add(userExperience);
+
+
+            return context.SaveChanges() > 0;
         }
     }
 }
