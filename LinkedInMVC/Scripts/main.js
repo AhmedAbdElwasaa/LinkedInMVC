@@ -1,12 +1,20 @@
 ﻿var edu = null;
 var exp = null;
 var skill = null;
+var [, EducationModal] = $("#EducationModal").children().children().children();
+var EducationForm = EducationModal.children.form0;
 //education
 $(".btn-edit-education").click(function () {
-    
-    temp = $(this).parent();
-    console.log(temp);
-    debugger;
+
+
+    let [, , temp] = $(this).parent().children();
+    let EductionDetails = temp.children;
+    let schoolName = EductionDetails[1].textContent;
+    let degree = EductionDetails[2].textContent;
+    let field = EductionDetails[3].textContent;
+    let grade = EductionDetails[4].textContent;
+    //let startDate=
+
 });
 
 $("#EduBtnSave").click(() => {
@@ -20,7 +28,7 @@ $("#EduBtnSave").click(() => {
 
     }
     $('#EducationModal').modal('hide');
-    
+
 });
 
 
@@ -28,7 +36,7 @@ $("#EduBtnSave").click(() => {
 
 function OnSuccessAddEducation() {
 
-      $(".education-container").append(`<div class="education">
+    $(".education-container").append(`<div class="education">
         <div class= "education-data">
         <div class="btn-edit-education" data-toggle="modal" data-target="#AddEducationModal"><i class="fas fa-pen"></i></div>
             <div class="school-img-container">
@@ -49,24 +57,14 @@ function OnSuccessAddEducation() {
 </div>
     </div >`);
 
-   
-} 
 
-
-//$(".btn-edit-education").click(() => {
-   
-    
-//    console.log($(this))
-
-//    debugger
-//});
-
+}
 
 //Experience
 
 $("#ExpBtnSave").click(() => {
 
-    exp  = {
+    exp = {
 
         Title: $("#Experience_Title").val(),
         Company: $("#Experience_Company").val(),
