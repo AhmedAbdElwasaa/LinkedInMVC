@@ -31,13 +31,12 @@ namespace LinkedInMVC.BLL
             postsManager.Update(post);
             return context.Posts.FirstOrDefault(p => p.Id == postId);
         }
-        public Post deleteLikes(string userId, int postId)
+        public Post deleteLikes(ApplicationUser user, int postId)
         {
             //Delete like with user id in Likes table
-            Like userlike = new Like();
-            userlike.ApplicationUser.Id = userId;
-            userlike.Fk_PostId = postId;
-            context.Likes.Remove(userlike);
+            var rlike = context.Likes.Where(l => l.Fk_PostId == postId);
+            Like userLike = rlike.FirstOrDefault(l => l.ApplicationUser.Id == user.Id);
+            context.Likes.Remove(userLike);
             context.SaveChanges();
 
             //Update number of likes in post table
@@ -48,5 +47,15 @@ namespace LinkedInMVC.BLL
             return context.Posts.FirstOrDefault(p => p.Id == postId);
         }
 
+        public List<ApplicationUser> GetLikers(int postId)
+        {
+            var likes = context.Likes.Where(l => l.Fk_PostId == postId);
+            List<ApplicationUser> users = new List<ApplicationUser>();
+            foreach(var item in likes)
+            {
+                users.Add(item.ApplicationUser);
+            }
+            return users;
+        }
     }
 }

@@ -1,0 +1,12 @@
+﻿@model LinkedInMVC.ViewModel.PostViewModel[]
+<div class="posts col-md-12 flex-column">
+    @if (Model != null)
+    {
+        <text>
+            @foreach (LinkedInMVC.ViewModel.PostViewModel post in Model)
+            {
+                @Html.Partial("_PostPartial", post)
+            }
+        </text>
+    }
+</div>

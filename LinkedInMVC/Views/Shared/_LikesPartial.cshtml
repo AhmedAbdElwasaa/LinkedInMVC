@@ -1,2 +1,16 @@
-﻿@model Int32
-<span id="LikesPartial" class="num-likes pr-2">@Model </span>
+﻿@model LikesViewModel
+@*<span class="num-likes pr-2">@Model.num</span>*@
+@*@Ajax.ActionLink("Likes", "GetLikes","Likes",null
+    ,new AjaxOptions {  InsertionMode = InsertionMode.Replace, UpdateTargetId = "likers" ,HttpMethod="GET"}
+    ,new { @class = "num-likes pr-2", data-toggle = "modal" })*@
+<a href="#" class="num-likes pr-2" data-toggle="modal" data-target="#exampleModal_">@Model.num Likes</a>
+<div class="modal fade" id="exampleModal_" tabindex="-1" role="dialog" aria-labelledby="exampleModal_Label" aria-hidden="true">
+    <div id="likers" class="modal-dialog"  role="document">
+       @Html.Partial("_LikesModalPartial", @Model.likers)
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+
+    </div>
+</div>
+

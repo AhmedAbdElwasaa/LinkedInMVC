@@ -1,10 +1,13 @@
 ﻿@model LinkedInMVC.ViewModel.SearchResultViewModel
-
+@{ 
+    string name = Model.applicationUser.FirstName + " ";
+    name += Model.applicationUser.SecondName;
+}
 <div class="search-result col-md-12">
 <img class="search-result__imgCont col-md-1" src="../images/u.png" />
 
 <div class="search-result__user-main-info col-md-7">
-    <div class="search-result__user-name">@{string.Format(Model.applicationUser.FirstName, " ", Model.applicationUser.SecondName);}</div>
+    <div class="search-result__user-name">@name</div>
     <div class="search-result__user-title">@Model.applicationUser.Headline</div>
     <div class="search-result__country">@Model.applicationUser.Country</div>
 

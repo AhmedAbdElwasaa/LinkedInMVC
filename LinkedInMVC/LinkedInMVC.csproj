@@ -224,21 +224,24 @@
     <Compile Include="BLL\UserEducationManager.cs" />
     <Compile Include="BLL\UserExperienceManager.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\ConnectionController.cs" />
     <Compile Include="Controllers\EducationsController.cs" />
     <Compile Include="Controllers\ExperiencesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LikesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NetworkController.cs" />
+    <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\DLIndustryHelper.cs" />
-    <Compile Include="Migrations\201904061845422_test.cs" />
-    <Compile Include="Migrations\201904061845422_test.Designer.cs">
-      <DependentUpon>201904061845422_test.cs</DependentUpon>
+    <Compile Include="Migrations\201904081743357_final.cs" />
+    <Compile Include="Migrations\201904081743357_final.Designer.cs">
+      <DependentUpon>201904081743357_final.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -271,6 +274,7 @@
     <Compile Include="ViewModel\ExperienceViewModel.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />
     <Compile Include="ViewModel\IndustryViewModel.cs" />
+    <Compile Include="ViewModel\LikesViewModel.cs" />
     <Compile Include="ViewModel\PostViewModel.cs" />
     <Compile Include="ViewModel\ProfileViewModel.cs" />
     <Compile Include="ViewModel\SearchResultViewModel.cs" />
@@ -490,6 +494,7 @@
     <Content Include="sass\layout\profile-card-layout.scss" />
     <Content Include="sass\components\Profile-card.scss" />
     <Content Include="sass\components\_search-results.scss" />
+    <Content Include="sass\components\_likes-results.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -573,11 +578,18 @@
     <Content Include="Views\Home\SearchResults.cshtml" />
     <Content Include="Views\Shared\_LikesPartial.cshtml" />
     <Content Include="Views\Shared\_SearchResultPartial.cshtml" />
+    <Content Include="Views\Shared\_LikesModalPartial.cshtml" />
+    <Content Include="Views\Shared\_CommentPartial.cshtml" />
+    <Content Include="Views\Shared\_PostsPartial.cshtml" />
+    <Content Include="Views\Shared\_CommentsPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="sass\pages\" />
     <Folder Include="sass\themes\" />
+    <Folder Include="Views\Comments\" />
+    <Folder Include="Views\Likes\" />
+    <Folder Include="Views\Posts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -589,8 +601,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904061845422_test.resx">
-      <DependentUpon>201904061845422_test.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904081743357_final.resx">
+      <DependentUpon>201904081743357_final.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
