@@ -7246,6 +7246,10 @@ a.text-dark:hover, a.text-dark:focus {
       font-size: 1.6rem;
       padding-left: 2rem; }
 
+.Endorsements {
+  font-size: 1.6rem;
+  padding-left: 2rem; }
+
 .job-card {
   margin-bottom: 2rem;
   width: 25.2rem;
@@ -7648,10 +7652,23 @@ a.text-dark:hover, a.text-dark:focus {
 .connection .dropdown-item {
   font-size: 12px; }
 
-<<<<<<< HEAD
+.connection-section {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 83ms;
+  background-color: #fff;
+  border-radius: 2px;
+  width: 800px;
+  margin-top: 6%;
+  margin-left: 5%; }
+
 .job-page {
   height: 100vh;
   background-color: #F5F5F5; }
+  .job-page .job-search {
+    background-color: #f3f6f8;
+    position: relative;
+    z-index: 3;
+    width: 112.8rem; }
   .job-page .job-container-head {
     margin: 10rem;
     padding-top: 5rem;
@@ -7670,15 +7687,6 @@ a.text-dark:hover, a.text-dark:focus {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: flex-start; }
-=======
-.connection-section {
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 83ms;
-  background-color: #fff;
-  border-radius: 2px;
-  width: 800px;
-  margin-top: 6%;
-  margin-left: 5%; }
 
 .network-block {
   margin-top: 100px;
@@ -7820,7 +7828,6 @@ a.text-dark:hover, a.text-dark:focus {
   display: flex;
   justify-content: center;
   margin-top: 74px; }
->>>>>>> 150438a0d56d808cf5429042a98c6a277bd98794
 
 body {
   background-color: #E6E9EC !important; }
