@@ -253,3 +253,5 @@ E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.cspro
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CopyComplete
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.dll
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.pdb
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csprojAssemblyReference.cache
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.skills.resources

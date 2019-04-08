@@ -25,7 +25,7 @@
                             Add profile section
                         </button>
                         <div class="dropdown-menu" aria-labelledby="Add-profile-section">
-                            <a class="dropdown-item" href="#"><i class="fas fa-briefcase"></i> <span data-toggle="modal" data-target="#ExperienceModal" > Work experience </span></a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-briefcase"></i> <span data-toggle="modal" data-target="#ExperienceModal"> Work experience </span></a>
                             <a class="dropdown-item" href="#"><i class="fas fa-university"></i> <span data-toggle="modal" data-target="#EducationModal">Education</span> </a>
                             <a class="dropdown-item" href="#"><i class="fas fa-medal"></i>Skills</a>
                         </div>
@@ -87,34 +87,21 @@
 
     <div class="skills-container col-lg-8">
         <h2 class="profile-section">Skills & Endorsements</h2>
-        <div id="btn-add-skill"><i class="fas fa-plus"></i></div>
-        <div class="btn-edit-skills"><i class="fas fa-pen"></i></div>
-        <div class="skill">
-            <div class="skill-data">
-                <button class="plus-icon-container">
-                    <i class="fas fa-plus"></i>
-                </button>
-                <div class="skill-name"> java script </div>
-            </div>
-            <div class="Endorsements"><span class="Endorsed-by">Endorsed by </span>Ibrahim Sharaf ElDen, who is highly skilled at this</div>
-        </div>
+        <div id="btn-add-skill" data-toggle="modal" data-target="#SkillsModal"><i class="fas fa-plus"></i></div>
+        <div class="btn-edit-skills" data-toggle="modal" data-target="#SkillsModal"><i class="fas fa-pen"></i></div>
 
-        @*<div class="skill">
-                <div class="skill-data">
-                    <button class="plus-icon-container">
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <div class="skill-name"> java script </div>
-                </div>
-                <div class="Endorsements"><span cl
-            ass="Endorsed-by">Endorsed by </span>Ibrahim Sharaf ElDen, who is highly skilled at this</div>
-            </div>*@
+        @foreach (var skill in Model.Skills)
+        {
+            @Html.Partial("_Skill", skill)
+        }
+
     </div>
 </div>
 
 
 
-<!-- Modal -->
+
+<!-- Modal education -->
 <div class="modal fade" data-keyboard="true" id="EducationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -170,7 +157,7 @@
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary"  id="EduBtnSave">Save</button>
+                        <button type="submit" class="btn btn-primary" id="EduBtnSave">Save</button>
                     </div>
                 }
             </div>
@@ -179,8 +166,8 @@
 </div>
 
 
-
-<div class="modal fade" id="ExperienceModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal Experience -->
+<div class="modal fade" data-keyboard="true" id="ExperienceModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -232,7 +219,7 @@
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary"  id="ExpBtnSave">Save</button>
+                        <button type="submit" class="btn btn-primary" id="ExpBtnSave">Save</button>
                     </div>
                 }
             </div>
@@ -241,6 +228,50 @@
 
 
 </div>
+
+
+<!-- Modal Skills -->
+
+<div class="modal fade" data-keyboard="true" id="SkillsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Experience</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                @using (Ajax.BeginForm("Create", "Skills", "Post", new AjaxOptions { HttpMethod = "POST", OnSuccess = "OnSuccessAddSkill" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.LabelFor(m => m.Skill.SkillName, new { @class = "Title" })
+                    @Html.EditorFor(m => m.Skill.SkillName, new { id = "Title"  @*placeholder = "Ex: Boston University"*@});
+
+                  
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" id="SkillBtnSave">Save</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
 
 <script src="~/Scripts/main.js"></script>
 
