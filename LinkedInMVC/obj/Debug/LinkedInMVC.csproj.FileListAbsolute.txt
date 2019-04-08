@@ -119,8 +119,10 @@ E:\ITI\MVC\Linkedin\Linkedin-\LinkedInMVC\bin\Microsoft.AI.DependencyCollector.x
 E:\ITI\MVC\Linkedin\Linkedin-\LinkedInMVC\bin\Microsoft.AI.WindowsServer.xml
 E:\ITI\MVC\Linkedin\Linkedin-\LinkedInMVC\bin\Microsoft.AI.Web.xml
 E:\ITI\MVC\Linkedin\Linkedin-\LinkedInMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ITI\MVC\Linkedin\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csprojAssemblyReference.cache
+E:\ITI\MVC\Linkedin\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.sh.resources
+E:\ITI\MVC\Linkedin\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.GenerateResource.cache
 E:\ITI\MVC\Linkedin\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CoreCompileInputs.cache
 E:\ITI\MVC\Linkedin\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CopyComplete
 E:\ITI\MVC\Linkedin\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.dll
 E:\ITI\MVC\Linkedin\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.pdb
-E:\ITI\MVC\Linkedin\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csprojAssemblyReference.cache

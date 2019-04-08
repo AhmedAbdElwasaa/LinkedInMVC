@@ -238,7 +238,11 @@
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\SkillsController.cs" />
     <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
+      <DependentUpon>Global.asax</DependentUpon></Compile>
+    <Compile Include="Helper\DLIndustryHelper.cs" />
+    <Compile Include="Migrations\201904081817575_sh.cs" />
+    <Compile Include="Migrations\201904081817575_sh.Designer.cs">
+      <DependentUpon>201904081817575_sh.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -273,6 +277,7 @@
     <Compile Include="ViewModel\EducationViewModel.cs" />
     <Compile Include="ViewModel\EndorsementViewModel.cs" />
     <Compile Include="ViewModel\ExperienceViewModel.cs" />
+    <Compile Include="ViewModel\NetworkViewModel.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />
     <Compile Include="ViewModel\IndustryViewModel.cs" />
     <Compile Include="ViewModel\PostViewModel.cs" />
@@ -763,6 +768,25 @@
     <Content Include="Views\Shared\_Layout2.cshtml" />
     <Content Include="Views\Connection\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\Shared\_PostPartial.cshtml" />
+    <Content Include="Views\Shared\_Connection.cshtml" />
+    <Content Include="Views\Network\Create.cshtml" />
+    <Content Include="Views\Network\Delete.cshtml" />
+    <Content Include="Views\Network\Details.cshtml" />
+    <Content Include="Views\Network\Edit.cshtml" />
+    <Content Include="Views\Network\Index.cshtml" />
+    <Content Include="Views\Profile\_education.cshtml" />
+    <Content Include="Views\Profile\_experience.cshtml" />
+    <Content Include="Views\Profile\Details.cshtml" />
+    <Content Include="Views\Home\_CreatePostPartial.cshtml" />
+    <Content Include="Views\Company\Create.cshtml" />
+    <Content Include="Views\Company\Details.cshtml" />
+    <Content Include="Views\Company\Edit.cshtml" />
+    <Content Include="Views\Company\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout3.cshtml" />
+    <Content Include="Views\Home\SearchResults.cshtml" />
+    <Content Include="Views\Shared\_LikesPartial.cshtml" />
+    <Content Include="Views\Shared\_SearchResultPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -788,6 +812,13 @@
     <Content Include="Views\Profile\_education.cshtml" />
     <Content Include="Views\Profile\_experience.cshtml" />
     <Content Include="Views\Profile\_Skill.cshtml" />
+    <Content Include="Views\Shared\_PeopleMayKnow.cshtml" />
+    <Content Include="Views\Shared\_FreindRequest.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904081817575_sh.resx">
+      <DependentUpon>201904081817575_sh.cs</DependentUpon>
+    </EmbeddedResource>
     <Content Include="Views\Shared\_CommentPartial.cshtml" />
     <Content Include="Views\Shared\_Connection.cshtml" />
     <Content Include="Views\Shared\_Layout3.cshtml" />
