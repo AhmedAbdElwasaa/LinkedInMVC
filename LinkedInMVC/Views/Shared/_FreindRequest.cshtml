@@ -1,0 +1,28 @@
+﻿@model LinkedInMVC.ViewModel.ConnectionViewModel
+
+
+<div class=" col-lg-12 connection-card  ">
+    <div id="m" class=" connection">
+        <div class="image-container">
+            <img class="image" src="@Model.ImageUrl " />
+        </div>
+        <div class="profile-info">
+
+            <h2>@Html.ActionLink(Model.FirstName, "Details", "Profile", new { id = Model.UserId }, null)</h2>
+            <h5 class="job">developer</h5>
+        </div>
+        <div class="connection-btn">
+            <input type="button" value="Ignore" class="btn btn-ignore " />
+            <input type="button" value="Accept" class="btn btn-accept " />
+
+        </div>
+    </div>
+</div>
+<div id="y"></div>
+<script src="/Scripts/MicrosoftAjax.js" type="text/javascript"></script>
+<script src="/Scripts/MicrosoftMvcAjax.js" type="text/javascript"></script>
+<script type="text/javascript">
+    function deleteComplete() {
+        window.location.reload();
+    }
+</script>

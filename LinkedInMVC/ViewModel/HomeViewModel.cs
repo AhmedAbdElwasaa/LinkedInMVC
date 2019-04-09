@@ -9,6 +9,6 @@ namespace LinkedInMVC.ViewModel
     public class HomeViewModel
     {
         public ApplicationUser ApplicationUser { get; set; }
-        public Post[] posts { get; set; }
+        public PostViewModel[] PostViewModels { get; set; }
     }
 }

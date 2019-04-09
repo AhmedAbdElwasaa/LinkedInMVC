@@ -63,6 +63,7 @@ namespace LinkedInMVC.Migrations
                 }
                 );
 
+<<<<<<< HEAD
 
             //context.Users.AddOrUpdate(x => x.Id,
             //    new ApplicationUser()
@@ -86,6 +87,21 @@ namespace LinkedInMVC.Migrations
           
 
 
+=======
+            context.Users.AddOrUpdate(x => x.Id,
+                new ApplicationUser()
+                {
+                    FirstName = "Ahmed",
+                    SecondName = "Abd-Elwasaa",
+                    UserName = "Ahmed Abd-Elwasaa",
+                    Email = "ahmedabdelwasaa@outlook.com",
+                    PasswordHash = "AHCfRHzod5yoVBbvJo2vVRobCpjbOfMCbSchC2Y3fXERHk+fGEp0LVWRVLy+vcjZZg==",
+                    SecurityStamp = "ccd82430-f36b-41e7-9ebb-d8f290a65b5d"
+
+                }
+
+                );
+>>>>>>> 367e97306dec3a1e4f16b13c701d80a8e38bf59c
             context.CompanyType.AddOrUpdate(x => x.Id,
             new CompanyType()
             {

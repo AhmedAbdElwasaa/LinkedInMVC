@@ -15,12 +15,12 @@ namespace LinkedInMVC.Models
 
         public string Company { get; set; }
         public string Location { get; set; }
+
         [Display(Name ="Start Year")]
         public int FromYear { get; set; }
 
         [Display(Name="End Year")]
         public string ToYear { get; set; }
-
         public virtual ICollection<UserExperience> UserExperience { get; set; }
 
     }

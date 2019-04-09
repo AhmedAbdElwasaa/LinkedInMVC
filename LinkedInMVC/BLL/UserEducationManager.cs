@@ -24,21 +24,17 @@ namespace LinkedInMVC.BLL
 
             List<int> EducationIds =  context.UserEducation.Where(u => u.UserId.Id == id).Select(e => e.Education.Id).ToList();
             List<EducationViewModel> Educations = new List<EducationViewModel>();
-//            foreach (int item in EducationIds)
-//            {
-//               var  education= context.Education
-//                .Where(u => u.Id == item).Select(e =>
-//<<<<<<< HEAD
-//                new EducationViewModel { SchoolName = e.SchoolName ,Degree =e.Degree , FieldOfStudy=e.FieldOfStudy ,
-//=======
-//                new EducationViewModel { Id=e.Id,  SchoolName = e.SchoolName ,Degree =e.Degree , FieldOfStudy=e.FieldOfStudy ,
-//>>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
+            foreach (int item in EducationIds)
+            {
+               var education= context.Education
+                .Where(u => u.Id == item).Select(e =>
+                new EducationViewModel { Id=e.Id,  SchoolName = e.SchoolName ,Degree =e.Degree , FieldOfStudy=e.FieldOfStudy ,
 
-//                    FromYear =e.FromYear ,ToYear =e.ToYear ,Grade =e.Grade }).FirstOrDefault();
+                    FromYear =e.FromYear ,ToYear =e.ToYear ,Grade =e.Grade }).FirstOrDefault();
 
-//                Educations.Add(education);
+                Educations.Add(education);
 
-//            }
+            }
             return Educations;
         }
 

@@ -213,6 +213,7 @@
     <Compile Include="BLL\CompanyTypeManager.cs" />
     <Compile Include="BLL\ConnectionManager.cs" />
     <Compile Include="BLL\EducationManager.cs" />
+    <Compile Include="BLL\EndorsementManager.cs" />
     <Compile Include="BLL\ExperienceManager.cs" />
     <Compile Include="BLL\HomeManager.cs" />
     <Compile Include="BLL\IndustryManager.cs" />
@@ -226,19 +227,24 @@
     <Compile Include="BLL\UserExperienceManager.cs" />
     <Compile Include="BLL\UserSkillManager.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\ConnectionController.cs" />
     <Compile Include="Controllers\EducationsController.cs" />
+    <Compile Include="Controllers\EndorsementsController.cs" />
     <Compile Include="Controllers\ExperiencesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LikesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NetworkController.cs" />
+    <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\SkillsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\DLIndustryHelper.cs" />
+<<<<<<< HEAD
     <Compile Include="Migrations\201904082139359_ahmed.cs" />
     <Compile Include="Migrations\201904082139359_ahmed.Designer.cs">
       <DependentUpon>201904082139359_ahmed.cs</DependentUpon>
@@ -246,6 +252,11 @@
     <Compile Include="Migrations\201904082218203_yyy.cs" />
     <Compile Include="Migrations\201904082218203_yyy.Designer.cs">
       <DependentUpon>201904082218203_yyy.cs</DependentUpon>
+=======
+    <Compile Include="Migrations\201904082316240_beforefinal.cs" />
+    <Compile Include="Migrations\201904082316240_beforefinal.Designer.cs">
+      <DependentUpon>201904082316240_beforefinal.cs</DependentUpon>
+>>>>>>> 367e97306dec3a1e4f16b13c701d80a8e38bf59c
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -255,16 +266,17 @@
     <Compile Include="Models\CompanyType.cs" />
     <Compile Include="Models\Connection_Request.cs" />
     <Compile Include="Models\Education.cs" />
-    <Compile Include="Models\EmploymentType.cs" />
+    <Compile Include="Models\Endorsement.cs" />
     <Compile Include="Models\Experience.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Industry.cs" />
-    <Compile Include="Models\Job.cs" />
-    <Compile Include="Models\JobIndustry.cs" />
     <Compile Include="Models\Like.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Post.cs" />
+<<<<<<< HEAD
     <Compile Include="Models\SeniorityLevel.cs" />
+=======
+>>>>>>> 367e97306dec3a1e4f16b13c701d80a8e38bf59c
     <Compile Include="Models\Skill.cs" />
     <Compile Include="Models\UnitofWork.cs" />
     <Compile Include="Models\UserCompany.cs" />
@@ -281,7 +293,10 @@
     <Compile Include="ViewModel\CompanyViewModel.cs" />
     <Compile Include="ViewModel\ConnectionViewModel.cs" />
     <Compile Include="ViewModel\EducationViewModel.cs" />
+    <Compile Include="ViewModel\EndorsementViewModel.cs" />
     <Compile Include="ViewModel\ExperienceViewModel.cs" />
+    <Compile Include="ViewModel\LikesViewModel.cs" />
+    <Compile Include="ViewModel\NetworkViewModel.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />
     <Compile Include="ViewModel\IndustryViewModel.cs" />
     <Compile Include="ViewModel\PostViewModel.cs" />
@@ -309,17 +324,9 @@
     <Content Include="HTML\Profile.html" />
     <Content Include="HTML\ProfileCard.html" />
     <Content Include="HTML\SearchComponent.html" />
-    <Content Include="images\0.jpg" />
-    <Content Include="images\1.jpg" />
-    <Content Include="images\1.png" />
-    <Content Include="images\2.jpg" />
-    <Content Include="images\2.png" />
-    <Content Include="images\3.jpg" />
-    <Content Include="images\cover.jpg" />
-    <Content Include="images\df.png" />
+    <Content Include="HTML\TestPage.html" />
     <Content Include="images\Logo.png" />
-    <Content Include="images\me.jpg" />
-    <Content Include="images\u.png" />
+    <Content Include="js\main.js" />
     <Content Include="node_modules\bootstrap\dist\css\bootstrap-grid.css" />
     <Content Include="node_modules\bootstrap\dist\css\bootstrap-grid.min.css" />
     <Content Include="node_modules\bootstrap\dist\css\bootstrap-reboot.css" />
@@ -737,19 +744,14 @@
     <Content Include="node_modules\bootstrap\scss\_type.scss" />
     <Content Include="node_modules\bootstrap\scss\_utilities.scss" />
     <Content Include="node_modules\bootstrap\scss\_variables.scss" />
-    <Content Include="sass\components\_companyentry.scss" />
-    <Content Include="sass\components\_companyregistration.scss" />
-    <Content Include="sass\components\_divposition.scss" />
-    <Content Include="sass\components\_connection.scss" />
-    <Content Include="sass\components\CreatePost.scss" />
-    <Content Include="sass\components\posts.scss" />
-    <Content Include="sass\layout\Home.scss" />
-    <Content Include="sass\components\_comp_Post.scss" />
-    <Content Include="sass\components\_companyProfile.scss" />
-    <Content Include="sass\components\_peopleMayKnow.scss" />
-    <Content Include="sass\components\_compcomun.scss" />
-    <Content Include="sass\components\_compdashboard.scss" />
-    <Content Include="sass\components\comments.scss" />
+    <Content Include="node_modules\jquery-ajax-unobtrusive\package.json" />
+    <Content Include="node_modules\jquery-ajax-unobtrusive\README.md" />
+    <Content Include="node_modules\jquery-validation-unobtrusive\package.json" />
+    <Content Include="node_modules\jquery-validation-unobtrusive\README.md" />
+    <Content Include="node_modules\jquery-validation\changelog.md" />
+    <Content Include="node_modules\jquery-validation\LICENSE.md" />
+    <Content Include="node_modules\jquery-validation\package.json" />
+    <Content Include="node_modules\jquery-validation\README.md" />
     <Content Include="node_modules\jquery\bower.json" />
     <Content Include="node_modules\jquery\dist\jquery.min.map" />
     <Content Include="node_modules\jquery\dist\jquery.slim.min.map" />
@@ -757,6 +759,7 @@
     <Content Include="node_modules\jquery\package.json" />
     <Content Include="node_modules\jquery\README.md" />
     <Content Include="node_modules\jquery\src\.eslintrc.json" />
+<<<<<<< HEAD
     <Content Include="node_modules\jquery-ajax-unobtrusive\package.json" />
     <Content Include="node_modules\jquery-ajax-unobtrusive\README.md" />
     <Content Include="node_modules\jquery-validation\changelog.md" />
@@ -769,10 +772,9 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+=======
+>>>>>>> 367e97306dec3a1e4f16b13c701d80a8e38bf59c
     <Content Include="Scripts\main.js" />
-    <Content Include="sass\layout\profile-card-layout.scss" />
-    <Content Include="sass\components\Profile-card.scss" />
-    <Content Include="sass\components\_search-results.scss" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -782,9 +784,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -814,7 +814,6 @@
     <Content Include="Views\Shared\_Layout2.cshtml" />
     <Content Include="Views\Connection\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
-    <Content Include="Views\Shared\_PostPartial.cshtml" />
     <Content Include="Views\Shared\_Connection.cshtml" />
     <Content Include="Views\Network\Create.cshtml" />
     <Content Include="Views\Network\Delete.cshtml" />
@@ -838,6 +837,9 @@
     <Folder Include="App_Data\" />
     <Folder Include="sass\pages\" />
     <Folder Include="sass\themes\" />
+    <Folder Include="Views\Comments\" />
+    <Folder Include="Views\Likes\" />
+    <Folder Include="Views\Posts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -845,9 +847,20 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
-    <Content Include="Views\Shared\_CommentPartial.cshtml" />
-    <Content Include="sass\components\_job.scss" />
+    <Content Include="Views\Company\Create.cshtml" />
+    <Content Include="Views\Company\Details.cshtml" />
+    <Content Include="Views\Company\Edit.cshtml" />
+    <Content Include="Views\Company\Index.cshtml" />
+    <Content Include="Views\Network\Create.cshtml" />
+    <Content Include="Views\Network\Delete.cshtml" />
+    <Content Include="Views\Network\Details.cshtml" />
+    <Content Include="Views\Network\Edit.cshtml" />
+    <Content Include="Views\Network\Index.cshtml" />
+    <Content Include="Views\Profile\Details.cshtml" />
+    <Content Include="Views\Profile\_education.cshtml" />
+    <Content Include="Views\Profile\_experience.cshtml" />
     <Content Include="Views\Profile\_Skill.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Company\ViewProfComp.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -856,6 +869,44 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904082218203_yyy.resx">
       <DependentUpon>201904082218203_yyy.cs</DependentUpon>
+=======
+    <Content Include="Views\Shared\_PeopleMayKnow.cshtml" />
+    <Content Include="Views\Shared\_FreindRequest.cshtml" />
+    <Content Include="Views\Shared\_PostsPartial.cshtml" />
+    <Content Include="Views\Shared\_CommentsPartial.cshtml" />
+    <Content Include="Views\Shared\_LikesModalPartial.cshtml" />
+    <Content Include="Views\Shared\_PostPartial.cshtml" />
+    <Content Include="sass\layout\Home.scss" />
+    <Content Include="sass\layout\profile-card-layout.scss" />
+    <Content Include="sass\components\_comp_Post.scss" />
+    <Content Include="sass\components\_companyentry.scss" />
+    <Content Include="sass\components\_companyProfile.scss" />
+    <Content Include="sass\components\_companyregistration.scss" />
+    <Content Include="sass\components\_compcomun.scss" />
+    <Content Include="sass\components\_compdashboard.scss" />
+    <Content Include="sass\components\_divposition.scss" />
+    <Content Include="sass\components\_connection.scss" />
+    <Content Include="sass\components\_job.scss" />
+    <Content Include="sass\components\_likes-results.scss" />
+    <Content Include="sass\components\posts.scss" />
+    <Content Include="sass\components\_search-results.scss" />
+    <Content Include="sass\components\_peopleMayKnow.scss" />
+    <Content Include="sass\components\CreatePost.scss" />
+    <Content Include="sass\components\comments.scss" />
+    <Content Include="sass\components\Profile-card.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_CommentPartial.cshtml" />
+    <Content Include="Views\Shared\_Connection.cshtml" />
+    <Content Include="Views\Shared\_Layout3.cshtml" />
+    <Content Include="Views\Shared\_LikesPartial.cshtml" />
+    <Content Include="Views\Shared\_PeopleMayKnow.cshtml" />
+    <Content Include="Views\Shared\_SearchResultPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904082316240_beforefinal.resx">
+      <DependentUpon>201904082316240_beforefinal.cs</DependentUpon>
+>>>>>>> 367e97306dec3a1e4f16b13c701d80a8e38bf59c
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

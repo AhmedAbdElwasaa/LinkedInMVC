@@ -11,7 +11,6 @@ using LinkedInMVC.Models;
 using Microsoft.AspNet.Identity.Owin;
 using LinkedInMVC.ViewModel;
 using System.IO;
-using Microsoft.AspNet.Identity;
 
 namespace LinkedInMVC.Controllers
 {
@@ -68,9 +67,12 @@ namespace LinkedInMVC.Controllers
         {
             CompanyViewModel cvm = new CompanyViewModel
             {
+<<<<<<< HEAD
 
                  Selected=false, 
                // Company = UnitofWork.CompanyManager.GetAll().FirstOrDefault(),
+=======
+>>>>>>> 367e97306dec3a1e4f16b13c701d80a8e38bf59c
                 Industries = UnitofWork.IndustryManager.GetAll().Select(a => new SelectListItem { Text = a.Name, Value = a.Id.ToString(),Selected=true }).ToList(),
                 Sizes=UnitofWork.CompanySizeManager.GetAll().Select(a=> new SelectListItem { Text=a.Size,Value=a.Id.ToString(),Selected=true}).ToList(),
                 Types=UnitofWork.CompanyTypeManager.GetAll().Select(a=>new SelectListItem {Text=a.Type,Value=a.Id.ToString(),Selected=true }).ToList()
@@ -83,14 +85,13 @@ namespace LinkedInMVC.Controllers
         // POST: Company/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Company company)
+        public async Task<ActionResult> Create([Bind(Include = "Id,Name,URL,Logo,Cover,Type,Industry,Address,Description")] Company company)
         {
             if (ModelState.IsValid)
             {
+<<<<<<< HEAD
                 UserCompany userCompany = new UserCompany();
                 string userId = User.Identity.GetUserId();
                 ApplicationUser currentUser = UnitofWork.UserManager.FindById(userId);
@@ -111,10 +112,19 @@ namespace LinkedInMVC.Controllers
                
 
 
+=======
+                //string str = company.Logo.FileName;
+                //FileUpload1.PostedFile.SaveAs(Server.MapPath("~/Images/") + str);
+                //string path = "~/Images/" + str.ToString();
+                //UnitofWork.CompanyManager.Add(company);
+                
+                return RedirectToAction("Index");
+>>>>>>> 367e97306dec3a1e4f16b13c701d80a8e38bf59c
             }
 
-            return View();
+            return View(company);
         }
+<<<<<<< HEAD
 
         [HttpGet]
         public ActionResult ViewProfComp()
@@ -127,6 +137,8 @@ namespace LinkedInMVC.Controllers
             return View(cvm);
         }
       
+=======
+>>>>>>> 367e97306dec3a1e4f16b13c701d80a8e38bf59c
 
         // GET: Company/Edit/5
         //public async Task<ActionResult> Edit(int? id)

@@ -1,14 +1,16 @@
 ﻿@model LinkedInMVC.ViewModel.HomeViewModel
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
+    string name = Model.ApplicationUser.FirstName;
+    string jobTitle = Model.ApplicationUser.Headline;
 }
-<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css">
-<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+@*<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css">*@
+@*<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>*@
 <!--<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+@*<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">*@
 
 <div class="container Home col-md-10">
     <div class="row">
@@ -23,18 +25,11 @@
                 </div>
                 <div class="small-profile-card__content">
                     <a class="small-profile-card__nametag">
-                        Souhaila Muhammad
-                        @*@{
-                            string name = (Model.ApplicationUser.FirstName + " " + Model.ApplicationUser.SecondName);
-                        }
-                        @Html.DisplayFor(n=>name
-                                  , new
-                                  {
-                                      @class = "small-profile-card__nametag"
-                                  })*@
+                        @name
+                       
                     </a>
                     <p class="small-profile-card__details">
-                        <Label class="small-profile-card__details text-center">Enterprise&Web(Microsoft) Intern at Information Technology Institute (ITI)</Label>
+                        <Label class="small-profile-card__details text-center">@jobTitle</Label>
                     </p>
                 </div>
                 <div class="small-profile-card__managecon col-md-12">
@@ -80,7 +75,10 @@
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
 
-                            @using (Html.BeginForm("AddPost", "Home", FormMethod.Post, new { @class = "modal-content" }))
+                            @using (Ajax.BeginForm("AddPost","Posts",null
+                                , new AjaxOptions { UpdateTargetId= "changingPart",
+                                    InsertionMode = InsertionMode.Replace
+                                , HttpMethod="POST" } ,new { @class = "modal-content" }))
                             {
                                 <div class="post-box__modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel"></h5>
@@ -89,15 +87,14 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    @Html.TextArea("post.postText" , new { @style = "width:inherit ;height:100px;border:none"
+                                    @Html.TextArea("post.postText" , new { @style = "width: -webkit-fill-available;height:100px;border:none"
                                    , @id = "PostInputText",
                                    @type = "text" , @placeholder = "What do you want to talk about..?"
                                })
-                                    @*<textarea  style = "width:100% ;height:100px;border:none" id="PostInputText" type="text" placeholder="What do you want to talk about..?"></textarea>*@
-                                </div>
+                                   </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-primary  post-btn">Post</button>
+                                    <button  class="btn btn-primary  post-btn" type="submit">Post</button>
                                 </div>
                             }
 
@@ -119,16 +116,8 @@
                 </div>
             </div>
             <div class="Home__posts-sec row">
-                <div class="posts col-md-12 flex-column">
-                    @if (Model.posts != null)
-                    {
-                        <text>
-                            @foreach (LinkedInMVC.Models.Post post in Model.posts)
-                            {
-                                @Html.Partial("_PostPartial", post)
-                            }
-                        </text>
-                    }
+                <div id="changingPart" class="col-md-12">
+                    @Html.Partial("_PostsPartial", Model.PostViewModels)
                 </div>
                 
 

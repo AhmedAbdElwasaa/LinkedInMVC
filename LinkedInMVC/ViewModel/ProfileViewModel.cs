@@ -40,10 +40,14 @@ namespace LinkedInMVC.ViewModel
         }
 
 
+        private Experience experience;
 
+<<<<<<< HEAD
 
         private Experience experience;
 
+=======
+>>>>>>> 367e97306dec3a1e4f16b13c701d80a8e38bf59c
         public Experience Experience
         {
             get
@@ -76,11 +80,32 @@ namespace LinkedInMVC.ViewModel
             set { skill = value; }
         }
 
+<<<<<<< HEAD
+=======
+
+        private Endorsement endorsement;
+        public Endorsement Endorsement
+        {
+            get
+            {
+                if (endorsement == null)
+                {
+
+                    endorsement = new Endorsement();
+
+                }
+                return endorsement;
+            }
+            set { endorsement = value; }
+        }
+
+>>>>>>> 367e97306dec3a1e4f16b13c701d80a8e38bf59c
         public List<EducationViewModel> Educations { get; set; }
         public List<ExperienceViewModel> Experiences { get; set; }
 
         public List<SkillViewModel> Skills { get; set; }
 
+        public List<EndorsementViewModel> Endorsements { get; set; }
 
     }
 }

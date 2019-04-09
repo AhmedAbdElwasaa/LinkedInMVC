@@ -10,13 +10,6 @@ namespace LinkedInMVC.Models
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser 
     {
-
-        public ApplicationUser()
-        {
-            this.UserCompanies = new HashSet<UserCompany>();
-        }
-        
-
         public string FirstName { get; set; }
         public string SecondName { get; set; }
 
@@ -34,7 +27,10 @@ namespace LinkedInMVC.Models
         public ICollection<UserExperience> UserExperiences = new List<UserExperience>();
         public ICollection<Connection_Request> Connection_Requeset = new List<Connection_Request>();
         public ICollection<Connection_Request> Connection_Requeset1 = new List<Connection_Request>();
-        public ICollection<UserSkill> UserSkill = new List<UserSkill>();
+        public ICollection<UserSkill> UserSkills = new List<UserSkill>();
+
+        public ICollection<Endorsement> Endorsments = new List<Endorsement>();
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
@@ -80,12 +76,19 @@ namespace LinkedInMVC.Models
         public DbSet<Skill> skill { get; set; }
         public DbSet<UserSkill> UserSkills { get; set; }
 
+        public DbSet<Endorsement> Endorsement { get; set; }
         //CONNECTION
         public DbSet<Connection_Request> Connection_Requeset { get; set; }
        
+<<<<<<< HEAD
         //Job
         public DbSet<Job> Job { get; set; }
         public DbSet<SeniorityLevel> SeniorityLevel { get; set; }
         public DbSet<EmploymentType> EmploymentType { get; set; }
+=======
+
+
+
+>>>>>>> 367e97306dec3a1e4f16b13c701d80a8e38bf59c
     }
 }

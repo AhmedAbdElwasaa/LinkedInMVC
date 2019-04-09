@@ -76,6 +76,14 @@ namespace LinkedInMVC.Models
             }
         }
 
+        public EndorsementManager EndorsementManager
+        {
+            get
+            {
+                return new EndorsementManager(context);
+            }
+        }
+
         public IndustryManager IndustryManager
         {
             get

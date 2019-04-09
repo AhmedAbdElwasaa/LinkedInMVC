@@ -41,7 +41,6 @@ namespace LinkedInMVC.BLL
         }
 
 
-
         public bool AddUserExperience(Experience experience, ApplicationUser user)
         {
             UserExperience userExperience = new UserExperience();
@@ -53,6 +52,5 @@ namespace LinkedInMVC.BLL
 
             return context.SaveChanges() > 0;
         }
-
     }
 }

@@ -1,0 +1,9 @@
+﻿@model LinkedInMVC.Models.Comment[]
+
+    <text>
+        @foreach (LinkedInMVC.Models.Comment comment in Model)
+        {
+            @Html.Partial("_CommentPartial", comment)
+        }
+    </text>
+

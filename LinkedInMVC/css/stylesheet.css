@@ -7245,15 +7245,9 @@ a.text-dark:hover, a.text-dark:focus {
     .skills-container .skill .Endorsements {
       font-size: 1.6rem;
       padding-left: 2rem; }
-<<<<<<< HEAD
-=======
   .skills-container .Endorsements {
     font-size: 1.6rem;
     padding-left: 2rem; }
-
-.Endorsements {
-  font-size: 1.6rem;
-  padding-left: 2rem; }
 
 .job-card {
   margin-bottom: 2rem;
@@ -7288,7 +7282,6 @@ a.text-dark:hover, a.text-dark:focus {
     color: rgba(0, 0, 0, 0.6); }
   .job-card:hover {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2); }
->>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
 
 .i-color-company {
   color: #005E93; }
@@ -7667,16 +7660,9 @@ a.text-dark:hover, a.text-dark:focus {
   margin-top: 6%;
   margin-left: 5%; }
 
-<<<<<<< HEAD
-=======
 .job-page {
   height: 100vh;
   background-color: #F5F5F5; }
-  .job-page .job-search {
-    background-color: #f3f6f8;
-    position: relative;
-    z-index: 3;
-    width: 112.8rem; }
   .job-page .job-container-head {
     margin: 10rem;
     padding-top: 5rem;
@@ -7696,7 +7682,6 @@ a.text-dark:hover, a.text-dark:focus {
     justify-content: space-evenly;
     align-content: flex-start; }
 
->>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
 .network-block {
   margin-top: 100px;
   display: flex;
@@ -7723,10 +7708,10 @@ a.text-dark:hover, a.text-dark:focus {
     .network-block__imgprofile__pimage {
       position: absolute;
       border-radius: 50%;
-      top: 1rem;
-      left: 4rem;
-      width: 8.5rem;
-      height: 8.5rem; }
+      top: 0rem;
+      left: 2rem;
+      width: 8.7rem;
+      height: 8.7rem; }
     .network-block__imgprofile__content {
       display: flex;
       justify-content: center;
@@ -7838,6 +7823,10 @@ a.text-dark:hover, a.text-dark:focus {
   justify-content: center;
   margin-top: 74px; }
 
+.net-row {
+  margin-top: 100px;
+  margin-bottom: 100px; }
+
 body {
   background-color: #E6E9EC !important; }
 
@@ -7858,6 +7847,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+
+.activeLike {
+  background-color: #0073b1;
+  color: #0073b1; }
+  .activeLike:hover {
+    background-color: #0073b1;
+    color: #0073b1; }
 
 .post {
   display: flex;
@@ -7988,11 +7984,8 @@ ul, li {
   .post-box__modal-header {
     background: #0073b1; }
 
-<<<<<<< HEAD
 .modal-header {
   background-color: #0073b1 !important; }
-=======
->>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7
 
 .close {
   color: white; }
@@ -8260,6 +8253,58 @@ ul, li {
       color: #0073b1;
       cursor: pointer;
       text-decoration: underline; }
+
+.likes-results {
+  background: white;
+  display: flex;
+  flex-direction: column; }
+
+.like-result {
+  padding: 3rem;
+  background: white;
+  display: flex;
+  border-bottom: 0.1px rgba(0, 0, 0, 0.04);
+  border-bottom-style: groove; }
+  .like-result__imgCont {
+    border-radius: 50%;
+    height: 3rem; }
+  .like-result__user-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #0073b1; }
+    .like-result__user-name:hover {
+      text-decoration: underline; }
+  .like-result__user-title {
+    font-size: 1.4rem;
+    line-height: 1.42857;
+    color: rgba(0, 0, 0, 0.9);
+    font-weight: 400; }
+  .like-result__country {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400; }
+  .like-result__connect-or-msg {
+    font-weight: 700;
+    font-size: 1.4rem;
+    height: 4rem;
+    color: #0073b1;
+    background-color: white;
+    border-color: #0073b1;
+    border: 2px solid;
+    border-radius: 5px;
+    cursor: pointer; }
+    .like-result__connect-or-msg:hover {
+      background-color: rgba(152, 216, 244, 0.25);
+      box-shadow: inset 0 0 0 2px #006097; }
+  .like-result__matual-cons {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 700;
+    font-size: 1rem; }
+
+.search-result-info {
+  padding-top: 1.5rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.4rem;
+  line-height: 1.42857; }
 
 body {
   background-color: #E6E9EC !important; }
@@ -15381,51 +15426,6 @@ body {
   padding: 0rem;
   margin: 0rem; }
 
-<<<<<<< HEAD
-#AddEducationModal .modal-dialog {
-  max-width: 700px; }
-  #AddEducationModal .modal-dialog .modal-body {
-    font-size: 1.6rem; }
-    #AddEducationModal .modal-dialog .modal-body input {
-      width: 100% !important; }
-    #AddEducationModal .modal-dialog .modal-body .Title {
-      margin-top: 2rem; }
-    #AddEducationModal .modal-dialog .modal-body .date {
-      display: flex;
-      width: 100%; }
-      #AddEducationModal .modal-dialog .modal-body .date .StartDate-wrapper {
-        width: 50%; }
-        #AddEducationModal .modal-dialog .modal-body .date .StartDate-wrapper select {
-          width: 90%; }
-      #AddEducationModal .modal-dialog .modal-body .date .EndDate-Wrapper {
-        width: 50%; }
-        #AddEducationModal .modal-dialog .modal-body .date .EndDate-Wrapper select {
-          width: 90%; }
-  #AddEducationModal .modal-dialog .modal-footer button {
-    font-size: 1.6rem; }
-
-#EditEducationModal .modal-dialog {
-  max-width: 700px; }
-  #EditEducationModal .modal-dialog .modal-body {
-    font-size: 1.6rem; }
-    #EditEducationModal .modal-dialog .modal-body input {
-      width: 100% !important; }
-    #EditEducationModal .modal-dialog .modal-body .Title {
-      margin-top: 2rem; }
-    #EditEducationModal .modal-dialog .modal-body .date {
-      display: flex;
-      width: 100%; }
-      #EditEducationModal .modal-dialog .modal-body .date .StartDate-wrapper {
-        width: 50%; }
-        #EditEducationModal .modal-dialog .modal-body .date .StartDate-wrapper select {
-          width: 90%; }
-      #EditEducationModal .modal-dialog .modal-body .date .EndDate-Wrapper {
-        width: 50%; }
-        #EditEducationModal .modal-dialog .modal-body .date .EndDate-Wrapper select {
-          width: 90%; }
-  #EditEducationModal .modal-dialog .modal-footer button {
-    font-size: 1.6rem; }
-=======
 #EducationModal .modal-dialog {
   max-width: 700px; }
   #EducationModal .modal-dialog .modal-body {
@@ -15515,4 +15515,3 @@ body {
         }
     }
 }*/
->>>>>>> 29bc76c60a8eaeec1aac09f1b2670c43143ba2d7

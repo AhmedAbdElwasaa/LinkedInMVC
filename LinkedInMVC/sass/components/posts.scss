@@ -4,7 +4,15 @@
     justify-content: space-between;
     //background-color: #E6E9EC;
 }
+.activeLike {
+    background-color: #0073b1;
+    color: #0073b1;
 
+    &:hover {
+        background-color: #0073b1;
+        color: #0073b1;
+    }
+}
 .post {
     display: flex;
     flex-direction: column;

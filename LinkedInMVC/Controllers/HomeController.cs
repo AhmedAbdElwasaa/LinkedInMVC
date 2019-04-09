@@ -22,6 +22,7 @@ namespace LinkedInMVC.Controllers
         }
         public ActionResult Index()
         {
+            bool liked = false;
             ApplicationUser ApplicationUser;
             string id = User.Identity.GetUserId();
             ApplicationUser = UnitofWork.UserManager.Users
@@ -29,48 +30,47 @@ namespace LinkedInMVC.Controllers
             HomeViewModel homeViewModel = new HomeViewModel();
 
             homeViewModel.ApplicationUser = ApplicationUser;
-            homeViewModel.posts = UnitofWork.PostsManager.GetAll().ToArray();
+            List<PostViewModel> postViewModels = new List<PostViewModel>();
+            var allPosts = UnitofWork.PostsManager.GetAll().ToArray();
+            LikesViewModel LikesViewModel;
+            foreach (Post post in allPosts)
+            {
+                LikesViewModel = new LikesViewModel { likers = UnitofWork.LikesManager.GetLikers(post.Id), num = post.numOfLikes };
+                if (UnitofWork.LikesManager.GetLikers(post.Id).Any(l =>l.Id == id))
+                {
+                    liked = true;
+                }
+                postViewModels.Add(new PostViewModel
+                {
+                    ApplicationUser = post.ApplicationUser,
+                    Comments = post.Comments,
+                    Date = post.Date,
+                    Id = post.Id,
+                    liked = liked,
+                    Likes = post.Likes
+                ,
+                    numOfComments = post.numOfComments,
+                    numOfLikes = post.numOfLikes,
+                    numOfShares = post.numOfShares
+                ,
+                    postText = post.postText,
+                    Post_Shared = post.Post_Shared,
+                   LikesViewModel = LikesViewModel
+                });
+            }
+            homeViewModel.PostViewModels = postViewModels.ToArray();
+           
             return View(homeViewModel);
         }
-        public ActionResult t()
+        public ActionResult GetLatest()
         {
-            ApplicationUser ApplicationUser;
-            string id = User.Identity.GetUserId();
-            ApplicationUser = UnitofWork.UserManager.Users
-                .Where(e => e.Id == id).FirstOrDefault();
-            Post post = UnitofWork.PostsManager.GetById(2006);
-            post = UnitofWork.LikesManager.AddLikes(ApplicationUser, 2006);
-            int likesNum = post.numOfLikes;
-            post.numOfLikes = likesNum;
-            return Content(likesNum.ToString());
+            return PartialView("");
         }
-
-        public ActionResult AddLike(Post post)
+        public ActionResult GetTop()
         {
-            ApplicationUser ApplicationUser;
-            string id = User.Identity.GetUserId();
-            ApplicationUser = UnitofWork.UserManager.Users
-                .Where(e => e.Id == id).FirstOrDefault();
-            post = UnitofWork.LikesManager.AddLikes(ApplicationUser, post.Id);
-            int likesNum = post.numOfLikes;
-            post.numOfLikes = likesNum;
-            return Content(likesNum.ToString());
-            //return PartialView("_LikesPartial", likesNum);
+            return PartialView("");
         }
-
-        [HttpPost]
-        //Submit the post to the server
-        public ActionResult AddPost(Post post)
-        {
-            ApplicationUser ApplicationUser;
-            string id = User.Identity.GetUserId();
-            ApplicationUser = UnitofWork.UserManager.Users
-                .Where(e => e.Id == id).FirstOrDefault();
-            post.ApplicationUser = ApplicationUser;
-            post.Date = DateTime.Now;
-            UnitofWork.PostsManager.Add(post);
-            return RedirectToAction("Index");
-        }
+        
 
         public ActionResult SearchPeople(string searchedText)
         {
