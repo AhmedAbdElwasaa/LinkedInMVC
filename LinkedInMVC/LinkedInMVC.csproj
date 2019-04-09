@@ -244,19 +244,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\DLIndustryHelper.cs" />
-<<<<<<< HEAD
-    <Compile Include="Migrations\201904082139359_ahmed.cs" />
-    <Compile Include="Migrations\201904082139359_ahmed.Designer.cs">
-      <DependentUpon>201904082139359_ahmed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904082218203_yyy.cs" />
-    <Compile Include="Migrations\201904082218203_yyy.Designer.cs">
-      <DependentUpon>201904082218203_yyy.cs</DependentUpon>
-=======
-    <Compile Include="Migrations\201904082316240_beforefinal.cs" />
-    <Compile Include="Migrations\201904082316240_beforefinal.Designer.cs">
-      <DependentUpon>201904082316240_beforefinal.cs</DependentUpon>
->>>>>>> 367e97306dec3a1e4f16b13c701d80a8e38bf59c
+    <Compile Include="Migrations\201904090738046_ahmed.cs" />
+    <Compile Include="Migrations\201904090738046_ahmed.Designer.cs">
+      <DependentUpon>201904090738046_ahmed.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -266,17 +256,17 @@
     <Compile Include="Models\CompanyType.cs" />
     <Compile Include="Models\Connection_Request.cs" />
     <Compile Include="Models\Education.cs" />
+    <Compile Include="Models\EmploymentType.cs" />
     <Compile Include="Models\Endorsement.cs" />
     <Compile Include="Models\Experience.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Industry.cs" />
+    <Compile Include="Models\Job.cs" />
+    <Compile Include="Models\JobIndustry.cs" />
     <Compile Include="Models\Like.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Post.cs" />
-<<<<<<< HEAD
     <Compile Include="Models\SeniorityLevel.cs" />
-=======
->>>>>>> 367e97306dec3a1e4f16b13c701d80a8e38bf59c
     <Compile Include="Models\Skill.cs" />
     <Compile Include="Models\UnitofWork.cs" />
     <Compile Include="Models\UserCompany.cs" />
@@ -759,7 +749,6 @@
     <Content Include="node_modules\jquery\package.json" />
     <Content Include="node_modules\jquery\README.md" />
     <Content Include="node_modules\jquery\src\.eslintrc.json" />
-<<<<<<< HEAD
     <Content Include="node_modules\jquery-ajax-unobtrusive\package.json" />
     <Content Include="node_modules\jquery-ajax-unobtrusive\README.md" />
     <Content Include="node_modules\jquery-validation\changelog.md" />
@@ -772,8 +761,6 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-=======
->>>>>>> 367e97306dec3a1e4f16b13c701d80a8e38bf59c
     <Content Include="Scripts\main.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -860,16 +847,9 @@
     <Content Include="Views\Profile\_education.cshtml" />
     <Content Include="Views\Profile\_experience.cshtml" />
     <Content Include="Views\Profile\_Skill.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Company\ViewProfComp.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904082139359_ahmed.resx">
-      <DependentUpon>201904082139359_ahmed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904082218203_yyy.resx">
-      <DependentUpon>201904082218203_yyy.cs</DependentUpon>
-=======
     <Content Include="Views\Shared\_PeopleMayKnow.cshtml" />
     <Content Include="Views\Shared\_FreindRequest.cshtml" />
     <Content Include="Views\Shared\_PostsPartial.cshtml" />
@@ -904,9 +884,8 @@
     <Content Include="Views\Shared\_SearchResultPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904082316240_beforefinal.resx">
-      <DependentUpon>201904082316240_beforefinal.cs</DependentUpon>
->>>>>>> 367e97306dec3a1e4f16b13c701d80a8e38bf59c
+    <EmbeddedResource Include="Migrations\201904090738046_ahmed.resx">
+      <DependentUpon>201904090738046_ahmed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

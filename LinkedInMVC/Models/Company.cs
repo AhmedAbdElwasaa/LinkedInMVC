@@ -21,14 +21,12 @@ namespace LinkedInMVC.Models
         public string Address { get; set; }
         [DisplayName("TagLine")]
         public string Description { get; set; }
-<<<<<<< HEAD
         [NotMapped]
         [Required(ErrorMessage = "Image musn't empty")]
         public HttpPostedFileBase LogoFileName { get; set; }
         [NotMapped]
         public HttpPostedFileBase CoverFileName { get; set; }
-=======
->>>>>>> 367e97306dec3a1e4f16b13c701d80a8e38bf59c
+
         public ICollection<UserCompany> UserCompanies { get; set; }
         
         public CompanySize CompanySize { get; set; }
@@ -36,12 +34,10 @@ namespace LinkedInMVC.Models
         public CompanyType CompanyType { get; set; }
        
         public Industry Industry { get; set; }
-<<<<<<< HEAD
         [ForeignKey("Industry")]
         public int? Industry_FKId { get; set; }
         public ICollection<Job> JobFK { get; set; }
-=======
->>>>>>> 367e97306dec3a1e4f16b13c701d80a8e38bf59c
+
 
     }
 }

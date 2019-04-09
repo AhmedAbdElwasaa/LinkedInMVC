@@ -80,15 +80,11 @@ namespace LinkedInMVC.Models
         //CONNECTION
         public DbSet<Connection_Request> Connection_Requeset { get; set; }
        
-<<<<<<< HEAD
+
         //Job
         public DbSet<Job> Job { get; set; }
         public DbSet<SeniorityLevel> SeniorityLevel { get; set; }
         public DbSet<EmploymentType> EmploymentType { get; set; }
-=======
 
-
-
->>>>>>> 367e97306dec3a1e4f16b13c701d80a8e38bf59c
     }
 }
