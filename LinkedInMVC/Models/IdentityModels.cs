@@ -86,6 +86,6 @@ namespace LinkedInMVC.Models
         //Job
         public DbSet<Job> Job { get; set; }
         public DbSet<SeniorityLevel> SeniorityLevel { get; set; }
-        public DbSet<EmploymentType> MyProperty { get; set; }
+        public DbSet<EmploymentType> EmploymentType { get; set; }
     }
 }

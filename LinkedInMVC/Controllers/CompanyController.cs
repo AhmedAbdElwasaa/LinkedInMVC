@@ -69,7 +69,7 @@ namespace LinkedInMVC.Controllers
             CompanyViewModel cvm = new CompanyViewModel
             {
 
-                Selected = false,
+                 Selected=false, 
                // Company = UnitofWork.CompanyManager.GetAll().FirstOrDefault(),
                 Industries = UnitofWork.IndustryManager.GetAll().Select(a => new SelectListItem { Text = a.Name, Value = a.Id.ToString(),Selected=true }).ToList(),
                 Sizes=UnitofWork.CompanySizeManager.GetAll().Select(a=> new SelectListItem { Text=a.Size,Value=a.Id.ToString(),Selected=true}).ToList(),
@@ -78,6 +78,7 @@ namespace LinkedInMVC.Controllers
         
             return View(cvm);
         }
+
 
         // POST: Company/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
@@ -104,15 +105,26 @@ namespace LinkedInMVC.Controllers
                     UnitofWork.CompanyManager.Add(company);
                     UnitofWork.UserCompanyManager.AddCompany(currentUser, company);
                     ViewBag.Message += string.Format("<b>{0}</b> Uploaded.<br/>", fileName);
-                    return RedirectToAction("Index");
+                    TempData["NewCompany"] = company;
+                    return RedirectToAction("ViewProfComp","Company");
                 }
-
-
+               
 
 
             }
 
             return View();
+        }
+
+        [HttpGet]
+        public ActionResult ViewProfComp()
+        {
+            var company = TempData["NewCompany"] as Company;
+            CompanyViewModel cvm = new CompanyViewModel {
+                Company = UnitofWork.CompanyManager.GetById(company.Id),
+                Industry = UnitofWork.IndustryManager.GetById(company.Industry_FKId)
+            };
+            return View(cvm);
         }
       
 

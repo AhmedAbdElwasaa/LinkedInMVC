@@ -28,17 +28,13 @@ namespace LinkedInMVC.Models
         [Url(ErrorMessage ="text must be url")]
         [DisplayName("Website")]
         public string  URL { get; set; }
-        [Required(ErrorMessage ="Image musn't empty")]
         public string Logo { get; set; }
         public string Cover { get; set; }
-        public string Type { get; set; }
-        [Column("Industry")]
-        public string CompanyIndustry { get; set; }
-        public string Size { get; set; }
         public string Address { get; set; }
         [DisplayName("TagLine")]
         public string Description { get; set; }
         [NotMapped]
+        [Required(ErrorMessage = "Image musn't empty")]
         public HttpPostedFileBase LogoFileName { get; set; }
         [NotMapped]
         public HttpPostedFileBase CoverFileName { get; set; }
@@ -46,6 +42,8 @@ namespace LinkedInMVC.Models
         public CompanySize CompanySize { get; set; }
         public CompanyType CompanyType { get; set; }
         public Industry Industry { get; set; }
+        [ForeignKey("Industry")]
+        public int? Industry_FKId { get; set; }
         public ICollection<Job> JobFK { get; set; }
 
     }
