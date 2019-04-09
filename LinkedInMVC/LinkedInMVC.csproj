@@ -755,6 +755,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    </itemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="sass\pages\" />
