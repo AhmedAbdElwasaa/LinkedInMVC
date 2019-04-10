@@ -18,6 +18,7 @@ namespace LinkedInMVC.ViewModel
         public Company Company { get; set; }
 
         [DisplayName("Company type *")]
+        [Required(ErrorMessage = "must choose type")]
         public List<SelectListItem> Types { get; set; }
         [DisplayName("Industry *")]
         [Required(ErrorMessage = "must choose Industry")]

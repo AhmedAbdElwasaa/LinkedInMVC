@@ -2,6 +2,12 @@
 @{
     ViewBag.Title = "Company_Profile";
     Layout = "~/Views/Shared/_Layout3.cshtml";
+
+    AjaxOptions ao = new AjaxOptions
+    {
+        UpdateTargetId = "test1",
+        InsertionMode = InsertionMode.Replace
+    };
 }
 
 
@@ -11,10 +17,32 @@
     <div class="row">
         <div class="col-12">
             <div class="profil-fristblock">
+
+              @using (Ajax.BeginForm("ViewProfComp", "Company",ao))
+              {
+                  @Html.AntiForgeryToken()
+
                 <div class="profil-fristblock__comp-cover-profile">
-                    <img src="../images/cp0.jpg" class="img-fluid">
-                    <button class="comp-post-block__comp-post__edit-block__item-edit1 btn-position1">  <i class="fas fa-pencil-alt"></i></button>
+                    @if (Model.Company.Cover == null)
+    {
+                <img src="../images/cp0.jpg" class="img-fluid">
+
+}
+else
+{
+                <img src="@Url.Content(Model.Company.Cover)" class="img-fluid">
+
+}
+                    <input type="file" class="buttfile-choose" value="Choose file" style="    height: 2.2rem;
+    width: 6.3rem;
+    position: absolute;
+    right: 20rem;
+    top: 13rem;
+    background-color: lightblue;" />
                 </div>
+                    <button type="submit" class="comp-post-block__comp-post__edit-block__item-edit1 btn-position1">  <i class="fas fa-pencil-alt"></i></button>
+                
+              }
                 <div class="profil-fristblock__comp-img-profile">
                     <img src="@Url.Content(@Model.Company.Logo)" class="img-fluid" />
 

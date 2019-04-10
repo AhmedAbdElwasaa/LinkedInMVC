@@ -39,7 +39,7 @@ namespace LinkedInMVC.Migrations
 
 
         );
-
+   
             context.CompanySize.AddOrUpdate(x => x.Id,
                 new CompanySize()
                 {

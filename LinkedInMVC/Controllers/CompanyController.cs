@@ -71,13 +71,11 @@ namespace LinkedInMVC.Controllers
 
 
                  Selected=false, 
-               // Company = UnitofWork.CompanyManager.GetAll().FirstOrDefault(),
-
                 Industries = UnitofWork.IndustryManager.GetAll().Select(a => new SelectListItem { Text = a.Name, Value = a.Id.ToString(),Selected=true }).ToList(),
                 Sizes=UnitofWork.CompanySizeManager.GetAll().Select(a=> new SelectListItem { Text=a.Size,Value=a.Id.ToString(),Selected=true}).ToList(),
                 Types=UnitofWork.CompanyTypeManager.GetAll().Select(a=>new SelectListItem {Text=a.Type,Value=a.Id.ToString(),Selected=true }).ToList()
             };
-        
+            ModelState.Clear();
             return View(cvm);
         }
 
@@ -87,7 +85,7 @@ namespace LinkedInMVC.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Id,Name,URL,Logo,Cover,Type,Industry,Address,Description")] Company company)
+        public ActionResult Create( Company company)
         {
             if (ModelState.IsValid)
             {
@@ -111,8 +109,13 @@ namespace LinkedInMVC.Controllers
                
             }
 
-            return View(company);
+            return View();
         }
+
+
+
+
+
 
 
         [HttpGet]
@@ -125,7 +128,31 @@ namespace LinkedInMVC.Controllers
             };
             return View(cvm);
         }
-      
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ViewProfComp(Company company)
+        {
+
+            CompanyViewModel cvm = new CompanyViewModel();
+            var companyId = UnitofWork.CompanyManager.GetById(company.Id);
+            if (company.CoverFileName!= null)
+            {
+                string fileName = Path.GetFileNameWithoutExtension(company.CoverFileName.FileName);
+                string fileExtension = Path.GetExtension(company.CoverFileName.FileName);
+                fileName = DateTime.Now.ToString("yyyyMMdd") + "-" + fileName.Trim() + fileExtension;
+                company.Cover = "~/images/" + fileName;
+                cvm.Company.Cover = company.Cover;
+                fileName = Path.Combine(Server.MapPath("~/images/"), fileName);
+                company.CoverFileName.SaveAs(fileName);
+                UnitofWork.CompanyManager.Add(company);
+                ViewBag.Message += string.Format("<b>{0}</b> Uploaded.<br/>", fileName);
+                TempData["NewCompany"] = company;
+                return RedirectToAction("ViewProfComp", "Company",cvm);
+            }
+            return View();
+        }
 
 
         // GET: Company/Edit/5

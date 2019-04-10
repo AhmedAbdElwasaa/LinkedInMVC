@@ -125,3 +125,6 @@ D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.pdb
 D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.ahmed.resources
 D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.GenerateResource.Cache
 D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csprojResolveAssemblyReference.cache
+D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.TEE.resources
+D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.rttt.resources
+D:\ahmed\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.z.resources
