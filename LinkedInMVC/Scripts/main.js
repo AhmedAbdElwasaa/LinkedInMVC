@@ -1,32 +1,9 @@
 ﻿var edu = null;
 var exp = null;
 var skill = null;
-var [, EducationModal] = $("#EditEducationModal").children().children().children();
-var EducationForm = EducationModal.children.form1;
-//education
-$(".btn-edit-education").click(function () {
 
+// Add education
 
-    let [, , temp] = $(this).parent().children();
-    let EductionDetails = temp.children;
-
-    let id = EductionDetails[0].value;
-    let schoolName = EductionDetails[1].textContent;
-    let degree = EductionDetails[2].textContent;
-    let field = EductionDetails[3].textContent;
-    let grade = EductionDetails[4].textContent;
-    //let startDate=
-
-    console.log(EducationForm)
-    debugger
-
-    EducationForm[1].value = id;
-    EducationForm[2].value = schoolName;
-    EducationForm[3].value = degree;
-    EducationForm[4].value = field;
-    EducationForm[5].value = grade;
-    debugger
-});
 
 $("#EduBtnSave").click(() => {
     edu = {
@@ -41,8 +18,6 @@ $("#EduBtnSave").click(() => {
    
 
 });
-
-
 
 
 function OnSuccessAddEducation() {
@@ -74,7 +49,83 @@ function OnSuccessAddEducation() {
 
 }
 
-//Experience
+
+//////////////////edit education  ///////////////////////////////
+
+$(".btn-edit-education").click(function () {
+    let [, EducationModal] = $("#EditEducationModal").children().children().children();
+    let EducationForm = EducationModal.children.EditEducationForm;
+
+     [, , temp] = $(this).parent().children();
+    EductionDetails = temp.children;
+
+    let id = EductionDetails[0].value;
+    let schoolName = EductionDetails[1].textContent;
+    let degree = EductionDetails[2].textContent;
+    let field = EductionDetails[3].textContent;
+    let grade = EductionDetails[4].textContent;
+    //let startDate=
+
+    EducationForm[1].value = id;
+    EducationForm[2].value = schoolName;
+    EducationForm[3].value = degree;
+    EducationForm[4].value = field;
+    EducationForm[5].value = grade;
+
+
+
+});
+
+
+$("#EditEduBtnSave").click(() => {
+    let [, EducationModal] = $("#EditEducationModal").children().children().children();
+    let EducationForm = EducationModal.children.form1;
+
+    debugger
+    edu = {
+
+        SchoolName: EducationForm[2].value,
+        Degree: EducationForm[3].value,
+        FieldOfStudy: EducationForm[4].value,
+        Grade: EducationForm[5].value
+        //date
+
+    }
+    debugger
+
+});
+
+function OnSuccessEditEducation() {
+
+    debugger
+
+    EductionDetails[1].textContent = edu.SchoolName;
+    EductionDetails[2].textContent = edu.Degree;
+
+    EductionDetails[3].textContent = edu.FieldOfStudy;
+    EductionDetails[4].textContent = edu.Grade;
+
+
+}
+//////////////////////////Delete Education ////////////////////////////////////
+
+$("#DeleteEduBtn").click(() => {
+    let [, EducationModal] = $("#EditEducationModal").children().children().children();
+    let EducationForm = EducationModal.children.EditEducationForm;
+    let idd =  EducationForm[1].value;
+
+    $.ajax({
+        url: `/Educations/Delete/${idd}`,
+        type: "Get",
+        success: function (response) {
+            alert("yayyyyyyyyyy")
+
+        }
+    });
+});
+
+
+/////////////////////// Add Experience//////////////////////////////////////////
 
 $("#ExpBtnSave").click(() => {
 
@@ -115,7 +166,59 @@ function OnSuccessAddExperience() {
 
 }
 
-// skills
+////////////////////////////////Edit Experience ////////////////////////
+
+
+$(".btn-edit-experience").click(function () {
+    let [, ExperienceModal] = $("#EditExperienceModal").children().children().children();
+    let ExperienceForm = ExperienceModal.children.EditExperienceForm;
+
+    
+    [, , temp] = $(this).parent().children();
+    ExperienceDetails = temp.children;
+    
+    let id = ExperienceDetails[0].value;
+    let title = ExperienceDetails[1].textContent;
+    let companyName = ExperienceDetails[2].textContent;
+    let companyLocation = ExperienceDetails[3].textContent;
+    //let startDate=
+
+    ExperienceForm[1].value = id;
+    ExperienceForm[2].value = title;
+    ExperienceForm[3].value = companyName;
+    ExperienceForm[4].value = companyLocation;
+
+
+
+});
+
+
+$("#ExpEditBtnSave").click(() => {
+    let [, ExperienceModal] = $("#EditExperienceModal").children().children().children();
+    let ExperienceForm = ExperienceModal.children.EditExperienceForm;
+    exp = {
+
+        id: ExperienceForm[1].value,
+        Title: ExperienceForm[2].value,
+        CompanyName: ExperienceForm[3].value,
+        Location: ExperienceForm[4].value
+        //date
+
+    }
+
+});
+
+function OnSuccessEditExperience() {
+    ExperienceDetails[1].textContent = exp.Title;
+    ExperienceDetails[2].textContent = exp.CompanyName;
+    ExperienceDetails[3].textContent = exp.Location;
+
+
+}
+
+
+
+/////////////////////Add  skills/////////////////////////////
 
 $("#SkillBtnSave").click(() => {
 
@@ -143,3 +246,111 @@ function OnSuccessAddSkill() {
 
 
 }
+
+////////////////////Edit skills////////////////////////////////////////////
+
+$(".btn-edit-skills").click(function () {
+    let [, SkillModal] = $("#EditSkillsModal").children().children().children();
+    let SkillForm = SkillModal.children.EditSkillForm;
+    [, , temp] = $(this).parent().children();
+    SkillDetails = temp.children;
+  
+   
+    let Skill = SkillDetails[0].textContent;
+    let id = SkillDetails[1].value;
+    //let startDate=
+
+    SkillForm[1].value = id;
+    SkillForm[2].value = Skill;
+    
+});
+
+
+$("#EditSkillBtnSave").click(() => {
+    let [, skillModal] = $("#EditSkillsModal").children().children().children();
+    let SkillForm = skillModal.children.EditSkillForm;
+    skill = {
+
+        id: SkillForm[1].value,
+        skillName: SkillForm[2].value,
+      
+        //date
+
+    }
+   
+});
+
+function OnSuccessEditSkill() {
+
+    debugger
+    SkillDetails[0].textContent = skill.skillName;
+   
+
+}
+////////////////////////// Endorsement //////////////////////////// AddSkill
+
+$(".EndorseBtn").click(() => {
+
+   
+    var x = $(this).parent();
+    debugger
+    $.ajax({
+        url: `/Skills/Create/${idd}`,
+        type: "Get",
+        success: function (response) {
+            alert("yayyyyyyyyyy")
+
+        }
+    });
+
+
+});
+
+
+
+
+
+
+
+
+////////////////////////// change cover images /////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+//$("#btnChangeProfile").click(() => {
+
+
+//    $.ajax({
+//        url: `/Profile/Edit`,
+//        type: "Get",
+//        success: function (response) {
+//            alert("yayyyyyyyyyy")
+
+//        }
+//    });
+
+
+//});
+
+
+//$("#btnChangeCover").click(() => {
+//    edu = {
+
+//        SchoolName: $("#Education_SchoolName").val(),
+//        Degree: $("#Education_Degree").val(),
+//        FieldOfStudy: $("#Education_FieldOfStudy").val(),
+//        Grade: $("#Education_Grade").val()
+//        //date
+
+//    }
+
+
+//});

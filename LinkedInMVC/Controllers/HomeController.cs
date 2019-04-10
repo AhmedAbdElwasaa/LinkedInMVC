@@ -31,17 +31,20 @@ namespace LinkedInMVC.Controllers
 
             homeViewModel.ApplicationUser = ApplicationUser;
             List<PostViewModel> postViewModels = new List<PostViewModel>();
-            var allPosts = UnitofWork.PostsManager.GetAll().ToArray();
+            var allPosts = UnitofWork.PostsManager.GetAllByDate(id,0).ToArray();
             LikesViewModel LikesViewModel;
             foreach (Post post in allPosts)
             {
-                LikesViewModel = new LikesViewModel { likers = UnitofWork.LikesManager.GetLikers(post.Id), num = post.numOfLikes };
-                if (UnitofWork.LikesManager.GetLikers(post.Id).Any(l =>l.Id == id))
+                liked = false;
+                var likes = UnitofWork.LikesManager.GetLikers(post.Id);
+                LikesViewModel = new LikesViewModel { likers = likes ,num = post.numOfLikes };
+                if (likes.Any(l => l.Id == id) && likes != null && LikesViewModel != null )
                 {
                     liked = true;
                 }
                 postViewModels.Add(new PostViewModel
                 {
+                    CurrentUser = ApplicationUser,
                     ApplicationUser = post.ApplicationUser,
                     Comments = post.Comments,
                     Date = post.Date,
@@ -62,25 +65,24 @@ namespace LinkedInMVC.Controllers
            
             return View(homeViewModel);
         }
-        public ActionResult GetLatest()
-        {
-            return PartialView("");
-        }
-        public ActionResult GetTop()
-        {
-            return PartialView("");
-        }
         
 
         public ActionResult SearchPeople(string searchedText)
         {
+            bool first = false;
+            string userid = User.Identity.GetUserId();
             List<SearchResultViewModel> results = new List<SearchResultViewModel>();
             foreach (var item in UnitofWork.HomeManager.SearchPeople(searchedText))
             {
+                first = false;
+                if (UnitofWork.ConnectionManager.GetAllFriend(userid).Any(us=>us.Id == item.Id))
+                {
+                    first = true;
+                }
                 results.Add(new SearchResultViewModel
                 {
                     applicationUser = item,
-                    first = false,
+                    first = first,
                     second = false
                 });
             }

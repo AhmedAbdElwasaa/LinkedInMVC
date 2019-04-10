@@ -64,7 +64,7 @@ namespace LinkedInMVC.Controllers
 
 
 
-        
+
         //    // GET: Skills/Create
         //    public ActionResult Create()
         //    {
@@ -87,21 +87,20 @@ namespace LinkedInMVC.Controllers
         //        return View(skill);
         //    }
 
-        //    // POST: Skills/Edit/5
-        //    // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        //    // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        //    [HttpPost]
-        //    [ValidateAntiForgeryToken]
-        //    public async Task<ActionResult> Edit([Bind(Include = "Id,SkillName")] Skill skill)
-        //    {
-        //        if (ModelState.IsValid)
-        //        {
-        //            db.Entry(skill).State = EntityState.Modified;
-        //            await db.SaveChangesAsync();
-        //            return RedirectToAction("Index");
-        //        }
-        //        return View(skill);
-        //    }
+        // POST: Skills/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Edit(Skill skill)
+        {
+            if (ModelState.IsValid)
+            {
+                UnitofWork.SkillManager.Update(skill);
+                
+            }
+            return RedirectToAction("Index", "Profile");
+        }
 
         //    // GET: Skills/Delete/5
         //    public async Task<ActionResult> Delete(int? id)

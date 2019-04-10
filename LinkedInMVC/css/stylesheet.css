@@ -7041,7 +7041,15 @@ a.text-dark:hover, a.text-dark:focus {
     padding: 0rem !important;
     margin: auto;
     border: 1px solid white;
-    background-color: white; }
+    background-color: white;
+    /*.ProfileImage {
+
+
+        }
+
+        .coverImage {
+
+        }*/ }
     .profile .profile-view .container-img-profile {
       width: 15rem;
       height: 15rem;
@@ -7108,6 +7116,20 @@ a.text-dark:hover, a.text-dark:focus {
         font-size: 1.6rem; }
         .profile .profile-view .profile-details .dropdown-profile .dropdown-menu .dropdown-item i {
           margin-right: 0.7rem; }
+    .profile .profile-view .EditProfileIcon {
+      background-color: #e9ecef;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      font-size: 2rem; }
+    .profile .profile-view .Cover {
+      top: 18rem;
+      left: 78rem;
+      z-index: 100; }
 
 .profile-section {
   text-transform: capitalize;
@@ -7282,6 +7304,49 @@ a.text-dark:hover, a.text-dark:focus {
     color: rgba(0, 0, 0, 0.6); }
   .job-card:hover {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2); }
+
+#EditProfileModal .modal-content {
+  width: 70rem;
+  height: 50rem; }
+  #EditProfileModal .modal-content .modal-body .profile-details .container-img-background {
+    width: 100%;
+    height: 20rem; }
+    #EditProfileModal .modal-content .modal-body .profile-details .container-img-background #img-background {
+      width: 100%;
+      height: 100%; }
+  #EditProfileModal .modal-content .modal-body .profile-details .container-img-profile {
+    width: 15rem;
+    height: 15rem;
+    border: 1.5px solid white;
+    border-radius: 50%;
+    position: relative;
+    top: -7rem;
+    left: 2rem; }
+    #EditProfileModal .modal-content .modal-body .profile-details .container-img-profile #img-profile {
+      width: 100%;
+      height: 100%;
+      border: 1.5px solid white;
+      border-radius: 50%;
+      overflow: hidden;
+      background-size: cover; }
+  #EditProfileModal .modal-content .modal-body .profile-details .EditProfileIcon {
+    background-color: #e9ecef;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 1.5rem; }
+  #EditProfileModal .modal-content .modal-body .profile-details .Profile {
+    left: 13rem;
+    top: 23rem;
+    z-index: 100; }
+  #EditProfileModal .modal-content .modal-body .profile-details .Cover {
+    top: 18rem;
+    left: 64rem;
+    z-index: 100; }
 
 .i-color-company {
   color: #005E93; }
@@ -7862,6 +7927,14 @@ body {
   .activeLike:hover {
     background-color: #0073b1;
     color: #0073b1; }
+
+.load-more {
+  background-color: #0073b1;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-weight: 400;
+  font-size: 1.3rem; }
 
 .post {
   display: flex;

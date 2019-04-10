@@ -50,6 +50,30 @@ namespace LinkedInMVC.BLL
 
             return context.SaveChanges() > 0;
         }
+
+
+
+
+        public bool DeleteUserEducation(Education education, ApplicationUser user)
+        {
+            UserEducation userEducation = new UserEducation();
+            userEducation.UserId = user;
+            userEducation.Education = education;
+
+
+            context.Education.Attach(education);
+            context.Education.Remove(education);
+            
+
+            context.UserEducation.Attach(userEducation);
+            context.UserEducation.Remove(userEducation);
+
+            context.SaveChanges();
+
+            //context.Entry(userEducation).State = EntityState.Deleted;
+            //context.Entry(education).State = EntityState.Deleted;
+            return true;
+        }
     }
 
 }

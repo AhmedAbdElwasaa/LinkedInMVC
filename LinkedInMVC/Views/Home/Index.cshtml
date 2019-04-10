@@ -1,8 +1,12 @@
 ﻿@model LinkedInMVC.ViewModel.HomeViewModel
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    string name = Model.ApplicationUser.FirstName;
+    string name = Model.ApplicationUser.FirstName + " ";
+    name += Model.ApplicationUser.SecondName;
     string jobTitle = Model.ApplicationUser.Headline;
+    string imgUrl = "../images/" + Model.ApplicationUser.ProfileImage;
+    int x;
+    int count=6;
 }
 @*<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css">*@
 @*<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>*@
@@ -18,15 +22,14 @@
             <div class="small-profile-card profile-card-layout col-md-12">
 
                 <img class="small-profile-card__cover" src="../images/lincov.PNG" />
-
+                @Html.HiddenFor(model => model.count);
 
                 <div class="col-md-12">
-                    <img class="small-profile-card__pimage small-profile-card__pimage1" src="../images/pp.png" />
+                    <img class="small-profile-card__pimage small-profile-card__pimage1" src=@imgUrl />
                 </div>
                 <div class="small-profile-card__content">
                     <a class="small-profile-card__nametag">
                         @name
-                       
                     </a>
                     <p class="small-profile-card__details">
                         <Label class="small-profile-card__details text-center">@jobTitle</Label>
@@ -43,6 +46,8 @@
                             <Label class="small-profile-card__managecon-rightside-num4">12</Label>
                         </a>
                         <a class="small-profile-card__managecon-rightside-num5">
+                            @*@Html.LabelFor(model=>model.ApplicationUser.NumOfConnections.ToString()
+                       , new { @class = "small-profile-card__managecon-rightside-num5" })*@
                             <Label class="small-profile-card__managecon-rightside-num5">222</Label>
                         </a>
                     </div>
@@ -75,7 +80,7 @@
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
 
-                            @using (Ajax.BeginForm("AddPost","Posts",null
+                            @using (Ajax.BeginForm("AddPost", "Posts",null
                                 , new AjaxOptions { UpdateTargetId= "changingPart",
                                     InsertionMode = InsertionMode.Replace
                                 , HttpMethod="POST" } ,new { @class = "modal-content" }))
@@ -93,8 +98,9 @@
                                })
                                    </div>
                                 <div class="modal-footer">
+                                    @Html.HiddenFor(model => count);
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button  class="btn btn-primary  post-btn" type="submit">Post</button>
+                                    <button class="btn btn-primary  post-btn" type="submit">Post</button>
                                 </div>
                             }
 
@@ -110,16 +116,53 @@
                         Sort by
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <button class="dropdown-item" type="button">Top</button>
-                        <button class="dropdown-item" type="button">Date</button>
+                        @using (@Ajax.BeginForm("GetSortedPosts", "Posts", new { x = 1, count = 0 }
+                                        , new AjaxOptions
+                                        {
+                                            UpdateTargetId = "changingPart",
+                                            InsertionMode = InsertionMode.Replace
+                                ,
+                                            HttpMethod = "POST"
+                                        }, null))
+                        {
+                            @*@Html.HiddenFor(model => count);*@
+                            <button class="dropdown-item" type="submit">Top</button>
+                        }
+                        @using (@Ajax.BeginForm("GetSortedPosts", "Posts", new { x = 0, count=0 }
+                                , new AjaxOptions
+                                {
+                                    UpdateTargetId = "changingPart",
+                                    InsertionMode = InsertionMode.Replace
+                                ,
+                                    HttpMethod = "POST"
+                                }, null))
+                        {
+                            @*@Html.HiddenFor(model => count);*@
+                            <button class="dropdown-item" type="submit">Date</button>
+                        }
+
                     </div>
                 </div>
             </div>
             <div class="Home__posts-sec row">
                 <div id="changingPart" class="col-md-12">
                     @Html.Partial("_PostsPartial", Model.PostViewModels)
+
                 </div>
-                
+                @using (@Ajax.BeginForm("GetSortedPosts", "Posts", new { x = 0 }
+                                , new AjaxOptions
+                                {
+                                    UpdateTargetId = "changingPart",
+                                    InsertionMode = InsertionMode.InsertAfter
+                                ,
+                                    HttpMethod = "POST"
+                                }, new { @class = "col-md-12" }))
+                {
+                    @Html.HiddenFor(model => count);
+                    <button id="btn_" class="load-more col-md-12" type="submit">
+                        Load More Posts
+                    </button>
+                }
 
             </div>
         </div>
@@ -128,6 +171,17 @@
         </div>
     </div>
 </div>
+@*<script>
+    //function updatePosts() {
+    //      $('#count').val();  
+    //}
+    //$(window).scroll(function () {
+    //    if ($(window).scrollTop()
+    //        + $(window).height() >= $(window).height()) {
+    //        $('#btn_').click();
+    //    }
+    //});
+</script>*@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

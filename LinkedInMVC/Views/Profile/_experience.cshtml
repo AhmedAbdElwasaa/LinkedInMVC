@@ -3,11 +3,12 @@
 
         <div class="experience">
             <div class="experience-data">
-                <div class="btn-edit-experience"  data-toggle="modal" data-target="#ExperienceModal"><i class="fas fa-pen"></i></div>
+                <div class="btn-edit-experience"  data-toggle="modal" data-target="#EditExperienceModal"><i class="fas fa-pen"></i></div>
                 <div class="company-img-container">
                     <img src="../images/Logo.png" class="company-img">
                 </div>
                 <div class="experience-details">
+                    <input type="hidden" value="@Model.Id" />
                     <h4 class="title"> @Model.Title</h4>
                     <h4 class="company-name">@Model.Company</h4>
                     <h4 class="company-locatiob">@Model.Location</h4>

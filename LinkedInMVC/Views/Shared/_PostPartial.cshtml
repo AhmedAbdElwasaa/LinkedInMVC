@@ -3,6 +3,8 @@
     string name = Model.ApplicationUser.FirstName + " ";
     name += Model.ApplicationUser.SecondName;
     string jobTitle = @Model.ApplicationUser.Headline;
+    string imgUrl = "../images/" + Model.ApplicationUser.ProfileImage;
+    string imgUrlC = "../images/" + Model.CurrentUser.ProfileImage;
 }
 @{
     string targetLike = "my" + Model.Id.ToString(),
@@ -28,12 +30,11 @@ targetComments = "comments" + Model.Id.ToString();
         HttpMethod = "POST"
     };
 }
-@*@Ajax.ActionLink("Test", "t", "Home", null, ao, null)*@
 
 <div class="post pl-5 ">
     <div class="post__post-main col-md-12">
         <div class="post-main-head row">
-            <img class="user-photo col-md-2 " src="../images/u.png">
+            <img class="user-photo col-md-2 " style="height:5rem;" src=@imgUrl>
             <div class="user-data col-md-6 d-flex">
 
                 @Html.ActionLink(name, "", null, new { @class = "user-data__user-name" })
@@ -47,8 +48,6 @@ targetComments = "comments" + Model.Id.ToString();
             <li>
                 <div id=@targetLike>
                     @Html.Partial("_LikesPartial", Model.LikesViewModel)
-                    @*<span id="likesNum" class="num-likes pr-2">@Model.numOfLikes </span>
-                        <span>Likes</span>*@
                 </div>
             </li>
             <li>.</li>
@@ -69,7 +68,7 @@ targetComments = "comments" + Model.Id.ToString();
                     <span> Like </span>
                 </button>
             }
-            <button class="comment-button col-md-3" onclick="focusComment()">
+            <button class="comment-button col-md-3" >
                 <i class="fal fa-comment-alt-lines comment-button__icomment"></i>
                 <span>Comment</span>
             </button>
@@ -85,7 +84,7 @@ targetComments = "comments" + Model.Id.ToString();
         {
             @Html.HiddenFor(model => Model.Id)
             <div class="add-Comment">
-                <div class="user-img-container col-md-3 "><img class="user-photo" src="../images/u.png"></div>
+                <div class="user-img-container col-md-3 "><img class="user-photo" src=@imgUrlC></div>
                 @Html.TextBox("CommentText", null, new { @class = "comment-txt col-md-8", @placeholder = "Add a comment..." })
                 @*<input type="text" name="" class="comment-txt col-md-8" placeholder="Add a comment...">*@
                 <button class="btn btn-primary post-btn" @*type="submit"*@ onclick="$(document.forms[3]).submit">Post</button>
@@ -98,11 +97,12 @@ targetComments = "comments" + Model.Id.ToString();
             @Html.Partial("_CommentsPartial", Model.Comments.ToArray())
         }
     </div>
-
+    
 </div>
 
 <script>
-        if (  @Model.liked.ToString().ToLower() === true) {
+    if (  @Model.liked.ToString().ToLower() === true && !document.getElementById('@targetbtn')
+        .classList.contains('activeLike')) {
             document.getElementById('@targetbtn').classList.add('activeLike');
         }
 
@@ -117,7 +117,7 @@ targetComments = "comments" + Model.Id.ToString();
         });
 
 </script>
-@*<div id="my">blablabla</div>*@
+
 
 
 

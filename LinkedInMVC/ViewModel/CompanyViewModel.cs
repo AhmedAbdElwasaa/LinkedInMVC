@@ -1,4 +1,4 @@
-﻿using LinkedInMVC.Models;
+using LinkedInMVC.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
