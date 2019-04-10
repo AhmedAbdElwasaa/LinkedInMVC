@@ -7,7 +7,7 @@ using System.Web;
 
 namespace LinkedInMVC.Models
 {
-    [Table("Company Type")]
+    [Table("Company_Type")]
     public class CompanyType
     {
         [Key]

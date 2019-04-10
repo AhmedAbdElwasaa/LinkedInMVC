@@ -42,7 +42,10 @@ namespace LinkedInMVC.ViewModel
         }
 
 
+
+
         private Experience experience;
+
 
         public Experience Experience
         {

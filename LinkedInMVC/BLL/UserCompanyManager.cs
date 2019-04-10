@@ -17,13 +17,13 @@ namespace LinkedInMVC.BLL
         }
 
 
-        public void AddCompany(string userId,Company company)
+        public bool AddCompany(ApplicationUser userId, Company company)
         {
             UserCompany uc = new UserCompany();
-            uc.ApplicationUser.Id = userId;
-            uc.Company.Id = company.Id;
+            uc.Company = company;
+            uc.ApplicationUser = userId;
             context.UserCompany.Add(uc);
-            context.SaveChanges();
+            return context.SaveChanges() > 0;
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -11,6 +11,7 @@ using LinkedInMVC.Models;
 using Microsoft.AspNet.Identity.Owin;
 using LinkedInMVC.ViewModel;
 using System.IO;
+using Microsoft.AspNet.Identity;
 
 namespace LinkedInMVC.Controllers
 {
@@ -67,33 +68,92 @@ namespace LinkedInMVC.Controllers
         {
             CompanyViewModel cvm = new CompanyViewModel
             {
+
+
+                 Selected=false, 
                 Industries = UnitofWork.IndustryManager.GetAll().Select(a => new SelectListItem { Text = a.Name, Value = a.Id.ToString(),Selected=true }).ToList(),
                 Sizes=UnitofWork.CompanySizeManager.GetAll().Select(a=> new SelectListItem { Text=a.Size,Value=a.Id.ToString(),Selected=true}).ToList(),
                 Types=UnitofWork.CompanyTypeManager.GetAll().Select(a=>new SelectListItem {Text=a.Type,Value=a.Id.ToString(),Selected=true }).ToList()
             };
-        
+            ModelState.Clear();
             return View(cvm);
         }
+
 
         // POST: Company/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Id,Name,URL,Logo,Cover,Type,Industry,Address,Description")] Company company)
+        public ActionResult Create( Company company)
         {
             if (ModelState.IsValid)
             {
-                //string str = company.Logo.FileName;
-                //FileUpload1.PostedFile.SaveAs(Server.MapPath("~/Images/") + str);
-                //string path = "~/Images/" + str.ToString();
-                //UnitofWork.CompanyManager.Add(company);
-                
-                return RedirectToAction("Index");
+                UserCompany userCompany = new UserCompany();
+                string userId = User.Identity.GetUserId();
+                ApplicationUser currentUser = UnitofWork.UserManager.FindById(userId);
+                if (company.LogoFileName != null)
+                {
+                    string fileName = Path.GetFileNameWithoutExtension(company.LogoFileName.FileName);
+                    string fileExtension = Path.GetExtension(company.LogoFileName.FileName);
+                    fileName = DateTime.Now.ToString("yyyyMMdd") + "-" + fileName.Trim() + fileExtension;
+                    company.Logo = "~/images/" + fileName;
+                    fileName = Path.Combine(Server.MapPath("~/images/"), fileName);
+                    company.LogoFileName.SaveAs(fileName);
+                    UnitofWork.CompanyManager.Add(company);
+                    UnitofWork.UserCompanyManager.AddCompany(currentUser, company);
+                    ViewBag.Message += string.Format("<b>{0}</b> Uploaded.<br/>", fileName);
+                    TempData["NewCompany"] = company;
+                    return RedirectToAction("ViewProfComp","Company");
+                }
+               
             }
 
-            return View(company);
+            return View();
         }
+
+
+
+
+
+
+
+        [HttpGet]
+        public ActionResult ViewProfComp()
+        {
+            var company = TempData["NewCompany"] as Company;
+            CompanyViewModel cvm = new CompanyViewModel {
+                Company = UnitofWork.CompanyManager.GetById(company.Id),
+                Industry = UnitofWork.IndustryManager.GetById(company.Industry_FKId)
+            };
+            return View(cvm);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ViewProfComp(Company company)
+        {
+
+            CompanyViewModel cvm = new CompanyViewModel();
+            var companyId = UnitofWork.CompanyManager.GetById(company.Id);
+            if (company.CoverFileName!= null)
+            {
+                string fileName = Path.GetFileNameWithoutExtension(company.CoverFileName.FileName);
+                string fileExtension = Path.GetExtension(company.CoverFileName.FileName);
+                fileName = DateTime.Now.ToString("yyyyMMdd") + "-" + fileName.Trim() + fileExtension;
+                company.Cover = "~/images/" + fileName;
+                cvm.Company.Cover = company.Cover;
+                fileName = Path.Combine(Server.MapPath("~/images/"), fileName);
+                company.CoverFileName.SaveAs(fileName);
+                UnitofWork.CompanyManager.Add(company);
+                ViewBag.Message += string.Format("<b>{0}</b> Uploaded.<br/>", fileName);
+                TempData["NewCompany"] = company;
+                return RedirectToAction("ViewProfComp", "Company",cvm);
+            }
+            return View();
+        }
+
 
         // GET: Company/Edit/5
         //public async Task<ActionResult> Edit(int? id)

@@ -7553,6 +7553,14 @@ a.text-dark:hover, a.text-dark:focus {
   top: 13rem;
   background-color: white !important; }
 
+.profil-fristblock .profil-fristblock__comp-cover-profile .buttfile-choose {
+  height: 3.2rem;
+  width: 8.3rem;
+  position: absolute;
+  right: 20rem;
+  top: 13rem;
+  background-color: lightblue; }
+
 .btn-position2 {
   position: absolute;
   right: 15rem;
@@ -7919,6 +7927,14 @@ body {
   .activeLike:hover {
     background-color: #0073b1;
     color: #0073b1; }
+
+.load-more {
+  background-color: #0073b1;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-weight: 400;
+  font-size: 1.3rem; }
 
 .post {
   display: flex;

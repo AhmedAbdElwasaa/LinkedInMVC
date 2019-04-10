@@ -15,7 +15,7 @@ namespace LinkedInMVC.ViewModel
 
         //Refernce to the original post 
         public Post Post_Shared { get; set; }
-
+        public ApplicationUser CurrentUser { get; set; }
         public string postText { get; set; }
         public DateTime Date { get; set; }
 
@@ -24,6 +24,7 @@ namespace LinkedInMVC.ViewModel
         public int numOfComments { get; set; }
 
         public int numOfShares { get; set; }
+        public string[] sortingTechniques = new string[] { "Top", "Latest" };
 
         public virtual ICollection<Like> Likes { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }

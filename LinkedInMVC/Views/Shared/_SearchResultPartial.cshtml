@@ -2,9 +2,10 @@
 @{ 
     string name = Model.applicationUser.FirstName + " ";
     name += Model.applicationUser.SecondName;
+    string imgUrl = "../images/" + Model.applicationUser.ProfileImage;
 }
 <div class="search-result col-md-12">
-<img class="search-result__imgCont col-md-1" src="../images/u.png" />
+<img class="search-result__imgCont col-md-1" src=@imgUrl />
 
 <div class="search-result__user-main-info col-md-7">
     <div class="search-result__user-name">@name</div>
