@@ -251,3 +251,6 @@ E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CoreCompileInputs
 E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CopyComplete
 E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.dll
 E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.pdb
+E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.csprojAssemblyReference.cache
+E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.db.resources
+E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.GenerateResource.cache

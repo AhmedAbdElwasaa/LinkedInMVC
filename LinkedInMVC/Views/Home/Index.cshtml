@@ -29,7 +29,7 @@
                 </div>
                 <div class="small-profile-card__content">
                     <a class="small-profile-card__nametag">
-                        @name
+                        @Html.ActionLink(name, "Details", "Profile", new { id = Model.ApplicationUser.Id }, new { @class = "user-data__user-name" })
                     </a>
                     <p class="small-profile-card__details">
                         <Label class="small-profile-card__details text-center">@jobTitle</Label>
@@ -46,9 +46,9 @@
                             <Label class="small-profile-card__managecon-rightside-num4">12</Label>
                         </a>
                         <a class="small-profile-card__managecon-rightside-num5">
-                            @*@Html.LabelFor(model=>model.ApplicationUser.NumOfConnections.ToString()
-                       , new { @class = "small-profile-card__managecon-rightside-num5" })*@
-                            <Label class="small-profile-card__managecon-rightside-num5">222</Label>
+                            @Html.ActionLink("22", "Index", "Connection", new { id = Model.ApplicationUser.Id }
+                       , new { @class = "small-profile-card__managecon-rightside-num5" })
+                            @*<Label class="small-profile-card__managecon-rightside-num5">222</Label>*@
                         </a>
                     </div>
                 </div>
