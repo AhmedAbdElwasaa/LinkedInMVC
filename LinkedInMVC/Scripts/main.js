@@ -55,7 +55,7 @@ function OnSuccessAddEducation() {
 $(".btn-edit-education").click(function () {
     let [, EducationModal] = $("#EditEducationModal").children().children().children();
     let EducationForm = EducationModal.children.EditEducationForm;
-
+   
      [, , temp] = $(this).parent().children();
     EductionDetails = temp.children;
 
@@ -252,6 +252,7 @@ function OnSuccessAddSkill() {
 $(".btn-edit-skills").click(function () {
     let [, SkillModal] = $("#EditSkillsModal").children().children().children();
     let SkillForm = SkillModal.children.EditSkillForm;
+    debugger
     [, , temp] = $(this).parent().children();
     SkillDetails = temp.children;
   
@@ -289,16 +290,22 @@ function OnSuccessEditSkill() {
 }
 ////////////////////////// Endorsement //////////////////////////// AddSkill
 
-$(".EndorseBtn").click(() => {
+$(".Endorse-Btn").click(function () {
 
-   
-    var x = $(this).parent();
+
+    let Data = $(this).parent().children()[2];
+    let Endorsements = $(this).parent().parent().children()[1];
+    let SpanEndorsement = Endorsements.children;
+    let id = Data.children[1].value;
+    let temp = window.location.href;
+    let EId = temp.split('/')[5];
     debugger
     $.ajax({
-        url: `/Skills/Create/${idd}`,
+        url: `/Endorsements/Create/${id}/${EId}`,
         type: "Get",
         success: function (response) {
-            alert("yayyyyyyyyyy")
+            SpanEndorsement.append("hiiiii");
+           
 
         }
     });
@@ -308,7 +315,11 @@ $(".EndorseBtn").click(() => {
 
 
 
+//function OnSuccessAddEndorsedName() {
 
+
+
+//}
 
 
 
