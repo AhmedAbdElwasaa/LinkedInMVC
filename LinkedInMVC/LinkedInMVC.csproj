@@ -244,9 +244,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\DLIndustryHelper.cs" />
-    <Compile Include="Migrations\201904101654377_db.cs" />
-    <Compile Include="Migrations\201904101654377_db.Designer.cs">
-      <DependentUpon>201904101654377_db.cs</DependentUpon>
+    <Compile Include="Migrations\201904101954248_t.cs" />
+    <Compile Include="Migrations\201904101954248_t.Designer.cs">
+      <DependentUpon>201904101954248_t.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -256,13 +256,17 @@
     <Compile Include="Models\CompanyType.cs" />
     <Compile Include="Models\Connection_Request.cs" />
     <Compile Include="Models\Education.cs" />
+    <Compile Include="Models\EmploymentType.cs" />
     <Compile Include="Models\Endorsement.cs" />
     <Compile Include="Models\Experience.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Industry.cs" />
+    <Compile Include="Models\Job.cs" />
+    <Compile Include="Models\JobIndustry.cs" />
     <Compile Include="Models\Like.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Post.cs" />
+    <Compile Include="Models\SeniorityLevel.cs" />
     <Compile Include="Models\Skill.cs" />
     <Compile Include="Models\UnitofWork.cs" />
     <Compile Include="Models\UserCompany.cs" />
@@ -746,6 +750,14 @@
     <Content Include="node_modules\jquery\package.json" />
     <Content Include="node_modules\jquery\README.md" />
     <Content Include="node_modules\jquery\src\.eslintrc.json" />
+    <Content Include="node_modules\jquery-ajax-unobtrusive\package.json" />
+    <Content Include="node_modules\jquery-ajax-unobtrusive\README.md" />
+    <Content Include="node_modules\jquery-validation\changelog.md" />
+    <Content Include="node_modules\jquery-validation\LICENSE.md" />
+    <Content Include="node_modules\jquery-validation\package.json" />
+    <Content Include="node_modules\jquery-validation\README.md" />
+    <Content Include="node_modules\jquery-validation-unobtrusive\package.json" />
+    <Content Include="node_modules\jquery-validation-unobtrusive\README.md" />
     <Content Include="Scripts\main.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -781,6 +793,24 @@
     <Content Include="Views\Network\Edit.cshtml" />
     <Content Include="Views\Network\Index.cshtml" />
     <Content Include="Views\Profile\_Skill.cshtml" />
+    <Content Include="Views\Company\ViewProfComp.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\_Layout2.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Views\Shared\_PeopleMayKnow.cshtml" />
     <Content Include="Views\Shared\_FreindRequest.cshtml" />
     <Content Include="Views\Shared\_PostsPartial.cshtml" />
@@ -817,25 +847,14 @@
     <Content Include="Views\Account\SendCode.cshtml" />
     <Content Include="Views\Account\VerifyCode.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Shared\_Layout2.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Web.config" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\SearchResults.cshtml" />
     <Content Include="Views\Home\_CreatePostPartial.cshtml" />
     <Content Include="Views\Connection\Index.cshtml" />
-    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Views\Manage\Index.cshtml" />
-    <Content Include="Views\Manage\ManageLogins.cshtml" />
-    <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Profile\Details.cshtml" />
+    <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\Profile\_education.cshtml" />
+    <Content Include="Views\Profile\_experience.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_CommentPartial.cshtml" />
@@ -846,8 +865,8 @@
     <Content Include="Views\Shared\_SearchResultPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904101654377_db.resx">
-      <DependentUpon>201904101654377_db.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904101954248_t.resx">
+      <DependentUpon>201904101954248_t.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

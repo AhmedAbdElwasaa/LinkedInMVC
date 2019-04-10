@@ -41,7 +41,9 @@ namespace LinkedInMVC.Controllers
             LikesViewModel LikesViewModel;
             foreach (Post post_ in allPosts)
             {
-                LikesViewModel = new LikesViewModel { likers = UnitofWork.LikesManager.GetLikers(post_.Id), num = post_.numOfLikes };
+                LikesViewModel = new LikesViewModel {
+                    likers = UnitofWork.LikesManager.GetLikers(post_.Id)
+                    , num = post_.numOfLikes, PostId=post.Id };
                 if (UnitofWork.LikesManager.GetLikers(post_.Id).Any(l => l.Id == id))
                 {
                     liked = true;
@@ -87,7 +89,9 @@ namespace LinkedInMVC.Controllers
                 {
                     liked = false;
                     var likes = UnitofWork.LikesManager.GetLikers(post.Id);
-                    LikesViewModel = new LikesViewModel { likers = likes, num = post.numOfLikes };
+                    LikesViewModel = new LikesViewModel { likers = likes, num = post.numOfLikes
+                    , PostId = post.Id
+                    };
                     if (LikesViewModel != null && likes != null && likes.Any(l => l.Id == id))
                     {
                         liked = true;
@@ -121,7 +125,7 @@ namespace LinkedInMVC.Controllers
                 {
                     liked = false;
                     var likes = UnitofWork.LikesManager.GetLikers(post.Id);
-                    LikesViewModel = new LikesViewModel { likers = likes, num = post.numOfLikes };
+                    LikesViewModel = new LikesViewModel { likers = likes, num = post.numOfLikes, PostId = post.Id };
                     if (LikesViewModel != null && likes != null && likes.Any(l => l.Id == id))
                     {
                         liked = true;

@@ -8,10 +8,6 @@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
     <link rel="stylesheet" href="~/css/stylesheet.css">
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
-    <link rel="stylesheet" href="~/css/stylesheet.css">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -22,8 +18,7 @@
         @RenderBody()
 
     </div>
-    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="~/node_modules/jquery-ajax-unobtrusive/dist/jquery.unobtrusive-ajax.min.js"></script>
+ 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

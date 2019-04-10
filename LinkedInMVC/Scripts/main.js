@@ -15,7 +15,7 @@ $("#EduBtnSave").click(() => {
         //date
 
     }
-   
+
 
 });
 
@@ -56,7 +56,7 @@ $(".btn-edit-education").click(function () {
     let [, EducationModal] = $("#EditEducationModal").children().children().children();
     let EducationForm = EducationModal.children.EditEducationForm;
 
-     [, , temp] = $(this).parent().children();
+    [, , temp] = $(this).parent().children();
     EductionDetails = temp.children;
 
     let id = EductionDetails[0].value;
@@ -79,7 +79,7 @@ $(".btn-edit-education").click(function () {
 
 $("#EditEduBtnSave").click(() => {
     let [, EducationModal] = $("#EditEducationModal").children().children().children();
-    let EducationForm = EducationModal.children.form1;
+    let EducationForm = EducationModal.children.EditEducationForm;
 
     debugger
     edu = {
@@ -106,13 +106,19 @@ function OnSuccessEditEducation() {
     EductionDetails[4].textContent = edu.Grade;
 
 
+    EducationForm[1].value = "";
+    EducationForm[2].value = "";
+    EducationForm[3].value = "";
+    EducationForm[4].value = "";
+
+
 }
 //////////////////////////Delete Education ////////////////////////////////////
 
 $("#DeleteEduBtn").click(() => {
     let [, EducationModal] = $("#EditEducationModal").children().children().children();
     let EducationForm = EducationModal.children.EditEducationForm;
-    let idd =  EducationForm[1].value;
+    let idd = EducationForm[1].value;
 
     $.ajax({
         url: `/Educations/Delete/${idd}`,
@@ -173,10 +179,10 @@ $(".btn-edit-experience").click(function () {
     let [, ExperienceModal] = $("#EditExperienceModal").children().children().children();
     let ExperienceForm = ExperienceModal.children.EditExperienceForm;
 
-    
+
     [, , temp] = $(this).parent().children();
     ExperienceDetails = temp.children;
-    
+
     let id = ExperienceDetails[0].value;
     let title = ExperienceDetails[1].textContent;
     let companyName = ExperienceDetails[2].textContent;
@@ -252,17 +258,18 @@ function OnSuccessAddSkill() {
 $(".btn-edit-skills").click(function () {
     let [, SkillModal] = $("#EditSkillsModal").children().children().children();
     let SkillForm = SkillModal.children.EditSkillForm;
+    debugger
     [, , temp] = $(this).parent().children();
     SkillDetails = temp.children;
-  
-   
+
+
     let Skill = SkillDetails[0].textContent;
     let id = SkillDetails[1].value;
     //let startDate=
 
     SkillForm[1].value = id;
     SkillForm[2].value = Skill;
-    
+
 });
 
 
@@ -273,32 +280,38 @@ $("#EditSkillBtnSave").click(() => {
 
         id: SkillForm[1].value,
         skillName: SkillForm[2].value,
-      
+
         //date
 
     }
-   
+
 });
 
 function OnSuccessEditSkill() {
 
     debugger
     SkillDetails[0].textContent = skill.skillName;
-   
+
 
 }
 ////////////////////////// Endorsement //////////////////////////// AddSkill
 
-$(".EndorseBtn").click(() => {
+$(".Endorse-Btn").click(function () {
 
-   
-    var x = $(this).parent();
+
+    let Data = $(this).parent().children()[2];
+    let Endorsements = $(this).parent().parent().children()[1];
+    let SpanEndorsement = Endorsements.children;
+    let id = Data.children[1].value;
+    let temp = window.location.href;
+    let EId = temp.split('/')[5];
     debugger
     $.ajax({
-        url: `/Skills/Create/${idd}`,
+        url: `/Endorsements/Create/${id}/${EId}`,
         type: "Get",
         success: function (response) {
-            alert("yayyyyyyyyyy")
+            //SpanEndorsement.append("hiiiii");
+
 
         }
     });
@@ -308,7 +321,11 @@ $(".EndorseBtn").click(() => {
 
 
 
+//function OnSuccessAddEndorsedName() {
 
+
+
+//}
 
 
 
