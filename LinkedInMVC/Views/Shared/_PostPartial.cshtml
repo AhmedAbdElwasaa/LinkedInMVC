@@ -1,6 +1,6 @@
 ﻿@model LinkedInMVC.ViewModel.PostViewModel
 @{
-    sstring name = Model.ApplicationUser.FirstName + " ";
+    string name = Model.ApplicationUser.FirstName + " ";
     name += Model.ApplicationUser.SecondName;
     string jobTitle = @Model.ApplicationUser.Headline;
     string imgUrl = "../images/" + Model.ApplicationUser.ProfileImage;

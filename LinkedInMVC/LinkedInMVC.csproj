@@ -244,21 +244,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\DLIndustryHelper.cs" />
-    <Compile Include="Migrations\201904090738046_ahmed.cs" />
-    <Compile Include="Migrations\201904090738046_ahmed.Designer.cs">
-      <DependentUpon>201904090738046_ahmed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904090957188_TEE.cs" />
-    <Compile Include="Migrations\201904090957188_TEE.Designer.cs">
-      <DependentUpon>201904090957188_TEE.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904091108505_rttt.cs" />
-    <Compile Include="Migrations\201904091108505_rttt.Designer.cs">
-      <DependentUpon>201904091108505_rttt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904100659188_z.cs" />
-    <Compile Include="Migrations\201904100659188_z.Designer.cs">
-      <DependentUpon>201904100659188_z.cs</DependentUpon>
+    <Compile Include="Migrations\201904101051523_tes.cs" />
+    <Compile Include="Migrations\201904101051523_tes.Designer.cs">
+      <DependentUpon>201904101051523_tes.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -879,9 +867,7 @@
     <Content Include="Views\Account\SendCode.cshtml" />
     <Content Include="Views\Account\VerifyCode.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Connection\Index.cshtml" />
-=======
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_Layout2.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
@@ -889,29 +875,22 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Web.config" />
->>>>>>> b5caecaa48f900b35b020efdf15f68f63d33b3f4
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\SearchResults.cshtml" />
     <Content Include="Views\Home\_CreatePostPartial.cshtml" />
-<<<<<<< HEAD
-=======
     <Content Include="Views\Connection\Index.cshtml" />
->>>>>>> b5caecaa48f900b35b020efdf15f68f63d33b3f4
     <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
     <Content Include="Views\Manage\ChangePassword.cshtml" />
     <Content Include="Views\Manage\Index.cshtml" />
     <Content Include="Views\Manage\ManageLogins.cshtml" />
     <Content Include="Views\Manage\SetPassword.cshtml" />
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Profile\Details.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Profile\_education.cshtml" />
     <Content Include="Views\Profile\_experience.cshtml" />
-=======
->>>>>>> b5caecaa48f900b35b020efdf15f68f63d33b3f4
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_CommentPartial.cshtml" />
@@ -922,17 +901,8 @@
     <Content Include="Views\Shared\_SearchResultPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904090738046_ahmed.resx">
-      <DependentUpon>201904090738046_ahmed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904090957188_TEE.resx">
-      <DependentUpon>201904090957188_TEE.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904091108505_rttt.resx">
-      <DependentUpon>201904091108505_rttt.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904100659188_z.resx">
-      <DependentUpon>201904100659188_z.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904101051523_tes.resx">
+      <DependentUpon>201904101051523_tes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

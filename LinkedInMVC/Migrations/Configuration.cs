@@ -62,12 +62,6 @@ namespace LinkedInMVC.Migrations
                     Size = "51–200 employees"
                 }
                 );
-
-<<<<<<< HEAD
-
-           
-
-=======
             context.Users.AddOrUpdate(x => x.Id,
                 new ApplicationUser()
                 {
@@ -109,7 +103,6 @@ namespace LinkedInMVC.Migrations
 
                 }
                 );
->>>>>>> 8d2a4fd88982393e8af2ea855fd307b75cd5b670
             context.CompanyType.AddOrUpdate(x => x.Id,
             new CompanyType()
             {
