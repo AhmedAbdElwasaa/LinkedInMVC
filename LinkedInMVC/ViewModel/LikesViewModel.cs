@@ -6,9 +6,9 @@ using System.Web;
 
 namespace LinkedInMVC.ViewModel
 {
-    public class HomeViewModel
+    public class LikesViewModel
     {
-        public ApplicationUser ApplicationUser { get; set; }
-        public PostViewModel[] PostViewModels { get; set; }
+        public int num { get; set; }
+        public List<ApplicationUser> likers { get; set; }
     }
 }

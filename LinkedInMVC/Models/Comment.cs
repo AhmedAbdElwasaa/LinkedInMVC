@@ -13,9 +13,9 @@ namespace LinkedInMVC.Models
         [Key]
         public int Id { get; set; }
 
-        public ApplicationUser ApplicationUser { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
 
-        public Post Post { get; set; }
+        public virtual Post Post { get; set; }
 
         [ForeignKey("Post")]
         public int Fk_PostId { get; set; }

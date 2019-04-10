@@ -7,13 +7,13 @@ namespace LinkedInMVC.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class sh : IMigrationMetadata
+    public sealed partial class beforefinal : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(sh));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(beforefinal));
         
         string IMigrationMetadata.Id
         {
-            get { return "201904081817575_sh"; }
+            get { return "201904082316240_beforefinal"; }
         }
         
         string IMigrationMetadata.Source

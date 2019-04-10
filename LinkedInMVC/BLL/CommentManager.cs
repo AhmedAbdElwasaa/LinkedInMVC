@@ -14,21 +14,20 @@ namespace LinkedInMVC.BLL
         {
             this.context = context;
         }
-        public Post AddComment(ApplicationUser user, int postId)
+        public Post AddComment(Comment userComment)
         {
             //Add Comment with user id in Comments table
-            Comment userComment = new Comment();
-            userComment.ApplicationUser = user;
-            userComment.Fk_PostId = postId;
+
             context.Comments.Add(userComment);
+
             context.SaveChanges();
 
             //Update number of Comments in post table
-            Post post = context.Posts.FirstOrDefault(p => p.Id == postId);
+            Post post = context.Posts.FirstOrDefault(p => p.Id == userComment.Fk_PostId);
             post.numOfComments = post.numOfComments + 1;
             PostsManager postsManager = new PostsManager(context);
             postsManager.Update(post);
-            return context.Posts.FirstOrDefault(p => p.Id == postId);
+            return context.Posts.FirstOrDefault(p => p.Id == userComment.Fk_PostId);
         }
 
         public List<Comment> GetCommentByPostId(int postId)

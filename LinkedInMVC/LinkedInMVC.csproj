@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -227,23 +227,26 @@
     <Compile Include="BLL\UserExperienceManager.cs" />
     <Compile Include="BLL\UserSkillManager.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\ConnectionController.cs" />
     <Compile Include="Controllers\EducationsController.cs" />
     <Compile Include="Controllers\EndorsementsController.cs" />
     <Compile Include="Controllers\ExperiencesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LikesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NetworkController.cs" />
+    <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\SkillsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\DLIndustryHelper.cs" />
-    <Compile Include="Migrations\201904081817575_sh.cs" />
-    <Compile Include="Migrations\201904081817575_sh.Designer.cs">
-      <DependentUpon>201904081817575_sh.cs</DependentUpon>
+    <Compile Include="Migrations\201904082316240_beforefinal.cs" />
+    <Compile Include="Migrations\201904082316240_beforefinal.Designer.cs">
+      <DependentUpon>201904082316240_beforefinal.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -278,6 +281,7 @@
     <Compile Include="ViewModel\EducationViewModel.cs" />
     <Compile Include="ViewModel\EndorsementViewModel.cs" />
     <Compile Include="ViewModel\ExperienceViewModel.cs" />
+    <Compile Include="ViewModel\LikesViewModel.cs" />
     <Compile Include="ViewModel\NetworkViewModel.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />
     <Compile Include="ViewModel\IndustryViewModel.cs" />
@@ -293,8 +297,20 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="HTML\CommentBox.html" />
+    <Content Include="HTML\companyprofile.html" />
+    <Content Include="HTML\company_registration.html" />
+    <Content Include="HTML\components.html" />
     <Content Include="HTML\CreatePost.html" />
+    <Content Include="HTML\Home.html" />
+    <Content Include="HTML\job-card.html" />
+    <Content Include="HTML\job-page.html" />
+    <Content Include="HTML\landingCompanyPage.html" />
+    <Content Include="HTML\PostBox.html" />
     <Content Include="HTML\Profile.html" />
+    <Content Include="HTML\ProfileCard.html" />
+    <Content Include="HTML\SearchComponent.html" />
+    <Content Include="HTML\TestPage.html" />
     <Content Include="images\Logo.png" />
     <Content Include="js\main.js" />
     <Content Include="node_modules\bootstrap\dist\css\bootstrap-grid.css" />
@@ -739,60 +755,14 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ResetPassword.cshtml" />
-    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\SendCode.cshtml" />
-    <Content Include="Views\Account\VerifyCode.cshtml" />
-    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Views\Manage\Index.cshtml" />
-    <Content Include="Views\Manage\ManageLogins.cshtml" />
-    <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
-    <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Shared\_Layout2.cshtml" />
-    <Content Include="Views\Connection\Index.cshtml" />
-    <Content Include="Views\Profile\Index.cshtml" />
-    <Content Include="Views\Shared\_PostPartial.cshtml" />
-    <Content Include="Views\Shared\_Connection.cshtml" />
-    <Content Include="Views\Network\Create.cshtml" />
-    <Content Include="Views\Network\Delete.cshtml" />
-    <Content Include="Views\Network\Details.cshtml" />
-    <Content Include="Views\Network\Edit.cshtml" />
-    <Content Include="Views\Network\Index.cshtml" />
-    <Content Include="Views\Profile\_education.cshtml" />
-    <Content Include="Views\Profile\_experience.cshtml" />
-    <Content Include="Views\Profile\Details.cshtml" />
-    <Content Include="Views\Home\_CreatePostPartial.cshtml" />
-    <Content Include="Views\Company\Create.cshtml" />
-    <Content Include="Views\Company\Details.cshtml" />
-    <Content Include="Views\Company\Edit.cshtml" />
-    <Content Include="Views\Company\Index.cshtml" />
-    <Content Include="Views\Shared\_Layout3.cshtml" />
-    <Content Include="Views\Home\SearchResults.cshtml" />
-    <Content Include="Views\Shared\_LikesPartial.cshtml" />
-    <Content Include="Views\Shared\_SearchResultPartial.cshtml" />
-  </ItemGroup>
+    </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="sass\pages\" />
     <Folder Include="sass\themes\" />
+    <Folder Include="Views\Comments\" />
+    <Folder Include="Views\Likes\" />
+    <Folder Include="Views\Posts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -812,18 +782,41 @@
     <Content Include="Views\Profile\_Skill.cshtml" />
     <Content Include="Views\Shared\_PeopleMayKnow.cshtml" />
     <Content Include="Views\Shared\_FreindRequest.cshtml" />
+    <Content Include="Views\Shared\_PostsPartial.cshtml" />
+    <Content Include="Views\Shared\_CommentsPartial.cshtml" />
+    <Content Include="Views\Shared\_LikesModalPartial.cshtml" />
+    <Content Include="Views\Shared\_PostPartial.cshtml" />
+    <Content Include="sass\layout\Home.scss" />
+    <Content Include="sass\layout\profile-card-layout.scss" />
+    <Content Include="sass\components\_comp_Post.scss" />
+    <Content Include="sass\components\_companyentry.scss" />
+    <Content Include="sass\components\_companyProfile.scss" />
+    <Content Include="sass\components\_companyregistration.scss" />
+    <Content Include="sass\components\_compcomun.scss" />
+    <Content Include="sass\components\_compdashboard.scss" />
+    <Content Include="sass\components\_divposition.scss" />
+    <Content Include="sass\components\_connection.scss" />
+    <Content Include="sass\components\_job.scss" />
+    <Content Include="sass\components\_likes-results.scss" />
+    <Content Include="sass\components\posts.scss" />
+    <Content Include="sass\components\_search-results.scss" />
+    <Content Include="sass\components\_peopleMayKnow.scss" />
+    <Content Include="sass\components\CreatePost.scss" />
+    <Content Include="sass\components\comments.scss" />
+    <Content Include="sass\components\Profile-card.scss" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904081817575_sh.resx">
-      <DependentUpon>201904081817575_sh.cs</DependentUpon>
-    </EmbeddedResource>
     <Content Include="Views\Shared\_CommentPartial.cshtml" />
     <Content Include="Views\Shared\_Connection.cshtml" />
     <Content Include="Views\Shared\_Layout3.cshtml" />
     <Content Include="Views\Shared\_LikesPartial.cshtml" />
     <Content Include="Views\Shared\_PeopleMayKnow.cshtml" />
-    <Content Include="Views\Shared\_PostPartial.cshtml" />
     <Content Include="Views\Shared\_SearchResultPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904082316240_beforefinal.resx">
+      <DependentUpon>201904082316240_beforefinal.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
