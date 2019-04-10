@@ -297,6 +297,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="HTML\AjaxComponent.html" />
     <Content Include="HTML\CommentBox.html" />
     <Content Include="HTML\companyprofile.html" />
     <Content Include="HTML\company_registration.html" />

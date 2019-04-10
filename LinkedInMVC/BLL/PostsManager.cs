@@ -1,4 +1,6 @@
 ﻿using LinkedInMVC.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
 using Repository;
 using System;
 using System.Collections.Generic;
@@ -13,19 +15,42 @@ namespace LinkedInMVC.BLL
         public PostsManager(ApplicationDbContext context) : base(context)
         {
             this.context = context;
-
         }
-
-        //public static List<Post> GetAllByDate(string userId)
-        //{
-        //    List<string> cons = context.Connection_Requeset.Where(c => c.FK_UserId.Id == userId)
-        //        .Where(c => c.IsApproved == true)
-        //        .Select(c => c.FK_Connction_UserId.Id).ToList();
-        //    return context.Posts
-        //        .Where(p => cons.Any(c => c == p.ApplicationUser.Id))
-        //        .OrderBy(p => p.Date).ToList();
-        //}
-        public List<Post> GetAllByTop(string userId)
+        public UnitofWork UnitofWork
+        {
+            get
+            {
+                return HttpContext.Current.GetOwinContext().Get<UnitofWork>();
+            }
+        }
+        public  List<Post> GetAllByDate(string userId,int count)
+        {
+            var friendsPosts = GetAllPosts(userId);
+            var Posts = friendsPosts
+                .OrderByDescending(p => p.Date).ToList();
+            List<Post> topPosts = new List<Post>();
+            for (int i = 0; count < Posts.ToArray().Length && i <4; ++count)
+            {
+                topPosts.Add(Posts[count]);
+                ++i;
+            }
+            count += 4;
+            return topPosts;
+        }
+        public List<Post> GetAllByTop(string userId, int count)
+        {
+            var friendsPosts = GetAllPosts(userId);
+            var Posts = friendsPosts
+                .OrderByDescending(p => p.numOfComments).ToList();
+              List<Post> topPosts = new List<Post>();
+            for(; count < Posts.ToArray().Length; ++count)
+            {
+                topPosts.Add(Posts[count]);
+            }
+            count += 4;
+            return topPosts;
+        }
+        public List<Post> GetAllPosts(string userId)
         {
             /***
              * Get Connections of the user who he has access to 
@@ -38,9 +63,15 @@ namespace LinkedInMVC.BLL
             /***
              * Get the posts of people in cons
              * */
-            return context.Posts
-                .Where(p => cons.Any(c => c == p.ApplicationUser.Id))
-                .OrderBy(p => p.numOfComments).ToList();
+            var friendsPosts = context.Posts
+               .Where(p => cons.Any(c => c == p.ApplicationUser.Id)).ToList();
+            var myPosts = context.Posts
+                .Where(p => p.ApplicationUser.Id == userId).ToList();
+            foreach (Post post in myPosts)
+            {
+                friendsPosts.Add(post);
+            }
+            return friendsPosts;
         }
         public void deletePost(int postId)
         {

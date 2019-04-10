@@ -71,10 +71,38 @@ namespace LinkedInMVC.Migrations
                     UserName = "Ahmed Abd-Elwasaa",
                     Email = "ahmedabdelwasaa@outlook.com",
                     PasswordHash = "AHCfRHzod5yoVBbvJo2vVRobCpjbOfMCbSchC2Y3fXERHk+fGEp0LVWRVLy+vcjZZg==",
-                    SecurityStamp = "ccd82430-f36b-41e7-9ebb-d8f290a65b5d"
+                    SecurityStamp = "ccd82430-f36b-41e7-9ebb-d8f290a65b5d",
+                    Country = "Egypt",
+                    Headline = "Software developer",
+                    ProfileImage = "0.jpg"
+
+                },
+                new ApplicationUser()
+                {
+                    FirstName = "Muhammad",
+                    SecondName = "Ahmed",
+                    UserName = "Muhammad Ahmed",
+                    Email = "Muhammad_Ahmed@outlook.com",
+                    PasswordHash = "AHCfRHzod5yoVBbvJo2vVRobCpjbOfMCbSchC2Y3fXERHk+fGEp0LVWRVLy+vcjZZg==",
+                    SecurityStamp = "ccd82430-f36b-41e7-9ebb-d8f290a65b5d",
+                    Country = "US",
+                    Headline = "Software Engineer",
+                    ProfileImage = "5.jpg"
+
+                },
+                new ApplicationUser()
+                {
+                    FirstName = "Souhaila",
+                    SecondName = "Muhammad",
+                    UserName = "SolaMuhammad",
+                    Email = "sola.111me@gmail.com",
+                    PasswordHash = "AHCfRHzod5yoVBbvJo2vVRobCpjbOfMCbSchC2Y3fXERHk+fGEp0LVWRVLy+vcjZZg==",
+                    SecurityStamp = "ccd82430-f36b-41e7-9ebb-d8f290a65b5d",
+                    Country = "UK",
+                    Headline = "Software Engineer",
+                    ProfileImage = "pp.jpg"
 
                 }
-
                 );
             context.CompanyType.AddOrUpdate(x => x.Id,
             new CompanyType()

@@ -9,7 +9,7 @@ namespace LinkedInMVC.BLL
 {
     public class ConnectionManager : Repository<Connection_Request, ApplicationDbContext>
     {
-        private readonly ApplicationDbContext context;
+        private ApplicationDbContext context;
         public ConnectionManager(ApplicationDbContext context) : base(context)
         {
             this.context = context;

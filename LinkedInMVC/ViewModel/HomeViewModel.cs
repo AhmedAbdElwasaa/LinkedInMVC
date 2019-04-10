@@ -10,5 +10,6 @@ namespace LinkedInMVC.ViewModel
     {
         public ApplicationUser ApplicationUser { get; set; }
         public PostViewModel[] PostViewModels { get; set; }
+        public int count = 4;
     }
 }
