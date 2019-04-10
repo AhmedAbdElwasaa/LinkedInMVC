@@ -238,7 +238,8 @@
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\SkillsController.cs" />
     <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon></Compile>
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Helper\DLIndustryHelper.cs" />
     <Compile Include="Migrations\201904081817575_sh.cs" />
     <Compile Include="Migrations\201904081817575_sh.Designer.cs">
@@ -808,9 +809,6 @@
     <Content Include="Views\Network\Details.cshtml" />
     <Content Include="Views\Network\Edit.cshtml" />
     <Content Include="Views\Network\Index.cshtml" />
-    <Content Include="Views\Profile\Details.cshtml" />
-    <Content Include="Views\Profile\_education.cshtml" />
-    <Content Include="Views\Profile\_experience.cshtml" />
     <Content Include="Views\Profile\_Skill.cshtml" />
     <Content Include="Views\Shared\_PeopleMayKnow.cshtml" />
     <Content Include="Views\Shared\_FreindRequest.cshtml" />

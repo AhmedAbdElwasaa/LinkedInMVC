@@ -98,5 +98,22 @@ namespace LinkedInMVC.Controllers
             return View(ProfileVM);
         }
 
+
+
+        public ActionResult Edit( ProfileViewModel profile)
+        {
+            string id = User.Identity.GetUserId();
+            ApplicationUser currentUser = UnitofWork.UserManager.FindById(id);
+
+            currentUser.FirstName = profile.FirstName;
+            currentUser.SecondName = profile.LastName;
+            currentUser.ProfileImage = profile.ProfileImage;
+            currentUser.ProfileCover = profile.ProfileCover;
+
+            UnitofWork.UserManager.Update(currentUser);
+
+            return RedirectToAction("Index", "Profile");
+        }
+
     }
 }     

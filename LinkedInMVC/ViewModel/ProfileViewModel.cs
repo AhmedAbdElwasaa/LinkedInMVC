@@ -10,7 +10,9 @@ namespace LinkedInMVC.ViewModel
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public HttpPostedFileBase ProfileImagetemp { get; set; }
 
+        public HttpPostedFileBase ProfileCovertemp { get; set; }
         public string ProfileImage { get; set; }
 
         public string ProfileCover { get; set; }

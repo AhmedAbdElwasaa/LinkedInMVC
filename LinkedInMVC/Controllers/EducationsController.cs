@@ -64,12 +64,6 @@ namespace LinkedInMVC.Controllers
         }
 
 
-
-
-
-
-
-
         // POST: Educations/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -87,6 +81,32 @@ namespace LinkedInMVC.Controllers
         }
 
 
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        public async Task<ActionResult> Delete(int? id)
+        {
+            string userId = User.Identity.GetUserId();
+            ApplicationUser currentUser = UnitofWork.UserManager.FindById(userId);
+
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Education education =  UnitofWork.EducationManager.GetById(id);
+            if (education == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                UnitofWork.UserEducationManager.DeleteUserEducation(education, currentUser);
+            }
+            return RedirectToAction("Index", "Profile");
+        }
+
+
+
+
 
         //// GET: Educations/Edit/5
         //public async Task<ActionResult> Edit(int? id)
@@ -102,31 +122,10 @@ namespace LinkedInMVC.Controllers
         //    }
         //    return View(education);
         //}
-        //// GET: Educations/Delete/5
-        //public async Task<ActionResult> Delete(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    Education education = await db.Educations.FindAsync(id);
-        //    if (education == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(education);
-        //}
 
-        //// POST: Educations/Delete/5
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public async Task<ActionResult> DeleteConfirmed(int id)
-        //{
-        //    Education education = await db.Educations.FindAsync(id);
-        //    db.Educations.Remove(education);
-        //    await db.SaveChangesAsync();
-        //    return RedirectToAction("Index");
-        //}
+
+
+
 
         //protected override void Dispose(bool disposing)
         //{
