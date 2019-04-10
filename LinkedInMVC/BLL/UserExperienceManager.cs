@@ -26,6 +26,7 @@ namespace LinkedInMVC.BLL
                 var experience = context.Experience.Where(u => u.Id == item).Select(e =>
                  new ExperienceViewModel
                  {
+                     Id = e.Id,
                      Company = e.Company,
                      Title = e.Title,
                      Location = e.Location,

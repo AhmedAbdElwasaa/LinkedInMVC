@@ -15,13 +15,8 @@ namespace LinkedInMVC.BLL
             this.context = context;
 
         }
-        //public int AddEducation(Education education)
-        //{
-           
-        //    context.Education.Add(education);
-        //    context.SaveChanges() ;
-        //    int id = education.Id;
-        //    return id;
-        //}
+
+
+     
     }
 }

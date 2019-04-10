@@ -2,15 +2,17 @@
 
 <div class="skill">
     <div class="skill-data">
-        <button class="plus-icon-container">
-            <i class="fas fa-plus"></i>
-        </button>
-        <div class="skill-name">@Model.Skill.SkillName</div>
-        <input type="hidden" value="@Model.Id" />
+        <div class="btn-edit-skills" data-toggle="modal" data-target="#EditSkillsModal"><i class="fas fa-pen"></i></div>
+        <div class="plus-icon-container EndorseBtn" >
+            <i class="fas fa-plus" ></i>
+        </div>
+        <div class="Skill-details">
+            <div class="skill-name">@Model.Skill.SkillName</div>
+            <input type="hidden" value="@Model.Skill.Id" />
+        </div>
     </div>
     <div class="Endorsements">
         <span class="Endorsed-by">Endorsed by </span>
-
         @foreach (string name in @Model.EndorsedByNames)
         {
             <span>  @name</span>

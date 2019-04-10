@@ -1,108 +1,155 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 .profile {
-  margin: 5rem 0;
-  display:flex;
-  .profile-view {
-    height: 50rem;
-    padding: 0rem !important ;
-    margin: auto;
-    border: 1px solid $white;
-    background-color: $white;
-    .container-img-profile {
-      width: 15rem;
-      height: 15rem;
-      border: 1.5px solid $white; //change color
-      border-radius: 50%;   
-      position: relative;
-      top: -7rem;
-      left: 4rem;
-      #img-profile {
-        width: 100%;
-        height: 100%;
-        border: 1.5px solid $white; //change color
-        border-radius: 50%;
-        overflow: hidden;
-        background-size: cover;
-      }
-    }
-    .container-img-background {
-      //  width: 80rem;
-      width: 100%;
-      height: 20rem;
-      #img-background {
-        width: 100%;
-        height: 100%;
-      }
-    }
+    margin: 5rem 0;
+    display: flex;
 
-    .profile-details {
-      margin-top: -5rem;
-      display: flex;
-      justify-content: space-between;
-      .profile-details-left {
-        padding-left: 2rem;
-        #profile-user-name {
-          text-transform: capitalize;
-        }
-        #profile-headline {
-          text-transform: capitalize;
-        }
-      }
-      .profile-details-right {
-        padding-right: 5rem;
-        margin-left: 40rem;
-        #company-img {
-          width: 3rem;
-          height: 2rem;
-        }
-        .current-company-name {
-          font-size: 1.5rem;
-          margin-top: 2rem;
-        }
-        #see-connection {
-          margin-top: 2rem;
-          font-size: 1.5rem;
-          cursor: pointer;
-          &:hover {
-            color: $primary;
-            text-decoration: underline;
-          }
-          // }
-        }
-      }
+    .profile-view {
+        height: 50rem;
+        padding: 0rem !important;
+        margin: auto;
+        border: 1px solid $white;
+        background-color: $white;
 
-      #profile-user-name,
-      #profile-headline,
-      .current-company-name,
-      #see-connection {
-        font-size: 2rem;
-        font-weight: 400;
-        margin-bottom: 2px;
-      }
-      #profile-headline .current-company-name {
-        color: $gray-800;
-      }
-      #fa-users {
-        color: $gray-700;
-      }
-      .dropdown-profile {
-        #Add-profile-section {
-          font-size: 1.6rem;
-          // padding: 0.7rem;
-          margin-top: 2rem;
-        }
-        .dropdown-menu {
-          .dropdown-item {
-            color: $gray-800;
-            font-size: 1.6rem;
-            i {
-              margin-right: 0.7rem;
+        .container-img-profile {
+            width: 15rem;
+            height: 15rem;
+            border: 1.5px solid $white; //change color
+            border-radius: 50%;
+            position: relative;
+            top: -7rem;
+            left: 4rem;
+
+            #img-profile {
+                width: 100%;
+                height: 100%;
+                border: 1.5px solid $white; //change color
+                border-radius: 50%;
+                overflow: hidden;
+                background-size: cover;
             }
-          }
         }
-      }
+
+        .container-img-background {
+            //  width: 80rem;
+            width: 100%;
+            height: 20rem;
+
+            #img-background {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .profile-details {
+            margin-top: -5rem;
+            display: flex;
+            justify-content: space-between;
+
+            .profile-details-left {
+                padding-left: 2rem;
+
+                #profile-user-name {
+                    text-transform: capitalize;
+                }
+
+                #profile-headline {
+                    text-transform: capitalize;
+                }
+            }
+
+            .profile-details-right {
+                padding-right: 5rem;
+                margin-left: 40rem;
+
+                #company-img {
+                    width: 3rem;
+                    height: 2rem;
+                }
+
+                .current-company-name {
+                    font-size: 1.5rem;
+                    margin-top: 2rem;
+                }
+
+                #see-connection {
+                    margin-top: 2rem;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $primary;
+                        text-decoration: underline;
+                    }
+                    // }
+                }
+            }
+
+            #profile-user-name,
+            #profile-headline,
+            .current-company-name,
+            #see-connection {
+                font-size: 2rem;
+                font-weight: 400;
+                margin-bottom: 2px;
+            }
+
+            #profile-headline .current-company-name {
+                color: $gray-800;
+            }
+
+            #fa-users {
+                color: $gray-700;
+            }
+
+            .dropdown-profile {
+                #Add-profile-section {
+                    font-size: 1.6rem;
+                    // padding: 0.7rem;
+                    margin-top: 2rem;
+                }
+
+                .dropdown-menu {
+                    .dropdown-item {
+                        color: $gray-800;
+                        font-size: 1.6rem;
+
+                        i {
+                            margin-right: 0.7rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .EditProfileIcon {
+            background-color: $gray-200;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            font-size: 2rem;
+        }
+
+        .Cover {
+            top: 18rem;
+            left:78rem;
+            z-index: 100;
+        }
+
+      
+
+        /*.ProfileImage {
+
+
+        }
+
+        .coverImage {
+
+        }*/
     }
-  }
 }
 .profile-section
 {
@@ -363,3 +410,75 @@
     }
 }
 
+
+#EditProfileModal {
+    .modal-content {
+        width: 70rem;
+        height: 50rem;
+
+
+        .modal-header {
+           
+        }
+
+        .modal-body {
+
+
+            .profile-details {
+                .container-img-background {
+                    //  width: 80rem;
+                    width: 100%;
+                    height: 20rem;
+
+                    #img-background {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .container-img-profile {
+                    width: 15rem;
+                    height: 15rem;
+                    border: 1.5px solid $white; //change color
+                    border-radius: 50%;
+                    position: relative;
+                    top: -7rem;
+                    left: 2rem;
+
+                    #img-profile {
+                        width: 100%;
+                        height: 100%;
+                        border: 1.5px solid $white; //change color
+                        border-radius: 50%;
+                        overflow: hidden;
+                        background-size: cover;
+                    }
+                }
+
+                .EditProfileIcon {
+                    background-color: $gray-200;
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    font-size: 1.5rem;
+                }
+
+                .Profile {
+                    left: 13rem;
+                    top: 23rem;
+                    z-index: 100;
+                }
+
+                .Cover {
+                    top: 18rem;
+                    left: 64rem;
+                    z-index: 100;
+                }
+            }
+        }
+    }
+}    
