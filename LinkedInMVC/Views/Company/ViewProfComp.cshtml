@@ -1,0 +1,190 @@
+@model CompanyViewModel
+@{
+    ViewBag.Title = "Company_Profile";
+    Layout = "~/Views/Shared/_Layout3.cshtml";
+
+    AjaxOptions ao = new AjaxOptions
+    {
+        UpdateTargetId = "test1",
+        InsertionMode = InsertionMode.Replace
+    };
+}
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="profil-fristblock">
+
+              @using (Ajax.BeginForm("ViewProfComp", "Company",ao))
+              {
+                  @Html.AntiForgeryToken()
+
+                <div class="profil-fristblock__comp-cover-profile">
+                    @if (Model.Company.Cover == null)
+    {
+                <img src="../images/cp0.jpg" class="img-fluid">
+
+}
+else
+{
+                <img src="@Url.Content(Model.Company.Cover)" class="img-fluid">
+
+}
+                    <input type="file" class="buttfile-choose" value="Choose file" style="    height: 2.2rem;
+    width: 6.3rem;
+    position: absolute;
+    right: 20rem;
+    top: 13rem;
+    background-color: lightblue;" />
+                </div>
+                    <button type="submit" class="comp-post-block__comp-post__edit-block__item-edit1 btn-position1">  <i class="fas fa-pencil-alt"></i></button>
+                
+              }
+                <div class="profil-fristblock__comp-img-profile">
+                    <img src="@Url.Content(@Model.Company.Logo)" class="img-fluid" />
+
+                </div>
+                <button class="comp-post-block__comp-post__edit-block__item-edit1 btn-position2">  <i class="fas fa-pencil-alt"></i></button>
+                <div class="profil-fristblock__subBlock">
+                    <span class="profil-fristblock__subBlock__s-position h2 d-block">@Model.Company.Name</span>
+                    <span class="profil-fristblock__subBlock__s-position h4 text-color1 d-block">
+                       @Model.Industry.Name
+                    </span>
+                    <input type="button" disabled="disabled" value="Follow"
+                           class=" btn btn-lg profil-fristblock__subBlock__butt-follow" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-3 ml-4">
+            <div class="cop-dashb bg-white ">
+                <div class="cop-dashb__db-header">
+                    <h3 class="px-3">Dashboard</h3>
+                </div>
+                <div class="cop-dashb__dbcon">
+                    <div class="cop-dashb__dbcon__db-1 py-3">
+                        <span class="d-block h6">
+                            Last 30 days
+                        </span>
+                        <span class="d-block h6">
+                            0
+                        </span>
+                        <span class="d-block h6">
+                            Visitors
+                        </span>
+
+                    </div>
+                    <div class="cop-dashb__dbcon__db-2 py-3">
+                        <span class="d-block h6">
+                            0
+                        </span>
+                        <span class="d-block h6">
+
+                            All post impressions
+                        </span>
+
+                    </div>
+
+                    <div class="cop-dashb__dbcon__db-footer py-3">
+                        <span class="d-block h6">
+                            0
+                        </span>
+                        <span class="d-block  h6">
+                            Followers
+                        </span>
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="col-4">
+            <div class="comp-post-block">
+                <div class="comp-post-block__comp-post">
+                    <div class="comp-post-block__comp-post__edit-block">
+                        <button class="comp-post-block__comp-post__edit-block__item-edit1">
+                            <i class="fas fa-camera-retro comp-post-block__comp-post__edit-block__item-edit1__cam1"></i>
+                        </button>
+                        <button class="comp-post-block__comp-post__edit-block__item-edit2">
+                            <i class="fas fa-video comp-post-block__comp-post__edit-block__item-edit2__cam2"></i>
+                        </button>
+                        <button class="comp-post-block__comp-post__edit-block__item-edit3">
+                            <i class="fas fa-file-alt comp-post-block__comp-post__edit-block__item-edit3__cam3"></i>
+                        </button>
+                    </div>
+                    <textarea class="comp-post-block__comp-post__textarea-styles"
+                              placeholder="Share an article, photo, video, document, or idea"></textarea>
+                    <input type="button" value="Post" class="btn btn-sm comp-post-block__comp-post__btnp-color" />
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="col-4">
+            <div class="cop-dashb bg-white">
+                <div class="cop-dashb__db-header">
+                    <h3 class="px-3">Communities</h3>
+                    <button class="comp-post-block__comp-post__edit-block__item-edit1 btn-position3">  <i class="fas fa-pencil-alt"></i></button>
+                </div>
+
+                <div class="hash-com">
+                    <span class="d-block h5 px-3">
+                        Hashtags
+                    </span>
+
+                </div>
+                <div class=" px-3 ">
+
+                    <span class="d-block h6 div-height">
+
+                        Add hashtags to like, comment and reshare on your feed
+                    </span>
+
+                </div>
+
+                <div class="cop-dashb__dbcon__db-footer py-3">
+                    <span class="d-block h6">
+
+                    </span>
+                    <span class="d-block  h6">
+
+                    </span>
+
+
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
