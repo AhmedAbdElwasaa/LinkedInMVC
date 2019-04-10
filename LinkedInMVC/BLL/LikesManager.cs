@@ -49,7 +49,7 @@ namespace LinkedInMVC.BLL
 
         public List<ApplicationUser> GetLikers(int postId)
         {
-            var likes = context.Likes.Where(l => l.Fk_PostId == postId);
+            var likes = context.Likes.Where(l => l.Fk_PostId == postId).ToList();
             List<ApplicationUser> users = new List<ApplicationUser>();
             foreach (var item in likes)
             {

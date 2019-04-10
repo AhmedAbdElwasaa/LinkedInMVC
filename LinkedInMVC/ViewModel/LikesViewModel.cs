@@ -10,5 +10,6 @@ namespace LinkedInMVC.ViewModel
     {
         public int num { get; set; }
         public List<ApplicationUser> likers { get; set; }
+        public int PostId { get; set; }
     }
 }

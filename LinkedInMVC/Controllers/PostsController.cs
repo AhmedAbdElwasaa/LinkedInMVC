@@ -37,7 +37,7 @@ namespace LinkedInMVC.Controllers
             UnitofWork.PostsManager.Add(post);
             bool liked = false;
             List<PostViewModel> postViewModels = new List<PostViewModel>();
-            var allPosts = UnitofWork.PostsManager.GetAllByDate(id,6).ToArray();
+            var allPosts = UnitofWork.PostsManager.GetAllByDate(id,0).ToArray();
             LikesViewModel LikesViewModel;
             foreach (Post post_ in allPosts)
             {

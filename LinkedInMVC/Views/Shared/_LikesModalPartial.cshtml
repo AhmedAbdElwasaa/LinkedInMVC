@@ -16,9 +16,10 @@
                 <img class="like-result__imgCont col-md-1" src="../images/u.png" />
 
                 <div class="like-result__user-main-info col-md-7">
-                    <div class="like-result__user-name">@{string.Format(liker.FirstName, " ", liker.SecondName);}</div>
-                    <div class="like-result__user-title">liker.Headline</div>
-                    <div class="like-result__country">liker.Country</div>
+                    @{ string name = liker.FirstName + " " + liker.SecondName; }
+                    <div class="like-result__user-name">@Html.DisplayFor(model => name)</div>
+                    <div class="like-result__user-title">@Html.DisplayFor(model => liker.Headline)</div>
+                    <div class="like-result__country">@Html.DisplayFor(model => liker.Country)</div>
 
                     <div>
                         <i class="far fa-user-friends"></i>

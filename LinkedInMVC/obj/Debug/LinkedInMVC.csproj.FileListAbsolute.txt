@@ -247,9 +247,6 @@ E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.AI.DependencyCollector.xml
 E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.AI.WindowsServer.xml
 E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.AI.Web.xml
 E:\LinkedInMVC\origin\LinkedInMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.csprojAssemblyReference.cache
-E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.beforefinal.resources
-E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.GenerateResource.cache
 E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CoreCompileInputs.cache
 E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CopyComplete
 E:\LinkedInMVC\origin\LinkedInMVC\obj\Debug\LinkedInMVC.dll

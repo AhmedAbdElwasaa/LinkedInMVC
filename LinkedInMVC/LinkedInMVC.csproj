@@ -244,10 +244,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\DLIndustryHelper.cs" />
-    <Compile Include="Migrations\201904082316240_beforefinal.cs" />
-    <Compile Include="Migrations\201904082316240_beforefinal.Designer.cs">
-      <DependentUpon>201904082316240_beforefinal.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Comment.cs" />
@@ -844,11 +840,6 @@
     <Content Include="Views\Shared\_LikesPartial.cshtml" />
     <Content Include="Views\Shared\_PeopleMayKnow.cshtml" />
     <Content Include="Views\Shared\_SearchResultPartial.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904082316240_beforefinal.resx">
-      <DependentUpon>201904082316240_beforefinal.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
