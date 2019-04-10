@@ -1,10 +1,8 @@
-E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csprojAssemblyReference.cache
-E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CoreCompileInputs.cache
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\csc.exe
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\ApplicationInsights.config
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\LinkedInMVC.dll.config
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\LinkedInMVC.dll
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\LinkedInMVC.pdb
-E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\csc.exe
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\csc.exe.config
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\csc.rsp
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\roslyn\csi.exe
@@ -121,8 +119,10 @@ E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AI.Dependency
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AI.WindowsServer.xml
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.AI.Web.xml
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.tes.resources
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.GenerateResource.cache
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CoreCompileInputs.cache
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.CopyComplete
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.dll
 E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.pdb
-E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.Migrations.tes.resources
-E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csproj.GenerateResource.cache
+E:\ITI\MVC\Linkedin\New folder\Linkedin-\LinkedInMVC\obj\Debug\LinkedInMVC.csprojAssemblyReference.cache
