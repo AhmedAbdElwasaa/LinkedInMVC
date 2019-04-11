@@ -5,11 +5,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Microsoft.AspNet.Identity.Owin;
+using System.Data.Entity;
+
 namespace LinkedInMVC.BLL
 {
     public class ConnectionManager : Repository<Connection_Request, ApplicationDbContext>
     {
-        private ApplicationDbContext context;
+        private readonly ApplicationDbContext context;
         public ConnectionManager(ApplicationDbContext context) : base(context)
         {
             this.context = context;
@@ -63,7 +65,7 @@ namespace LinkedInMVC.BLL
             return users;
 
         }
-        public void AcceptFriendRequest(string userId, string connectionId)
+        public void AcceptFriendRequest(string connectionId, string userId)
         {
             Connection_Request result = context.Connection_Requeset.SingleOrDefault(u => u.FK_UserId.Id == userId && u.FK_Connction_UserId.Id == connectionId);
             if (result != null)
@@ -72,9 +74,15 @@ namespace LinkedInMVC.BLL
                 context.SaveChanges();
 
             }
+            ApplicationUser ApplicationUser;
+            ApplicationUser = UnitofWork.UserManager.Users
+                .Where(e => e.Id == connectionId).FirstOrDefault();
+            ApplicationUser ApplicationUser2;
+            ApplicationUser2 = UnitofWork.UserManager.Users
+                .Where(e => e.Id == userId).FirstOrDefault();
             Connection_Request friend = new Connection_Request();
-            friend.FK_UserId.Id = connectionId;
-            friend.FK_Connction_UserId.Id = userId;
+            friend.FK_UserId = ApplicationUser;
+            friend.FK_Connction_UserId = ApplicationUser2;
             friend.IsApproved = true;
             context.Connection_Requeset.Add(friend);
             context.SaveChanges();
@@ -89,7 +97,7 @@ namespace LinkedInMVC.BLL
                 List<ApplicationUser> friendsOffriend = con.GetAllFriend(item.Id);
                 foreach (ApplicationUser i in friendsOffriend)
                 {
-                    if (i.Id != userId && !friends.Contains(i)&& !checkFreindRequest(userId,i.Id) )
+                    if (i.Id != userId && !friends.Contains(i) && !checkFreindRequest(userId, i.Id))
                     {
 
                         friendsOffriends.Add(i);
@@ -103,26 +111,53 @@ namespace LinkedInMVC.BLL
             return friendsOffriends;
 
         }
-        public void RemoveConnection(string userId , string connId)
+        public void RemoveConnection(string userId, string connId)
         {
             Connection_Request connecToDelete = context.Connection_Requeset
-             .Select(p => p).Where(p => p.FK_UserId.Id == userId && p.FK_Connction_UserId.Id==connId && p.IsApproved==true).FirstOrDefault();
+             .Select(p => p).Where(p => p.FK_UserId.Id == userId && p.FK_Connction_UserId.Id == connId && p.IsApproved == true).FirstOrDefault();
             context.Connection_Requeset.Remove(connecToDelete);
             Connection_Request connecToDelete2 = context.Connection_Requeset
           .Select(p => p).Where(p => p.FK_UserId.Id == connId && p.FK_Connction_UserId.Id == userId && p.IsApproved == true).FirstOrDefault();
             context.Connection_Requeset.Remove(connecToDelete2);
             context.SaveChanges();
         }
-        public bool checkFreindRequest(string userId ,string connId)
+        public bool checkFreindRequest(string userId, string connId)
+
         {
-            bool flag=true;
-          Connection_Request connlist = context.Connection_Requeset.Where(u => u.IsApproved == false && u.FK_UserId.Id == userId && u.FK_Connction_UserId.Id==connId).Select(y => y).FirstOrDefault();
+            bool flag = true;
+            Connection_Request connlist = context.Connection_Requeset.Where(u => u.IsApproved == false && u.FK_UserId.Id == userId && u.FK_Connction_UserId.Id == connId).Select(y => y).FirstOrDefault();
             if (connlist == null)
             {
                 flag = false;
             }
-           
+
             return flag;
         }
+        public void DeleteFriend(string userId, string connectionId)
+        {
+            ApplicationUser ApplicationUser;
+            ApplicationUser = UnitofWork.UserManager.Users
+                .Where(e => e.Id == userId).FirstOrDefault();
+            ApplicationUser ApplicationUser2;
+            ApplicationUser2 = UnitofWork.UserManager.Users
+                .Where(e => e.Id == connectionId).FirstOrDefault();
+            Connection_Request friend = new Connection_Request();
+            friend.FK_UserId = ApplicationUser;
+            friend.FK_Connction_UserId = ApplicationUser2;
+            friend.IsApproved = false;
+            var entry = context.Entry(friend);
+            if (entry.State == EntityState.Detached)
+            {
+                context.Connection_Requeset.Attach(friend);
+            }
+
+            context.Connection_Requeset.Remove(friend);
+            context.SaveChanges();
+
+
+
+
+        }
+
     }
 }

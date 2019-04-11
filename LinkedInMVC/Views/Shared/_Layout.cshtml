@@ -37,22 +37,22 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="#home"><i class="fas fa-home"></i>@Html.ActionLink("Home", "Index", "Home", new { @class = "nav-link-item" })</a>
+                                <a class="nav-link" href="@Url.Action("index","Home")"><i class="fas fa-home"></i>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link-item" })</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas fa-users"></i>@Html.ActionLink("My Network", "Index", "Home", new { @class = "nav-link-item" }) </a>
+                                <a class="nav-link" href="@Url.Action("index","network")"><i class="fas fa-users"></i>@Html.ActionLink("network", "Index", "network", null, new { @class = "nav-link-item" }) </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas fa-briefcase"></i>@Html.ActionLink("jobs", "Index", "Home", new { @class = "nav-link-item" }) </a>
+                                <a class="nav-link" href="#"><i class="fas fa-briefcase"></i>@Html.ActionLink("jobs", "Index", "Home", null, new { @class = "nav-link-item" }) </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#events"><i class="far fa-bell"></i>@Html.ActionLink(" Notification", "Index", "Home", new { @class = "nav-link-item" })</a>
+                                <a class="nav-link" href="#events"><i class="far fa-bell"></i>@Html.ActionLink(" Notification", "Index", "Home", null, new { @class = "nav-link-item" })</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#albums"><i class="fas fa-user-alt"></i>@Html.ActionLink(" Me", "Index", "Home", new { @class = "nav-link-item" })</a>
+                                <a class="nav-link" href="@Url.Action("index","Profile")"><i class="fas fa-user-alt"></i>@Html.ActionLink(" Me", "Index", "Profile", null, new { @class = "nav-link-item" })</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#gallery"><i class="fas fa-sign-out-alt"></i>@Html.ActionLink("Sign Out", "Index", "Home", new { @class = "nav-link-item" })</a>
+                                <a class="nav-link" href="#gallery"><i class="fas fa-sign-out-alt"></i>@Html.ActionLink("Sign Out", "Index", "Home", null, new { @class = "nav-link-item" })</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("Index","Company")"><i class="fas fa-stroopwafel"></i>Work</a>

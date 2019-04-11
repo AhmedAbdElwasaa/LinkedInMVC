@@ -7889,16 +7889,27 @@ a.text-dark:hover, a.text-dark:focus {
   transition: box-shadow 83ms;
   background-color: #fff;
   border-radius: 2px;
-  overflow: hidden; }
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding-top: 41px;
+  padding-left: 31px; }
 
 .network {
-  display: flex;
-  justify-content: center;
-  margin-top: 74px; }
+  display: flex; }
 
 .net-row {
-  margin-top: 100px;
   margin-bottom: 100px; }
+
+.net-block {
+  margin-bottom: 100px;
+  margin-top: 61px; }
+
+.net-header {
+  margin-left: 51px;
+  margin-bottom: 44px; }
 
 body {
   background-color: #E6E9EC !important; }
