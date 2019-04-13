@@ -809,6 +809,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Profile\_DetailsSkill.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_PeopleMayKnow.cshtml" />

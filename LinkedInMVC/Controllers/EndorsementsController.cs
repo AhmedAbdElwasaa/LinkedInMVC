@@ -39,10 +39,6 @@ namespace LinkedInMVC.Controllers
             if (ModelState.IsValid)
             {
                 endorsement = UnitofWork.EndorsementManager.Add(endorsement);
-               
-
-
-
             }
             return RedirectToAction("Index", "Profile");
         }
