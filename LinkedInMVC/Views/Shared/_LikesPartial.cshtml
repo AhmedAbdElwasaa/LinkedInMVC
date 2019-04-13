@@ -1,7 +1,10 @@
 ﻿@model LikesViewModel
-
-<a href="#" class="num-likes pr-2" data-toggle="modal" data-target="#exampleModal_">@Model.num Likes</a>
-<div class="modal fade" id="exampleModal_" tabindex="-1" role="dialog" aria-labelledby="exampleModal_Label" aria-hidden="true">
+@{ 
+    string label = "#exampleModal_" + Model.PostId.ToString();
+    string label2 = "exampleModal_" + Model.PostId.ToString();
+}
+<a href="#" class="num-likes pr-2" data-toggle="modal" data-target=@label >@Model.num Likes</a>
+<div class="modal fade" id=@label2 tabindex="-1" role="dialog" aria-labelledby="exampleModal_Label" aria-hidden="true">
     <div id="likers" class="modal-dialog"  role="document">
        @Html.Partial("_LikesModalPartial", @Model.likers)
         <div class="modal-footer">

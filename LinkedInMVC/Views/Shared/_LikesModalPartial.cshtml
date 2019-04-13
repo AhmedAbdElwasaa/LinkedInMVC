@@ -1,7 +1,5 @@
 ﻿@model List<LinkedInMVC.Models.ApplicationUser>
-@{ 
 
-}
 <div class="post-box__modal-header">
     <h5 class="modal-title" id="exampleModalLabel"></h5>
     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -12,25 +10,32 @@
     <div class="likes-results col-md-12">
         @foreach (LinkedInMVC.Models.ApplicationUser liker in Model)
         {
-            <div class="like-result col-md-12">
-                <img class="like-result__imgCont col-md-1" src="../images/u.png" />
+            
+        <div class="like-result col-md-12">
+            @{ string name = liker.FirstName + " ";
+                name += liker.SecondName;
+                string url = "../images/" + liker.ProfileImage;
+            }
+            <img class="like-result__imgCont col-md-2" src="@Url.Content(url)" />
 
-                <div class="like-result__user-main-info col-md-7">
-                    <div class="like-result__user-name">@{string.Format(liker.FirstName, " ", liker.SecondName);}</div>
-                    <div class="like-result__user-title">liker.Headline</div>
-                    <div class="like-result__country">liker.Country</div>
+            <div class="like-result__user-main-info col-md-7">
 
-                    <div>
-                        <i class="far fa-user-friends"></i>
-                        Mohammed Barakat, Mahmoud Elrefaey, and 98 other shared connections
-                    </div>
+
+                <div class="like-result__user-name">@Html.DisplayFor(model => name)</div>
+                <div class="like-result__user-title">@Html.DisplayFor(model => liker.Headline)</div>
+                <div class="like-result__country">@Html.DisplayFor(model => liker.Country)</div>
+
+                <div>
+                    <i class="far fa-user-friends"></i>
+                    Mohammed Barakat, Mahmoud Elrefaey, and 98 other shared connections
                 </div>
-                <button class="like-result__connect-or-msg col-md-2">
-                    <p>Message</p>
-
-                </button>
-
             </div>
+            <button class="like-result__connect-or-msg col-md-3">
+                <p>Message</p>
+
+            </button>
+
+        </div>
 
         }
     </div>

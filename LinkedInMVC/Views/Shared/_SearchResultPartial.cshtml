@@ -8,7 +8,9 @@
 <img class="search-result__imgCont col-md-1" src=@imgUrl />
 
 <div class="search-result__user-main-info col-md-7">
-    <div class="search-result__user-name">@name</div>
+    <div class="search-result__user-name">
+        @Html.ActionLink(name, "Details", "Profile", new { id = Model.applicationUser.Id }, new { @class = "user-data__user-name" })
+    </div>
     <div class="search-result__user-title">@Model.applicationUser.Headline</div>
     <div class="search-result__country">@Model.applicationUser.Country</div>
 

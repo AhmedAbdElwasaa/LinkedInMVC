@@ -42,7 +42,8 @@ namespace LinkedInMVC.Controllers
             LikesViewModel likesViewModel = new LikesViewModel
             {
                 num = likesNum,
-                likers = UnitofWork.LikesManager.GetLikers(post.Id).ToList()
+                likers = UnitofWork.LikesManager.GetLikers(post.Id).ToList(),
+                PostId = post.Id
             };
             //turn Content(likesNum.ToString());
             return PartialView("_LikesPartial", likesViewModel);
@@ -56,7 +57,8 @@ namespace LinkedInMVC.Controllers
             LikesViewModel likesViewModel = new LikesViewModel
             {
                 num = likesNum,
-                likers = UnitofWork.LikesManager.GetLikers(post.Id).ToList()
+                likers = UnitofWork.LikesManager.GetLikers(post.Id).ToList(),
+                PostId = postId
             };
             return PartialView("_LikesPartial", likesViewModel);
             //return PartialView("_LikesPartial", likesNum);

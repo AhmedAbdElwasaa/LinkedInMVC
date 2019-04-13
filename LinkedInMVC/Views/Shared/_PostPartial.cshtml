@@ -37,7 +37,7 @@ targetComments = "comments" + Model.Id.ToString();
             <img class="user-photo col-md-2 " style="height:5rem;" src=@imgUrl>
             <div class="user-data col-md-6 d-flex">
 
-                @Html.ActionLink(name, "", null, new { @class = "user-data__user-name" })
+                @Html.ActionLink(name, "Details", "Profile", new { id=Model.ApplicationUser.Id}, new { @class = "user-data__user-name" })
                 <div class="user-data__user-title">@jobTitle</div>
             </div>
         </div>

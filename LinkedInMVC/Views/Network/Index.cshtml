@@ -1,25 +1,20 @@
 ﻿@model NetworkViewModel
 
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+                /**/
+
+                ViewBag.Title = "Index";
+                Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="row">
+<div class="container row net-block">
     <div class="col-lg-8 network-container">
-        <div class="row">
-            <h3>Recommended for you</h3>
-        </div>
+        <h3 class="net-header">Invitations</h3>
         <div class=" row net-row">
             <div class="container network row ">
                 @*@{
-            int x = 0;
-        }*@
-                @foreach (var network in Model.MetualFriend)
-                {
-                    //x++;
+                        int x = 0;
+                    }*@
 
-                    @Html.Partial("_PeopleMayKnow", network)
-                }
                 @foreach (var FriendRequest in Model.FriendRequest)
                 {
                     //x++;
@@ -31,6 +26,29 @@
         </div>
     </div>
 </div>
+<div class="row container row net-block">
+    <div class="col-lg-8 network-container">
+
+        <h3>Recommended for you</h3>
+
+        <div class=" row net-row">
+            <div class="container network row ">
+                @*@{
+                        int x = 0;
+                    }*@
+                @foreach (var network in Model.MetualFriend)
+                {
+                    //x++;
+
+                    @Html.Partial("_PeopleMayKnow", network)
+                }
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
 <script>
     function removerow(x) {
         var self = this

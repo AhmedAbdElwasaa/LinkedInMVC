@@ -43,9 +43,9 @@ namespace LinkedInMVC.BLL
             var Posts = friendsPosts
                 .OrderByDescending(p => p.numOfComments).ToList();
               List<Post> topPosts = new List<Post>();
-            for(; count < Posts.ToArray().Length; ++count)
+            for(int i = 0; count < Posts.ToArray().Length&& i<4; ++count)
             {
-                topPosts.Add(Posts[count]);
+                topPosts.Add(Posts[count]);++i;
             }
             count += 4;
             return topPosts;

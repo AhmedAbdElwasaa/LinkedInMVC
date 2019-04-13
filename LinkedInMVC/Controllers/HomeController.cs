@@ -6,6 +6,7 @@ using Microsoft.AspNet.Identity.Owin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -36,8 +37,8 @@ namespace LinkedInMVC.Controllers
             foreach (Post post in allPosts)
             {
                 liked = false;
-                var likes = UnitofWork.LikesManager.GetLikers(post.Id);
-                LikesViewModel = new LikesViewModel { likers = likes ,num = post.numOfLikes };
+                var likes =  UnitofWork.LikesManager.GetLikers(post.Id);
+                LikesViewModel = new LikesViewModel { likers = likes ,num = post.numOfLikes , PostId=post.Id };
                 if (likes.Any(l => l.Id == id) && likes != null && LikesViewModel != null )
                 {
                     liked = true;

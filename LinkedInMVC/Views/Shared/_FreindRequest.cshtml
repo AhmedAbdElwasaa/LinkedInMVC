@@ -12,8 +12,12 @@
             <h5 class="job">developer</h5>
         </div>
         <div class="connection-btn">
-            <input type="button" value="Ignore" class="btn btn-ignore " />
-            <input type="button" value="Accept" class="btn btn-accept " />
+
+            @*<input type="button" value="Ignore" class="btn btn-ignore " />*@
+            @Html.ActionLink("Ignore", "Ignore", "Network", new { id = Model.UserId }, new { @class = "btn btn-ignore" })
+            @Html.ActionLink("Accept", "Accept", "Network", new { id = Model.UserId }, new { @class = "btn btn-accept " })
+
+            @*<input type="button" value="Accept" class="btn btn-accept " />*@
 
         </div>
     </div>

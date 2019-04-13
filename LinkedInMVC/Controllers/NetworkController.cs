@@ -26,12 +26,12 @@ namespace LinkedInMVC.Controllers
         }
 
         // GET: Network
-        public  ActionResult Index()
+        public ActionResult Index()
         {
             List<ApplicationUser> matualFreind = UnitofWork.ConnectionManager.
                            GetMetualFriend(User.Identity.GetUserId());
             List<ConnectionViewModel> cvm = matualFreind.Select(c => new ConnectionViewModel
-            { FirstName = c.FirstName, UserId = c.Id, ImageUrl = c.ProfileImage ,CoverUrl=c.ProfileCover })
+            { FirstName = c.FirstName, UserId = c.Id, ImageUrl = c.ProfileImage, CoverUrl = c.ProfileCover })
             .ToList();
 
 
@@ -47,15 +47,27 @@ namespace LinkedInMVC.Controllers
         }
         public ActionResult Add(string Id)
         {
-            if (ModelState.IsValid)
-            {
-                UnitofWork.ConnectionManager.
-                               AddFriendRequest(Id, User.Identity.GetUserId());
-                }
-            
+
+            UnitofWork.ConnectionManager.
+                           AddFriendRequest(User.Identity.GetUserId(), Id);
+
+
             return RedirectToAction("Index");
         }
 
+        public ActionResult Accept(string id)
+        {
+            UnitofWork.ConnectionManager.
+                           AcceptFriendRequest(id, User.Identity.GetUserId());
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Ignore(string id)
+        {
+            UnitofWork.ConnectionManager.
+                           DeleteFriend(id, User.Identity.GetUserId());
+            return RedirectToAction("Index");
+        }
 
         // GET: Network/Details/5
         public async Task<ActionResult> Details(int? id)
@@ -110,7 +122,7 @@ namespace LinkedInMVC.Controllers
             return View(connection_Request);
         }
 
-     
+
 
         // GET: Network/Delete/5
         public async Task<ActionResult> Delete(int? id)
@@ -138,8 +150,8 @@ namespace LinkedInMVC.Controllers
             return RedirectToAction("Index");
         }
 
-       
-       
+
+
 
     }
 }

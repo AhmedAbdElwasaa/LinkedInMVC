@@ -117,7 +117,7 @@
 
 <!-------------------------------education ------------------------------------------>
 <!-- Modal Add education -->
-<div class="modal fade" data-keyboard="true" id="AddEducationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade mymodal" data-keyboard="true" id="AddEducationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -184,7 +184,7 @@
 </div>
 
 <!--   Modal Edit Education-->
-<div class="modal fade" data-keyboard="true" id="EditEducationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade mymodal" data-keyboard="true" id="EditEducationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -253,7 +253,7 @@
 
 <!-------------------------------Experience ------------------------------------------>
 <!-- Modal Add  Experience -->
-<div class="modal fade" data-keyboard="true" id="ExperienceModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade mymodal" data-keyboard="true" id="ExperienceModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -318,7 +318,7 @@
 
 
 <!-- Modal Edit  Experience -->
-<div class="modal fade" data-keyboard="true" id="EditExperienceModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade mymodal" data-keyboard="true" id="EditExperienceModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -386,7 +386,7 @@
 <!-------------------------------Skills ------------------------------------------>
 <!-- Modal Add  Skills -->
 
-<div class="modal fade" data-keyboard="true" id="AddSkillsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade mymodal" data-keyboard="true" id="AddSkillsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -420,7 +420,7 @@
 
 <!-- Modal Edit Skills -->
 
-<div class="modal fade" data-keyboard="true" id="EditSkillsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade mymodal" data-keyboard="true" id="EditSkillsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -459,7 +459,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="EditProfileModal" data-keyboard="true" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade mymodal" id="EditProfileModal" data-keyboard="true" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -476,13 +476,13 @@
                     <div class="container-img-profile">
                         <img id="img-profile" src=@Model.ProfileImage />
                     </div>
-                    <div class="EditProfileIcon Profile" id="btnChangeProfile">
+                    @*<div class="EditProfileIcon Profile" id="btnChangeProfile">
                         <i class="fas fa-pen"></i>
                     </div>
 
                     <div class="EditProfileIcon Cover" id="btnChangeProfile">
                         <i class="fas fa-pen"></i>
-                    </div>
+                    </div>*@
                 </div>
 
 
@@ -492,6 +492,7 @@
 
                     @Html.TextBox("ProfileImagetemp",null ,new { type = "file", @class = "FileDialog" , id= "ProfileImagetemp" })
                     @Html.TextBox("ProfileCovertemp", null ,new { type = "file", @class = "FileDialog" , id= "ProfileCovertemp" })
+                     
 
                     @Html.LabelFor(m => m.FirstName, new { @class = "Title" })
                     @Html.EditorFor(m => m.FirstName, new { id = "FirstName"  @*placeholder = "Ex: Boston University"*@});
