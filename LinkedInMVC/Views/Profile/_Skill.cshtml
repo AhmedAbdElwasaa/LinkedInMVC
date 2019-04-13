@@ -8,11 +8,25 @@
             <input type="hidden" value="@Model.Skill.Id" />
         </div>
     </div>
-    <div class="Endorsements">
-        <span class="Endorsed-by">Endorsed by </span>
-        @foreach (string name in @Model.EndorsedByNames)
-        {
-            <span>  @name</span>
-        }
-    </div>
-    </div>
+    @if (@Model.EndorsedByNames.Capacity > 0)
+    {
+        <div class="Endorsements">
+            <span class="Endorsed-by">Endorsed by </span>
+            @foreach (string name in @Model.EndorsedByNames)
+            {
+                <span>  @name</span>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="Endorsements">
+            <span class="Endorsed-by"></span>
+            
+                <span></span>
+           
+        </div>
+
+    }
+
+</div>

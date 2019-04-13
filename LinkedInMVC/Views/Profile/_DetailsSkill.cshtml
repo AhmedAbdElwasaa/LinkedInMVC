@@ -2,7 +2,6 @@
 
 <div class="skill">
     <div class="skill-data">
-        <div class="btn-edit-skills" data-toggle="modal" data-target="#EditSkillsModal"><i class="fas fa-pen"></i></div>
         <div class="plus-icon-container Endorse-Btn">
             <i class="fas fa-plus"></i>
 
@@ -13,12 +12,24 @@
             <input type="hidden" value="@Model.Skill.Id" />
         </div>
     </div>
-    <div class="Endorsements">
-        <span class="Endorsed-by">Endorsed by </span>
-        @foreach (string name in @Model.EndorsedByNames)
-        {
-            <span>  @name</span>
-        }
-    </div>
+    @if (@Model.EndorsedByNames.Capacity > 0)
+    {
+        <div class="Endorsements">
+            <span class="Endorsed-by">Endorsed by </span>
+            @foreach (string name in @Model.EndorsedByNames)
+            {
+                <span>  @name</span>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="Endorsements">
+            <span class="Endorsed-by"></span>
+
+            <span></span>
+
+        </div>
+    }
 </div>
 

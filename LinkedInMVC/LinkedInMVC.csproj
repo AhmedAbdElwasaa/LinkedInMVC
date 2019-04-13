@@ -244,9 +244,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\DLIndustryHelper.cs" />
-    <Compile Include="Migrations\201904111947144_createdb.cs" />
-    <Compile Include="Migrations\201904111947144_createdb.Designer.cs">
-      <DependentUpon>201904111947144_createdb.cs</DependentUpon>
+    <Compile Include="Migrations\201904131843211_final.cs" />
+    <Compile Include="Migrations\201904131843211_final.Designer.cs">
+      <DependentUpon>201904131843211_final.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -810,6 +810,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Profile\_DetailsSkill.cshtml" />
+    <Content Include="Views\Profile\_DetailsExperience.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_PeopleMayKnow.cshtml" />
@@ -863,11 +864,11 @@
     <Content Include="Views\Shared\_Layout3.cshtml" />
     <Content Include="Views\Shared\_LikesPartial.cshtml" />
     <!-- <Content Include="Views\Shared\_PeopleMayKnow.cshtml" /> -->
-   <Content Include="Views\Shared\_SearchResultPartial.cshtml" />
+    <Content Include="Views\Shared\_SearchResultPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904111947144_createdb.resx">
-      <DependentUpon>201904111947144_createdb.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904131843211_final.resx">
+      <DependentUpon>201904131843211_final.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

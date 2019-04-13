@@ -486,14 +486,14 @@
                 </div>
 
 
-                @using (Ajax.BeginForm("Edit", "Profile", new AjaxOptions { HttpMethod = "POST", OnSuccess = "OnSuccessAddEducation" }))
+                @using (Ajax.BeginForm("Edit", "Profile", new AjaxOptions { HttpMethod = "POST", OnSuccess = "OnSuccessAddEducation" }, new { enctype = "multipart/form-data" }))
                 {
                     @Html.AntiForgeryToken()
 
                     @Html.TextBox("ProfileImagetemp",null ,new { type = "file", @class = "FileDialog" , id= "ProfileImagetemp" })
                     @Html.TextBox("ProfileCovertemp", null ,new { type = "file", @class = "FileDialog" , id= "ProfileCovertemp" })
                      
-
+                        
                     @Html.LabelFor(m => m.FirstName, new { @class = "Title" })
                     @Html.EditorFor(m => m.FirstName, new { id = "FirstName"  @*placeholder = "Ex: Boston University"*@});
 

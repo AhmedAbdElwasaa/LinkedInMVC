@@ -150,7 +150,7 @@ namespace LinkedInMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FirstName = model.FirstName , ProfileCover= "../images/lincov.PNG" , ProfileImage= "../images/Default.png" };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FirstName = model.FirstName , ProfileCover= "../../images/lincov.PNG" , ProfileImage= "../../images/Default.png" };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

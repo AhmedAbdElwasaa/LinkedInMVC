@@ -298,7 +298,7 @@ function OnSuccessEditSkill() {
 
 $(".Endorse-Btn").click(function () {
 
-
+    debugger
     let Data = $(this).parent().children()[2];
     let Endorsements = $(this).parent().parent().children()[1];
     let SpanEndorsement = Endorsements.children;
@@ -310,6 +310,7 @@ $(".Endorse-Btn").click(function () {
         url: `/Endorsements/Create/${id}/${EId}`,
         type: "Get",
         success: function (response) {
+            console.log(response);
             //SpanEndorsement.append("hiiiii");
 
 

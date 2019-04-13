@@ -67,7 +67,7 @@ namespace LinkedInMVC.Controllers
             //  string id = User.Identity.GetUserId();
             ApplicationUser user = UnitofWork.UserManager.FindById(id);
             ProfileViewModel ProfileVM;
-            if (id !=null)
+            if (user != null)
             {
                 List<EducationViewModel> userEducations = UnitofWork.UserEducationManager.GetUserEducations(id);
                 List<ExperienceViewModel> userExperiences = UnitofWork.UserExperienceManager.GetUserExperiences(id);
@@ -99,18 +99,19 @@ namespace LinkedInMVC.Controllers
         }
 
 
-
-        public ActionResult Edit( ProfileViewModel profile)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(HttpPostedFileBase file)
         {
-            string id = User.Identity.GetUserId();
-            ApplicationUser currentUser = UnitofWork.UserManager.FindById(id);
+            //string id = User.Identity.GetUserId();
+            //ApplicationUser currentUser = UnitofWork.UserManager.FindById(id);
 
-            currentUser.FirstName = profile.FirstName;
-            currentUser.SecondName = profile.LastName;
-            currentUser.ProfileImage = profile.ProfileImage;
-            currentUser.ProfileCover = profile.ProfileCover;
+            //currentUser.FirstName = profile.FirstName;
+            //currentUser.SecondName = profile.LastName;
+            //currentUser.ProfileImage = profile.ProfileImage;
+            //currentUser.ProfileCover = profile.ProfileCover;
 
-            UnitofWork.UserManager.Update(currentUser);
+            //UnitofWork.UserManager.Update(currentUser);
 
             return RedirectToAction("Index", "Profile");
         }
